@@ -76,19 +76,21 @@
             ZIndex: =2
 
             lbl_welcome As label:
+                AutoHeight: =true
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
-                Size: =25
+                Size: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,13,25)
                 Text: ="Welcome " & ComboBox1.Selected.Title & " 👋"
-                Width: =450
+                Width: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,100,450)
                 ZIndex: =1
 
             lbl_flex As label:
                 FillPortions: =1
                 Height: =Parent.Height
                 LayoutMinWidth: =0
-                Text: =""
+                Text: ="text"
+                Visible: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,false,true)
                 ZIndex: =2
 
             con_notification As groupContainer.manualLayoutContainer:
