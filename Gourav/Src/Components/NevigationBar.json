@@ -1361,7 +1361,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638399643524109978",
+    "LastModifiedTimestamp": "638399690921729359",
     "Name": "NevigationBar",
     "Rules": [
       {
@@ -1372,7 +1372,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "Table(\n    {\n        ID: 1,\n        Img: \"data:image/svg+xml;utf8, \"&EncodeUrl(\" <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-house' viewBox='0 0 16 16'>\n  <path d='M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z'/>\n</svg>\"),\n        Lbl: \"Home\",\n        Screen: App.ActiveScreen\n      \n    },\n    {\n        ID: 2,\n        Img: \"data:image/svg+xml;utf8, \"&EncodeUrl(\"<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-grid-fill' viewBox='0 0 16 16'>\n  <path d='M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z'/>\n</svg>\"),\n        Lbl:\"DashBord\",\n\n        Screen: App.ActiveScreen\n     \n    },\n    {\n        ID: 3,\n        Img: \"data:image/svg+xml;utf8, \"&EncodeUrl(\"\n<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>\n  <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/>\n</svg>\"),\n        Lbl: \"Search\",\n        Screen: App.ActiveScreen\n     \n    }\n   \n)",
+        "InvariantScript": "Table(\n    {\n        ID: 1,\n        Img: \"data:image/svg+xml;utf8, \"&EncodeUrl( Substitute(\" <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-house' viewBox='0 0 16 16'>\n  <path d='M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z'/>\n</svg>\",\"currentColor\",\"RGBA(255,255,255,1)\")),\n        Lbl: \"Home\",\n        Screen: App.ActiveScreen\n      \n    },\n    {\n        ID: 2,\n        Img: \"data:image/svg+xml;utf8, \"&EncodeUrl( Substitute(\"<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-grid-fill' viewBox='0 0 16 16'>\n  <path d='M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z'/>\n</svg>\",\"currentColor\",\"RGBA(255,255,255,1)\")),\n        Lbl:\"DashBord\",\n\n        Screen: App.ActiveScreen\n     \n    },\n    {\n        ID: 3,\n        Img: \"data:image/svg+xml;utf8, \"&EncodeUrl(  Substitute(\"\n<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>\n  <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/>\n</svg>\",\"currentColor\",\"RGBA(255,255,255,1)\")),\n        Lbl: \"Search\",\n        Screen: App.ActiveScreen\n     \n    }\n   \n)",
         "Property": "NevMenu",
         "RuleProviderType": "System"
       },
@@ -1483,7 +1483,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638399643524109978",
+  "LastModifiedTimestamp": "638399690921729359",
   "Name": "8d8acd61e3154144836005b40fe0806e",
   "OverridableProperties": {},
   "Version": "1.0"

@@ -7,7 +7,7 @@
         DropShadow: =DropShadow.ExtraBold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height-150
-        Width: =If(App.ActiveScreen.Size=1,Parent.Width-40,Parent.Width-200)
+        Width: =If(App.ActiveScreen.Size=1,Parent.Width-160,Parent.Width-200)
         X: =(Parent.Height-Self.Height)/2+30
         Y: =(Parent.Height-Self.Height)/2
         ZIndex: =1
@@ -63,6 +63,7 @@
                 ZIndex: =5
 
         con_mainHeader As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
             Height: =60
             LayoutGap: =10
             LayoutMode: =LayoutMode.Auto
@@ -140,13 +141,14 @@
 
     con_nevigation As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =318
-        Width: =68
+        Height: =If(App.ActiveScreen.Size=1,220,318)
+        Width: =If(App.ActiveScreen.Size=1,40,68)
         X: =72
         Y: =(Parent.Height-Self.Height)/2
         ZIndex: =3
 
         NevigationBar_1 As NevigationBar:
-            Height: =318
-            Width: =NevigationBar_1.nevWidth
+            backGroundColor: =RGBA(132, 107, 247, 1)
+            Height: =If(App.ActiveScreen.Size=1,220,318)
+            Width: =If(App.ActiveScreen.Size=1,40,68)
 
