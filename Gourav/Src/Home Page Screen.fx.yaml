@@ -143,12 +143,3 @@
         Y: =(Parent.Height-Self.Height)/2
         ZIndex: =3
 
-        NevigationBar_1 As NevigationBar:
-            backGroundColor: =RGBA(85,74,216,255)
-            Height: =313
-            height_1: =Parent.Height-350
-            nevWidth: =Parent.Width
-            Width: =64
-            X: =3
-            Y: =
-
