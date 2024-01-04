@@ -1,0 +1,406 @@
+"Screen2 As screen.'autoLayout_HeaderFooter_ver1.0'":
+    OnVisible: =Set(Var_Persona,false)
+
+    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container6 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+            Container7 As groupContainer.verticalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =900
+                ZIndex: =1
+
+                Container9 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height/8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Visible: =If(Screen2.Size=1,false,true)
+                    ZIndex: =1
+
+                Container11 As groupContainer.verticalAutoLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    ContentLanguage: =
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height/1.8
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    X: =If(App.ActiveScreen.Size=3,18, 45)
+                    ZIndex: =2
+
+                    Label3 As label:
+                        Color: =RGBA(208, 162, 247, 1)
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height/2.2
+                        PaddingBottom: =0
+                        PaddingLeft: =90
+                        Size: =Switch(App.ActiveScreen.Size,1,25,2,25,3,30,4,40)
+                        Text: ="Liquid Energy Technology Company"
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Width: =Switch(App.ActiveScreen.Size,1,Parent.Width,2,Parent.Width/1.4,3,Parent.Width/1.3,4, Parent.Width/1.1)
+                        X: =If(Screen2.Size=1,18, 20)
+                        ZIndex: =1
+
+                    Label5 As label:
+                        FillPortions: =1
+                        Height: =
+                        PaddingLeft: =85
+                        PaddingTop: =10
+                        Text: |-
+                            =If(App.ActiveScreen.Size=4,"Unearthing Energy Riches, Pioneering Sustainable Solutions. Our Commitment: Fueling Progress Responsibly, Powering a Greener Tomorrow in Harmony with the Earth","Unearthing Energy Riches, Pioneering Sustainable Solutions")
+                        Width: =Switch(App.ActiveScreen.Size,1,500,2,350,4,  Parent.Width/1.1)
+                        ZIndex: =2
+
+                    Container15 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =3
+
+                        Button3 As button:
+                            OnSelect: =Set(Var_Persona,!Var_Persona)
+                            Text: ="Explore"
+                            X: =93
+                            Y: =45
+                            ZIndex: =1
+
+                Container13 As groupContainer.manualLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Visible: =If(Screen2.Size=1,false,true)
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+                    "Gallery1_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+                        DelayItemLoading: =true
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        Items: |-
+                            =Table(
+                                {
+                                    Header: "Colabartion",
+                                    Info: "We talk a lot about hope, helping and teamwork. Our whole message is that we are more powerful together.",
+                                    Icon: "data:image/svg+xml;utf8, " & EncodeUrl(
+                                        "<svg width='131' height='140' viewBox='0 0 131 140' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                            <g filter='url(#filter0_f_3412_5336)'>
+                            <rect x='41' y='50' width='40' height='40' fill='#237FEA'/>
+                            </g>
+                            <g clip-path='url(#clip0_3412_5336)'>
+                            <path d='M51.7998 64.8001V77.6001L57.3998 74.4001L63.7998 77.6001L69.3998 74.4001V61.6001L63.7998 64.8001L57.3998 61.6001L51.7998 64.8001Z' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/>
+                            <path d='M57.3999 61.6001V74.4001' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/>
+                            <path d='M63.7998 64.8V77.6' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/>
+                            </g>
+                            <defs>
+                            <filter id='filter0_f_3412_5336' x='-9' y='0' width='140' height='140' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+                            <feFlood flood-opacity='0' result='BackgroundImageFix'/>
+                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
+                            <feGaussianBlur stdDeviation='25' result='effect1_foregroundBlur_3412_5336'/>
+                            </filter>
+                            <clipPath id='clip0_3412_5336'>
+                            <rect width='19.2' height='19.2' fill='white' transform='translate(51 60)'/>
+                            </clipPath>
+                            </defs>
+                            </svg>"
+                                    )
+                                },
+                                {Header: "Safety",
+                                    Info: "Your employees learn by example. If they don’t see you practicing good safety habits, they won’t think safety is important.",
+                                    Icon:"data:image/svg+xml;utf8, "&EncodeUrl("<svg width='140' height='140' viewBox='0 0 140 140' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                            <g filter='url(#filter0_f_3412_5346)'>
+                            <rect x='50' y='50' width='40' height='40' fill='#237FEA'/>
+                            </g>
+                            <path d='M70.7466 74.2C70.6755 74.2 70.6065 74.1866 70.5396 74.16C70.4728 74.1333 70.4129 74.0933 70.3599 74.04L67.1466 70.6933C67.0843 70.6311 67.0331 70.5466 66.993 70.44C66.9528 70.3333 66.9329 70.2355 66.9332 70.1466C66.9332 69.9422 67.0067 69.7666 67.1535 69.6197C67.3003 69.4729 67.4758 69.3996 67.6799 69.4H68.7999C69.271 69.4 69.6778 69.2466 70.0202 68.9397C70.3626 68.6329 70.5691 68.253 70.6399 67.8H66.9332C66.7821 67.8 66.6554 67.7488 66.553 67.6464C66.4506 67.544 66.3995 67.4174 66.3999 67.2666C66.3999 67.1155 66.4511 66.9888 66.5535 66.8864C66.6559 66.784 66.7825 66.733 66.9332 66.7333H70.4799C70.3288 66.4222 70.1043 66.1666 69.8063 65.9664C69.5083 65.7662 69.1729 65.6663 68.7999 65.6666H66.9332C66.7821 65.6666 66.6554 65.6154 66.553 65.513C66.4506 65.4106 66.3995 65.2841 66.3999 65.1333C66.3999 64.9822 66.4511 64.8554 66.5535 64.753C66.6559 64.6506 66.7825 64.5996 66.9332 64.6H72.2666C72.4177 64.6 72.5444 64.6512 72.6468 64.7536C72.7492 64.856 72.8003 64.9826 72.7999 65.1333C72.7999 65.2844 72.7487 65.4112 72.6463 65.5136C72.5439 65.616 72.4173 65.667 72.2666 65.6666H71.0666C71.191 65.8178 71.3021 65.9822 71.3999 66.16C71.4977 66.3378 71.5732 66.5289 71.6266 66.7333H72.2666C72.4177 66.7333 72.5444 66.7845 72.6468 66.8869C72.7492 66.9893 72.8003 67.1159 72.7999 67.2666C72.7999 67.4178 72.7487 67.5445 72.6463 67.6469C72.5439 67.7493 72.4173 67.8003 72.2666 67.8H71.7199C71.6488 68.5555 71.3377 69.189 70.7866 69.7002C70.2355 70.2115 69.5732 70.467 68.7999 70.4666H68.4132L71.1332 73.2933C71.2932 73.4622 71.3267 73.6556 71.2335 73.8736C71.1403 74.0915 70.978 74.2003 70.7466 74.2Z' fill='white'/>
+                            <rect x='60.8' y='60.8' width='17.6' height='17.6' rx='8.8' stroke='white' stroke-width='1.6'/>
+                            <defs>
+                            <filter id='filter0_f_3412_5346' x='0' y='0' width='140' height='140' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+                            <feFlood flood-opacity='0' result='BackgroundImageFix'/>
+                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
+                            <feGaussianBlur stdDeviation='25' result='effect1_foregroundBlur_3412_5346'/>
+                            </filter>
+                            </defs>
+                            </svg>
+                            ")},
+                                {Header: "Relatablity",
+                                    Info: "Being considered reliable means that you are conscientious and keep your promises. A reliable person does not make excuses",
+                                    Icon:"data:image/svg+xml;utf8, "&EncodeUrl("<svg width='140' height='140' viewBox='0 0 140 140' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                            <g filter='url(#filter0_f_3412_5513)'>
+                            <rect x='50' y='50' width='40' height='40' fill='#237FEA'/>
+                            </g>
+                            <path d='M64.1667 74.1667H63.3334C62.8914 74.1667 62.4675 73.9911 62.1549 73.6785C61.8423 73.366 61.6667 72.942 61.6667 72.5V64.1667C61.6667 63.7246 61.8423 63.3007 62.1549 62.9882C62.4675 62.6756 62.8914 62.5 63.3334 62.5H76.6667C77.1088 62.5 77.5327 62.6756 77.8453 62.9882C78.1578 63.3007 78.3334 63.7246 78.3334 64.1667V72.5C78.3334 72.942 78.1578 73.366 77.8453 73.6785C77.5327 73.9911 77.1088 74.1667 76.6667 74.1667H75.8334' stroke='white' stroke-width='2.18182' stroke-linecap='round' stroke-linejoin='round'/>
+                            <path d='M69.9999 72.5L74.1666 77.5H65.8333L69.9999 72.5Z' stroke='white' stroke-width='2.18182' stroke-linecap='round' stroke-linejoin='round'/>
+                            <defs>
+                            <filter id='filter0_f_3412_5513' x='0' y='0' width='140' height='140' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+                            <feFlood flood-opacity='0' result='BackgroundImageFix'/>
+                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
+                            <feGaussianBlur stdDeviation='25' result='effect1_foregroundBlur_3412_5513'/>
+                            </filter>
+                            </defs>
+                            </svg>
+                            ")},
+                            {Header: "Solution",
+                                    Info: "Always look at the solution, not the problem. Learn to focus on what will give results",
+                                    Icon:"data:image/svg+xml;utf8, "&EncodeUrl("<svg width='140' height='140' viewBox='0 0 140 140' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                            <g filter='url(#filter0_f_3412_5513)'>
+                            <rect x='50' y='50' width='40' height='40' fill='#237FEA'/>
+                            </g>
+                            <path d='M64.1667 74.1667H63.3334C62.8914 74.1667 62.4675 73.9911 62.1549 73.6785C61.8423 73.366 61.6667 72.942 61.6667 72.5V64.1667C61.6667 63.7246 61.8423 63.3007 62.1549 62.9882C62.4675 62.6756 62.8914 62.5 63.3334 62.5H76.6667C77.1088 62.5 77.5327 62.6756 77.8453 62.9882C78.1578 63.3007 78.3334 63.7246 78.3334 64.1667V72.5C78.3334 72.942 78.1578 73.366 77.8453 73.6785C77.5327 73.9911 77.1088 74.1667 76.6667 74.1667H75.8334' stroke='white' stroke-width='2.18182' stroke-linecap='round' stroke-linejoin='round'/>
+                            <path d='M69.9999 72.5L74.1666 77.5H65.8333L69.9999 72.5Z' stroke='white' stroke-width='2.18182' stroke-linecap='round' stroke-linejoin='round'/>
+                            <defs>
+                            <filter id='filter0_f_3412_5513' x='0' y='0' width='140' height='140' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+                            <feFlood flood-opacity='0' result='BackgroundImageFix'/>
+                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
+                            <feGaussianBlur stdDeviation='25' result='effect1_foregroundBlur_3412_5513'/>
+                            </filter>
+                            </defs>
+                            </svg>
+                            ")}
+                            )
+                        LoadingSpinner: =LoadingSpinner.Data
+                        Selectable: =false
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Switch(App.ActiveScreen.Size,1,50,2,100,3,150,4,220)
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Image3_1 As image:
+                            Height: =54
+                            Image: =ThisItem.Icon
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =76
+                            X: =57
+                            Y: =12
+                            ZIndex: =1
+
+                        Title1_1 As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Semibold
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =ThisItem.Header
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - 64
+                            X: =28
+                            Y: =82
+                            ZIndex: =2
+
+                        Subtitle1_1 As label:
+                            Align: =Align.Center
+                            Color: =RGBA(128, 128, 128, 1)
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =76
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =9
+                            Text: =ThisItem.Info
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =182
+                            X: =4
+                            Y: =122
+                            ZIndex: =3
+
+                        Button2_1 As button:
+                            Fill: =Color.Transparent
+                            Height: =216
+                            OnSelect: =Select(Parent)
+                            Text: =""
+                            Width: =171
+                            X: =4
+                            ZIndex: =4
+
+            Container8 As groupContainer.horizontalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Visible: =If(Screen2.Size=1,false,true)
+                Width: =Parent.Width/3
+                ZIndex: =2
+
+                Image4 As image:
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =1
+                    Height: =Parent.Height
+                    Image: ='image-removebg-preview'
+                    Width: =
+                    ZIndex: =1
+
+    cont_Main_persona As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.63)
+        Height: =Parent.Height
+        Visible: |
+            =Var_Persona
+        Width: =Parent.Width
+        ZIndex: =2
+
+        cont_subMainPersona As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =470
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =12
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =40
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =15
+            Width: =If(App.ActiveScreen.Size=1,387,450)
+            X: =(Parent.Width-Self.Width)/2
+            Y: =If(App.ActiveScreen.Size=1,(Parent.Height-Self.Height),(Parent.Height-Self.Height)/2)
+            ZIndex: =1
+
+            cont_logIn As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height/5.5
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =0
+                LayoutMinWidth: =0
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingTop: =8
+                ZIndex: =1
+
+                lbl_LogIn As label:
+                    FontWeight: =FontWeight.Semibold
+                    Size: =18
+                    Text: ="Log In As"
+                    ZIndex: =1
+
+                Lbl_Size As label:
+                    Text: ="Select Your Size"
+                    ZIndex: =2
+
+            "gal_personaSize As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DelayItemLoading: =true
+                Height: =Parent.Height/5.5
+                Items: |-
+                    =[{
+                        ID:1,
+                        Title:"Employee",
+                        Img:"data:image/svg+xml;utf8, "&EncodeUrl("<svg width='38' height='37' viewBox='0 0 38 37' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <rect x='0.734375' y='0.234375' width='36.5312' height='36.5312' rx='8' fill='#E9F2FD'/>
+                    <path d='M27.477 28.2167C27.477 27.2862 27.477 26.3576 27.477 25.4271C27.477 24.9314 27.4853 24.44 27.3389 23.959C27.0692 23.0681 26.4188 22.2944 25.5656 21.9117C24.7396 21.5395 23.9093 21.1735 23.0812 20.8033C22.64 20.6068 22.2008 20.4102 21.7596 20.2136C21.6864 20.1802 21.6132 20.1467 21.54 20.1153C21.3099 20.015 21.0674 19.9961 20.8457 20.1279C20.7871 20.1634 20.7307 20.2073 20.6868 20.2617C20.6554 20.2994 20.6282 20.337 20.5989 20.3767C19.9946 21.1547 19.3902 21.9347 18.7858 22.7126C18.7691 22.7336 18.7524 22.7566 18.7356 22.7775C19.0096 22.813 19.2835 22.8486 19.5575 22.8841C18.995 22.148 18.4324 21.414 17.8699 20.6779C17.7904 20.5733 17.7088 20.4688 17.6294 20.3621C17.5541 20.2638 17.5018 20.1948 17.3952 20.13C17.1714 19.994 16.9267 20.017 16.6988 20.1174C16.6779 20.1279 16.6549 20.1362 16.634 20.1467C16.268 20.3098 15.8999 20.4729 15.534 20.634C14.6013 21.048 13.6665 21.4621 12.7338 21.8761C12.0855 22.1647 11.5355 22.6353 11.1779 23.2543C10.9186 23.7039 10.7743 24.2058 10.7409 24.7223C10.7325 24.8582 10.7346 24.9963 10.7346 25.1322C10.7346 26.1339 10.7346 27.1356 10.7346 28.1373C10.7346 28.1645 10.7346 28.1896 10.7346 28.2167C10.7346 28.4907 10.9751 28.7521 11.2574 28.7396C11.5397 28.727 11.7802 28.5095 11.7802 28.2167C11.7802 27.3092 11.7802 26.4016 11.7802 25.4961C11.7802 25.3225 11.7802 25.1468 11.7802 24.9733C11.7802 24.9419 11.7802 24.9084 11.7802 24.8771C11.7802 24.8164 11.7844 24.7537 11.7886 24.693C11.7928 24.6449 11.8283 24.4818 11.7907 24.6512C11.8158 24.5446 11.8283 24.4337 11.8576 24.3271C11.8869 24.2204 11.9224 24.1179 11.9601 24.0155C11.9747 23.9778 12.004 23.9527 11.9412 24.0573C11.9559 24.0322 11.9663 24.0029 11.9789 23.9757C12.004 23.9214 12.0312 23.8691 12.0604 23.8189C12.1085 23.7332 12.1608 23.6495 12.2173 23.568C12.234 23.5449 12.2549 23.5219 12.2696 23.4968C12.2047 23.6098 12.2236 23.5554 12.2507 23.5219C12.2905 23.4718 12.3344 23.4237 12.3783 23.3776C12.4452 23.3045 12.5184 23.2375 12.5937 23.1727C12.6167 23.1539 12.6397 23.1351 12.6627 23.1162C12.692 23.0912 12.7296 23.0849 12.6272 23.1434C12.6794 23.1142 12.7255 23.0723 12.7736 23.0389C12.9032 22.9531 13.0391 22.8799 13.1793 22.8172C13.9865 22.4554 14.7979 22.0978 15.6072 21.7402C16.0547 21.5416 16.5022 21.3429 16.9497 21.1442C17.0397 21.1045 17.1296 21.0648 17.2195 21.025C17.2216 21.025 17.2237 21.0229 17.2258 21.0229C17.2592 21.0083 17.2425 21.0334 17.1296 21.0648C16.9435 21.117 16.8264 21.0208 16.7218 20.8891C16.726 20.8954 16.7322 20.9016 16.7364 20.91C16.7699 20.9539 16.8033 20.9978 16.8368 21.0397C17.4265 21.8113 18.0163 22.583 18.6081 23.3546C18.6227 23.3756 18.6394 23.3944 18.6541 23.4153C18.7586 23.5512 18.8611 23.6411 19.0368 23.6641C19.1853 23.683 19.3776 23.6474 19.4759 23.5199C20.0322 22.8026 20.5885 22.0853 21.1447 21.3701C21.2367 21.253 21.3413 21.1379 21.4208 21.0146C21.425 21.0083 21.4333 21.002 21.4354 20.9957C21.4501 20.9748 21.4291 20.9895 21.3727 21.0376C21.3016 21.0773 21.1887 21.0836 21.1092 21.0668C21.0172 21.048 20.9795 21.0104 21.0172 21.025C21.0444 21.0376 21.0736 21.0501 21.1008 21.0627C21.4731 21.2279 21.8453 21.3952 22.2175 21.5604C23.1293 21.9661 24.0411 22.3739 24.9529 22.7796C25.1222 22.8548 25.2854 22.9364 25.4401 23.0389C25.4882 23.0702 25.5363 23.1142 25.5865 23.1434C25.5802 23.1392 25.4861 23.0619 25.5509 23.1162C25.574 23.1351 25.597 23.1539 25.62 23.1727C25.7015 23.2438 25.781 23.3191 25.8542 23.4007C25.8876 23.4362 25.919 23.4738 25.9504 23.5115C25.9796 23.547 26.0089 23.6202 25.942 23.4989C25.9546 23.5199 25.9713 23.5387 25.9859 23.5575C26.0508 23.6495 26.1114 23.7457 26.1658 23.8461C26.1888 23.89 26.2118 23.9339 26.2327 23.9778C26.2452 24.0029 26.2536 24.0343 26.2703 24.0594C26.2661 24.0531 26.2222 23.936 26.2515 24.0155C26.2933 24.1263 26.3331 24.2392 26.3623 24.3543C26.3874 24.4525 26.3979 24.5508 26.4209 24.6491C26.3812 24.4797 26.4188 24.6428 26.423 24.6909C26.4272 24.7516 26.4314 24.8122 26.4314 24.875C26.4334 24.9795 26.4314 25.0862 26.4314 25.1907C26.4314 26.1757 26.4314 27.1607 26.4314 28.1477C26.4314 28.1728 26.4314 28.1958 26.4314 28.2209C26.4314 28.4949 26.6718 28.7563 26.9542 28.7437C27.2386 28.727 27.477 28.5095 27.477 28.2167Z' fill='#237FEA'/>
+                    <path d='M19.6276 28.2166C19.6276 27.6457 19.6276 27.0748 19.6276 26.5039C19.6276 25.5942 19.6276 24.6846 19.6276 23.7749C19.6276 23.5658 19.6276 23.3566 19.6276 23.1475C19.6276 22.8736 19.3872 22.6122 19.1048 22.6247C18.8225 22.6372 18.582 22.8547 18.582 23.1475C18.582 23.7184 18.582 24.2893 18.582 24.8602C18.582 25.7699 18.582 26.6796 18.582 27.5893C18.582 27.7984 18.582 28.0075 18.582 28.2166C18.582 28.4906 18.8225 28.752 19.1048 28.7394C19.3872 28.7269 19.6276 28.5094 19.6276 28.2166Z' fill='#237FEA'/>
+                    <path d='M22.3678 15.3975C22.3678 15.4205 22.3657 15.4435 22.3636 15.4665C22.3594 15.5356 22.3929 15.3264 22.3657 15.4268C22.3552 15.4707 22.3427 15.5146 22.328 15.5565C22.3113 15.6025 22.2758 15.6338 22.3406 15.5335C22.3301 15.5502 22.3218 15.5732 22.3134 15.5899C22.2841 15.6464 22.2507 15.7029 22.2151 15.7551C22.2026 15.7719 22.1879 15.7886 22.1775 15.8074C22.236 15.707 22.2256 15.7489 22.2005 15.776C22.1649 15.8158 22.1315 15.8534 22.0938 15.8911C22.0792 15.9057 22.0645 15.9183 22.0499 15.9329C22.0415 15.9392 22.0353 15.9454 22.0269 15.9517C21.9851 15.9873 21.9976 15.9768 22.0645 15.9245C22.0269 15.9392 21.983 15.9747 21.9474 15.9977C21.799 16.0897 21.7446 16.2194 21.6818 16.372C21.6651 16.4118 21.64 16.4536 21.6317 16.4954C21.6588 16.3679 21.6505 16.4494 21.6317 16.4912C21.6233 16.5122 21.6149 16.531 21.6045 16.5519C21.5794 16.6063 21.5543 16.6606 21.5292 16.715C21.4393 16.9011 21.341 17.0852 21.2322 17.2629C21.1841 17.3424 21.1339 17.4218 21.0817 17.4971C21.0524 17.539 21.0231 17.5808 20.9938 17.6226C20.9813 17.6393 20.9708 17.6561 20.9583 17.6707C20.9457 17.6874 20.9332 17.7021 20.9227 17.7188C20.9374 17.7 20.952 17.6791 20.9687 17.6602C20.8349 17.8024 20.7199 17.9593 20.5798 18.0952C20.5191 18.1538 20.4564 18.2102 20.3916 18.2646C20.356 18.2939 20.2222 18.3775 20.3665 18.2855C20.3288 18.3106 20.2933 18.3399 20.2556 18.365C20.1887 18.411 20.1197 18.4549 20.0486 18.4946C20.0089 18.5176 19.9712 18.5386 19.9294 18.5574C19.9127 18.5657 19.898 18.5741 19.8813 18.5804C19.8646 18.5887 19.7516 18.6348 19.8457 18.5971C19.9399 18.5595 19.8081 18.6118 19.7851 18.6201C19.7433 18.6348 19.7015 18.6494 19.6596 18.6619C19.5739 18.687 19.4881 18.71 19.4003 18.7247C19.3836 18.7289 19.3648 18.731 19.348 18.733C19.2497 18.7519 19.4631 18.7226 19.394 18.7268C19.3543 18.731 19.3125 18.7351 19.2728 18.7393C19.1807 18.7456 19.0887 18.7477 18.9967 18.7435C18.9507 18.7414 18.9068 18.7372 18.8608 18.733C18.842 18.731 18.8252 18.7289 18.8064 18.7268C18.9653 18.7393 18.8921 18.7393 18.8524 18.731C18.7604 18.7121 18.6705 18.6954 18.5785 18.6682C18.5011 18.6452 18.4279 18.618 18.3526 18.5887C18.2752 18.5595 18.4007 18.6097 18.4049 18.6097C18.3861 18.5992 18.3631 18.5908 18.3442 18.5825C18.3003 18.5616 18.2564 18.5386 18.2125 18.5156C18.1414 18.4779 18.0724 18.4361 18.0034 18.3901C17.9657 18.365 17.9281 18.3399 17.8905 18.3127C17.8758 18.3022 17.8612 18.2897 17.8465 18.2792C17.9804 18.3629 17.8863 18.3106 17.8549 18.2834C17.7106 18.1663 17.5768 18.0367 17.4534 17.9007C17.3948 17.8359 17.3363 17.7669 17.2819 17.6979C17.2735 17.6874 17.2108 17.608 17.2673 17.6812C17.3237 17.7543 17.2631 17.6728 17.2526 17.6623C17.2233 17.6226 17.192 17.5808 17.1648 17.539C17.0498 17.3717 16.9431 17.1981 16.8448 17.0203C16.7884 16.9179 16.734 16.8112 16.6838 16.7066C16.6587 16.6523 16.6336 16.5979 16.6085 16.5435C16.6002 16.5226 16.5897 16.5038 16.5813 16.4829C16.573 16.462 16.5646 16.4431 16.5542 16.4222C16.5625 16.4431 16.573 16.4641 16.5813 16.4871C16.5688 16.4285 16.5291 16.3595 16.5061 16.303C16.4433 16.1504 16.3618 16.05 16.2196 15.9643C16.1986 15.9517 16.1819 15.9392 16.161 15.9266C16.1296 15.9036 16.1443 15.9162 16.2091 15.9643C16.1945 15.9517 16.1777 15.9392 16.1631 15.9266C16.1255 15.8932 16.0878 15.8555 16.0544 15.8179C16.0397 15.8032 16.0272 15.7865 16.0125 15.7698C15.9435 15.6945 16.0815 15.8681 16.0063 15.7614C15.9728 15.7133 15.9414 15.6631 15.9142 15.6108C15.9038 15.592 15.8954 15.5732 15.885 15.5544C15.8327 15.4603 15.9184 15.6568 15.8891 15.5648C15.8745 15.5209 15.8661 15.4289 15.841 15.3913C15.8452 15.3975 15.8494 15.5293 15.8494 15.4456C15.8494 15.4143 15.8473 15.385 15.8473 15.3536C15.8473 15.3411 15.8557 15.224 15.8473 15.3223C15.839 15.4164 15.8599 15.2909 15.8641 15.2721C15.8745 15.2261 15.908 15.2323 15.841 15.3181C15.8536 15.3013 15.8682 15.27 15.8787 15.2491C15.9226 15.1696 15.8034 15.3202 15.8494 15.2867C15.8578 15.2783 15.8661 15.27 15.8745 15.2616C15.9142 15.2261 15.8975 15.2386 15.8243 15.2972C16.0293 15.1466 16.1087 14.9563 16.0648 14.7074C16.0502 14.6217 16.0355 14.5339 16.023 14.4481C16.0188 14.4209 16.0146 14.3958 16.0104 14.3687C16.0021 14.3059 16.0146 14.4084 16.0167 14.4084C16.0042 14.4042 16 14.2641 15.9979 14.2495C15.977 14.0654 15.9623 13.8793 15.954 13.6953C15.9414 13.392 15.9435 13.0867 15.9686 12.7835C15.9728 12.7229 15.9791 12.6601 15.9874 12.5995C15.9895 12.5807 15.9895 12.5618 15.9937 12.5451C15.9958 12.5346 15.9749 12.6727 15.9833 12.6162C15.9895 12.5807 15.9937 12.5451 16 12.5096C16.0188 12.3945 16.0418 12.2795 16.069 12.1666C16.0962 12.0558 16.1275 11.947 16.1652 11.8404C16.1819 11.7923 16.1986 11.7463 16.2175 11.6982C16.2635 11.5831 16.2112 11.7295 16.2028 11.7295C16.2049 11.7295 16.2363 11.6542 16.2405 11.648C16.2844 11.556 16.3304 11.466 16.3827 11.3803C16.4057 11.3406 16.4308 11.3029 16.4559 11.2653C16.4684 11.2485 16.4789 11.2318 16.4914 11.2151C16.504 11.1963 16.5709 11.1105 16.5061 11.1942C16.4454 11.2736 16.4998 11.2025 16.5165 11.1837C16.5291 11.167 16.5437 11.1523 16.5562 11.1377C16.5897 11.1001 16.6232 11.0624 16.6587 11.0269C16.7256 10.96 16.7946 10.8972 16.8678 10.8387C16.9369 10.7822 16.7988 10.8889 16.826 10.87C16.8448 10.8575 16.8637 10.8428 16.8825 10.8282C16.9201 10.801 16.9599 10.7738 16.9996 10.7487C17.0811 10.6985 17.1648 10.6505 17.2505 10.6086C17.2903 10.5877 17.3321 10.5689 17.3739 10.5522C17.4722 10.5082 17.2631 10.5961 17.3363 10.5689C17.3635 10.5584 17.3886 10.548 17.4157 10.5375C17.5078 10.5041 17.6019 10.4727 17.696 10.4455C17.7984 10.4162 17.9009 10.3911 18.0055 10.3702C18.0557 10.3598 18.1058 10.3514 18.156 10.343C18.1832 10.3389 18.2104 10.3347 18.2376 10.3305C18.2648 10.3263 18.3777 10.3117 18.2752 10.3242C18.1707 10.3389 18.2815 10.3242 18.3024 10.3221C18.3275 10.32 18.3526 10.3159 18.3756 10.3138C18.4342 10.3075 18.4927 10.3033 18.5513 10.2991C18.6726 10.2908 18.7939 10.2845 18.9152 10.2824C19.1619 10.2761 19.4087 10.2824 19.6534 10.2991C19.7077 10.3033 19.7621 10.3075 19.8165 10.3138C19.8457 10.3159 19.8729 10.32 19.9022 10.3221C19.9273 10.3242 20.0319 10.3389 19.9294 10.3242C19.8248 10.3096 19.9315 10.3242 19.9566 10.3284C19.9838 10.3326 20.011 10.3368 20.0381 10.3409C20.0925 10.3493 20.1469 10.3598 20.1992 10.3702C20.3999 10.41 20.5986 10.4643 20.7889 10.5375C20.8119 10.5459 20.8349 10.5563 20.8579 10.5647C20.9499 10.6003 20.7471 10.5145 20.8203 10.548C20.8642 10.5689 20.9102 10.5877 20.9541 10.6086C21.0398 10.6505 21.1235 10.6985 21.205 10.7487C21.2427 10.7717 21.2782 10.7968 21.3138 10.8219C21.3326 10.8345 21.3514 10.8491 21.3703 10.8638C21.4246 10.9014 21.2573 10.7717 21.3431 10.8428C21.4121 10.9014 21.4811 10.96 21.5438 11.0248C21.5773 11.0582 21.6087 11.0938 21.64 11.1293C21.6526 11.144 21.6672 11.1607 21.6798 11.1753C21.6944 11.1921 21.7613 11.2778 21.6965 11.1942C21.6358 11.1147 21.6902 11.1879 21.7048 11.2067C21.7174 11.2234 21.7299 11.2402 21.7404 11.2569C21.7697 11.3008 21.799 11.3447 21.8261 11.3907C21.8763 11.4744 21.9223 11.5601 21.9642 11.6501C21.9746 11.6731 21.9851 11.6982 21.9955 11.7212C22.0143 11.7609 21.96 11.648 21.9642 11.648C21.9663 11.648 21.9788 11.6835 21.9809 11.6898C22.0018 11.74 22.0206 11.7902 22.0374 11.8424C22.1126 12.0641 22.167 12.2942 22.2047 12.5242C22.2088 12.5514 22.213 12.5786 22.2172 12.6037C22.2297 12.6936 22.2005 12.474 22.2151 12.5869C22.2235 12.6518 22.2297 12.7187 22.2339 12.7835C22.2465 12.9236 22.2527 13.0616 22.2548 13.2017C22.2611 13.551 22.2444 13.9023 22.2047 14.2495C22.2005 14.2955 22.1942 14.3415 22.1879 14.3896C22.1816 14.4523 22.1942 14.3519 22.1942 14.3498C22.1984 14.3603 22.1858 14.4147 22.1837 14.4293C22.1691 14.5234 22.1545 14.6154 22.1377 14.7095C22.0938 14.9626 22.1754 15.1508 22.3782 15.2992C22.3699 15.293 22.2841 15.2135 22.328 15.2637C22.3406 15.2783 22.3929 15.339 22.3364 15.2658C22.2737 15.1842 22.3489 15.3076 22.3636 15.3223C22.351 15.3076 22.3239 15.2072 22.3406 15.2762C22.3448 15.2951 22.351 15.3139 22.3552 15.3327C22.3782 15.4226 22.351 15.2365 22.3531 15.3055C22.3636 15.339 22.3678 15.3683 22.3678 15.3975C22.3719 15.6715 22.6062 15.9329 22.8906 15.9203C23.1708 15.9078 23.4176 15.6903 23.4134 15.3975C23.4092 15.1863 23.3695 14.9897 23.2775 14.7994C23.1959 14.6321 23.0641 14.5109 22.9178 14.4042C22.9972 14.6008 23.0788 14.7974 23.1582 14.9939C23.382 13.7266 23.4364 12.3297 22.8822 11.1356C22.4849 10.2803 21.7048 9.70312 20.8119 9.4459C20.3225 9.3037 19.8018 9.24933 19.2937 9.23678C18.7667 9.22423 18.2355 9.25978 17.719 9.36644C16.803 9.55465 15.9686 10.0461 15.4772 10.8575C15.2179 11.282 15.061 11.7734 14.9857 12.2628C14.8791 12.9424 14.877 13.6304 14.9565 14.3143C14.9836 14.5401 15.015 14.7681 15.0547 14.9918C15.1342 14.7953 15.2158 14.5987 15.2952 14.4021C15.0757 14.5631 14.9146 14.7618 14.8456 15.0295C14.7808 15.2804 14.785 15.5607 14.8665 15.8074C15.0108 16.2487 15.3266 16.6774 15.7407 16.9011C15.6612 16.7966 15.5796 16.692 15.5002 16.5895C15.9937 17.8505 16.7821 19.0906 18.0912 19.6093C18.6684 19.8393 19.348 19.856 19.9399 19.6762C20.5505 19.4901 21.0879 19.1095 21.5125 18.6389C22.0499 18.0408 22.4284 17.3361 22.7191 16.5895C22.6396 16.6941 22.5581 16.7987 22.4786 16.9011C23.0035 16.6188 23.405 15.9956 23.4176 15.3975C23.4238 15.1236 23.1729 14.8622 22.8948 14.8747C22.602 14.8894 22.374 15.1048 22.3678 15.3975Z' fill='#237FEA'/>
+                    <path d='M15.9141 14.4377C15.9999 14.2412 16.0961 14.0488 16.2048 13.8648C16.2654 13.7602 16.3303 13.6577 16.4014 13.5594C16.4369 13.5072 16.4767 13.4591 16.5122 13.4068C16.4118 13.5469 16.4913 13.436 16.5164 13.4047C16.5373 13.3796 16.5582 13.3545 16.5791 13.3315C16.6649 13.2332 16.7548 13.1391 16.8531 13.0492C16.9012 13.0032 16.9535 12.9613 17.0036 12.9195C17.0998 12.8421 16.9179 12.9802 16.9995 12.9216C17.0267 12.9028 17.0538 12.8819 17.0831 12.8631C17.196 12.7857 17.3152 12.7167 17.4407 12.6581C17.4846 12.6372 17.5787 12.6226 17.4407 12.656C17.4742 12.6477 17.5076 12.6288 17.5411 12.6184C17.6143 12.5933 17.6896 12.5703 17.7628 12.5515C17.5662 12.472 17.3696 12.3904 17.173 12.311C17.4073 12.6351 17.7188 12.8902 18.043 13.1182C18.7624 13.6201 19.6281 13.9212 20.4897 14.0613C21.253 14.1847 22.0205 14.2056 22.7901 14.1387C23.0619 14.1157 23.3254 13.9149 23.3129 13.6159C23.3003 13.3524 23.0828 13.068 22.7901 13.0931C22.1397 13.1496 21.4998 13.1328 20.8515 13.068C20.8431 13.068 20.977 13.0847 20.9205 13.0764C20.9059 13.0743 20.8933 13.0722 20.8787 13.0701C20.841 13.0638 20.8055 13.0596 20.7679 13.0534C20.7009 13.0429 20.634 13.0304 20.5671 13.0178C20.4437 12.9948 20.3224 12.9676 20.2011 12.9362C19.9774 12.8798 19.7578 12.8129 19.5424 12.7313C19.4964 12.7146 19.4483 12.6958 19.4023 12.6769C19.3918 12.6728 19.3835 12.6686 19.373 12.6644C19.3019 12.6351 19.4462 12.6937 19.4399 12.6937C19.4148 12.6874 19.3897 12.6707 19.3646 12.6602C19.2768 12.6205 19.189 12.5786 19.1032 12.5347C18.9569 12.4594 18.8126 12.3758 18.6745 12.2859C18.6118 12.2461 18.5512 12.2043 18.4926 12.1604C18.4675 12.1416 18.4424 12.1186 18.4173 12.1039C18.4299 12.1123 18.5449 12.2043 18.478 12.1499C18.4654 12.1395 18.4508 12.129 18.4382 12.1186C18.3567 12.0517 18.2772 11.9826 18.2019 11.9095C18.1475 11.8572 18.0953 11.8028 18.0472 11.7442C18.0346 11.7275 18.0221 11.7108 18.0074 11.6961C17.9823 11.669 18.1162 11.8384 18.0744 11.7819C17.9342 11.5895 17.7251 11.4787 17.4846 11.5414C16.3135 11.8467 15.4833 12.838 15.0149 13.9087C14.9563 14.0425 14.9229 14.1659 14.9626 14.3123C14.9961 14.4336 15.0902 14.5653 15.2031 14.6239C15.4269 14.7431 15.797 14.7033 15.9141 14.4377Z' fill='#237FEA'/>
+                    </svg>
+                    ")
+                    },{
+                         ID:2,
+                        Title:"Manager",
+                        Img:"data:image/svg+xml;utf8, "&EncodeUrl("<svg width='38' height='37' viewBox='0 0 38 37' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <rect x='0.734375' y='0.234375' width='36.5312' height='36.5312' rx='8' fill='#E9F2FD'/>
+                    <path d='M18.8501 15.2948C20.8664 15.2948 22.5009 13.6618 22.5009 11.6474C22.5009 9.63305 20.8664 8.00006 18.8501 8.00006C16.8338 8.00006 15.1992 9.63305 15.1992 11.6474C15.1992 13.6618 16.8338 15.2948 18.8501 15.2948Z' stroke='#237FEA' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+                    <path d='M27.674 23.7972L18.8491 28.0002L10 23.7972C10.9188 19.7634 14.5212 16.744 18.8249 16.744C23.1527 16.7682 26.7552 19.7634 27.674 23.7972Z' stroke='#237FEA' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+                    <path d='M18.8503 26.1645L20.0591 24.7394L19.3822 19.1596H18.9228H18.7535H18.2942L17.6172 24.7394L18.8503 26.1645Z' stroke='#237FEA' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+                    <path d='M19.72 19.0149H17.9551L17.2539 16.9376H20.4212L19.72 19.0149Z' stroke='#237FEA' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+                    </svg>
+                    ")
+                    },]
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =230
+                LayoutMinWidth: =0
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =
+                TemplateSize: =If(App.ActiveScreen.Size=1,Self.Width/2.19,Self.Width/2.17)
+                Width: =(Parent.Width-38)
+                WrapCount: =2
+                ZIndex: =2
+
+                cont_personaSize As groupContainer.manualLayoutContainer:
+                    Height: =188.94009216589862
+                    Width: =176
+                    X: =12
+                    ZIndex: =3
+
+                    btn_Trans As button:
+                        Fill: =Color.Transparent
+                        Height: =188
+                        Text: =""
+                        Width: =176
+                        ZIndex: =1
+
+            btn_contine As button:
+                Fill: |-
+                    =ColorValue("#237FEA")
+                Height: =45
+                Size: =20
+                Text: ="Continue"
+                Width: =Parent.Width-30
+                ZIndex: =3
+

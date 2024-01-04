@@ -1,0 +1,81 @@
+{
+  "ad35ed50-698e-48be-9427-a782a1a80ec5": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
+        "dataSources": {
+          "OM__RAAG_Oil_RDG_Condensate_Dispatch": {
+            "tableName": "04fe44fc-925f-42fd-8939-e0030d12e972"
+          },
+          "OM_Crude_oil_sales_pipeline_inventory": {
+            "tableName": "76fafcc9-4a35-4e9a-aef4-429922668f73"
+          },
+          "OM_Jaipur_Terminal": {
+            "tableName": "0f72268f-7585-4c7e-9b8c-db6ab769ffbd"
+          },
+          "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal": {
+            "tableName": "8f991d0b-8bdc-4ed7-9552-0d2e4839c60f"
+          },
+          "OM_Sales_to_Jaipur_Terminal": {
+            "tableName": "3171c2a3-6648-4928-8a22-6273a09a06f3"
+          },
+          "OM_Sales_to_Jaisalmer": {
+            "tableName": "b61ec1a3-2d58-4643-badd-8624b9df72e9"
+          },
+          "OM_User_Iist": {
+            "tableName": "bdebf089-d249-47e7-8bd7-7f722206dd0a"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "OM__RAAG_Oil_RDG_Condensate_Dispatch",
+      "OM_Sales_to_Jaisalmer",
+      "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal",
+      "OM_Crude_oil_sales_pipeline_inventory",
+      "OM_Sales_to_Jaipur_Terminal",
+      "OM_Jaipur_Terminal",
+      "OM_User_Iist"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ad35ed50-698e-48be-9427-a782a1a80ec5"
+  },
+  "c5b2dfc5-6ce6-40d7-bfda-6011ac1e7b4a": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
+        "dataSources": {
+          "OM_MPT_Crude_Oil": {
+            "tableName": "e669dd0c-ee73-4283-b68a-66ab20e292e7"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "OM_MPT_Crude_Oil"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c5b2dfc5-6ce6-40d7-bfda-6011ac1e7b4a"
+  }
+}

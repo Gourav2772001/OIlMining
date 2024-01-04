@@ -1,0 +1,81 @@
+"'Home Page Screen' As screen":
+    BackgroundImage: ='7f951bda68241a57aa84929a95f120f9f082a9a0-1440x1054'
+    Fill: =RGBA(175, 191, 224, 1)
+    ImagePosition: =ImagePosition.Fill
+
+    con_main1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.ExtraBold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height-150
+        Width: =If(App.ActiveScreen.Size=1,Parent.Width-40,Parent.Width-200)
+        X: =(Parent.Height-Self.Height)/2+30
+        Y: =(Parent.Height-Self.Height)/2
+        ZIndex: =1
+
+        Container2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Height: =97
+            LayoutGap: =15
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =Parent.Width-80
+            X: =57
+            Y: =96
+            ZIndex: =1
+
+            Container3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =1
+
+            Container5 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =2
+
+            Container12 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =3
+
+            Container14 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =4
+
+            Container17 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =5
+
+    Container1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =318
+        Width: =68
+        X: =72
+        Y: =(Parent.Height-Self.Height)/2
+        ZIndex: =3
+
+        NevigationBar_1 As NevigationBar:
+            backGroundColor: =RGBA(85,74,216,255)
+            Height: =313
+            height_1: =Parent.Height-350
+            nevWidth: =Parent.Width
+            Width: =64
+            X: =3
+            Y: =
+

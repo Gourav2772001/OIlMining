@@ -1,0 +1,98 @@
+NevigationBar As CanvasComponent:
+    backGroundColor: =RGBA(208, 162, 247,1)
+    Fill: =Color.Transparent
+    Height: =NevigationBar.height_1
+    height_1: =768
+    NevMenu: |-
+        =Table(
+            {
+                ID: 1,
+                Img: "data:image/svg+xml;utf8, "&EncodeUrl(" <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-house' viewBox='0 0 16 16'>
+          <path d='M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z'/>
+        </svg>"),
+                Lbl: "Home",
+                Screen: App.ActiveScreen
+              
+            },
+            {
+                ID: 2,
+                Img: "data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-grid-fill' viewBox='0 0 16 16'>
+          <path d='M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z'/>
+        </svg>"),
+                Lbl:"DashBord",
+        
+                Screen: App.ActiveScreen
+             
+            },
+            {
+                ID: 3,
+                Img: "data:image/svg+xml;utf8, "&EncodeUrl("
+        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
+          <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/>
+        </svg>"),
+                Lbl: "Search",
+                Screen: App.ActiveScreen
+             
+            }
+           
+        )
+    nevWidth: =60
+    Width: =NevigationBar.nevWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    con_mainNev As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =If(IsBlank(NevigationBar.backGroundColor),RGBA(85,74,216,255),NevigationBar.backGroundColor)
+        Height: =Parent.Height
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =Parent.Width
+        ZIndex: =1
+
+        "gal_mainNev As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            DelayItemLoading: =true
+            Height: =Parent.Height
+            Items: =NevigationBar.NevMenu
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =70
+            Width: =Parent.Width
+            Y: =Parent.Height/35
+            ZIndex: =1
+
+            Container10 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =70
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Circle3 As circle:
+                    Fill: =RGBA(97,86,233,255)
+                    Height: =55
+                    Visible: =If(ThisItem.IsSelected,true,false)
+                    Width: =54
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =1
+
+                Image5 As image:
+                    Height: =30
+                    Image: =ThisItem.Img
+                    RadiusBottomLeft: =40
+                    RadiusBottomRight: =40
+                    RadiusTopLeft: =40
+                    RadiusTopRight: =40
+                    Width: =45
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =2
+
