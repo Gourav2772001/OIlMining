@@ -73,22 +73,44 @@
                 Width: =Parent.Width*.3
                 ZIndex: =1
 
-                gal_TabItems As gallery.variableTemplateHeightGallery:
+                gal_tempTabItems As gallery.variableTemplateHeightGallery:
                     DelayItemLoading: =true
                     Height: =Parent.Height-Self.Y
                     Items: =temp_Tabs
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =99
+                    TemplateFill: =If(ThisItem.IsSelected,Color.Lavender,RGBA(0, 0, 0, 0))
+                    TemplateSize: =83
                     Width: =409
                     ZIndex: =1
 
-                    lbl_TabItems As label:
+                    lbl_TabItemstemp As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Bold
                         OnSelect: =Select(Parent)
+                        Size: =18
                         Text: =ThisItem.Name
                         Width: =Parent.TemplateWidth
-                        Y: =10
+                        Y: =20
                         ZIndex: =1
+
+                    rect_tabItemGal As rectangle:
+                        Height: =7
+                        OnSelect: =Select(Parent)
+                        Visible: =If(ThisItem.IsSelected,true,false)
+                        Width: =Parent.TemplateWidth
+                        Y: =72
+                        ZIndex: =2
+
+                    btn_galTabSelecteds As button:
+                        Fill: =RGBA(56, 96, 178, 0)
+                        Height: =Parent.TemplateHeight
+                        HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
+                        OnSelect: =Select(Parent)
+                        PressedFill: =Self.Fill
+                        Text: =""
+                        Width: =Parent.TemplateWidth
+                        ZIndex: =3
 
             cont_rightContent As groupContainer.manualLayoutContainer:
                 Height: =Parent.Height
