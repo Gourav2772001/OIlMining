@@ -1,0 +1,100 @@
+"'Form Screen' As screen":
+
+    cont_MainFormScreen As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        cont_HeaderRegionalForm_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =Parent.Height*.1
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            Y: =5
+            ZIndex: =1
+
+            img_oilLogoHeader_2 As image:
+                Height: =Parent.Height
+                Image: ='9d2ea1b508c12a7d974e238d426589ad-removebg-preview'
+                ImagePosition: =ImagePosition.Fill
+                Width: =Parent.Height
+                ZIndex: =1
+
+            lbl_RegionalForm_LogoHeader_2 As label:
+                AlignInContainer: =AlignInContainer.Center
+                AutoHeight: =true
+                Color: =RGBA(39, 67, 125, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                Text: ="Fueling Progress, Powering Tomorrow"
+                Width: =Parent.Width*.2
+                ZIndex: =2
+
+            lbl_LoggedInUserName_2 As label:
+                Align: =Align.Right
+                AlignInContainer: =AlignInContainer.Center
+                Color: =RGBA(39, 67, 125, 1)
+                FillPortions: =1
+                FontWeight: =FontWeight.Bold
+                Height: =Parent.Height
+                Size: =18
+                Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
+                Width: =Parent.Width*.5
+                ZIndex: =3
+
+            img_RegionalForm_UserImage_2 As image:
+                AlignInContainer: =AlignInContainer.Center
+                Height: =Parent.Height
+                Image: =User().Image
+                RadiusBottomLeft: =1000
+                RadiusBottomRight: =1000
+                RadiusTopLeft: =1000
+                RadiusTopRight: =1000
+                Width: =Parent.Height
+                ZIndex: =4
+
+        cont_ContentFormScreen As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =Parent.Height*.9
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            cont_leftContent As groupContainer.manualLayoutContainer:
+                FillPortions: =0
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =Parent.Width*.3
+                ZIndex: =1
+
+                gal_TabItems As gallery.variableTemplateHeightGallery:
+                    DelayItemLoading: =true
+                    Height: =Parent.Height-Self.Y
+                    Items: =temp_Tabs
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =280
+                    Width: =Parent.Width
+                    Y: =10
+                    ZIndex: =1
+
+                    lbl_TabItems As label:
+                        OnSelect: =Select(Parent)
+                        Text: =ThisItem.Name
+                        X: =28
+                        Y: =24
+                        ZIndex: =1
+
+            cont_rightContent As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =Parent.Width*.7
+                ZIndex: =2
+
