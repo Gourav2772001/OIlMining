@@ -59,6 +59,7 @@ NevigationBar As CanvasComponent:
             Items: =NevigationBar.NevMenu
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: =Navigate(ThisItem.Screen,ScreenTransition.Cover)
             TemplatePadding: =0
             TemplateSize: =70
             Width: =Parent.Width
@@ -78,6 +79,7 @@ NevigationBar As CanvasComponent:
                 Circle3 As circle:
                     Fill: =RGBA(97,86,233,255)
                     Height: =55
+                    OnSelect: =Navigate(ThisItem.Screen,ScreenTransition.Cover)
                     Visible: =If(ThisItem.IsSelected,true,false)
                     Width: =54
                     X: =(Parent.Width-Self.Width)/2
@@ -87,6 +89,7 @@ NevigationBar As CanvasComponent:
                 Image5 As image:
                     Height: =30
                     Image: =ThisItem.Img
+                    OnSelect: =Navigate(ThisItem.Screen,ScreenTransition.Cover)
                     RadiusBottomLeft: =40
                     RadiusBottomRight: =40
                     RadiusTopLeft: =40

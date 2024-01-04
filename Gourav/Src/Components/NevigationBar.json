@@ -16,7 +16,14 @@
                 "ControlPropertyState": [
                   "ItemAccessibleLabel",
                   "TemplateFill",
-                  "OnSelect"
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "false",
+                    "InvariantPropertyName": "OnSelect",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  }
                 ],
                 "ControlUniqueId": "7",
                 "HasDynamicProperties": false,
@@ -48,9 +55,9 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "false",
+                    "InvariantScript": "Navigate(ThisItem.Screen,ScreenTransition.Cover)",
                     "Property": "OnSelect",
-                    "RuleProviderType": "Unknown"
+                    "RuleProviderType": "User"
                   }
                 ],
                 "StyleName": "defaultGalleryTemplateStyle",
@@ -130,6 +137,14 @@
                         "AutoRuleBindingEnabled": false,
                         "AutoRuleBindingString": "true",
                         "InvariantPropertyName": "Visible",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "false",
+                        "InvariantPropertyName": "OnSelect",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
                       }
@@ -238,6 +253,12 @@
                         "Category": "Design",
                         "InvariantScript": "If(ThisItem.IsSelected,true,false)",
                         "Property": "Visible",
+                        "RuleProviderType": "User"
+                      },
+                      {
+                        "Category": "Behavior",
+                        "InvariantScript": "Navigate(ThisItem.Screen,ScreenTransition.Cover)",
+                        "Property": "OnSelect",
                         "RuleProviderType": "User"
                       }
                     ],
@@ -359,7 +380,15 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingBottom",
-                      "PaddingLeft"
+                      "PaddingLeft",
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "false",
+                        "InvariantPropertyName": "OnSelect",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      }
                     ],
                     "ControlUniqueId": "10",
                     "HasDynamicProperties": false,
@@ -550,6 +579,12 @@
                         "InvariantScript": "0",
                         "Property": "PaddingLeft",
                         "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Behavior",
+                        "InvariantScript": "Navigate(ThisItem.Screen,ScreenTransition.Cover)",
+                        "Property": "OnSelect",
+                        "RuleProviderType": "User"
                       }
                     ],
                     "StyleName": "defaultImageStyle",
@@ -1361,7 +1396,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638399690921729359",
+    "LastModifiedTimestamp": "638399702941480304",
     "Name": "NevigationBar",
     "Rules": [
       {
@@ -1483,7 +1518,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638399690921729359",
+  "LastModifiedTimestamp": "638399702941480304",
   "Name": "8d8acd61e3154144836005b40fe0806e",
   "OverridableProperties": {},
   "Version": "1.0"
