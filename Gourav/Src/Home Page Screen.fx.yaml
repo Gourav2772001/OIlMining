@@ -82,15 +82,16 @@
                 Height: =Parent.Height
                 Size: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,13,25)
                 Text: ="Welcome " & ComboBox1.Selected.Title & " 👋"
-                Width: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,100,450)
+                Width: =If( App.ActiveScreen.Size=2 ||App.ActiveScreen.Size=1,220,450)
                 ZIndex: =1
 
             lbl_flex As label:
                 FillPortions: =1
                 Height: =Parent.Height
                 LayoutMinWidth: =0
-                Text: ="text"
-                Visible: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,false,true)
+                Text: =""
+                Visible: =If( App.ActiveScreen.Size=1,false,true)
+                Width: =If(App.ActiveScreen.Size=1,25,If( App.ActiveScreen.Size=2,50,150))
                 ZIndex: =2
 
             con_notification As groupContainer.manualLayoutContainer:
@@ -144,4 +145,8 @@
         X: =72
         Y: =(Parent.Height-Self.Height)/2
         ZIndex: =3
+
+        NevigationBar_1 As NevigationBar:
+            Height: =318
+            Width: =NevigationBar_1.nevWidth
 
