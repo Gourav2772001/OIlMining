@@ -79,16 +79,15 @@
                     Items: =temp_Tabs
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =280
-                    Width: =Parent.Width
-                    Y: =10
+                    TemplateSize: =99
+                    Width: =409
                     ZIndex: =1
 
                     lbl_TabItems As label:
                         OnSelect: =Select(Parent)
                         Text: =ThisItem.Name
-                        X: =28
-                        Y: =24
+                        Width: =Parent.TemplateWidth
+                        Y: =10
                         ZIndex: =1
 
             cont_rightContent As groupContainer.manualLayoutContainer:
