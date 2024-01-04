@@ -9,6 +9,16 @@ App As appinfo:
             {Name: "Summary"},
             {Name:"Dispatch Form"},
             {Name:"Cargo Form"}
+        );
+        
+            ClearCollect(
+            temp_Tabs,
+            {Name: "Sales"},
+            {Name: "Crude Oil"},
+            {Name: "Inventory"},
+            {Name: "Summary"},
+            {Name:"Dispatch Form"},
+            {Name:"Cargo Form"}
         )
     Theme: =PowerAppsTheme
 
