@@ -1334,6 +1334,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard22.DataCardValue128.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard22.DataCardValue128.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard22.DataCardValue128"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue129.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue129.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue129"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Jaipur.form_Cargo_Jaipur.Cumulative_Till_Date_DataCard2.DataCardValue132.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Jaipur.form_Cargo_Jaipur.Cumulative_Till_Date_DataCard2.DataCardValue132.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Jaipur.form_Cargo_Jaipur.Cumulative_Till_Date_DataCard2.DataCardValue132"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Jaipur.form_Cargo_Jaipur.Title_DataCard23.DataCardValue131.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Jaipur.form_Cargo_Jaipur.Title_DataCard23.DataCardValue131.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Jaipur.form_Cargo_Jaipur.Title_DataCard23.DataCardValue131"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Dispatch_Kota.form_Dispatch_Kota.Title_DataCard21.DataCardValue119.AccessibleLabel"
                 }
               ],
@@ -3670,7 +3790,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Form Screen\" is 504, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Form Screen\" is 532, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
