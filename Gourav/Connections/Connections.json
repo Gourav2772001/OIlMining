@@ -24,6 +24,9 @@
           "OM_Jaipur_Terminal": {
             "tableName": "0f72268f-7585-4c7e-9b8c-db6ab769ffbd"
           },
+          "OM_Kota_Terminal": {
+            "tableName": "b35977ab-7fc3-4a92-a25c-e7cd3cd2ac97"
+          },
           "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal": {
             "tableName": "8f991d0b-8bdc-4ed7-9552-0d2e4839c60f"
           },
@@ -42,6 +45,9 @@
           "OM_Sales_to_Udaipur_Terminal": {
             "tableName": "ffeef10a-8099-4334-8592-a6d961a502b8"
           },
+          "OM_Udaipur_Terminal": {
+            "tableName": "7d242b65-ab05-47e2-a594-199ff86c998e"
+          },
           "OM_User_Iist": {
             "tableName": "bdebf089-d249-47e7-8bd7-7f722206dd0a"
           }
@@ -58,7 +64,9 @@
       "OM_User_Iist",
       "OM_Sales_to_Jodhpur",
       "OM_Sales_to_Udaipur_Terminal",
-      "OM_Sales_to_Kota_Terminal"
+      "OM_Sales_to_Kota_Terminal",
+      "OM_Udaipur_Terminal",
+      "OM_Kota_Terminal"
     ],
     "dependencies": {},
     "dependents": [],
