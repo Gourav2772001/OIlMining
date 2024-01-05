@@ -36,6 +36,9 @@
           "OM_Sales_to_Jodhpur": {
             "tableName": "dc2155c4-91ff-4d6e-95a2-08c63309e76d"
           },
+          "OM_Sales_to_Kota_Terminal": {
+            "tableName": "38514817-4818-46a2-9352-39cb8974da0f"
+          },
           "OM_Sales_to_Udaipur_Terminal": {
             "tableName": "ffeef10a-8099-4334-8592-a6d961a502b8"
           },
@@ -54,7 +57,8 @@
       "OM_Jaipur_Terminal",
       "OM_User_Iist",
       "OM_Sales_to_Jodhpur",
-      "OM_Sales_to_Udaipur_Terminal"
+      "OM_Sales_to_Udaipur_Terminal",
+      "OM_Sales_to_Kota_Terminal"
     ],
     "dependencies": {},
     "dependents": [],

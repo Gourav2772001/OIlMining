@@ -524,6 +524,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Shortfall_Excess_NetMonth_DataCard5.DataCardValue64.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Shortfall_Excess_NetMonth_DataCard5.DataCardValue64.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Shortfall_Excess_NetMonth_DataCard5.DataCardValue64"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jodhpur.form_SalesOf_Jodhpur.Net_Sales_DataCard5.DataCardValue54.AccessibleLabel"
                 }
               ],
@@ -2066,6 +2096,336 @@
                 "member": "AccessibleLabel",
                 "module": "Form Screen",
                 "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jodhpur.form_SalesOf_Jodhpur.Title_DataCard10.DataCardValue52"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Density_15C_DataCard6.DataCardValue63.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Density_15C_DataCard6.DataCardValue63.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Density_15C_DataCard6.DataCardValue63"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.BS_W_DataCard8.DataCardValue62.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.BS_W_DataCard8.DataCardValue62.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.BS_W_DataCard8.DataCardValue62"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Net_Sales_DataCard6.DataCardValue61.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Net_Sales_DataCard6.DataCardValue61.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Net_Sales_DataCard6.DataCardValue61"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Gross_Sales_DataCard6.DataCardValue60.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Gross_Sales_DataCard6.DataCardValue60.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Gross_Sales_DataCard6.DataCardValue60"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Title_DataCard11.DataCardValue59.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Title_DataCard11.DataCardValue59.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Kota.form_SalesOf_Kota.Title_DataCard11.DataCardValue59"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Density_15C_DataCard7.DataCardValue71.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Density_15C_DataCard7.DataCardValue71.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Density_15C_DataCard7.DataCardValue71"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Shortfall_Excess_NetMonth_DataCard6.DataCardValue70.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Shortfall_Excess_NetMonth_DataCard6.DataCardValue70.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Shortfall_Excess_NetMonth_DataCard6.DataCardValue70"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.BS_W_DataCard9.DataCardValue69.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.BS_W_DataCard9.DataCardValue69.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.BS_W_DataCard9.DataCardValue69"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Net_Sales_DataCard7.DataCardValue68.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Net_Sales_DataCard7.DataCardValue68.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Net_Sales_DataCard7.DataCardValue68"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Gross_Sales_DataCard7.DataCardValue67.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Gross_Sales_DataCard7.DataCardValue67.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Gross_Sales_DataCard7.DataCardValue67"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Title_DataCard12.DataCardValue66.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Title_DataCard12.DataCardValue66.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaisalmer.form_SalesOf_Jaisalmer.Title_DataCard12.DataCardValue66"
               }
             }
           ],
