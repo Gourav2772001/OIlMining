@@ -2494,6 +2494,73 @@
                         Y: =10
                         ZIndex: =1
 
+                        Gross_Volume_pumped_DataCard3 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Volume_pumped"
+                            Default: =ThisItem.Gross_Volume_pumped
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Gross_Volume_pumped")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue74.Text)
+                            Width: =477
+                            X: =-477
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey74 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue74 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey74.Y + DataCardKey74.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage74 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue74.Y + DataCardValue74.Height
+                                ZIndex: =3
+
+                            StarVisible74 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey74.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey74.Y
+                                ZIndex: =4
+
                         Title_DataCard13 As typedDataCard.textualEditCard:
                             BorderStyle: =BorderStyle.Solid
                             DataField: ="Title"
@@ -2562,207 +2629,6 @@
                                 Y: =DataCardKey73.Y
                                 ZIndex: =4
 
-                        Gross_Volume_pumped_DataCard3 As typedDataCard.numberEditCard:
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="Gross_Volume_pumped"
-                            Default: =ThisItem.Gross_Volume_pumped
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Gross_Volume_pumped")
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =50
-                            Required: =false
-                            Update: =Value(DataCardValue74.Text)
-                            Width: =477
-                            X: =1
-                            Y: =0
-                            ZIndex: =2
-
-                            DataCardKey74 As label:
-                                AutoHeight: =true
-                                Height: =34
-                                Text: =Parent.DisplayName
-                                Width: =Parent.Width - 60
-                                Wrap: =false
-                                X: =30
-                                Y: =10
-                                ZIndex: =1
-
-                            DataCardValue74 As text:
-                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                Default: =Parent.Default
-                                DelayOutput: =true
-                                DisplayMode: =Parent.DisplayMode
-                                Format: =TextFormat.Number
-                                PaddingLeft: =5
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
-                                Tooltip: =Parent.DisplayName
-                                Width: =Parent.Width - 60
-                                X: =30
-                                Y: =DataCardKey74.Y + DataCardKey74.Height + 5
-                                ZIndex: =2
-
-                            ErrorMessage74 As label:
-                                AutoHeight: =true
-                                Height: =10
-                                Live: =Live.Assertive
-                                PaddingBottom: =0
-                                PaddingLeft: =0
-                                PaddingRight: =0
-                                PaddingTop: =0
-                                Text: =Parent.Error
-                                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                Width: =Parent.Width - 60
-                                X: =30
-                                Y: =DataCardValue74.Y + DataCardValue74.Height
-                                ZIndex: =3
-
-                            StarVisible74 As label:
-                                Align: =Align.Center
-                                Height: =DataCardKey74.Height
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                Wrap: =false
-                                Y: =DataCardKey74.Y
-                                ZIndex: =4
-
-                        "' Total_Nomination_DataCard1' As typedDataCard.numberEditCard":
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="Total_Nomination"
-                            Default: =ThisItem.' Total_Nomination'
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Total_Nomination")
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =50
-                            Required: =false
-                            Update: =Value(DataCardValue75.Text)
-                            Width: =477
-                            X: =0
-                            Y: =1
-                            ZIndex: =2
-
-                            DataCardKey75 As label:
-                                AutoHeight: =true
-                                Height: =34
-                                Text: =Parent.DisplayName
-                                Width: =Parent.Width - 60
-                                Wrap: =false
-                                X: =30
-                                Y: =10
-                                ZIndex: =1
-
-                            DataCardValue75 As text:
-                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                Default: =Parent.Default
-                                DelayOutput: =true
-                                DisplayMode: =Parent.DisplayMode
-                                Format: =TextFormat.Number
-                                PaddingLeft: =5
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
-                                Tooltip: =Parent.DisplayName
-                                Width: =Parent.Width - 60
-                                X: =30
-                                Y: =DataCardKey75.Y + DataCardKey75.Height + 5
-                                ZIndex: =2
-
-                            ErrorMessage75 As label:
-                                AutoHeight: =true
-                                Height: =10
-                                Live: =Live.Assertive
-                                PaddingBottom: =0
-                                PaddingLeft: =0
-                                PaddingRight: =0
-                                PaddingTop: =0
-                                Text: =Parent.Error
-                                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                Width: =Parent.Width - 60
-                                X: =30
-                                Y: =DataCardValue75.Y + DataCardValue75.Height
-                                ZIndex: =3
-
-                            StarVisible75 As label:
-                                Align: =Align.Center
-                                Height: =DataCardKey75.Height
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                Wrap: =false
-                                Y: =DataCardKey75.Y
-                                ZIndex: =4
-
-                        Total_Gross_Pumped_DataCard3 As typedDataCard.numberEditCard:
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="Total_Gross_Pumped"
-                            Default: =ThisItem.Total_Gross_Pumped
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Total_Gross_Pumped")
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =50
-                            Required: =false
-                            Update: =Value(DataCardValue76.Text)
-                            Width: =477
-                            X: =1
-                            Y: =1
-                            ZIndex: =2
-
-                            DataCardKey76 As label:
-                                AutoHeight: =true
-                                Height: =34
-                                Text: =Parent.DisplayName
-                                Width: =Parent.Width - 60
-                                Wrap: =false
-                                X: =30
-                                Y: =10
-                                ZIndex: =1
-
-                            DataCardValue76 As text:
-                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                Default: =Parent.Default
-                                DelayOutput: =true
-                                DisplayMode: =Parent.DisplayMode
-                                Format: =TextFormat.Number
-                                PaddingLeft: =5
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
-                                Tooltip: =Parent.DisplayName
-                                Width: =Parent.Width - 60
-                                X: =30
-                                Y: =DataCardKey76.Y + DataCardKey76.Height + 5
-                                ZIndex: =2
-
-                            ErrorMessage76 As label:
-                                AutoHeight: =true
-                                Height: =10
-                                Live: =Live.Assertive
-                                PaddingBottom: =0
-                                PaddingLeft: =0
-                                PaddingRight: =0
-                                PaddingTop: =0
-                                Text: =Parent.Error
-                                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                Width: =Parent.Width - 60
-                                X: =30
-                                Y: =DataCardValue76.Y + DataCardValue76.Height
-                                ZIndex: =3
-
-                            StarVisible76 As label:
-                                Align: =Align.Center
-                                Height: =DataCardKey76.Height
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                Wrap: =false
-                                Y: =DataCardKey76.Y
-                                ZIndex: =4
-
                         RAAG_Oil_RDG_DataCard3 As typedDataCard.numberEditCard:
                             BorderStyle: =BorderStyle.Solid
                             DataField: ="RAAG_Oil_RDG"
@@ -2774,8 +2640,8 @@
                             Required: =false
                             Update: =Value(DataCardValue77.Text)
                             Width: =477
-                            X: =0
-                            Y: =2
+                            X: =-1908
+                            Y: =0
                             ZIndex: =2
 
                             DataCardKey77 As label:
@@ -2830,22 +2696,22 @@
                                 Y: =DataCardKey77.Y
                                 ZIndex: =4
 
-                        Attachments_DataCard6 As typedDataCard.attachmentsEditCard:
+                        Total_Gross_Pumped_DataCard3 As typedDataCard.numberEditCard:
                             BorderStyle: =BorderStyle.Solid
-                            DataField: ="{Attachments}"
-                            Default: =ThisItem.Attachments
+                            DataField: ="Total_Gross_Pumped"
+                            Default: =ThisItem.Total_Gross_Pumped
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"{Attachments}")
+                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Total_Gross_Pumped")
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =50
                             Required: =false
-                            Update: =DataCardValue78.Attachments
+                            Update: =Value(DataCardValue76.Text)
                             Width: =477
-                            X: =1
-                            Y: =2
+                            X: =-1431
+                            Y: =0
                             ZIndex: =2
 
-                            DataCardKey78 As label:
+                            DataCardKey76 As label:
                                 AutoHeight: =true
                                 Height: =34
                                 Text: =Parent.DisplayName
@@ -2855,22 +2721,24 @@
                                 Y: =10
                                 ZIndex: =1
 
-                            DataCardValue78 As attachments:
+                            DataCardValue76 As text:
                                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
                                 DisplayMode: =Parent.DisplayMode
-                                IsInDataCard: =true
-                                Items: =Parent.Default
-                                PaddingBottom: =5
-                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                PaddingRight: =5
-                                PaddingTop: =5
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
                                 Tooltip: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 X: =30
-                                Y: =DataCardKey78.Y + DataCardKey78.Height + 5
+                                Y: =DataCardKey76.Y + DataCardKey76.Height + 5
                                 ZIndex: =2
 
-                            ErrorMessage78 As label:
+                            ErrorMessage76 As label:
                                 AutoHeight: =true
                                 Height: =10
                                 Live: =Live.Assertive
@@ -2882,17 +2750,84 @@
                                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                                 Width: =Parent.Width - 60
                                 X: =30
-                                Y: =DataCardValue78.Y + DataCardValue78.Height
+                                Y: =DataCardValue76.Y + DataCardValue76.Height
                                 ZIndex: =3
 
-                            StarVisible78 As label:
+                            StarVisible76 As label:
                                 Align: =Align.Center
-                                Height: =DataCardKey78.Height
+                                Height: =DataCardKey76.Height
                                 Text: ="*"
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =30
                                 Wrap: =false
-                                Y: =DataCardKey78.Y
+                                Y: =DataCardKey76.Y
+                                ZIndex: =4
+
+                        "' Total_Nomination_DataCard1' As typedDataCard.numberEditCard":
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Total_Nomination"
+                            Default: =ThisItem.' Total_Nomination'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Total_Nomination")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue75.Text)
+                            Width: =477
+                            X: =-954
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey75 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue75 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey75.Y + DataCardKey75.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage75 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue75.Y + DataCardValue75.Height
+                                ZIndex: =3
+
+                            StarVisible75 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey75.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey75.Y
                                 ZIndex: =4
 
                     cont_CrudeOil_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
@@ -2911,6 +2846,262 @@
 
                         btn_CrudeOil_Jaipur As button:
                             OnSelect: =SubmitForm(form_CrudeOil_Jaipur);ResetForm(form_CrudeOil_Jaipur)
+                            Text: ="Save"
+                            ZIndex: =1
+
+                cont_InventoryJaipur As groupContainer.verticalAutoLayoutContainer:
+                    BorderThickness: =1
+                    Fill: =RGBA(241, 244, 249, 1)
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: |-
+                        =If(
+                            gal_tempTabItems.Selected.Name = "Inventory" && selectedData="Gourav Kumar",
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width
+                    ZIndex: =8
+
+                    form_InventoryJaipur As form:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderThickness: =2
+                        DataSource: =OM_Crude_oil_sales_pipeline_inventory
+                        DefaultMode: =FormMode.New
+                        FillPortions: =0
+                        Height: =Parent.Height*.7
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        NumberOfColumns: =2
+                        OnSuccess: =ResetForm(form_InventoryJaipur)
+                        Width: =Parent.Width
+                        X: =10
+                        Y: =10
+                        ZIndex: =1
+
+                        Title_DataCard14 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Crude_oil_sales_pipeline_inventory],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@OM_Crude_oil_sales_pipeline_inventory], DataSourceInfo.MaxLength, "Title")
+                            Required: =false
+                            Update: =DataCardValue44.Text
+                            Width: =477
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey44 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue44 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey44.Y + DataCardKey44.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage44 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue44.Y + DataCardValue44.Height
+                                ZIndex: =3
+
+                            StarVisible44 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey44.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey44.Y
+                                ZIndex: =4
+
+                        Sales_Value_DataCard2 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Sales_Value"
+                            Default: =ThisItem.Sales_Value
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Crude_oil_sales_pipeline_inventory],DataSourceInfo.DisplayName,"Sales_Value")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue51.Text)
+                            Width: =477
+                            X: =1
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey51 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue51 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey51.Y + DataCardKey51.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage51 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue51.Y + DataCardValue51.Height
+                                ZIndex: =3
+
+                            StarVisible51 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey51.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey51.Y
+                                ZIndex: =4
+
+                        Nomination_Met_DataCard2 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Nomination_Met"
+                            Default: =ThisItem.Nomination_Met
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Crude_oil_sales_pipeline_inventory],DataSourceInfo.DisplayName,"Nomination_Met")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue58.Text)
+                            Width: =477
+                            X: =0
+                            Y: =1
+                            ZIndex: =2
+
+                            DataCardKey58 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue58 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey58.Y + DataCardKey58.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage58 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue58.Y + DataCardValue58.Height
+                                ZIndex: =3
+
+                            StarVisible58 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey58.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey58.Y
+                                ZIndex: =4
+
+                    cont_Inventory_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Fill: =Parent.Fill
+                        FillPortions: =0
+                        Height: =Parent.Height*.2
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        btn_Inventory_Jaipur As button:
+                            OnSelect: =SubmitForm(form_InventoryJaipur);ResetForm(form_InventoryJaipur)
                             Text: ="Save"
                             ZIndex: =1
 
