@@ -29126,7 +29126,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DataSource",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "OM__RAAG_Oil_RDG_Condensate_Dispatch",
+          "InvariantPropertyName": "DataSource",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

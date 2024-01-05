@@ -82,7 +82,7 @@
 
         Form1 As form:
             AlignInContainer: =AlignInContainer.SetByContainer
-            DataSource: =OM__RAAG_Oil_RDG_Condensate_Dispatch
+            DataSource: =OM__Jaipur_Oil_RDG_Condensate_Dispatch
             DefaultMode: =FormMode.New
             LayoutMinHeight: =250
             LayoutMinWidth: =400
@@ -1447,7 +1447,7 @@
                     ZIndex: =4
 
         Form5 As form:
-            DataSource: =OM__RAAG_Oil_RDG_Condensate_Dispatch
+            DataSource: =OM__Jaipur_Oil_RDG_Condensate_Dispatch
             DefaultMode: =FormMode.New
             LayoutMinHeight: =250
             LayoutMinWidth: =400

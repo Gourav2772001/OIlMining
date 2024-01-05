@@ -15,8 +15,17 @@
     "datasets": {
       "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
         "dataSources": {
-          "OM__RAAG_Oil_RDG_Condensate_Dispatch": {
+          "OM__Jaipur_Oil_RDG_Condensate_Dispatch": {
             "tableName": "04fe44fc-925f-42fd-8939-e0030d12e972"
+          },
+          "OM__Jaisalmer_Oil_RDG_Condensate_Dispatch": {
+            "tableName": "64f6960a-9eee-41c0-a2f5-1f555a1f2849"
+          },
+          "OM__Jodhpur_Oil_RDG_Condensate_Dispatch": {
+            "tableName": "7dd62dc1-8457-4a2a-a379-b1885c531de0"
+          },
+          "OM__Kota_Oil_RDG_Condensate_Dispatch": {
+            "tableName": "ac455880-7418-43c1-95e7-bbfb6ed30962"
           },
           "OM_Crude_oil_sales_pipeline_inventory": {
             "tableName": "76fafcc9-4a35-4e9a-aef4-429922668f73"
@@ -29,6 +38,12 @@
           },
           "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal": {
             "tableName": "8f991d0b-8bdc-4ed7-9552-0d2e4839c60f"
+          },
+          "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1": {
+            "tableName": "8f991d0b-8bdc-4ed7-9552-0d2e4839c60f"
+          },
+          "OM_Nos_of_Cargo_Loaded_from_Kota_Terminal": {
+            "tableName": "e0203a43-f0d1-464c-8d4c-fe98c1422cff"
           },
           "OM_Sales_to_Jaipur_Terminal": {
             "tableName": "3171c2a3-6648-4928-8a22-6273a09a06f3"
@@ -55,7 +70,6 @@
       }
     },
     "dataSources": [
-      "OM__RAAG_Oil_RDG_Condensate_Dispatch",
       "OM_Sales_to_Jaisalmer",
       "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal",
       "OM_Crude_oil_sales_pipeline_inventory",
@@ -66,7 +80,13 @@
       "OM_Sales_to_Udaipur_Terminal",
       "OM_Sales_to_Kota_Terminal",
       "OM_Udaipur_Terminal",
-      "OM_Kota_Terminal"
+      "OM_Kota_Terminal",
+      "OM__Jaipur_Oil_RDG_Condensate_Dispatch",
+      "OM__Jaisalmer_Oil_RDG_Condensate_Dispatch",
+      "OM__Jodhpur_Oil_RDG_Condensate_Dispatch",
+      "OM__Kota_Oil_RDG_Condensate_Dispatch",
+      "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1",
+      "OM_Nos_of_Cargo_Loaded_from_Kota_Terminal"
     ],
     "dependencies": {},
     "dependents": [],

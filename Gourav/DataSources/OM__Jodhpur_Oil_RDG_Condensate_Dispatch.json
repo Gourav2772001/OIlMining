@@ -45,7 +45,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "OM__RAAG_Oil_RDG_Condensate_Dispatch",
+    "Name": "OM__Jodhpur_Oil_RDG_Condensate_Dispatch",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
