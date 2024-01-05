@@ -2443,6 +2443,186 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Attachments_DataCard6.DataCardValue78.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Attachments_DataCard6.DataCardValue78.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Attachments_DataCard6.DataCardValue78"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.RAAG_Oil_RDG_DataCard3.DataCardValue77.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.RAAG_Oil_RDG_DataCard3.DataCardValue77.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.RAAG_Oil_RDG_DataCard3.DataCardValue77"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Total_Gross_Pumped_DataCard3.DataCardValue76.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Total_Gross_Pumped_DataCard3.DataCardValue76.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Total_Gross_Pumped_DataCard3.DataCardValue76"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.' Total_Nomination_DataCard1'.DataCardValue75.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.' Total_Nomination_DataCard1'.DataCardValue75.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.' Total_Nomination_DataCard1'.DataCardValue75"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Gross_Volume_pumped_DataCard3.DataCardValue74.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Gross_Volume_pumped_DataCard3.DataCardValue74.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Gross_Volume_pumped_DataCard3.DataCardValue74"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Title_DataCard13.DataCardValue73.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Title_DataCard13.DataCardValue73.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_CrudeOil_Jaipur.form_CrudeOil_Jaipur.Title_DataCard13.DataCardValue73"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.user_data"
                 }
               ],
