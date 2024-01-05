@@ -136,6 +136,12 @@
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    Visible: |-
+                        =If(
+                            gal_tempTabItems.Selected.Name = "Sales",
+                            true,
+                            false
+                        )
                     Width: =Parent.Width
                     ZIndex: =1
 
@@ -149,6 +155,13 @@
                         LayoutMinHeight: =250
                         LayoutMinWidth: =400
                         NumberOfColumns: =2
+                        OnSuccess: =ResetForm(form_SalesOf_Jaipur_1)
+                        Visible: |-
+                            =If(
+                                selectedData="Gourav Kumar",
+                                true,
+                                false
+                            )
                         Width: =Parent.Width
                         X: =10
                         Y: =10
@@ -567,10 +580,51 @@
                         LayoutMinHeight: =
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
+                        Visible: |-
+                            =If(
+                                selectedData="Gourav Kumar",
+                                true,
+                                false
+                            )
                         Width: =Parent.Width
                         ZIndex: =2
 
                         btn_SalesJaipur As button:
-                            Text: ="Button"
+                            OnSelect: =SubmitForm(form_SalesOf_Jaipur_1);ResetForm(form_SalesOf_Jaipur_1)
+                            Text: ="Save"
                             ZIndex: =1
+
+                    cont_NoFormToDisplay As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Visible: |-
+                            =If(
+                                First(userData1).Location = "Jodhpur" && (gal_tempTabItems.Selected.Name ="Summary" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                            
+                                true,
+                            
+                                First(userData1).Location = "Jaisalmer" && (gal_tempTabItems.Selected.Name ="Summary" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                            
+                                true,
+                                false
+                            )
+                        Width: =Parent.Width
+                        ZIndex: =3
+
+                        ico_noForm As icon.CancelBadge:
+                            Icon: =Icon.CancelBadge
+                            ZIndex: =1
+
+                        lbl_NoFormText As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Bold
+                            Text: ="You are not authorized to access this form"
+                            Width: =Parent.Width
+                            ZIndex: =2
 
