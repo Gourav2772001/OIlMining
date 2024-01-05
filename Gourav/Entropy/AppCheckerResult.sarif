@@ -2714,19 +2714,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard22.DataCardValue128.AccessibleLabel"
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard4.DataCardValue16.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard22.DataCardValue128.AccessibleLabel",
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard4.DataCardValue16.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard22.DataCardValue128"
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Title_DataCard4.DataCardValue16"
               }
             }
           ],
@@ -2744,19 +2744,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue129.AccessibleLabel"
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue17.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue129.AccessibleLabel",
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue17.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue129"
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_Cargo_Kota.form_Cargo_Kota.Cumulative_Till_Date_DataCard1.DataCardValue17"
               }
             }
           ],
