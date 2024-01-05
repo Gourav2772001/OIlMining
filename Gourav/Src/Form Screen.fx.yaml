@@ -607,11 +607,11 @@
                         
                             true,
                         
-                            First(userData1).Location = "Udaipur" && (gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                            First(userData1).Location = "Udaipur" && (gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Dispatch Form"),
                         
                             true,
                         
-                            First(userData1).Location = "Kota" && (gal_tempTabItems.Selected.Name ="Dispatch Form" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                            First(userData1).Location = "Kota" && ( gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
                         
                             true,
                         
@@ -1100,7 +1100,7 @@
                     LayoutMode: =LayoutMode.Auto
                     Visible: |-
                         =If(
-                            gal_tempTabItems.Selected.Name = "Sales" && selectedData="Rahul Choudhary",
+                            gal_tempTabItems.Selected.Name = "Sales" && selectedData="Jayesh Sahijwani",
                             true,
                             false
                         )
