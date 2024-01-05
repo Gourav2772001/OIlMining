@@ -1164,7 +1164,7 @@
                      );
                     Set(var_selected_ID,0);
                     Set(Var_Persona,false);
-                    Navigate(Screen1);
+                    Navigate('Form Screen');
                 Size: =20
                 Text: ="Continue"
                 Width: =Parent.Width-30

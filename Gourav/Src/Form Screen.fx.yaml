@@ -138,7 +138,7 @@
                     LayoutMode: =LayoutMode.Auto
                     Visible: |-
                         =If(
-                            gal_tempTabItems.Selected.Name = "Sales",
+                            gal_tempTabItems.Selected.Name = "Sales" && selectedData="Gourav Kumar",
                             true,
                             false
                         )
@@ -580,12 +580,6 @@
                         LayoutMinHeight: =
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        Visible: |-
-                            =If(
-                                selectedData="Gourav Kumar",
-                                true,
-                                false
-                            )
                         Width: =Parent.Width
                         ZIndex: =2
 
@@ -594,37 +588,1025 @@
                             Text: ="Save"
                             ZIndex: =1
 
-                    cont_NoFormToDisplay As groupContainer.verticalAutoLayoutContainer:
+                cont_NoFormToDisplay As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: |-
+                        =If(
+                            First(userData1).Location = "Jodhpur" && (gal_tempTabItems.Selected.Name ="Summary" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                        
+                            true,
+                        
+                            First(userData1).Location = "Jaisalmer" && (gal_tempTabItems.Selected.Name ="Summary" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                        
+                            true,
+                        
+                            First(userData1).Location = "Udaipur" && (gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                        
+                            true,
+                        
+                            First(userData1).Location = "Kota" && (gal_tempTabItems.Selected.Name ="Dispatch Form" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
+                        
+                            true,
+                        
+                            false
+                        )
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    ico_noForm As icon.CancelBadge:
+                        Icon: =Icon.CancelBadge
+                        ZIndex: =1
+
+                    lbl_NoFormText As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Bold
+                        Text: ="You are not authorized to access this form"
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                cont_SalesOf_Jodhpur As groupContainer.verticalAutoLayoutContainer:
+                    BorderThickness: =1
+                    Fill: =RGBA(241, 244, 249, 1)
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: |-
+                        =If(
+                            gal_tempTabItems.Selected.Name = "Sales" && selectedData="Rahul Choudhary",
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+                    form_SalesOf_Jodhpur As form:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderThickness: =2
+                        DataSource: =OM_Sales_to_Jaipur_Terminal
+                        DefaultMode: =FormMode.New
                         FillPortions: =0
-                        Height: =Parent.Height
+                        Height: =Parent.Height*.7
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        NumberOfColumns: =2
+                        OnSuccess: =ResetForm(form_SalesOf_Jodhpur)
+                        Width: =Parent.Width
+                        X: =10
+                        Y: =10
+                        ZIndex: =1
+
+                        Title_DataCard8_1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal], DataSourceInfo.MaxLength, "Title")
+                            Required: =false
+                            Update: =DataCardValue38_1.Text
+                            Width: =477
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey38_1 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue38_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey38_1.Y + DataCardKey38_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage38_1 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue38_1.Y + DataCardValue38_1.Height
+                                ZIndex: =3
+
+                            StarVisible38_1 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey38_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey38_1.Y
+                                ZIndex: =4
+
+                        Gross_Sales_DataCard3_1 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Sales"
+                            Default: =ThisItem.Gross_Sales
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal],DataSourceInfo.DisplayName,"Gross_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue39_1.Text)
+                            Width: =477
+                            X: =1
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey39_1 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue39_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey39_1.Y + DataCardKey39_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage39_1 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue39_1.Y + DataCardValue39_1.Height
+                                ZIndex: =3
+
+                            StarVisible39_1 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey39_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey39_1.Y
+                                ZIndex: =4
+
+                        Net_Sales_DataCard3_1 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Net_Sales"
+                            Default: =ThisItem.Net_Sales
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal],DataSourceInfo.DisplayName,"Net_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue40_1.Text)
+                            Width: =477
+                            X: =0
+                            Y: =1
+                            ZIndex: =2
+
+                            DataCardKey40_1 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue40_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey40_1.Y + DataCardKey40_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage40_1 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue40_1.Y + DataCardValue40_1.Height
+                                ZIndex: =3
+
+                            StarVisible40_1 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey40_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey40_1.Y
+                                ZIndex: =4
+
+                        BS_W_DataCard5_1 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue41_1.Text)
+                            Width: =477
+                            X: =1
+                            Y: =1
+                            ZIndex: =2
+
+                            DataCardKey41_1 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue41_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey41_1.Y + DataCardKey41_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage41_1 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue41_1.Y + DataCardValue41_1.Height
+                                ZIndex: =3
+
+                            StarVisible41_1 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey41_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey41_1.Y
+                                ZIndex: =4
+
+                        Density_15C_DataCard3_1 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Density_15C"
+                            Default: =ThisItem.Density_15C
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal],DataSourceInfo.DisplayName,"Density_15C")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue42_1.Text)
+                            Width: =477
+                            X: =0
+                            Y: =2
+                            ZIndex: =2
+
+                            DataCardKey42_1 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue42_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey42_1.Y + DataCardKey42_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage42_1 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue42_1.Y + DataCardValue42_1.Height
+                                ZIndex: =3
+
+                            StarVisible42_1 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey42_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey42_1.Y
+                                ZIndex: =4
+
+                        Sortfall_Excess_NetMonth_DataCard1_1 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Sortfall_Excess_NetMonth"
+                            Default: =ThisItem.Sortfall_Excess_NetMonth
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal],DataSourceInfo.DisplayName,"Sortfall_Excess_NetMonth")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue43_1.Text)
+                            Width: =477
+                            X: =1
+                            Y: =2
+                            ZIndex: =2
+
+                            DataCardKey43_1 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue43_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey43_1.Y + DataCardKey43_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage43_1 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue43_1.Y + DataCardValue43_1.Height
+                                ZIndex: =3
+
+                            StarVisible43_1 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey43_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey43_1.Y
+                                ZIndex: =4
+
+                    cont_SaleJodhpurButton As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Fill: =Parent.Fill
+                        FillPortions: =0
+                        Height: =Parent.Height*.2
                         LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =100
+                        LayoutMinHeight: =
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        Visible: |-
-                            =If(
-                                First(userData1).Location = "Jodhpur" && (gal_tempTabItems.Selected.Name ="Summary" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
-                            
-                                true,
-                            
-                                First(userData1).Location = "Jaisalmer" && (gal_tempTabItems.Selected.Name ="Summary" || gal_tempTabItems.Selected.Name ="Cargo Form" || gal_tempTabItems.Selected.Name ="Crude Oil" || gal_tempTabItems.Selected.Name ="Inventory"),
-                            
-                                true,
-                                false
-                            )
                         Width: =Parent.Width
-                        ZIndex: =3
+                        ZIndex: =2
 
-                        ico_noForm As icon.CancelBadge:
-                            Icon: =Icon.CancelBadge
+                        btn_SalesJodhpur As button:
+                            OnSelect: =SubmitForm(form_SalesOf_Jodhpur);ResetForm(form_SalesOf_Jodhpur)
+                            Text: ="Save"
                             ZIndex: =1
 
-                        lbl_NoFormText As label:
-                            Align: =Align.Center
-                            FontWeight: =FontWeight.Bold
-                            Text: ="You are not authorized to access this form"
-                            Width: =Parent.Width
+                cont_SalesOf_Udaipur As groupContainer.verticalAutoLayoutContainer:
+                    BorderThickness: =1
+                    Fill: =RGBA(241, 244, 249, 1)
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: |-
+                        =If(
+                            gal_tempTabItems.Selected.Name = "Sales" && selectedData="Rahul Choudhary",
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width
+                    ZIndex: =4
+
+                    form_SalesOf_Udaipur As form:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderThickness: =2
+                        DataSource: =OM_Sales_to_Udaipur_Terminal
+                        DefaultMode: =FormMode.New
+                        FillPortions: =0
+                        Height: =Parent.Height*.7
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        NumberOfColumns: =2
+                        OnSuccess: =ResetForm(form_SalesOf_Udaipur)
+                        Width: =Parent.Width
+                        X: =10
+                        Y: =10
+                        ZIndex: =1
+
+                        Title_DataCard9 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal], DataSourceInfo.MaxLength, "Title")
+                            Required: =false
+                            Update: =DataCardValue45.Text
+                            Width: =477
+                            X: =0
+                            Y: =0
                             ZIndex: =2
+
+                            DataCardKey45 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue45 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey45.Y + DataCardKey45.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage45 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue45.Y + DataCardValue45.Height
+                                ZIndex: =3
+
+                            StarVisible45 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey45.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey45.Y
+                                ZIndex: =4
+
+                        Gross_Sales_DataCard4 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Sales"
+                            Default: =ThisItem.Gross_Sales
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Gross_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue46.Text)
+                            Width: =477
+                            X: =1
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey46 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue46 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey46.Y + DataCardKey46.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage46 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue46.Y + DataCardValue46.Height
+                                ZIndex: =3
+
+                            StarVisible46 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey46.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey46.Y
+                                ZIndex: =4
+
+                        Net_Sales_DataCard4 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Net_Sales"
+                            Default: =ThisItem.Net_Sales
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Net_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue47.Text)
+                            Width: =477
+                            X: =0
+                            Y: =1
+                            ZIndex: =2
+
+                            DataCardKey47 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue47 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey47.Y + DataCardKey47.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage47 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue47.Y + DataCardValue47.Height
+                                ZIndex: =3
+
+                            StarVisible47 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey47.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey47.Y
+                                ZIndex: =4
+
+                        BS_W_DataCard6 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue48.Text)
+                            Width: =477
+                            X: =1
+                            Y: =1
+                            ZIndex: =2
+
+                            DataCardKey48 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue48 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey48.Y + DataCardKey48.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage48 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue48.Y + DataCardValue48.Height
+                                ZIndex: =3
+
+                            StarVisible48 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey48.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey48.Y
+                                ZIndex: =4
+
+                        Density_15C_DataCard4 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Density_15C"
+                            Default: =ThisItem.Density_15C
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Density_15C")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue49.Text)
+                            Width: =477
+                            X: =0
+                            Y: =2
+                            ZIndex: =2
+
+                            DataCardKey49 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue49 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey49.Y + DataCardKey49.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage49 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue49.Y + DataCardValue49.Height
+                                ZIndex: =3
+
+                            StarVisible49 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey49.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey49.Y
+                                ZIndex: =4
+
+                        Shortfall_Excess_NetMonth_DataCard3 As typedDataCard.numberEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Shortfall_Excess_NetMonth"
+                            Default: =ThisItem.Shortfall_Excess_NetMonth
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Shortfall_Excess_NetMonth")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Value(DataCardValue50.Text)
+                            Width: =477
+                            X: =1
+                            Y: =2
+                            ZIndex: =2
+
+                            DataCardKey50 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue50 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Format: =TextFormat.Number
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey50.Y + DataCardKey50.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage50 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue50.Y + DataCardValue50.Height
+                                ZIndex: =3
+
+                            StarVisible50 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey50.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey50.Y
+                                ZIndex: =4
+
+                        Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="{Attachments}"
+                            Default: =ThisItem.Attachments
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"{Attachments}")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =DataCardValue51.Attachments
+                            Width: =477
+                            X: =0
+                            Y: =3
+                            ZIndex: =2
+
+                            DataCardKey51 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue51 As attachments:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                DisplayMode: =Parent.DisplayMode
+                                IsInDataCard: =true
+                                Items: =Parent.Default
+                                PaddingBottom: =5
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey51.Y + DataCardKey51.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage51 As label:
+                                AutoHeight: =true
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue51.Y + DataCardValue51.Height
+                                ZIndex: =3
+
+                            StarVisible51 As label:
+                                Align: =Align.Center
+                                Height: =DataCardKey51.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey51.Y
+                                ZIndex: =4
+
+                    cont_SaleUdaipurButton As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Fill: =Parent.Fill
+                        FillPortions: =0
+                        Height: =Parent.Height*.2
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        btn_SalesUdaipur As button:
+                            OnSelect: =SubmitForm(form_SalesOf_Udaipur);ResetForm(form_SalesOf_Udaipur)
+                            Text: ="Save"
+                            ZIndex: =1
 

@@ -33,6 +33,12 @@
           "OM_Sales_to_Jaisalmer": {
             "tableName": "b61ec1a3-2d58-4643-badd-8624b9df72e9"
           },
+          "OM_Sales_to_Jodhpur": {
+            "tableName": "dc2155c4-91ff-4d6e-95a2-08c63309e76d"
+          },
+          "OM_Sales_to_Udaipur_Terminal": {
+            "tableName": "ffeef10a-8099-4334-8592-a6d961a502b8"
+          },
           "OM_User_Iist": {
             "tableName": "bdebf089-d249-47e7-8bd7-7f722206dd0a"
           }
@@ -46,7 +52,9 @@
       "OM_Crude_oil_sales_pipeline_inventory",
       "OM_Sales_to_Jaipur_Terminal",
       "OM_Jaipur_Terminal",
-      "OM_User_Iist"
+      "OM_User_Iist",
+      "OM_Sales_to_Jodhpur",
+      "OM_Sales_to_Udaipur_Terminal"
     ],
     "dependencies": {},
     "dependents": [],
