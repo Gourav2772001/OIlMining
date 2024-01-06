@@ -1,4 +1,6 @@
 "'Form Screen' As screen":
+    BackgroundImage: ='7f951bda68241a57aa84929a95f120f9f082a9a0-1440x1054'
+    ImagePosition: =ImagePosition.Fill
 
     cont_MainFormScreen As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
@@ -27,9 +29,21 @@
             lbl_RegionalForm_LogoHeader_2 As label:
                 AlignInContainer: =AlignInContainer.Center
                 AutoHeight: =true
-                Color: =RGBA(39, 67, 125, 1)
+                FillPortions: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
+                Size: |-
+                    =Switch(
+                        'Form Screen'.Size,
+                        1,
+                        10,
+                        2,
+                        13,
+                        3,
+                        16,
+                        4,
+                        19
+                    )
                 Text: ="Fueling Progress, Powering Tomorrow"
                 Width: =Parent.Width*.2
                 ZIndex: =2
@@ -37,12 +51,14 @@
             lbl_LoggedInUserName_2 As label:
                 Align: =Align.Right
                 AlignInContainer: =AlignInContainer.Center
-                Color: =RGBA(39, 67, 125, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 FillPortions: =1
+                Font: =Font.'Lato Black'
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
                 Size: =18
                 Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
+                Visible: =If('Form Screen'.Size>3,true,false)
                 Width: =Parent.Width*.5
                 ZIndex: =3
 
@@ -81,7 +97,7 @@
                     Items: =temp_Tabs
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
-                    LayoutMinWidth: =320
+                    LayoutMinWidth: =Parent.Width
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateFill: =If(ThisItem.IsSelected,Color.Lavender,RGBA(0, 0, 0, 0))
                     TemplateSize: =83
@@ -90,28 +106,31 @@
 
                     lbl_TabItemstemp As label:
                         Align: =Align.Center
-                        FontWeight: =FontWeight.Bold
+                        FontWeight: =FontWeight.Semibold
                         OnSelect: =Select(Parent)
-                        Size: =18
+                        Size: =If('Form Screen'.Size>2,20,15)
                         Text: =ThisItem.Name
                         Width: =Parent.TemplateWidth
                         Y: =20
                         ZIndex: =1
 
                     rect_tabItemGal As rectangle:
-                        Height: =7
+                        Fill: =RGBA(0, 18, 107, 1)
+                        Height: =4
                         OnSelect: =Select(Parent)
                         Visible: =If(ThisItem.IsSelected,true,false)
                         Width: =Parent.TemplateWidth
-                        Y: =72
+                        Y: =78
                         ZIndex: =2
 
                     btn_galTabSelecteds As button:
-                        Fill: =RGBA(56, 96, 178, 0)
-                        Height: =Parent.TemplateHeight
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =83
                         HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
                         OnSelect: =Select(Parent)
+                        PressedBorderColor: =
                         PressedFill: =Self.Fill
+                        Size: =20
                         Text: =""
                         Width: =Parent.TemplateWidth
                         ZIndex: =3
@@ -128,7 +147,6 @@
 
                 cont_SalesOf_Jaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -147,7 +165,7 @@
 
                     form_SalesOf_Jaipur_1 As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        BorderThickness: =2
+                        BorderStyle: =BorderStyle.None
                         DataSource: =OM_Sales_to_Jaipur_Terminal
                         DefaultMode: =FormMode.New
                         FillPortions: =0
@@ -178,14 +196,17 @@
                             MaxLength: =DataSourceInfo([@OM_Sales_to_Jaipur_Terminal], DataSourceInfo.MaxLength, "Title")
                             Required: =false
                             Update: =DataCardValue38.Text
-                            Width: =477
+                            Width: =478
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey38 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -245,14 +266,17 @@
                             Height: =50
                             Required: =false
                             Update: =Value(DataCardValue39.Text)
-                            Width: =477
+                            Width: =478
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey39 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -312,14 +336,17 @@
                             Height: =50
                             Required: =false
                             Update: =Value(DataCardValue40.Text)
-                            Width: =477
+                            Width: =478
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey40 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -379,14 +406,17 @@
                             Height: =50
                             Required: =false
                             Update: =Value(DataCardValue41.Text)
-                            Width: =477
+                            Width: =478
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey41 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -446,14 +476,17 @@
                             Height: =50
                             Required: =false
                             Update: =Value(DataCardValue42.Text)
-                            Width: =477
+                            Width: =478
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey42 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -513,14 +546,17 @@
                             Height: =50
                             Required: =false
                             Update: =Value(DataCardValue43.Text)
-                            Width: =477
+                            Width: =478
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey43 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -572,6 +608,7 @@
 
                     cont_SaleJaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -584,7 +621,11 @@
                         ZIndex: =2
 
                         btn_SalesJaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SalesOf_Jaipur_1);ResetForm(form_SalesOf_Jaipur_1)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
@@ -633,7 +674,6 @@
 
                 cont_SalesOf_Jodhpur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -652,6 +692,7 @@
 
                     form_SalesOf_Jodhpur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Sales_to_Jodhpur
                         DefaultMode: =FormMode.New
@@ -678,13 +719,16 @@
                             Required: =false
                             Update: =DataCardValue52.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey52 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -745,13 +789,16 @@
                             Required: =false
                             Update: =Value(DataCardValue53.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey53 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -812,13 +859,16 @@
                             Required: =false
                             Update: =Value(DataCardValue54.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey54 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -879,13 +929,16 @@
                             Required: =false
                             Update: =Value(DataCardValue55.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey55 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -946,13 +999,16 @@
                             Required: =false
                             Update: =Value(DataCardValue56.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey56 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1013,13 +1069,16 @@
                             Required: =false
                             Update: =Value(DataCardValue57.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey57 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1072,6 +1131,7 @@
                     cont_SaleJodhpurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -1084,13 +1144,16 @@
                         ZIndex: =2
 
                         btn_SalesJodhpur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SalesOf_Jodhpur);ResetForm(form_SalesOf_Jodhpur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_SalesOf_Udaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -1109,6 +1172,7 @@
 
                     form_SalesOf_Udaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Sales_to_Udaipur_Terminal
                         DefaultMode: =FormMode.New
@@ -1135,13 +1199,16 @@
                             Required: =false
                             Update: =DataCardValue45.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey45 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1202,13 +1269,16 @@
                             Required: =false
                             Update: =Value(DataCardValue46.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey46 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1269,13 +1339,16 @@
                             Required: =false
                             Update: =Value(DataCardValue47.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey47 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1336,13 +1409,16 @@
                             Required: =false
                             Update: =Value(DataCardValue48.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey48 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1403,13 +1479,16 @@
                             Required: =false
                             Update: =Value(DataCardValue49.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey49 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1470,13 +1549,16 @@
                             Required: =false
                             Update: =Value(DataCardValue50.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey50 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1529,6 +1611,7 @@
                     cont_SaleUdaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -1541,13 +1624,16 @@
                         ZIndex: =2
 
                         btn_SalesUdaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SalesOf_Udaipur);ResetForm(form_SalesOf_Udaipur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_SalesOf_Kota As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -1566,6 +1652,7 @@
 
                     form_SalesOf_Kota As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Sales_to_Kota_Terminal
                         DefaultMode: =FormMode.New
@@ -1592,13 +1679,16 @@
                             Required: =false
                             Update: =DataCardValue59.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey59 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1659,13 +1749,16 @@
                             Required: =false
                             Update: =Value(DataCardValue60.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey60 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1722,17 +1815,20 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"Net_Sales")
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =50
+                            Height: =60
                             Required: =false
                             Update: =Value(DataCardValue61.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey61 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1793,13 +1889,16 @@
                             Required: =false
                             Update: =Value(DataCardValue62.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey62 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1860,13 +1959,16 @@
                             Required: =false
                             Update: =Value(DataCardValue63.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey63 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1927,13 +2029,16 @@
                             Required: =false
                             Update: =Value(DataCardValue64.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey64 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1986,6 +2091,7 @@
                     cont_SaleKotaButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -1998,13 +2104,16 @@
                         ZIndex: =2
 
                         btn_SalesKota As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SalesOf_Kota);ResetForm(form_SalesOf_Kota)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_SalesOf_Jaisalmer As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -2023,6 +2132,7 @@
 
                     form_SalesOf_Jaisalmer As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Sales_to_Jaisalmer
                         DefaultMode: =FormMode.New
@@ -2049,13 +2159,16 @@
                             Required: =false
                             Update: =DataCardValue66.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey66 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2116,13 +2229,16 @@
                             Required: =false
                             Update: =Value(DataCardValue67.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey67 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2183,13 +2299,16 @@
                             Required: =false
                             Update: =Value(DataCardValue68.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey68 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2250,13 +2369,16 @@
                             Required: =false
                             Update: =Value(DataCardValue69.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey69 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2317,13 +2439,16 @@
                             Required: =false
                             Update: =Value(DataCardValue70.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey70 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2384,13 +2509,16 @@
                             Required: =false
                             Update: =Value(DataCardValue71.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey71 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2443,6 +2571,7 @@
                     cont_SaleJaisalmerButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -2455,13 +2584,16 @@
                         ZIndex: =2
 
                         btn_SalesJaisalmer As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SalesOf_Jaisalmer);ResetForm(form_SalesOf_Jaisalmer)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_CrudeOil_Jaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -2480,6 +2612,7 @@
 
                     form_CrudeOil_Jaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_MPT_Crude_Oil
                         DefaultMode: =FormMode.New
@@ -2505,13 +2638,16 @@
                             Required: =false
                             Update: =Value(DataCardValue77.Text)
                             Width: =477
-                            X: =-1908
+                            WidthFit: =true
+                            X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey77 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2572,13 +2708,16 @@
                             Required: =false
                             Update: =Value(DataCardValue76.Text)
                             Width: =477
-                            X: =-1431
+                            WidthFit: =true
+                            X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey76 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2639,13 +2778,16 @@
                             Required: =false
                             Update: =Value(DataCardValue75.Text)
                             Width: =477
-                            X: =-954
-                            Y: =0
+                            WidthFit: =true
+                            X: =0
+                            Y: =1
                             ZIndex: =2
 
                             DataCardKey75 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2706,13 +2848,16 @@
                             Required: =false
                             Update: =Value(DataCardValue74.Text)
                             Width: =477
-                            X: =-477
-                            Y: =0
+                            WidthFit: =true
+                            X: =1
+                            Y: =1
                             ZIndex: =2
 
                             DataCardKey74 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2769,18 +2914,20 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@OM_MPT_Crude_Oil],DataSourceInfo.DisplayName,"Title")
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =50
+                            Height: =84
                             MaxLength: =DataSourceInfo([@OM_MPT_Crude_Oil], DataSourceInfo.MaxLength, "Title")
                             Required: =false
                             Update: =DataCardValue73.Text
-                            Width: =477
+                            Width: =If('Form Screen'.Size>2,Parent.Width/2,Parent.Width)
                             X: =0
-                            Y: =0
+                            Y: =2
                             ZIndex: =2
 
                             DataCardKey73 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2833,6 +2980,7 @@
                     cont_CrudeOil_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -2845,13 +2993,16 @@
                         ZIndex: =2
 
                         btn_CrudeOil_Jaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_CrudeOil_Jaipur);ResetForm(form_CrudeOil_Jaipur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_InventoryJaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -2870,6 +3021,7 @@
 
                     form_InventoryJaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Crude_oil_sales_pipeline_inventory
                         DefaultMode: =FormMode.New
@@ -2896,13 +3048,16 @@
                             Required: =false
                             Update: =DataCardValue44.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey44 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -2963,13 +3118,16 @@
                             Required: =false
                             Update: =Value(DataCardValue51.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey51 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3029,14 +3187,16 @@
                             Height: =50
                             Required: =false
                             Update: =Value(DataCardValue58.Text)
-                            Width: =477
+                            Width: =If('Form Screen'.Size>2,Parent.Width/2,Parent.Width)
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey58 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3089,6 +3249,7 @@
                     cont_Inventory_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -3101,13 +3262,16 @@
                         ZIndex: =2
 
                         btn_Inventory_Jaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_InventoryJaipur);ResetForm(form_InventoryJaipur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_SummaryJaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -3126,6 +3290,7 @@
 
                     form_SummaryJaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Jaipur_Terminal
                         DefaultMode: =FormMode.New
@@ -3152,13 +3317,16 @@
                             Required: =false
                             Update: =DataCardValue7.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey7 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3219,13 +3387,16 @@
                             Required: =false
                             Update: =Value(DataCardValue8.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey8 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3286,13 +3457,16 @@
                             Required: =false
                             Update: =Value(DataCardValue9.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey9 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3353,13 +3527,16 @@
                             Required: =false
                             Update: =Value(DataCardValue10.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey10 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3412,6 +3589,7 @@
                     cont_Summary_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -3424,13 +3602,16 @@
                         ZIndex: =2
 
                         btn_Summary_Jaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SummaryJaipur);ResetForm(form_SummaryJaipur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_SummaryKota As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -3449,6 +3630,7 @@
 
                     form_SummaryKota As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Kota_Terminal
                         DefaultMode: =FormMode.New
@@ -3475,13 +3657,16 @@
                             Required: =false
                             Update: =DataCardValue82.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey82 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3542,13 +3727,16 @@
                             Required: =false
                             Update: =Value(DataCardValue83.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey83 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3609,13 +3797,16 @@
                             Required: =false
                             Update: =Value(DataCardValue84.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey84 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3676,13 +3867,16 @@
                             Required: =false
                             Update: =Value(DataCardValue85.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey85 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3735,6 +3929,7 @@
                     cont_Summary_KotaButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -3747,13 +3942,16 @@
                         ZIndex: =2
 
                         btn_Summary_Kota As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SummaryKota);ResetForm(form_SummaryKota)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_SummaryUdaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -3772,6 +3970,7 @@
 
                     form_SummaryUdaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Udaipur_Terminal
                         DefaultMode: =FormMode.New
@@ -3798,13 +3997,16 @@
                             Required: =false
                             Update: =DataCardValue87.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey87 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3865,13 +4067,16 @@
                             Required: =false
                             Update: =Value(DataCardValue88.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey88 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3932,13 +4137,16 @@
                             Required: =false
                             Update: =Value(DataCardValue89.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey89 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -3999,13 +4207,16 @@
                             Required: =false
                             Update: =Value(DataCardValue90.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey90 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4058,6 +4269,7 @@
                     cont_Summary_UdaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -4070,13 +4282,16 @@
                         ZIndex: =2
 
                         btn_Summary_Udaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_SummaryUdaipur);ResetForm(form_SummaryUdaipur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_Dispatch_Jaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -4095,6 +4310,7 @@
 
                     form_Dispatch_Jaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM__Jaipur_Oil_RDG_Condensate_Dispatch
                         DefaultMode: =FormMode.New
@@ -4121,13 +4337,16 @@
                             Required: =false
                             Update: =DataCardValue92.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey92 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4188,13 +4407,16 @@
                             Required: =false
                             Update: =Value(DataCardValue93.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey93 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4255,13 +4477,16 @@
                             Required: =false
                             Update: =Value(DataCardValue94.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey94 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4322,13 +4547,16 @@
                             Required: =false
                             Update: =Value(DataCardValue95.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey95 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4389,13 +4617,16 @@
                             Required: =false
                             Update: =Value(DataCardValue96.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey96 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4456,13 +4687,16 @@
                             Required: =false
                             Update: =Value(DataCardValue97.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey97 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4523,13 +4757,16 @@
                             Required: =false
                             Update: =Value(DataCardValue98.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey98 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4590,13 +4827,16 @@
                             Required: =false
                             Update: =Value(DataCardValue99.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey99 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4649,6 +4889,7 @@
                     cont_Dispatch_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -4661,13 +4902,16 @@
                         ZIndex: =2
 
                         btn_Dispatch_Jaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_Dispatch_Jaipur);ResetForm(form_Dispatch_Jaipur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_Dispatch_Jodhpur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -4686,6 +4930,7 @@
 
                     form_Dispatch_Jodhpur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM__Jodhpur_Oil_RDG_Condensate_Dispatch
                         DefaultMode: =FormMode.New
@@ -4712,13 +4957,16 @@
                             Required: =false
                             Update: =DataCardValue101.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey101 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4779,13 +5027,16 @@
                             Required: =false
                             Update: =Value(DataCardValue102.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey102 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4846,13 +5097,16 @@
                             Required: =false
                             Update: =Value(DataCardValue103.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey103 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4913,13 +5167,16 @@
                             Required: =false
                             Update: =Value(DataCardValue104.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey104 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -4980,13 +5237,16 @@
                             Required: =false
                             Update: =Value(DataCardValue105.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey105 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5047,13 +5307,16 @@
                             Required: =false
                             Update: =Value(DataCardValue106.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey106 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5114,13 +5377,16 @@
                             Required: =false
                             Update: =Value(DataCardValue107.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey107 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5181,13 +5447,16 @@
                             Required: =false
                             Update: =Value(DataCardValue108.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey108 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5240,6 +5509,7 @@
                     cont_Dispatch_JodhpurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -5252,13 +5522,16 @@
                         ZIndex: =2
 
                         btn_Dispatch_Jodhpur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_Dispatch_Jodhpur);ResetForm(form_Dispatch_Jodhpur)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_Dispatch_Jaisalmer As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -5277,6 +5550,7 @@
 
                     form_Dispatch_Jaisalmer As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM__Jaisalmer_Oil_RDG_Condensate_Dispatch
                         DefaultMode: =FormMode.New
@@ -5303,13 +5577,16 @@
                             Required: =false
                             Update: =DataCardValue25.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey25 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5370,13 +5647,16 @@
                             Required: =false
                             Update: =Value(DataCardValue26.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey26 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5437,13 +5717,16 @@
                             Required: =false
                             Update: =Value(DataCardValue27.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey27 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5504,13 +5787,16 @@
                             Required: =false
                             Update: =Value(DataCardValue28.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey28 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5571,13 +5857,16 @@
                             Required: =false
                             Update: =Value(DataCardValue29.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey29 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5638,13 +5927,16 @@
                             Required: =false
                             Update: =Value(DataCardValue30.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey30 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5705,13 +5997,16 @@
                             Required: =false
                             Update: =Value(DataCardValue31.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey31 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5772,13 +6067,16 @@
                             Required: =false
                             Update: =Value(DataCardValue32.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey32 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5831,6 +6129,7 @@
                     cont_Dispatch_JaisalmerButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -5843,13 +6142,16 @@
                         ZIndex: =2
 
                         btn_Dispatch_Jaisalmer As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_Dispatch_Jaisalmer);ResetForm(form_Dispatch_Jaisalmer)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_Dispatch_Kota As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -5868,6 +6170,7 @@
 
                     form_Dispatch_Kota As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM__Kota_Oil_RDG_Condensate_Dispatch
                         DefaultMode: =FormMode.New
@@ -5894,13 +6197,16 @@
                             Required: =false
                             Update: =DataCardValue111.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey111 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -5961,13 +6267,16 @@
                             Required: =false
                             Update: =Value(DataCardValue112.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey112 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6028,13 +6337,16 @@
                             Required: =false
                             Update: =Value(DataCardValue113.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey113 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6095,13 +6407,16 @@
                             Required: =false
                             Update: =Value(DataCardValue114.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =1
                             ZIndex: =2
 
                             DataCardKey114 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6162,13 +6477,16 @@
                             Required: =false
                             Update: =Value(DataCardValue115.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey115 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6229,13 +6547,16 @@
                             Required: =false
                             Update: =Value(DataCardValue116.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =2
                             ZIndex: =2
 
                             DataCardKey116 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6296,13 +6617,16 @@
                             Required: =false
                             Update: =Value(DataCardValue117.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey117 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6363,13 +6687,16 @@
                             Required: =false
                             Update: =Value(DataCardValue118.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =3
                             ZIndex: =2
 
                             DataCardKey118 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6422,6 +6749,7 @@
                     cont_Dispatch_KotaButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -6434,13 +6762,16 @@
                         ZIndex: =2
 
                         btn_Dispatch_Kota As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_Dispatch_Kota);ResetForm(form_Dispatch_Kota)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_Cargo_Kota As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -6459,6 +6790,7 @@
 
                     form_Cargo_Kota As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Nos_of_Cargo_Loaded_from_Kota_Terminal
                         DefaultMode: =FormMode.New
@@ -6485,13 +6817,16 @@
                             Required: =false
                             Update: =DataCardValue78.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey78 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6552,13 +6887,16 @@
                             Required: =false
                             Update: =Value(DataCardValue79.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey79 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6611,6 +6949,7 @@
                     cont_Cargo_KotaButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -6623,13 +6962,16 @@
                         ZIndex: =2
 
                         btn_Cargo_Kota As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_Cargo_Kota);ResetForm(form_Cargo_Kota)
+                            Size: =20
                             Text: ="Save"
                             ZIndex: =1
 
                 cont_Cargo_Jaipur As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
-                    Fill: =RGBA(241, 244, 249, 1)
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -6648,6 +6990,7 @@
 
                     form_Cargo_Jaipur As form:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DataSource: =OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1
                         DefaultMode: =FormMode.New
@@ -6674,13 +7017,16 @@
                             Required: =false
                             Update: =DataCardValue131.Text
                             Width: =477
+                            WidthFit: =true
                             X: =0
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey131 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6741,13 +7087,16 @@
                             Required: =false
                             Update: =Value(DataCardValue132.Text)
                             Width: =477
+                            WidthFit: =true
                             X: =1
                             Y: =0
                             ZIndex: =2
 
                             DataCardKey132 As label:
                                 AutoHeight: =true
+                                FontWeight: =FontWeight.Semibold
                                 Height: =34
+                                Size: =18
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -6800,6 +7149,7 @@
                     cont_Cargo_JaipurButton As groupContainer.horizontalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
                         Fill: =Parent.Fill
                         FillPortions: =0
                         Height: =Parent.Height*.2
@@ -6812,6 +7162,9 @@
                         ZIndex: =2
 
                         btn_Cargo_Jaipur As button:
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                             OnSelect: =SubmitForm(form_Cargo_Jaipur);ResetForm(form_Cargo_Jaipur)
                             Text: ="Save"
                             ZIndex: =1
