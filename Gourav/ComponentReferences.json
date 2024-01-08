@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 5,
+    "LibraryId": "2402ba05-d37b-4e29-98f6-2709197f691d",
+    "LibraryLogicalName": "cre6b_radialprogressbar_577b0",
+    "LibraryVersion": "2024-01-08T05:27:48Z",
+    "OriginalComponentDefinitionTemplateId": "a9e9011b5cb84fb5a8ef1730f69d33ab",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2024-01-08T05:28:01.893+00:00"
+  },
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 5,
+    "LibraryId": "2402ba05-d37b-4e29-98f6-2709197f691d",
+    "LibraryLogicalName": "cre6b_radialprogressbar_577b0",
+    "LibraryVersion": "2024-01-08T05:27:48Z",
+    "OriginalComponentDefinitionTemplateId": "8134784d325a4b138eaafc2f2601cc96",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2024-01-08T05:28:01.893+00:00"
+  }
+]

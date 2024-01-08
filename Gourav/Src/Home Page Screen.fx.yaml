@@ -34,12 +34,60 @@
                 LayoutMinWidth: =0
                 ZIndex: =1
 
+                "'con.sunKpi1' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    Height: =77
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =201
+                    ZIndex: =1
+
+                    KPI_1 As KPI:
+                        FillPortions: =1.4
+                        Height: =KPI_1.kpiHeight
+                        KpiWidth: =Parent.Width/1.4
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =0
+                        Width: =KPI_1.KpiWidth
+
+                    "'Radial Progress Bar_1' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_1'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        OnReset: =Set(precentageVisible,!'Radial Progress Bar_1'.precentagleVisble)
+                        progressHeight: =Parent.Height
+                        progressWidth: =Parent.Width/3.6
+                        Width: ='Radial Progress Bar_1'.progressWidth
+                        ZIndex: =2
+
             con_kpi2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height-20
                 LayoutMinHeight: =100
                 LayoutMinWidth: =0
                 ZIndex: =2
+
+                "'con.sunKpi1_1' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    Height: =77
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =201
+                    ZIndex: =1
+
+                    KPI_2 As KPI:
+                        Height: =KPI_2.kpiHeight
+                        KpiWidth: =Parent.Width/1.4
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        Width: =KPI_2.KpiWidth
+
+                    "'Radial Progress Bar_2' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_2'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progressHeight: =Parent.Height
+                        progressWidth: =Parent.Width/3.6
+                        Width: ='Radial Progress Bar_2'.progressWidth
+                        ZIndex: =2
 
             con_kpi3 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -48,6 +96,29 @@
                 LayoutMinWidth: =0
                 ZIndex: =3
 
+                "'con.sunKpi1_2' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    Height: =77
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =201
+                    ZIndex: =1
+
+                    KPI_3 As KPI:
+                        Height: =KPI_3.kpiHeight
+                        KpiWidth: =Parent.Width/1.4
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        Width: =KPI_3.KpiWidth
+
+                    "'Radial Progress Bar_3' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_3'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progressHeight: =Parent.Height
+                        progressWidth: =Parent.Width/3.6
+                        Width: ='Radial Progress Bar_3'.progressWidth
+                        ZIndex: =2
+
             con_kpi4 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height-20
@@ -55,12 +126,61 @@
                 LayoutMinWidth: =0
                 ZIndex: =4
 
+                "'con.sunKpi1_3' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    Height: =77
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =201
+                    ZIndex: =1
+
+                    KPI_4 As KPI:
+                        Height: =KPI_4.kpiHeight
+                        KpiWidth: =Parent.Width/1.4
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        Width: =KPI_4.KpiWidth
+
+                    "'Radial Progress Bar_4' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_4'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progressHeight: =Parent.Height
+                        progressWidth: =Parent.Width/3.6
+                        Width: ='Radial Progress Bar_4'.progressWidth
+                        ZIndex: =2
+
             con_kpi5 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height-20
                 LayoutMinHeight: =100
                 LayoutMinWidth: =0
+                Width: =Parent.Width
                 ZIndex: =5
+
+                "'con.sunKpi1_4' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =201
+                    ZIndex: =1
+
+                    KPI_5 As KPI:
+                        FillPortions: =3
+                        Height: =KPI_5.kpiHeight
+                        KpiWidth: =Parent.Width/1.4
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =0
+                        Width: =KPI_5.KpiWidth
+
+                    "'Radial Progress Bar_5' As 'Radial Progress Bar'":
+                        FillPortions: =1
+                        Height: ='Radial Progress Bar_5'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =0
+                        progressHeight: =Parent.Height
+                        progressWidth: =Parent.Width/3.6
+                        Width: ='Radial Progress Bar_5'.progressWidth
+                        ZIndex: =2
 
         con_mainHeader As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
@@ -81,9 +201,9 @@
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
-                Size: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,13,25)
+                Size: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,13,23)
                 Text: ="Welcome " & ComboBox1.Selected.Title & " 👋"
-                Width: =If( App.ActiveScreen.Size=2 ||App.ActiveScreen.Size=1,220,450)
+                Width: =If( App.ActiveScreen.Size=2 ||App.ActiveScreen.Size=1,220,475)
                 ZIndex: =1
 
             lbl_flex As label:

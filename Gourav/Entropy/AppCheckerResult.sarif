@@ -254,306 +254,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Title_DataCard9.DataCardValue45.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Title_DataCard9.DataCardValue45.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Title_DataCard9.DataCardValue45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Gross_Sales_DataCard4.DataCardValue46.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Gross_Sales_DataCard4.DataCardValue46.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Gross_Sales_DataCard4.DataCardValue46"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Net_Sales_DataCard4.DataCardValue47.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Net_Sales_DataCard4.DataCardValue47.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Net_Sales_DataCard4.DataCardValue47"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.BS_W_DataCard6.DataCardValue48.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.BS_W_DataCard6.DataCardValue48.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.BS_W_DataCard6.DataCardValue48"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Density_15C_DataCard4.DataCardValue49.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Density_15C_DataCard4.DataCardValue49.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Density_15C_DataCard4.DataCardValue49"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Shortfall_Excess_NetMonth_DataCard3.DataCardValue50.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Shortfall_Excess_NetMonth_DataCard3.DataCardValue50.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Shortfall_Excess_NetMonth_DataCard3.DataCardValue50"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Title_DataCard17.DataCardValue87.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Title_DataCard17.DataCardValue87.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Title_DataCard17.DataCardValue87"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Receipt_Tankage_only_BBLS_DataCard4.DataCardValue88.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Receipt_Tankage_only_BBLS_DataCard4.DataCardValue88.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Receipt_Tankage_only_BBLS_DataCard4.DataCardValue88"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Closing_Tank_Stock_BBLS_DataCard4.DataCardValue89.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Closing_Tank_Stock_BBLS_DataCard4.DataCardValue89.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Closing_Tank_Stock_BBLS_DataCard4.DataCardValue89"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Water_Drain_Quantity_BBLS_DataCard4.DataCardValue90.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Water_Drain_Quantity_BBLS_DataCard4.DataCardValue90.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Screen",
-                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Water_Drain_Quantity_BBLS_DataCard4.DataCardValue90"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jaipur.form_SalesOf_Jaipur_1.Title_DataCard8.DataCardValue38.AccessibleLabel"
                 }
               ],
@@ -897,6 +597,186 @@
                 "member": "AccessibleLabel",
                 "module": "Form Screen",
                 "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Jodhpur.form_SalesOf_Jodhpur.Shortfall_Excess_NetMonth_DataCard4.DataCardValue57"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Title_DataCard9.DataCardValue45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Title_DataCard9.DataCardValue45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Title_DataCard9.DataCardValue45"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Gross_Sales_DataCard4.DataCardValue46.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Gross_Sales_DataCard4.DataCardValue46.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Gross_Sales_DataCard4.DataCardValue46"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Net_Sales_DataCard4.DataCardValue47.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Net_Sales_DataCard4.DataCardValue47.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Net_Sales_DataCard4.DataCardValue47"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.BS_W_DataCard6.DataCardValue48.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.BS_W_DataCard6.DataCardValue48.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.BS_W_DataCard6.DataCardValue48"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Density_15C_DataCard4.DataCardValue49.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Density_15C_DataCard4.DataCardValue49.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Density_15C_DataCard4.DataCardValue49"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Shortfall_Excess_NetMonth_DataCard3.DataCardValue50.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Shortfall_Excess_NetMonth_DataCard3.DataCardValue50.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SalesOf_Udaipur.form_SalesOf_Udaipur.Shortfall_Excess_NetMonth_DataCard3.DataCardValue50"
               }
             }
           ],
@@ -1737,6 +1617,126 @@
                 "member": "AccessibleLabel",
                 "module": "Form Screen",
                 "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryKota.form_SummaryKota.Water_Drain_Quantity_BBLS_DataCard3.DataCardValue85"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Title_DataCard17.DataCardValue87.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Title_DataCard17.DataCardValue87.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Title_DataCard17.DataCardValue87"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Receipt_Tankage_only_BBLS_DataCard4.DataCardValue88.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Receipt_Tankage_only_BBLS_DataCard4.DataCardValue88.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Receipt_Tankage_only_BBLS_DataCard4.DataCardValue88"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Closing_Tank_Stock_BBLS_DataCard4.DataCardValue89.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Closing_Tank_Stock_BBLS_DataCard4.DataCardValue89.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Closing_Tank_Stock_BBLS_DataCard4.DataCardValue89"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Water_Drain_Quantity_BBLS_DataCard4.DataCardValue90.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Water_Drain_Quantity_BBLS_DataCard4.DataCardValue90.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Screen",
+                "type": "'Form Screen'.cont_MainFormScreen.cont_ContentFormScreen.cont_rightSideContentForms.cont_SummaryUdaipur.form_SummaryUdaipur.Water_Drain_Quantity_BBLS_DataCard4.DataCardValue90"
               }
             }
           ],

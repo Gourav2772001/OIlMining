@@ -1,0 +1,51 @@
+KPI As CanvasComponent:
+    AmountNo: ="$5048598K"
+    CompanyText: ="Jaipur Net Worth"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =KPI.kpiHeight
+    kpiHeight: =77
+    KpiWidth: =210
+    Width: =KPI.KpiWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    con_main As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        con_subKpi As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =0
+            LayoutMinWidth: =0
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width/4
+            ZIndex: =1
+
+            lbl_compay As label:
+                FontWeight: =FontWeight.Bold
+                Height: =Parent.Height/2
+                LayoutMinHeight: =70
+                LayoutMinWidth: =560
+                Size: =11
+                Text: =KPI.CompanyText
+                Width: =Parent.Width
+                ZIndex: =1
+
+            lbl_netWorth As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Bold
+                Height: =Parent.Height/2
+                LayoutMinHeight: =0
+                LayoutMinWidth: =560
+                Size: =18
+                Text: =KPI.AmountNo
+                Width: =Parent.Width
+                ZIndex: =2
+
