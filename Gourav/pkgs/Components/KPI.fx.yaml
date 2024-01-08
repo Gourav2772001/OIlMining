@@ -1,10 +1,15 @@
 KPI As CanvasComponent:
     AmountNo: ="$5048598K"
+    baseCircleColor: ="RGBA(237, 237, 237, 1)"
     CompanyText: ="Jaipur Net Worth"
     Fill: =RGBA(0, 0, 0, 0)
     Height: =KPI.kpiHeight
     kpiHeight: =77
+    KPiNOSize: =13
+    kpiTextSize: =10
     KpiWidth: =210
+    progressValueCircle: =85
+    valueCircleColor: ="RGBA(125,105,121,1)"
     Width: =KPI.KpiWidth
     X: =0
     Y: =0
@@ -29,11 +34,11 @@ KPI As CanvasComponent:
             ZIndex: =1
 
             lbl_compay As label:
-                FontWeight: =FontWeight.Bold
+                FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height/2
                 LayoutMinHeight: =70
                 LayoutMinWidth: =560
-                Size: =11
+                Size: =KPI.kpiTextSize
                 Text: =KPI.CompanyText
                 Width: =Parent.Width
                 ZIndex: =1
@@ -44,8 +49,95 @@ KPI As CanvasComponent:
                 Height: =Parent.Height/2
                 LayoutMinHeight: =0
                 LayoutMinWidth: =560
-                Size: =18
+                Size: =KPI.KPiNOSize
                 Text: =KPI.AmountNo
                 Width: =Parent.Width
                 ZIndex: =2
+
+        Container2_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0.6
+            Height: =Parent.Height
+            LayoutMinHeight: =0
+            LayoutMinWidth: =0
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =Parent.Width/1.4
+            ZIndex: =2
+
+            con_progressBar_1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =Parent.Width
+                X: =4
+                Y: =2
+                ZIndex: =1
+
+                img_progressBar_1 As image:
+                    Height: =Parent.Height/1.3
+                    Image: |
+                        =With(
+                            {
+                                BaseSVGCode: "
+                                <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+                                viewBox='0 0 64 64' style='enable-background: new 0 0 64 64;' xml:space='preserve'>
+                                <style type='text/css'>
+                                    .baseCircle{fill: none;stroke: #BaseCircleColor; stroke-width:7;}
+                                    .valueCircle{fill: none; stroke: #ValueCircleColor; stroke-width:7;}
+                                </style>
+                                <circle class='baseCircle' cx='32' cy='32' r='27'/>
+                                <circle class='valueCircle' cx='32' cy='32' r='27' stroke-dasharray='#DisplayValue, 500' stroke-linecap='round'  transform='rotate(270, 32, 32)' />
+                                </svg>
+                                ",
+                                ValueCircle_Circumference: (KPI.progressValueCircle/100) * 169.646, 
+                                BaseCircleColor:KPI.baseCircleColor,
+                                ValueCircleColor: KPI.valueCircleColor
+                            },
+                            "data:image/svg+xml;utf8," & 
+                            EncodeUrl(
+                                Substitute(
+                                    Substitute(
+                                        Substitute(
+                                            BaseSVGCode,
+                                            "#DisplayValue", Text(ValueCircle_Circumference, "[$-en-US]0")
+                                        ),
+                                        "#BaseCircleColor", BaseCircleColor
+                                    ), 
+                                    "#ValueCircleColor", ValueCircleColor
+                                )
+                            )
+                        )
+                    OnSelect: =
+                    Width: =Parent.Width/1.3
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =1
+
+                "'lbl_%_1' As label":
+                    Align: =Align.Center
+                    Height: =39
+                    Size: =11
+                    Text: =KPI.progressValueCircle & "%"
+                    Visible: =precentageVisible
+                    Width: =41
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =2
+
+                btn_transprent_1 As button:
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =Parent.Height-5
+                    HoverColor: =RGBA(0, 0, 0, 0)
+                    HoverFill: =Color.Transparent
+                    OnSelect: =Set(precentageVisible,!precentageVisible)
+                    Size: =24
+                    Text: =""
+                    Width: =Parent.Width
+                    ZIndex: =3
 
