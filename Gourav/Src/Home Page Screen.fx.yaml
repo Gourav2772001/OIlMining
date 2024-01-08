@@ -22,6 +22,7 @@
             PaddingLeft: =10
             PaddingRight: =10
             PaddingTop: =10
+            Visible: =false
             Width: =Parent.Width-80
             X: =54
             Y: =75
@@ -51,18 +52,54 @@
 
                 "'con.sunKpi1_1' As groupContainer.horizontalAutoLayoutContainer":
                     DropShadow: =DropShadow.None
-                    Height: =77
+                    Height: =Parent.Height
                     LayoutMode: =LayoutMode.Auto
-                    Width: =201
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Width: =Parent.Width
                     ZIndex: =1
+
+                    Container5 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =2
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width/2
+                        ZIndex: =1
+
+                        Label2 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =Parent.Height/2
+                            Size: =Switch(App.ActiveScreen.Size,4,10,3,6,2,4)
+                            Text: ="Jaipur Net Worth"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        Label3 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =Parent.Height/2
+                            Size: =Switch(App.ActiveScreen.Size,4,10,3,6,2,4)
+                            Text: ="$5048598K"
+                            Width: =Parent.Width
+                            ZIndex: =2
 
                     "'Radial Progress Bar_2' As 'Radial Progress Bar'":
                         Height: ='Radial Progress Bar_2'.progressHeight
                         LayoutMinHeight: =640
                         LayoutMinWidth: =640
                         progressHeight: =Parent.Height
+                        progressValueCircle: =78
                         progressWidth: =Parent.Width/3.6
                         Width: ='Radial Progress Bar_2'.progressWidth
+                        Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =2
 
             con_kpi3 As groupContainer.manualLayoutContainer:
@@ -208,6 +245,242 @@
                     X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =1
+
+        Container9 As groupContainer.verticalAutoLayoutContainer:
+            Height: =190
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width-80
+            X: =60
+            Y: =60
+            ZIndex: =4
+
+            cont_mainKpi_1 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =97
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                PaddingBottom: =20
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =Parent.Width-80
+                X: =40
+                Y: =250
+                ZIndex: =1
+
+                cont_kpi1_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height-20
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    ZIndex: =1
+
+                con_kpi2_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height-20
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    ZIndex: =2
+
+                    "'con.sunKpi1_5' As groupContainer.horizontalAutoLayoutContainer":
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Container5_1 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            DropShadow: =DropShadow.None
+                            Height: =Parent.Height
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =2
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =0
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width/2
+                            ZIndex: =1
+
+                            Label2_1 As label:
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height/2
+                                Size: =Switch(App.ActiveScreen.Size,4,10,3,6,2,4)
+                                Text: ="Jaipur Net Worth"
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                            Label3_1 As label:
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Bold
+                                Height: =Parent.Height/2
+                                Size: =Switch(App.ActiveScreen.Size,4,10,3,6,2,4)
+                                Text: ="$5048598K"
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                        "'Radial Progress Bar_6' As 'Radial Progress Bar'":
+                            Height: ='Radial Progress Bar_6'.progressHeight
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+                            progressHeight: =Parent.Height
+                            progressValueCircle: =78
+                            progressWidth: =Parent.Width/3.6
+                            Width: ='Radial Progress Bar_6'.progressWidth
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
+                con_kpi3_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height-20
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    ZIndex: =3
+
+                    "'con.sunKpi1_6' As groupContainer.horizontalAutoLayoutContainer":
+                        DropShadow: =DropShadow.None
+                        Height: =77
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =201
+                        ZIndex: =1
+
+                        "'Radial Progress Bar_7' As 'Radial Progress Bar'":
+                            Height: ='Radial Progress Bar_7'.progressHeight
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+                            progressHeight: =Parent.Height
+                            progressWidth: =Parent.Width/3.6
+                            Width: ='Radial Progress Bar_7'.progressWidth
+                            ZIndex: =2
+
+            cont_mainKpi_2 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =97
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                PaddingBottom: =20
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =Parent.Width-80
+                X: =40
+                Y: =250
+                ZIndex: =2
+
+                cont_kpi1_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height-20
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    ZIndex: =1
+
+                    KPI_3 As KPI:
+                        Height: =KPI_3.kpiHeight
+                        kpiHeight: =Parent.Height
+                        KPiNOSize: =11
+                        kpiTextSize: =9
+                        KpiWidth: =Parent.Width
+                        Width: =Parent.Width
+
+                con_kpi2_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height-20
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    ZIndex: =2
+
+                    "'con.sunKpi1_9' As groupContainer.horizontalAutoLayoutContainer":
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Container5_2 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            DropShadow: =DropShadow.None
+                            Height: =Parent.Height
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =2
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =0
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width/2
+                            ZIndex: =1
+
+                            Label2_2 As label:
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height/2
+                                Size: =Switch(App.ActiveScreen.Size,4,10,3,6,2,4)
+                                Text: ="Jaipur Net Worth"
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                            Label3_2 As label:
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Bold
+                                Height: =Parent.Height/2
+                                Size: =Switch(App.ActiveScreen.Size,4,10,3,6,2,4)
+                                Text: ="$5048598K"
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                        "'Radial Progress Bar_10' As 'Radial Progress Bar'":
+                            Height: ='Radial Progress Bar_10'.progressHeight
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+                            progressHeight: =Parent.Height
+                            progressValueCircle: =78
+                            progressWidth: =Parent.Width/3.6
+                            Width: ='Radial Progress Bar_10'.progressWidth
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
+                con_kpi2_3 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.Height-20
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =3
+
+                    "'con.sunKpi1_10' As groupContainer.horizontalAutoLayoutContainer":
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Container5_3 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            DropShadow: =DropShadow.None
+                            Height: =Parent.Height
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =2
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =0
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width/2
+                            ZIndex: =1
 
     con_nevigation As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
