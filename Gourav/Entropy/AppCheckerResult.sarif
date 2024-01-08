@@ -5653,66 +5653,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form_Screen",
-                "type": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Form_Screen",
-                "type": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.user_data"
                 }
               ],
@@ -6521,36 +6461,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.con_mainHeader_1.lbl_welcome_1.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.con_mainHeader_1.lbl_welcome_1.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Screen1",
-                "type": "Screen1.con_mainHeader_1.lbl_welcome_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen1.Container2.Container3.gal_tempTabItems_1.Container6.lbl_TabItemstemp_1.Size"
                 }
               ],
@@ -6581,19 +6491,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_SalesOf_Jaipur_1.Visible"
+                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_NoFormToDisplay_1.Visible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_SalesOf_Jaipur_1.Visible",
+                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_NoFormToDisplay_1.Visible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Visible",
                 "module": "Screen1",
-                "type": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_SalesOf_Jaipur_1"
+                "type": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_NoFormToDisplay_1"
               }
             }
           ],
@@ -6611,19 +6521,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_NoFormToDisplay_1.Visible"
+                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_SalesOf_Jaipur_1.Visible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_NoFormToDisplay_1.Visible",
+                  "fullyQualifiedName": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_SalesOf_Jaipur_1.Visible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Visible",
                 "module": "Screen1",
-                "type": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_NoFormToDisplay_1"
+                "type": "Screen1.Container2.Container4.cont_rightSideContentForms_1.cont_SalesOf_Jaipur_1"
               }
             }
           ],
@@ -7151,79 +7061,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form_Screen.cont_HeaderRegionalForm_3.lbl_RegionalForm_LogoHeader_3.Size"
+                  "fullyQualifiedName": "Screen1.con_mainHeader_1.lbl_welcome_1.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Form_Screen.cont_HeaderRegionalForm_3.lbl_RegionalForm_LogoHeader_3.Size",
+                  "fullyQualifiedName": "Screen1.con_mainHeader_1.lbl_welcome_1.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Size",
-                "module": "Form_Screen",
-                "type": "Form_Screen.cont_HeaderRegionalForm_3.lbl_RegionalForm_LogoHeader_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form_Screen.cont_HeaderRegionalForm_3.lbl_LoggedInUserName_3.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Screen.cont_HeaderRegionalForm_3.lbl_LoggedInUserName_3.Visible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "Form_Screen",
-                "type": "Form_Screen.cont_HeaderRegionalForm_3.lbl_LoggedInUserName_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "Form_Screen",
-                "type": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2"
+                "member": "Text",
+                "module": "Screen1",
+                "type": "Screen1.con_mainHeader_1.lbl_welcome_1"
               }
             }
           ],
