@@ -3,6 +3,7 @@
 
     pdfView_InventorySummary As pdfViewer:
         BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =Last(OM_InventorySummaryPDF).dataURL
         Fill: =RGBA(0, 0, 0, 0.5)
         X: =724
         ZIndex: =1

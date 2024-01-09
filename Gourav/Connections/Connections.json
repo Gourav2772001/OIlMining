@@ -30,6 +30,9 @@
           "OM_Crude_oil_sales_pipeline_inventory": {
             "tableName": "76fafcc9-4a35-4e9a-aef4-429922668f73"
           },
+          "OM_InventorySummaryPDF": {
+            "tableName": "cc65e810-cff4-4980-be86-754cd3f590bf"
+          },
           "OM_Jaipur_Terminal": {
             "tableName": "0f72268f-7585-4c7e-9b8c-db6ab769ffbd"
           },
@@ -86,7 +89,8 @@
       "OM__Jodhpur_Oil_RDG_Condensate_Dispatch",
       "OM__Kota_Oil_RDG_Condensate_Dispatch",
       "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1",
-      "OM_Nos_of_Cargo_Loaded_from_Kota_Terminal"
+      "OM_Nos_of_Cargo_Loaded_from_Kota_Terminal",
+      "OM_InventorySummaryPDF"
     ],
     "dependencies": {},
     "dependents": [],
