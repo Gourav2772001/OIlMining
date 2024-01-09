@@ -240,7 +240,7 @@
 
             con_graphChart As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
-                DropShadow: =DropShadow.ExtraBold
+                DropShadow: =DropShadow.None
                 Height: =Parent.Height
                 LayoutMinHeight: =0
                 LayoutMinWidth: =400
