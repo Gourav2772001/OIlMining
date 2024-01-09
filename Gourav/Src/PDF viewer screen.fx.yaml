@@ -1,0 +1,17 @@
+"'PDF viewer screen' As screen":
+    OnVisible: =Set(showInventory,false)
+
+    pdfView_InventorySummary As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 0.5)
+        X: =724
+        ZIndex: =1
+
+    btn_InventorySummary As button:
+        OnSelect: =If(showInventory=false,Set(showInventory,true),Set(showInventory,false))
+        Text: ="View Inventory Summary"
+        Width: =282
+        X: =132
+        Y: =56
+        ZIndex: =2
+
