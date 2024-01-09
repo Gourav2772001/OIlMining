@@ -5,14 +5,16 @@
         BorderColor: =RGBA(0, 0, 0, 1)
         Document: =Last(OM_InventorySummaryPDF).dataURL
         Fill: =RGBA(0, 0, 0, 0.5)
-        X: =724
+        Height: =267
+        X: =708
+        Y: =16
         ZIndex: =1
 
     btn_InventorySummary As button:
         OnSelect: =If(showInventory=false,Set(showInventory,true),Set(showInventory,false))
         Text: ="View Inventory Summary"
         Width: =282
-        X: =132
-        Y: =56
+        X: =64
+        Y: =36
         ZIndex: =2
 
