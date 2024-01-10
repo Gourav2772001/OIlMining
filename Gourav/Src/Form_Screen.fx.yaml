@@ -1113,15 +1113,12 @@ Form_Screen As screen:
 
                         DataCardValue50_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1183,15 +1180,12 @@ Form_Screen As screen:
 
                         DataCardValue49_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1253,15 +1247,12 @@ Form_Screen As screen:
 
                         DataCardValue48_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1323,15 +1314,12 @@ Form_Screen As screen:
 
                         DataCardValue47_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1393,15 +1381,12 @@ Form_Screen As screen:
 
                         DataCardValue46_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1464,15 +1449,12 @@ Form_Screen As screen:
 
                         DataCardValue45_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1509,7 +1491,8 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     DropShadow: =DropShadow.None
                     Fill: =Parent.Fill
-                    Height: =Parent.Height*.2
+                    FillPortions: =0
+                    Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
@@ -3838,15 +3821,12 @@ Form_Screen As screen:
 
                         DataCardValue90_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -3908,15 +3888,12 @@ Form_Screen As screen:
 
                         DataCardValue89_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -3978,15 +3955,12 @@ Form_Screen As screen:
 
                         DataCardValue88_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Format: =TextFormat.Number
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -4049,15 +4023,12 @@ Form_Screen As screen:
 
                         DataCardValue87_2 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -4094,7 +4065,8 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     DropShadow: =DropShadow.None
                     Fill: =Parent.Fill
-                    Height: =Parent.Height*.2
+                    FillPortions: =0
+                    Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
