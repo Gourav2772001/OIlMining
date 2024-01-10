@@ -1011,7 +1011,8 @@
 
                 Lbl_Size_1 As label:
                     PaddingLeft: =10
-                    Text: ="Select Your Type"
+                    Text: ="Select Your Persona"
+                    Width: =190
                     ZIndex: =2
 
             "gal_personaSize_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -1164,15 +1165,9 @@
                      );
                     Set(var_selected_ID,0);
                     Set(Var_Persona,false);
-                    Navigate('Form Screen');
+                    Navigate('Home Page Screen');
                 Size: =20
                 Text: ="Continue"
                 Width: =Parent.Width-30
                 ZIndex: =4
-
-        Image1 As image:
-            Image: ='image-removebg-preview'
-            X: =40
-            Y: =40
-            ZIndex: =2
 
