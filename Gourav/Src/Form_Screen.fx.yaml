@@ -529,6 +529,7 @@ Form_Screen As screen:
                     FillPortions: =0
                     Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =Parent.Width-400
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -536,14 +537,24 @@ Form_Screen As screen:
                     Width: =Parent.Width
                     ZIndex: =2
 
+                    Back_btn_1 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
+                        OnSelect: =Navigate('Home Page Screen')
+                        Size: =20
+                        Text: ="Back"
+                        ZIndex: =1
+
                     btn_SalesJaipur_2 As button:
+                        AlignInContainer: =AlignInContainer.Center
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =SubmitForm(form_SalesOf_Jaipur_3);ResetForm(form_SalesOf_Jaipur_3)
                         Size: =20
                         Text: ="Save"
-                        ZIndex: =1
+                        ZIndex: =2
 
             cont_NoFormToDisplay_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -2814,12 +2825,22 @@ Form_Screen As screen:
                     FillPortions: =0
                     Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =Parent.Width-400
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
                     ZIndex: =2
+
+                    Back_btn1_1 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
+                        OnSelect: =Navigate('Home Page Screen')
+                        Size: =20
+                        Text: ="Back"
+                        ZIndex: =1
 
                     btn_CrudeOil_Jaipur_2 As button:
                         Color: =RGBA(0, 0, 0, 1)
@@ -2828,7 +2849,7 @@ Form_Screen As screen:
                         OnSelect: =SubmitForm(form_CrudeOil_Jaipur_2);ResetForm(form_CrudeOil_Jaipur_2)
                         Size: =20
                         Text: ="Save"
-                        ZIndex: =1
+                        ZIndex: =2
 
             cont_InventoryJaipur_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -3074,12 +3095,22 @@ Form_Screen As screen:
                     FillPortions: =0
                     Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =Parent.Width-400
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
                     ZIndex: =2
+
+                    Back_btn1_2 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
+                        OnSelect: =Navigate('Home Page Screen')
+                        Size: =20
+                        Text: ="Back"
+                        ZIndex: =1
 
                     btn_Inventory_Jaipur_2 As button:
                         Color: =RGBA(0, 0, 0, 1)
@@ -3088,7 +3119,7 @@ Form_Screen As screen:
                         OnSelect: =SubmitForm(form_InventoryJaipur_2);ResetForm(form_InventoryJaipur_2)
                         Size: =20
                         Text: ="Save"
-                        ZIndex: =1
+                        ZIndex: =2
 
             cont_SummaryJaipur_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -3401,12 +3432,22 @@ Form_Screen As screen:
                     FillPortions: =0
                     Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =Parent.Width-400
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
                     ZIndex: =2
+
+                    Back_btn1_3 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
+                        OnSelect: =Navigate('Home Page Screen')
+                        Size: =20
+                        Text: ="Back"
+                        ZIndex: =1
 
                     btn_Summary_Jaipur_2 As button:
                         Color: =RGBA(0, 0, 0, 1)
@@ -3415,7 +3456,7 @@ Form_Screen As screen:
                         OnSelect: =SubmitForm(form_SummaryJaipur_2);ResetForm(form_SummaryJaipur_2)
                         Size: =20
                         Text: ="Save"
-                        ZIndex: =1
+                        ZIndex: =2
 
             cont_SummaryKota_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -4650,12 +4691,22 @@ Form_Screen As screen:
                     FillPortions: =0
                     Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =Parent.Width-400
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
                     ZIndex: =2
+
+                    Back_btn1_4 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
+                        OnSelect: =Navigate('Home Page Screen')
+                        Size: =20
+                        Text: ="Back"
+                        ZIndex: =1
 
                     btn_Dispatch_Jaipur_2 As button:
                         Color: =RGBA(0, 0, 0, 1)
@@ -4664,7 +4715,7 @@ Form_Screen As screen:
                         OnSelect: =SubmitForm(form_Dispatch_Jaipur_2);ResetForm(form_Dispatch_Jaipur_2)
                         Size: =20
                         Text: ="Save"
-                        ZIndex: =1
+                        ZIndex: =2
 
             cont_Dispatch_Jodhpur_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -6818,8 +6869,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     DropShadow: =DropShadow.None
                     Fill: =Parent.Fill
-                    Height: =Parent.Height*.2
+                    FillPortions: =0
+                    Height: =Parent.Height*.3
                     LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =Parent.Width-400
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -6827,13 +6880,23 @@ Form_Screen As screen:
                     Width: =Parent.Width
                     ZIndex: =2
 
+                    Back_btn1_5 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
+                        OnSelect: =Navigate('Home Page Screen')
+                        Size: =20
+                        Text: ="Back"
+                        ZIndex: =1
+
                     btn_Cargo_Jaipur_2 As button:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =SubmitForm(form_Cargo_Jaipur_2);ResetForm(form_Cargo_Jaipur_2)
+                        Size: =20
                         Text: ="Save"
-                        ZIndex: =1
+                        ZIndex: =2
 
     cont_HeaderRegionalForm_3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height*.1
