@@ -38,7 +38,7 @@ Form_Screen As screen:
                     FontWeight: =FontWeight.Bold
                     Height: =60
                     OnSelect: =Select(Parent)
-                    Size: =If('Form Screen'.Size>2,15,10)
+                    Size: =If('Form Screen'.Size>2,18,12)
                     Text: =ThisItem.Name
                     Width: |-
                         =If(Form_Screen.Size>2,
