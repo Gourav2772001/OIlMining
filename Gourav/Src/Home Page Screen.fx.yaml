@@ -100,7 +100,6 @@
                             Height: ='Radial Progress Bar_1'.progressHeight
                             LayoutMinHeight: =640
                             LayoutMinWidth: =640
-                            OnReset: =Set(precentageVisible,!'Radial Progress Bar_1'.precentagleVisble)
                             progessBarPrencatageSize: =8
                             progressHeight: =Parent.Height*.8
                             progressWidth: =Parent.Width*.3
