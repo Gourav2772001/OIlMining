@@ -240,7 +240,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -401,7 +401,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -562,7 +562,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard11_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -723,7 +723,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -884,7 +884,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1045,7 +1045,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1206,7 +1206,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard7_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1367,7 +1367,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard8_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1528,7 +1528,7 @@
       "MetaDataIDKey": "",
       "Name": "BS_W_DataCard9_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3972,7 +3972,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_galTabSelecteds_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7105,7 +7105,7 @@
       "MetaDataIDKey": "",
       "Name": "Closing_Tank_Stock_BBLS_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7266,7 +7266,7 @@
       "MetaDataIDKey": "",
       "Name": "Closing_Tank_Stock_BBLS_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7427,7 +7427,7 @@
       "MetaDataIDKey": "",
       "Name": "Closing_Tank_Stock_BBLS_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8665,7 +8665,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_CrudeOil_Jaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8776,7 +8776,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -9183,7 +9183,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Jaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9402,7 +9402,14 @@
       ],
       "DynamicProperties": [
         {
-          "ControlPropertyState": "FillPortions",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "FillPortions",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "FillPortions",
@@ -9701,7 +9708,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Jaisalmer_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10219,7 +10226,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Jodhpur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11695,7 +11702,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_InventoryJaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11893,7 +11900,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_leftSideContentgalTab_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12127,7 +12134,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_NoFormToDisplay_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12260,7 +12267,14 @@
         "BorderColor",
         "BorderStyle",
         "Fill",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "40",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -12306,7 +12320,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_rightSideContentForms_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12397,7 +12411,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -12417,12 +12431,12 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultGroupContainerStyle",
@@ -13054,14 +13068,7 @@
       ],
       "DynamicProperties": [
         {
-          "ControlPropertyState": {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "FillPortions",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
+          "ControlPropertyState": "FillPortions",
           "Property": {
             "Category": "Design",
             "PropertyName": "FillPortions",
@@ -13229,7 +13236,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -13633,7 +13640,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Jaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13885,7 +13892,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Jaisalmer_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14137,7 +14144,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Jodhpur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14389,7 +14396,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Kota_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14641,7 +14648,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Udaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15957,7 +15964,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SummaryJaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16209,7 +16216,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SummaryKota_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16461,7 +16468,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SummaryUdaipur_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16672,7 +16679,7 @@
       "MetaDataIDKey": "",
       "Name": "Cumulative_Till_Date_DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16833,7 +16840,7 @@
       "MetaDataIDKey": "",
       "Name": "Cumulative_Till_Date_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17183,7 +17190,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -17472,7 +17479,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -17761,7 +17768,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -18050,7 +18057,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -18339,7 +18346,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -18628,7 +18635,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -18917,7 +18924,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -19206,7 +19213,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -19495,7 +19502,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -19784,7 +19791,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -20073,7 +20080,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -20362,7 +20369,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -20651,7 +20658,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -20940,7 +20947,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -21229,7 +21236,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -21518,7 +21525,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -21807,7 +21814,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -22096,7 +22103,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -22385,7 +22392,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -24986,7 +24993,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -25275,7 +25282,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -25564,7 +25571,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -25853,7 +25860,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -26142,7 +26149,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -26431,7 +26438,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -26720,7 +26727,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -27009,7 +27016,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -27298,7 +27305,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -27587,7 +27594,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -27876,7 +27883,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -28165,7 +28172,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -28454,7 +28461,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -28743,7 +28750,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -29032,7 +29039,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -29321,7 +29328,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -29610,7 +29617,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -29899,7 +29906,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -30188,7 +30195,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -30477,7 +30484,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -30766,7 +30773,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -31055,7 +31062,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -31344,7 +31351,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -31633,7 +31640,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -31922,7 +31929,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -32211,7 +32218,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -32500,7 +32507,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -33945,7 +33952,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -34812,7 +34819,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -35101,7 +35108,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -35390,7 +35397,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -35679,7 +35686,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -35968,7 +35975,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -36257,7 +36264,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -36546,7 +36553,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -36835,7 +36842,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -37124,7 +37131,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -37413,7 +37420,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -37702,7 +37709,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -37991,7 +37998,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -39147,7 +39154,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -39725,7 +39732,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -40014,7 +40021,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -40303,7 +40310,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -40592,7 +40599,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -40881,7 +40888,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -41170,7 +41177,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -41459,7 +41466,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -41748,7 +41755,7 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -69034,7 +69041,7 @@
       "MetaDataIDKey": "",
       "Name": "Density_15C_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -69195,7 +69202,7 @@
       "MetaDataIDKey": "",
       "Name": "Density_15C_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -69356,7 +69363,7 @@
       "MetaDataIDKey": "",
       "Name": "Density_15C_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -69517,7 +69524,7 @@
       "MetaDataIDKey": "",
       "Name": "Density_15C_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -69678,7 +69685,7 @@
       "MetaDataIDKey": "",
       "Name": "Density_15C_DataCard7_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -69839,7 +69846,7 @@
       "MetaDataIDKey": "",
       "Name": "Duration_hours_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -70000,7 +70007,7 @@
       "MetaDataIDKey": "",
       "Name": "Duration_hours_DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -70161,7 +70168,7 @@
       "MetaDataIDKey": "",
       "Name": "Duration_hours_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -70322,7 +70329,7 @@
       "MetaDataIDKey": "",
       "Name": "Duration_hours_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -98657,7 +98664,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Sales_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -98818,7 +98825,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Sales_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -98979,7 +98986,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Sales_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -99140,7 +99147,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Sales_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -99301,7 +99308,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Sales_DataCard7_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -99462,7 +99469,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Volume_pumped_DataCard10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -99623,7 +99630,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Volume_pumped_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -99784,7 +99791,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Volume_pumped_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -99945,7 +99952,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Volume_pumped_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -100106,7 +100113,7 @@
       "MetaDataIDKey": "",
       "Name": "Gross_Volume_pumped_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -100806,7 +100813,7 @@
       "MetaDataIDKey": "",
       "Name": "img_RegionalForm_UserImage_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -101128,7 +101135,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_LoggedInUserName_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -101813,7 +101820,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_RegionalForm_LogoHeader_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -102110,7 +102117,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_TabItemstemp_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -102585,7 +102592,7 @@
       "MetaDataIDKey": "",
       "Name": "Net_Sales_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -102746,7 +102753,7 @@
       "MetaDataIDKey": "",
       "Name": "Net_Sales_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -102907,7 +102914,7 @@
       "MetaDataIDKey": "",
       "Name": "Net_Sales_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103075,7 +103082,7 @@
       "MetaDataIDKey": "",
       "Name": "Net_Sales_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103236,7 +103243,7 @@
       "MetaDataIDKey": "",
       "Name": "Net_Sales_DataCard7_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103396,7 +103403,7 @@
       "MetaDataIDKey": "",
       "Name": "Nomination_Met_DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103552,7 +103559,7 @@
       "MetaDataIDKey": "",
       "Name": "RAAG_Oil_RDG_DataCard10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103690,7 +103697,14 @@
         "Fill",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "478",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         {
@@ -103713,7 +103727,7 @@
       "MetaDataIDKey": "",
       "Name": "RAAG_Oil_RDG_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103774,7 +103788,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -103874,7 +103888,7 @@
       "MetaDataIDKey": "",
       "Name": "RAAG_Oil_RDG_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -104035,7 +104049,7 @@
       "MetaDataIDKey": "",
       "Name": "RAAG_Oil_RDG_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -104196,7 +104210,7 @@
       "MetaDataIDKey": "",
       "Name": "RAAG_Oil_RDG_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -104357,7 +104371,7 @@
       "MetaDataIDKey": "",
       "Name": "Receipt_Tankage_only_BBLS_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -104518,7 +104532,7 @@
       "MetaDataIDKey": "",
       "Name": "Receipt_Tankage_only_BBLS_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -104679,7 +104693,7 @@
       "MetaDataIDKey": "",
       "Name": "Receipt_Tankage_only_BBLS_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -105001,7 +105015,7 @@
       "MetaDataIDKey": "",
       "Name": "Shortfall_Excess_NetMonth_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -105162,7 +105176,7 @@
       "MetaDataIDKey": "",
       "Name": "Shortfall_Excess_NetMonth_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -105323,7 +105337,7 @@
       "MetaDataIDKey": "",
       "Name": "Shortfall_Excess_NetMonth_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -105484,7 +105498,7 @@
       "MetaDataIDKey": "",
       "Name": "Shortfall_Excess_NetMonth_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -105645,7 +105659,7 @@
       "MetaDataIDKey": "",
       "Name": "Sortfall_Excess_NetMonth_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -130058,7 +130072,7 @@
       "MetaDataIDKey": "",
       "Name": "Tank _DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -130219,7 +130233,7 @@
       "MetaDataIDKey": "",
       "Name": "Tank _DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -130380,7 +130394,7 @@
       "MetaDataIDKey": "",
       "Name": "Tank _DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -130541,7 +130555,7 @@
       "MetaDataIDKey": "",
       "Name": "Tank _DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -130710,7 +130724,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -130884,7 +130898,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard11_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -131058,7 +131072,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard12_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -131224,7 +131238,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard13_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -131370,7 +131384,14 @@
         "Fill",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "478",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         {
@@ -131393,7 +131414,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard14_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -131454,7 +131475,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -131567,7 +131588,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard15_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -131741,7 +131762,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard16_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -131915,7 +131936,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard17_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -132089,7 +132110,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard18_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -132263,7 +132284,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard19_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -132437,7 +132458,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -132611,7 +132632,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard21_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -132785,7 +132806,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard23_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -132959,7 +132980,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -133133,7 +133154,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard8_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -133307,7 +133328,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard9_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -133473,7 +133494,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Gross_Pumped_DataCard10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -133634,7 +133655,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Gross_Pumped_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -133795,7 +133816,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Gross_Pumped_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -133956,7 +133977,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Gross_Pumped_DataCard5_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -134117,7 +134138,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Gross_Pumped_DataCard6_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -134278,7 +134299,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Nomination_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -134439,7 +134460,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Nomination_DataCard2_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -134600,7 +134621,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Nomination_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -134761,7 +134782,7 @@
       "MetaDataIDKey": "",
       "Name": "Total_Nomination_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -134922,7 +134943,7 @@
       "MetaDataIDKey": "",
       "Name": "Water_Drain_Quantity_BBLS_DataCard1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -135083,7 +135104,7 @@
       "MetaDataIDKey": "",
       "Name": "Water_Drain_Quantity_BBLS_DataCard3_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -135244,7 +135265,7 @@
       "MetaDataIDKey": "",
       "Name": "Water_Drain_Quantity_BBLS_DataCard4_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
