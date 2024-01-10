@@ -6492,36 +6492,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2.Size"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2.Size",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Size",
-                "module": "Form_Screen",
-                "type": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Form_Screen.cont_HeaderRegionalForm_3.lbl_RegionalForm_LogoHeader_3.Size"
                 }
               ],
@@ -6565,6 +6535,36 @@
                 "member": "Visible",
                 "module": "Form_Screen",
                 "type": "Form_Screen.cont_HeaderRegionalForm_3.lbl_LoggedInUserName_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "Form_Screen",
+                "type": "Form_Screen.Main_container_Form_Screen.cont_leftSideContentgalTab_1.gal_tempTabItems_2.lbl_TabItemstemp_2"
               }
             }
           ],
