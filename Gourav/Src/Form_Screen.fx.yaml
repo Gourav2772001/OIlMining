@@ -2093,7 +2093,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2163,7 +2163,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2233,7 +2233,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2303,7 +2303,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2373,7 +2373,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2444,7 +2444,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2563,6 +2563,7 @@ Form_Screen As screen:
                         Required: =false
                         Update: =DataCardValue73_2.Text
                         Width: =478
+                        WidthFit: =true
                         X: =0
                         Y: =0
                         ZIndex: =2
@@ -2969,6 +2970,7 @@ Form_Screen As screen:
                         Required: =false
                         Update: =Value(DataCardValue58_2.Text)
                         Width: =478
+                        WidthFit: =true
                         X: =0
                         Y: =0
                         ZIndex: =2
@@ -3921,7 +3923,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -3991,7 +3993,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -4061,7 +4063,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -4132,7 +4134,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5495,7 +5497,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5565,7 +5567,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5635,7 +5637,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5705,7 +5707,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5775,7 +5777,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5845,7 +5847,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5915,7 +5917,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -5986,7 +5988,7 @@ Form_Screen As screen:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
-                            Size: =18
+                            Size: =If(Form_Screen.Size>2,18,14)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
