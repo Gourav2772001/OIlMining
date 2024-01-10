@@ -89,9 +89,10 @@
                         Width: =Parent.Width
                         ZIndex: =2
 
-                        Label3 As label:
+                        lbl_netWorthNo As label:
+                            FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
-                            Text: ="Text"
+                            Text: ="$5048598K"
                             Width: =Parent.Width*.7
                             ZIndex: =1
 
@@ -100,6 +101,7 @@
                             LayoutMinHeight: =640
                             LayoutMinWidth: =640
                             OnReset: =Set(precentageVisible,!'Radial Progress Bar_1'.precentagleVisble)
+                            progessBarPrencatageSize: =8
                             progressHeight: =Parent.Height*.8
                             progressWidth: =Parent.Width*.3
                             Width: ='Radial Progress Bar_1'.progressWidth
