@@ -35,6 +35,11 @@
                 LayoutMinWidth: =0
                 ZIndex: =1
 
+                "'Radial Progress Bar_1' As 'Radial Progress Bar'":
+                    Height: ='Radial Progress Bar_1'.progressHeight
+                    OnReset: =Set(precentageVisible,!'Radial Progress Bar_1'.precentagleVisble)
+                    Width: ='Radial Progress Bar_1'.progressWidth
+
             con_kpi2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height-20

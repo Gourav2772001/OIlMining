@@ -1,0 +1,80 @@
+"'Radial Progress Bar' As CanvasComponent":
+    baseCircleColor: ="RGBA(237, 237, 237, 1)"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: ='Radial Progress Bar'.progressHeight
+    OnReset: =Set(precentageVisible,!'Radial Progress Bar'.precentagleVisble)
+    precentagleVisble: =false
+    progessBarPrencatageSize: =10
+    progressHeight: =75
+    progressValueCircle: =50
+    progressWidth: =75
+    valueCircleColor: ="RGBA(125,105,121,1)"
+    Width: ='Radial Progress Bar'.progressWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    con_progressBar As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        img_progressBar As image:
+            Height: =Parent.Height
+            Image: |
+                =With(
+                    {
+                        BaseSVGCode: "
+                        <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+                        viewBox='0 0 64 64' style='enable-background: new 0 0 64 64;' xml:space='preserve'>
+                        <style type='text/css'>
+                            .baseCircle{fill: none;stroke: #BaseCircleColor; stroke-width:7;}
+                            .valueCircle{fill: none; stroke: #ValueCircleColor; stroke-width:7;}
+                        </style>
+                        <circle class='baseCircle' cx='32' cy='32' r='27'/>
+                        <circle class='valueCircle' cx='32' cy='32' r='27' stroke-dasharray='#DisplayValue, 500' stroke-linecap='round'  transform='rotate(270, 32, 32)' />
+                        </svg>
+                        ",
+                        ValueCircle_Circumference: ('Radial Progress Bar'.progressValueCircle/100) * 169.646, 
+                        BaseCircleColor:'Radial Progress Bar'.baseCircleColor,
+                        ValueCircleColor: 'Radial Progress Bar'.valueCircleColor
+                    },
+                    "data:image/svg+xml;utf8," & 
+                    EncodeUrl(
+                        Substitute(
+                            Substitute(
+                                Substitute(
+                                    BaseSVGCode,
+                                    "#DisplayValue", Text(ValueCircle_Circumference, "[$-en-US]0")
+                                ),
+                                "#BaseCircleColor", BaseCircleColor
+                            ), 
+                            "#ValueCircleColor", ValueCircleColor
+                        )
+                    )
+                )
+            OnSelect: =
+            Width: =Parent.Width
+            ZIndex: =1
+
+        "'lbl_%' As label":
+            Align: =Align.Center
+            Height: =Parent.Height
+            Size: ='Radial Progress Bar'.progessBarPrencatageSize
+            Text: ='Radial Progress Bar'.progressValueCircle & "%"
+            Visible: =precentageVisible
+            Width: =Parent.Width
+            ZIndex: =2
+
+        btn_transprent As button:
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =Color.Transparent
+            OnSelect: =Set(precentageVisible,!precentageVisible)
+            Size: =24
+            Text: =""
+            Width: =Parent.Width
+            ZIndex: =3
+
