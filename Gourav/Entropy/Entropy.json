@@ -1,8 +1,7 @@
 {
   "ComponentIndexes": {
     "KPI": 6,
-    "NevigationBar": 8,
-    "Radial Progress Bar": 7
+    "NevigationBar": 7
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -92,7 +91,6 @@
     "btn_Summary_Udaipur_1": 442,
     "btn_Summary_Udaipur_2": 1542,
     "btn_Trans_1": 161,
-    "btn_transprent": 18,
     "btn_transprent_1": 11,
     "Circle3": 24,
     "Closing_Tank_Stock_BBLS_DataCard1": 890,
@@ -122,7 +120,6 @@
     "con_OtherChart": 55,
     "con_otherGarph": 56,
     "con_progessBar": 58,
-    "con_progressBar": 15,
     "con_progressBar_1": 10,
     "con_subKpi": 6,
     "con_userImage": 33,
@@ -1188,7 +1185,6 @@
     "img_OIlLogoImg": 65,
     "img_oilMineImageRightSideMain": 108,
     "img_persona": 159,
-    "img_progressBar": 16,
     "img_progressBar_1": 12,
     "img_RegionalForm_UserImage_2": 686,
     "img_RegionalForm_UserImage_3": 1197,
@@ -1202,7 +1198,6 @@
     "img_userImage_1": 174,
     "KPI": 4,
     "Label1": 252,
-    "lbl_%": 17,
     "lbl_%_1": 13,
     "lbl_collabContent": 88,
     "lbl_collabContent_1": 129,
@@ -1311,7 +1306,6 @@
     "RAAG_Oil_RDG_DataCard6": 1060,
     "RAAG_Oil_RDG_DataCard6_1": 553,
     "RAAG_Oil_RDG_DataCard6_2": 1260,
-    "Radial Progress Bar": 14,
     "Receipt_Tankage_only_BBLS_DataCard1": 895,
     "Receipt_Tankage_only_BBLS_DataCard1_1": 378,
     "Receipt_Tankage_only_BBLS_DataCard1_2": 1483,
@@ -1698,7 +1692,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/10/2024 08:37:11",
+  "HeaderLastSavedDateTimeUTC": "01/10/2024 08:37:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "ad35ed50-698e-48be-9427-a782a1a80ec5": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/832938808e0b419c8dc90fe74f425501\"",
@@ -1765,13 +1759,11 @@
   },
   "OrderComponentMetadata": {
     "898f64f20a20477d9d4d6b7b84fc7494": 0,
-    "8d8acd61e3154144836005b40fe0806e": 2,
-    "ad5f2a910f064120ac734178e1c425ba": 1
+    "8d8acd61e3154144836005b40fe0806e": 1
   },
   "OrderComponentTemplate": {
     "898f64f20a20477d9d4d6b7b84fc7494": 0,
-    "8d8acd61e3154144836005b40fe0806e": 2,
-    "ad5f2a910f064120ac734178e1c425ba": 1
+    "8d8acd61e3154144836005b40fe0806e": 1
   },
   "OrderDataSource": {
     "ColumnChartSample": 0,
@@ -1908,7 +1900,6 @@
     "btn_Summary_Udaipur_1": {},
     "btn_Summary_Udaipur_2": {},
     "btn_Trans_1": {},
-    "btn_transprent": {},
     "btn_transprent_1": {},
     "Circle3": {},
     "Closing_Tank_Stock_BBLS_DataCard1": {},
@@ -1938,7 +1929,6 @@
     "con_OtherChart": {},
     "con_otherGarph": {},
     "con_progessBar": {},
-    "con_progressBar": {},
     "con_progressBar_1": {},
     "con_subKpi": {},
     "con_userImage": {},
@@ -3004,7 +2994,6 @@
     "img_OIlLogoImg": {},
     "img_oilMineImageRightSideMain": {},
     "img_persona": {},
-    "img_progressBar": {},
     "img_progressBar_1": {},
     "img_RegionalForm_UserImage_2": {},
     "img_RegionalForm_UserImage_3": {},
@@ -3018,7 +3007,6 @@
     "img_userImage_1": {},
     "KPI": {},
     "Label1": {},
-    "lbl_%": {},
     "lbl_%_1": {},
     "lbl_collabContent": {},
     "lbl_collabContent_1": {},
@@ -3127,7 +3115,6 @@
     "RAAG_Oil_RDG_DataCard6": {},
     "RAAG_Oil_RDG_DataCard6_1": {},
     "RAAG_Oil_RDG_DataCard6_2": {},
-    "Radial Progress Bar": {},
     "Receipt_Tankage_only_BBLS_DataCard1": {},
     "Receipt_Tankage_only_BBLS_DataCard1_1": {},
     "Receipt_Tankage_only_BBLS_DataCard1_2": {},
@@ -3601,7 +3588,6 @@
     "btn_Summary_Udaipur_1": 921,
     "btn_Summary_Udaipur_2": 1508,
     "btn_Trans_1": 99,
-    "btn_transprent": 1683,
     "btn_transprent_1": 1677,
     "Circle3": 1688,
     "Closing_Tank_Stock_BBLS_DataCard1": 344,
@@ -3631,7 +3617,6 @@
     "con_OtherChart": 130,
     "con_otherGarph": 131,
     "con_progessBar": 133,
-    "con_progressBar": 1680,
     "con_progressBar_1": 1676,
     "con_subKpi": 1672,
     "con_userImage": 108,
@@ -4697,7 +4682,6 @@
     "img_OIlLogoImg": 3,
     "img_oilMineImageRightSideMain": 46,
     "img_persona": 97,
-    "img_progressBar": 1681,
     "img_progressBar_1": 1678,
     "img_RegionalForm_UserImage_2": 140,
     "img_RegionalForm_UserImage_3": 1163,
@@ -4711,7 +4695,6 @@
     "img_userImage_1": 653,
     "KPI": 8,
     "Label1": 731,
-    "lbl_%": 1682,
     "lbl_%_1": 1679,
     "lbl_collabContent": 26,
     "lbl_collabContent_1": 67,
@@ -4820,7 +4803,6 @@
     "RAAG_Oil_RDG_DataCard6": 514,
     "RAAG_Oil_RDG_DataCard6_1": 1032,
     "RAAG_Oil_RDG_DataCard6_2": 1226,
-    "Radial Progress Bar": 18,
     "Receipt_Tankage_only_BBLS_DataCard1": 349,
     "Receipt_Tankage_only_BBLS_DataCard1_1": 857,
     "Receipt_Tankage_only_BBLS_DataCard1_2": 1449,
