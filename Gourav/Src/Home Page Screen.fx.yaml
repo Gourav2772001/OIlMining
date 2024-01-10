@@ -119,7 +119,7 @@
                 ZIndex: =2
 
                 con_SubChild_1 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =92
+                    Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
@@ -201,7 +201,7 @@
                 ZIndex: =3
 
                 con_SubChild_2 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =92
+                    Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
@@ -283,7 +283,7 @@
                 ZIndex: =4
 
                 con_SubChild_3 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =92
+                    Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
@@ -366,7 +366,7 @@
                 ZIndex: =5
 
                 con_SubChild_4 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =92
+                    Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width
