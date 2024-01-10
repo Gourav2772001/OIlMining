@@ -23,6 +23,7 @@
             PaddingLeft: =10
             PaddingRight: =10
             PaddingTop: =10
+            Visible: =If(App.ActiveScreen.Size=4||App.ActiveScreen.Size=3,true,false)
             Width: =Parent.Width-80
             X: =54
             Y: =75
@@ -35,10 +36,56 @@
                 LayoutMinWidth: =0
                 ZIndex: =1
 
-                "'Radial Progress Bar_1' As 'Radial Progress Bar'":
-                    Height: ='Radial Progress Bar_1'.progressHeight
-                    OnReset: =Set(precentageVisible,!'Radial Progress Bar_1'.precentagleVisble)
-                    Width: ='Radial Progress Bar_1'.progressWidth
+                con_SubChild As groupContainer.verticalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    con_subChildOne As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height*.4
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        PaddingTop: =5
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        img_kpiIcon As image:
+                            Height: =Parent.Height*.8
+                            Image: |-
+                                =  "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
+                                  <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
+                                  <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
+                                </svg>
+                                ")
+                            PaddingBottom: =5
+                            Visible: =If(App.ActiveScreen.Size,true,false)
+                            Width: =Parent.Width*.2
+                            ZIndex: =1
+
+                        lbl_companyName As label:
+                            Height: =Parent.Height*.8
+                            PaddingBottom: =8
+                            Size: =11
+                            Text: ="Jaipur Net Worth"
+                            Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon.Width,Parent.Width)
+                            ZIndex: =2
+
+                    con_SubChildSec As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =Parent.Height-con_subChildOne.Height
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        ZIndex: =2
 
             con_kpi2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
