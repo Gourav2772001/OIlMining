@@ -3,10 +3,12 @@
 
     pdfView_InventorySummary As pdfViewer:
         BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
         Document: =Last(OM_InventorySummaryPDF).dataURL
         Fill: =RGBA(0, 0, 0, 0.5)
-        Height: =267
-        X: =708
+        Height: =752
+        Width: =748
+        X: =600
         Y: =16
         ZIndex: =1
 

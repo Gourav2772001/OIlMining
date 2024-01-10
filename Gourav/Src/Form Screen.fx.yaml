@@ -1,5 +1,6 @@
 "'Form Screen' As screen":
     BackgroundImage: ='7f951bda68241a57aa84929a95f120f9f082a9a0-1440x1054'
+    Fill: =RGBA(247, 245, 245, 0.79)
     ImagePosition: =ImagePosition.Fill
 
     cont_MainFormScreen As groupContainer.verticalAutoLayoutContainer:
