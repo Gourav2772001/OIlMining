@@ -1,0 +1,85 @@
+"'Department Wise Approval Screen' As screen":
+
+    gal_SALEdepartmentwiseApproval As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Items: =OM_SalesPDF_Summary
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =98
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        lbl_IDRetrieved As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.ID
+            Width: =48
+            X: =69
+            Y: =5
+            ZIndex: =1
+
+        lbl_IDLabel As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="ID:"
+            Width: =48
+            X: =21
+            Y: =5
+            ZIndex: =2
+
+        lbl_locationLabel As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="LOCATION:"
+            Width: =105
+            X: =21
+            Y: =38
+            ZIndex: =3
+
+        lbl_locationName As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Location
+            X: =126
+            Y: =39
+            ZIndex: =4
+
+        ico_ViewPDFSales As icon.View:
+            Height: =19
+            Icon: =Icon.View
+            OnSelect: =Select(Parent);Set(showSalesPDFView,true)
+            Width: =36
+            X: =293
+            Y: =29
+            ZIndex: =5
+
+        btn_ApproveReject As button:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Text: ="Approve/Decline"
+            Width: =194
+            X: =392
+            Y: =17
+            ZIndex: =6
+
+    pdfViewer_SalesDepartment As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =gal_SALEdepartmentwiseApproval.Selected.dataURL
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Visible: =showSalesPDFView
+        X: =726
+        Y: =40
+        ZIndex: =2
+
+    Icon2 As icon.CancelBadge:
+        Height: =32
+        Icon: =Icon.CancelBadge
+        OnSelect: =Set(showSalesPDFView,false)
+        Visible: =showSalesPDFView
+        Width: =41
+        X: =1325
+        Y: =8
+        ZIndex: =3
+

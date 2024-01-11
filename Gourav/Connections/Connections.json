@@ -63,6 +63,9 @@
           "OM_Sales_to_Udaipur_Terminal": {
             "tableName": "ffeef10a-8099-4334-8592-a6d961a502b8"
           },
+          "OM_SalesPDF_Summary": {
+            "tableName": "406bb11a-7212-4da9-8e85-9c89a1ec34f3"
+          },
           "OM_Udaipur_Terminal": {
             "tableName": "7d242b65-ab05-47e2-a594-199ff86c998e"
           },
@@ -90,7 +93,8 @@
       "OM__Kota_Oil_RDG_Condensate_Dispatch",
       "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1",
       "OM_Nos_of_Cargo_Loaded_from_Kota_Terminal",
-      "OM_InventorySummaryPDF"
+      "OM_InventorySummaryPDF",
+      "OM_SalesPDF_Summary"
     ],
     "dependencies": {},
     "dependents": [],
