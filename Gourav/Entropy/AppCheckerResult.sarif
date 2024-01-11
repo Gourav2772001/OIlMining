@@ -8413,19 +8413,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Department Wise Approval Screen'.Icon2.AccessibleLabel"
+                  "fullyQualifiedName": "'Department Wise Approval Screen'.icon_CancelPDF.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Department Wise Approval Screen'.Icon2.AccessibleLabel",
+                  "fullyQualifiedName": "'Department Wise Approval Screen'.icon_CancelPDF.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Department Wise Approval Screen",
-                "type": "'Department Wise Approval Screen'.Icon2"
+                "type": "'Department Wise Approval Screen'.icon_CancelPDF"
               }
             }
           ],
@@ -8443,19 +8443,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Department Wise Approval Screen'.Icon2.TabIndex"
+                  "fullyQualifiedName": "'Department Wise Approval Screen'.icon_CancelPDF.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Department Wise Approval Screen'.Icon2.TabIndex",
+                  "fullyQualifiedName": "'Department Wise Approval Screen'.icon_CancelPDF.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Department Wise Approval Screen",
-                "type": "'Department Wise Approval Screen'.Icon2"
+                "type": "'Department Wise Approval Screen'.icon_CancelPDF"
               }
             }
           ],

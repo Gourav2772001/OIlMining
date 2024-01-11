@@ -73,7 +73,7 @@
         Y: =40
         ZIndex: =2
 
-    Icon2 As icon.CancelBadge:
+    icon_CancelPDF As icon.CancelBadge:
         Height: =32
         Icon: =Icon.CancelBadge
         OnSelect: =Set(showSalesPDFView,false)
