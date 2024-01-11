@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |
+    OnStart: |-
         =    ClearCollect(
             Tabs,
             {Name: "Sales"},
@@ -20,6 +20,14 @@ App As appinfo:
             {Name:"Dispatch Form"},
             {Name:"Cargo Form"}
         );
+        ClearCollect(
+            Tabs_AdminForm,
+            {Name:"Today"},
+            {Name: "Cumulative YTD"},
+            {Name:"Last Reported"},
+            {Name: "Remarks"}
+            
+        )
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

@@ -1,0 +1,105 @@
+Admin_from As screen:
+    BackgroundImage: ='7f951bda68241a57aa84929a95f120f9f082a9a0-1440x1054'
+    ImagePosition: =ImagePosition.Fill
+
+    Admin_form_Container As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        cont_HeaderRegionalForm_4 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Parent.Height*.1
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =1
+
+            img_oilLogoHeader_4 As image:
+                Height: =Parent.Height
+                Image: ='9d2ea1b508c12a7d974e238d426589ad-removebg-preview'
+                ImagePosition: =ImagePosition.Fill
+                Width: =Parent.Height
+                ZIndex: =1
+
+            lbl_RegionalForm_LogoHeader_4 As label:
+                AlignInContainer: =AlignInContainer.Center
+                AutoHeight: =true
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                Size: |-
+                    =Switch(
+                        'Form Screen'.Size,
+                        1,
+                        10,
+                        2,
+                        13,
+                        3,
+                        16,
+                        4,
+                        19
+                    )
+                Text: ="Fueling Progress, Powering Tomorrow"
+                Width: =Parent.Width*.2
+                ZIndex: =2
+
+            lbl_LoggedInUserName_4 As label:
+                Align: =Align.Right
+                AlignInContainer: =AlignInContainer.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FillPortions: =1
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Bold
+                Height: =Parent.Height
+                Size: =18
+                Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
+                Visible: =If('Form Screen'.Size>3,true,false)
+                Width: =Parent.Width*.5
+                ZIndex: =3
+
+            img_RegionalForm_UserImage_4 As image:
+                AlignInContainer: =AlignInContainer.Center
+                Height: =Parent.Height
+                Image: =User().Image
+                RadiusBottomLeft: =1000
+                RadiusBottomRight: =1000
+                RadiusTopLeft: =1000
+                RadiusTopRight: =1000
+                Width: =Parent.Height
+                ZIndex: =4
+
+        Admin_form_MainContainer As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height-(cont_HeaderRegionalForm_4.Height+160)
+            Width: =Parent.Width-Self.X*2
+            X: =80
+            Y: =cont_HeaderRegionalForm_4.Height+80
+            ZIndex: =2
+
+            AdminForm_Tabs As gallery.galleryHorizontal:
+                DelayItemLoading: =true
+                Height: =75
+                Items: =Tabs_AdminForm
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplateSize: =Parent.Width/4-10
+                Width: =Parent.Width-5
+                X: =8
+                ZIndex: =1
+
+                Btn_Tabs_AdminForm As button:
+                    AutoDisableOnSelect: =false
+                    BorderColor: =
+                    BorderThickness: =1
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =If(ThisItem.IsSelected,RGBA(136,110,255,0.3),RGBA(255,255,255,0))
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.TemplateHeight
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =25
+                    RadiusBottomRight: =25
+                    RadiusTopLeft: =25
+                    RadiusTopRight: =25
+                    Text: =ThisItem.Name
+                    Width: =Parent.TemplateWidth
+                    X: =//(Parent.TemplateWidth-Self.Width)/2
+                    ZIndex: =2
+
