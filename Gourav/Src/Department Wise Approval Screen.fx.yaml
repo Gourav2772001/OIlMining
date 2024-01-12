@@ -1,12 +1,14 @@
 "'Department Wise Approval Screen' As screen":
+    OnVisible: =Set(SalesAllDataCount,0)
 
     gal_SALEdepartmentwiseApproval As gallery.galleryVertical:
         DelayItemLoading: =true
+        Height: =480
         Items: =OM_SalesPDF_Summary
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =98
-        X: =40
+        X: =35
         Y: =40
         ZIndex: =1
 
@@ -51,18 +53,37 @@
             Icon: =Icon.View
             OnSelect: =Select(Parent);Set(showSalesPDFView,true)
             Width: =36
-            X: =293
+            X: =276
             Y: =29
             ZIndex: =5
 
         btn_ApproveReject As button:
-            Height: =43
-            OnSelect: =Select(Parent)
-            Text: ="Approve/Decline"
-            Width: =194
-            X: =392
-            Y: =17
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =28
+            OnSelect: |-
+                =Select(Parent);
+                Patch(OM_SalesPDF_Summary,{ID:ThisItem.ID, isApproved:true});
+                Set(SalesAllDataCount,SalesAllDataCount+1);
+                Refresh(OM_SalesPDF_Summary)
+            Text: ="Approve"
+            Width: =124
+            X: =355
+            Y: =26
             ZIndex: =6
+
+        btn_SaleDecline As button:
+            Fill: =RGBA(255, 0, 0, 0.67)
+            Height: =28
+            OnSelect: |-
+                =Select(Parent);
+                Patch(OM_SalesPDF_Summary,{ID:ThisItem.ID, isApproved:false});
+                Set(SalesAllDataCount,SalesAllDataCount+1);
+                Refresh(OM_SalesPDF_Summary)
+            Text: ="Decline"
+            Width: =122
+            X: =491
+            Y: =26
+            ZIndex: =7
 
     pdfViewer_SalesDepartment As pdfViewer:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -82,4 +103,18 @@
         X: =1325
         Y: =8
         ZIndex: =3
+
+    btn_TriggerSalesPDF As button:
+        Fill: =RGBA(151, 0, 0, 1)
+        Height: =53
+        RadiusBottomLeft: =1000
+        RadiusBottomRight: =1000
+        RadiusTopLeft: =1000
+        RadiusTopRight: =1000
+        Text: ="Trigger Cumulative Sales pdf"
+        Visible: =If(SalesAllDataCount<2,true,false)
+        Width: =396
+        X: =212
+        Y: =652
+        ZIndex: =4
 
