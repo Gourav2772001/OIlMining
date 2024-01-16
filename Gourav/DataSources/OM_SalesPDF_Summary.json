@@ -33,6 +33,7 @@
       "ID": "ID",
       "isApproved": "isApproved",
       "Location": "Location",
+      "LookupID": "LookupID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title"

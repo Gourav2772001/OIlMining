@@ -94,9 +94,9 @@ Admin_from As screen:
                     Fill: =If(ThisItem.IsSelected,RGBA(136,110,255,0.3),RGBA(255,255,255,0))
                     FontWeight: =FontWeight.Bold
                     Height: =Parent.TemplateHeight
-                    OnSelect: |-
+                    OnSelect: |
                         =Select(Parent);
-                        Set(next_gal_Item,"")
+                        Set(next_gal_Item,"");
                     RadiusBottomLeft: =25
                     RadiusBottomRight: =25
                     RadiusTopLeft: =25
@@ -469,7 +469,9 @@ Admin_from As screen:
                             ZIndex: =4
 
                 "'Today-CumulativeYTD' As button":
-                    OnSelect: =Set(next_gal_Item,"Cumulative YTD")
+                    OnSelect: |-
+                        =Set(next_gal_Item,"Cumulative YTD");
+                        Set(ProgBar,200)
                     Text: ="Next"
                     X: =894
                     Y: =357
@@ -832,14 +834,18 @@ Admin_from As screen:
                             ZIndex: =4
 
                 "'CumYtd-LastReported' As button":
-                    OnSelect: =Set(next_gal_Item,"Last Reported")
+                    OnSelect: |-
+                        =Set(next_gal_Item,"Last Reported");
+                        Set(ProgBar,300)
                     Text: ="Next"
                     X: =773
                     Y: =358
                     ZIndex: =2
 
                 "'CumYTD-Today' As button":
-                    OnSelect: =Set(next_gal_Item,"Today")
+                    OnSelect: |-
+                        =Set(next_gal_Item,"Today");
+                        Set(ProgBar,100)
                     Text: ="Previous"
                     X: =143
                     Y: =358
@@ -1202,14 +1208,18 @@ Admin_from As screen:
                             ZIndex: =4
 
                 "'LastReported-Remakrks' As button":
-                    OnSelect: =Set(next_gal_Item,"Remarks")
+                    OnSelect: |-
+                        =Set(next_gal_Item,"Remarks");
+                        Set(ProgBar,400)
                     Text: ="Next"
                     X: =773
                     Y: =358
                     ZIndex: =2
 
                 "'LastReported-CumYTD' As button":
-                    OnSelect: =Set(next_gal_Item,"Cumulative YTD")
+                    OnSelect: |-
+                        =Set(next_gal_Item,"Cumulative YTD");
+                        Set(ProgBar,200)
                     Text: ="Previous"
                     X: =143
                     Y: =358
@@ -1635,9 +1645,35 @@ Admin_from As screen:
                     ZIndex: =2
 
                 "'Remarks-LastReported' As button":
-                    OnSelect: =Set(next_gal_Item,"Last Reported")
+                    OnSelect: |-
+                        =Set(next_gal_Item,"Last Reported");
+                        Set(ProgBar,300)
                     Text: ="Previous"
                     X: =143
                     Y: =358
                     ZIndex: =3
+
+            "Progress1 As 'Progress Bar'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =40
+                Indeterminate: =false
+                Max: =400
+                ProgressColor: ='Progress.ProgressColor'.Success
+                Shape: ='Progress.Shape'.Square
+                Thickness: ='Progress.Thickness'.Large
+                Value: =ProgBar
+                Width: =Parent.Width-40
+                X: =20
+                Y: =53
+                ZIndex: =6
+
+    "'Radial Progress Bar_6' As 'Radial Progress Bar'":
+        Height: ='Radial Progress Bar_6'.progressHeight
+        OnReset: =Set(precentageVisible,!'Radial Progress Bar_6'.precentagleVisble)
+        progressValueCircle: =70
+        valueCircleColor: ="rgba(136,110,255,255)"
+        Width: ='Radial Progress Bar_6'.progressWidth
+        X: =(Parent.Width-Self.Width)/2
+        Y: =86
+        ZIndex: =2
 

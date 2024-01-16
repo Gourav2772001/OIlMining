@@ -28,6 +28,7 @@
       "BS_W": "BS_W",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
+      "created_on": "created_on",
       "Density_15C": "Density_15C",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
