@@ -75,6 +75,7 @@ Admin_from As screen:
             ZIndex: =2
 
             AdminForm_Tabs As gallery.galleryHorizontal:
+                Default: =LookUp(Tabs_AdminForm,Name=next_gal_Item)
                 DelayItemLoading: =true
                 Height: =75
                 Items: =Tabs_AdminForm
@@ -93,7 +94,9 @@ Admin_from As screen:
                     Fill: =If(ThisItem.IsSelected,RGBA(136,110,255,0.3),RGBA(255,255,255,0))
                     FontWeight: =FontWeight.Bold
                     Height: =Parent.TemplateHeight
-                    OnSelect: =Select(Parent)
+                    OnSelect: |-
+                        =Select(Parent);
+                        Set(next_gal_Item,"")
                     RadiusBottomLeft: =25
                     RadiusBottomRight: =25
                     RadiusTopLeft: =25
@@ -102,4 +105,1539 @@ Admin_from As screen:
                     Width: =Parent.TemplateWidth
                     X: =//(Parent.TemplateWidth-Self.Width)/2
                     ZIndex: =2
+
+            Today As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height-AdminForm_Tabs.Height-40
+                Visible: =If(AdminForm_Tabs.Selected.Name="Today",true,false)
+                Width: =Parent.Width-(Self.X*2)
+                X: =40
+                Y: =AdminForm_Tabs.Height+20
+                ZIndex: =2
+
+                Form_Today As form:
+                    BorderThickness: =3
+                    DataSource: =OM_HSES_SUMMARY
+                    DefaultMode: =FormMode.New
+                    Height: =416.20000000000005*.8
+                    NumberOfColumns: =2
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Title_DataCard1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Title"
+                        Default: =ThisItem.Title
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Title")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Title")
+                        Required: =false
+                        Update: =DataCardValue1.Text
+                        Width: =561
+                        WidthFit: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey1 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue1.Y + DataCardValue1.Height
+                            ZIndex: =3
+
+                        StarVisible1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey1.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey1.Y
+                            ZIndex: =4
+
+                    "'MTC/RWDC_Todays_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="MTC_x002f_RWDC_Todays"
+                        Default: =ThisItem.'MTC/RWDC_Todays'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"MTC_x002f_RWDC_Todays")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_Todays")
+                        Required: =false
+                        Update: =DataCardValue5.Text
+                        Width: =561
+                        WidthFit: =true
+                        X: =1
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey5 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue5 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage5 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue5.Y + DataCardValue5.Height
+                            ZIndex: =3
+
+                        StarVisible5 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey5.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey5.Y
+                            ZIndex: =4
+
+                    "'Incidents/Near_Misses_Todays_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Incidents_x002f_Near_Misses_Toda"
+                        Default: =ThisItem.'Incidents/Near_Misses_Todays'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Incidents_x002f_Near_Misses_Toda")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Incidents_x002f_Near_Misses_Toda")
+                        Required: =false
+                        Update: =DataCardValue13.Text
+                        Width: =561
+                        WidthFit: =true
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey13 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue13 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage13 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue13.Y + DataCardValue13.Height
+                            ZIndex: =3
+
+                        StarVisible13 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey13.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey13.Y
+                            ZIndex: =4
+
+                    COP_Todays_DataCard1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="COP_Todays"
+                        Default: =ThisItem.COP_Todays
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"COP_Todays")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Todays")
+                        Required: =false
+                        Update: =DataCardValue17.Text
+                        Width: =561
+                        WidthFit: =true
+                        X: =1
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey17 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue17 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage17 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue17.Y + DataCardValue17.Height
+                            ZIndex: =3
+
+                        StarVisible17 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey17.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey17.Y
+                            ZIndex: =4
+
+                    Perfect_Day_Todays_DataCard1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Perfect_Day_Todays"
+                        Default: =ThisItem.Perfect_Day_Todays
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Perfect_Day_Todays")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Todays")
+                        Required: =false
+                        Update: =DataCardValue21.Text
+                        Width: =563
+                        WidthFit: =false
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey21 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue21 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey21.Y + DataCardKey21.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage21 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue21.Y + DataCardValue21.Height
+                            ZIndex: =3
+
+                        StarVisible21 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey21.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey21.Y
+                            ZIndex: =4
+
+                "'Today-CumulativeYTD' As button":
+                    OnSelect: =Set(next_gal_Item,"Cumulative YTD")
+                    Text: ="Next"
+                    X: =894
+                    Y: =357
+                    ZIndex: =2
+
+            Cumulative_YTD As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height-AdminForm_Tabs.Height-40
+                Visible: =If(AdminForm_Tabs.Selected.Name="Cumulative YTD",true,false)
+                Width: =Parent.Width-(Self.X*2)
+                X: =40
+                Y: =AdminForm_Tabs.Height+20
+                ZIndex: =3
+
+                Form_CumYTD As form:
+                    DataSource: =OM_HSES_SUMMARY
+                    DefaultMode: =FormMode.New
+                    Height: =416.20000000000005*.8
+                    NumberOfColumns: =2
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    LTI_Cumulative_YTD_DataCard2 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="LTI_Cumulative_YTD"
+                        Default: =ThisItem.LTI_Cumulative_YTD
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"LTI_Cumulative_YTD")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "LTI_Cumulative_YTD")
+                        Required: =false
+                        Update: =DataCardValue80.Text
+                        Width: =563
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey80 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue80 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey80.Y + DataCardKey80.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage80 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue80.Y + DataCardValue80.Height
+                            ZIndex: =3
+
+                        StarVisible80 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey80.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey80.Y
+                            ZIndex: =4
+
+                    "'MTC/RWDC_Cumulative YTD_DataCard2' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="MTC_x002f_RWDC_CumulativeYTD"
+                        Default: =ThisItem.'MTC/RWDC_Cumulative YTD'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"MTC_x002f_RWDC_CumulativeYTD")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_CumulativeYTD")
+                        Required: =false
+                        Update: =DataCardValue100.Text
+                        Width: =563
+                        X: =1
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey100 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue100 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey100.Y + DataCardKey100.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage100 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue100.Y + DataCardValue100.Height
+                            ZIndex: =3
+
+                        StarVisible100 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey100.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey100.Y
+                            ZIndex: =4
+
+                    "'Incidents/Near_Misses_Cumulative_YTD_DataCard2' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Incidents_x002f_Near_Misses_Cumu"
+                        Default: =ThisItem.'Incidents/Near_Misses_Cumulative_YTD'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Incidents_x002f_Near_Misses_Cumu")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Incidents_x002f_Near_Misses_Cumu")
+                        Required: =false
+                        Update: =DataCardValue120.Text
+                        Width: =563
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey120 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue120 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey120.Y + DataCardKey120.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage120 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue120.Y + DataCardValue120.Height
+                            ZIndex: =3
+
+                        StarVisible120 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey120.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey120.Y
+                            ZIndex: =4
+
+                    COP_Cumulative_YTD_DataCard2 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="COP_Cumulative_YTD"
+                        Default: =ThisItem.COP_Cumulative_YTD
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"COP_Cumulative_YTD")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Cumulative_YTD")
+                        Required: =false
+                        Update: =DataCardValue124.Text
+                        Width: =563
+                        X: =1
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey124 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue124 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey124.Y + DataCardKey124.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage124 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue124.Y + DataCardValue124.Height
+                            ZIndex: =3
+
+                        StarVisible124 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey124.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey124.Y
+                            ZIndex: =4
+
+                    Perfect_Day_Cumulative_YTD_DataCard2 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Perfect_Day_Cumulative_YTD"
+                        Default: =ThisItem.Perfect_Day_Cumulative_YTD
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Perfect_Day_Cumulative_YTD")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Cumulative_YTD")
+                        Required: =false
+                        Update: =DataCardValue128.Text
+                        Width: =563
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey128 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue128 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey128.Y + DataCardKey128.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage128 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue128.Y + DataCardValue128.Height
+                            ZIndex: =3
+
+                        StarVisible128 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey128.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey128.Y
+                            ZIndex: =4
+
+                "'CumYtd-LastReported' As button":
+                    OnSelect: =Set(next_gal_Item,"Last Reported")
+                    Text: ="Next"
+                    X: =773
+                    Y: =358
+                    ZIndex: =2
+
+                "'CumYTD-Today' As button":
+                    OnSelect: =Set(next_gal_Item,"Today")
+                    Text: ="Previous"
+                    X: =143
+                    Y: =358
+                    ZIndex: =3
+
+            "'Last Reported' As groupContainer.manualLayoutContainer":
+                Height: =Parent.Height-AdminForm_Tabs.Height-40
+                Visible: =If(AdminForm_Tabs.Selected.Name="Last Reported",true,false)
+                Width: =Parent.Width-(Self.X*2)
+                X: =40
+                Y: =AdminForm_Tabs.Height+20
+                ZIndex: =4
+
+                Form_LastReported As form:
+                    DataSource: =OM_HSES_SUMMARY
+                    DefaultMode: =FormMode.New
+                    Height: =416.20000000000005*.8
+                    NumberOfColumns: =2
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    LTI_Last_Reported_DataCard3 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="LTI_Last_Reported"
+                        Default: =ThisItem.LTI_Last_Reported
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"LTI_Last_Reported")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "LTI_Last_Reported")
+                        Required: =false
+                        Update: =DataCardValue140.Text
+                        Width: =563
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey140 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue140 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey140.Y + DataCardKey140.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage140 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue140.Y + DataCardValue140.Height
+                            ZIndex: =3
+
+                        StarVisible140 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey140.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey140.Y
+                            ZIndex: =4
+
+                    "'MTC/RWDC_Last_Reported_DataCard3' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="MTC_x002f_RWDC_Last_Reported"
+                        Default: =ThisItem.'MTC/RWDC_Last_Reported'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"MTC_x002f_RWDC_Last_Reported")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_Last_Reported")
+                        Required: =false
+                        Update: =DataCardValue144.Text
+                        Width: =563
+                        X: =1
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey144 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue144 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey144.Y + DataCardKey144.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage144 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue144.Y + DataCardValue144.Height
+                            ZIndex: =3
+
+                        StarVisible144 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey144.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey144.Y
+                            ZIndex: =4
+
+                    "'Incidents/Near_Misses_Last_Reported_DataCard3' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Incidents_x002f_Near_Misses_Last"
+                        Default: =ThisItem.'Incidents/Near_Misses_Last_Reported'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Incidents_x002f_Near_Misses_Last")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Incidents_x002f_Near_Misses_Last")
+                        Required: =false
+                        Update: =DataCardValue148.Text
+                        Width: =563
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey148 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue148 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey148.Y + DataCardKey148.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage148 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue148.Y + DataCardValue148.Height
+                            ZIndex: =3
+
+                        StarVisible148 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey148.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey148.Y
+                            ZIndex: =4
+
+                    COP_Last_Reported_DataCard3 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="COP_Last_Reported"
+                        Default: =ThisItem.COP_Last_Reported
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"COP_Last_Reported")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Last_Reported")
+                        Required: =false
+                        Update: =DataCardValue152.Text
+                        Width: =563
+                        X: =1
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey152 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue152 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey152.Y + DataCardKey152.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage152 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue152.Y + DataCardValue152.Height
+                            ZIndex: =3
+
+                        StarVisible152 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey152.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey152.Y
+                            ZIndex: =4
+
+                    Perfect_Day_Last_Reported_DataCard3 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Perfect_Day_Last_Reported"
+                        Default: =ThisItem.Perfect_Day_Last_Reported
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Perfect_Day_Last_Reported")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Last_Reported")
+                        Required: =false
+                        Update: =DataCardValue156.Text
+                        Width: =563
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey156 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue156 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey156.Y + DataCardKey156.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage156 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue156.Y + DataCardValue156.Height
+                            ZIndex: =3
+
+                        StarVisible156 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey156.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey156.Y
+                            ZIndex: =4
+
+                "'LastReported-Remakrks' As button":
+                    OnSelect: =Set(next_gal_Item,"Remarks")
+                    Text: ="Next"
+                    X: =773
+                    Y: =358
+                    ZIndex: =2
+
+                "'LastReported-CumYTD' As button":
+                    OnSelect: =Set(next_gal_Item,"Cumulative YTD")
+                    Text: ="Previous"
+                    X: =143
+                    Y: =358
+                    ZIndex: =3
+
+            Remarks As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height-AdminForm_Tabs.Height-40
+                Visible: =If(AdminForm_Tabs.Selected.Name="Remarks",true,false)
+                Width: =Parent.Width-(Self.X*2)
+                X: =40
+                Y: =AdminForm_Tabs.Height+20
+                ZIndex: =5
+
+                Form_Remarks As form:
+                    DataSource: =OM_HSES_SUMMARY
+                    DefaultMode: =FormMode.New
+                    Height: =416.20000000000005*.8
+                    NumberOfColumns: =2
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    LTI_Remarks_DataCard4 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="LTI_Remarks"
+                        Default: =ThisItem.LTI_Remarks
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"LTI_Remarks")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "LTI_Remarks")
+                        Required: =false
+                        Update: =DataCardValue161.Text
+                        Width: =563
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey161 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue161 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey161.Y + DataCardKey161.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage161 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue161.Y + DataCardValue161.Height
+                            ZIndex: =3
+
+                        StarVisible161 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey161.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey161.Y
+                            ZIndex: =4
+
+                    "'MTC/RWDC_Remarks_DataCard4' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="MTC_x002f_RWDC_Remarks"
+                        Default: =ThisItem.'MTC/RWDC_Remarks'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"MTC_x002f_RWDC_Remarks")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_Remarks")
+                        Required: =false
+                        Update: =DataCardValue162.Text
+                        Width: =563
+                        X: =1
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey162 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue162 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey162.Y + DataCardKey162.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage162 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue162.Y + DataCardValue162.Height
+                            ZIndex: =3
+
+                        StarVisible162 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey162.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey162.Y
+                            ZIndex: =4
+
+                    "'Incidents/Near_Misses_Remarks_DataCard4' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Incidents_x002f_Near_Misses_Rema"
+                        Default: =ThisItem.'Incidents/Near_Misses_Remarks'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Incidents_x002f_Near_Misses_Rema")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Incidents_x002f_Near_Misses_Rema")
+                        Required: =false
+                        Update: =DataCardValue160.Text
+                        Width: =563
+                        X: =0
+                        Y: =1
+                        ZIndex: =1
+
+                        DataCardKey160 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue160 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey160.Y + DataCardKey160.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage160 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue160.Y + DataCardValue160.Height
+                            ZIndex: =3
+
+                        StarVisible160 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey160.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey160.Y
+                            ZIndex: =4
+
+                    COP_Remarks_DataCard4 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="COP_Remarks"
+                        Default: =ThisItem.COP_Remarks
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"COP_Remarks")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Remarks")
+                        Required: =false
+                        Update: =DataCardValue159.Text
+                        Width: =563
+                        X: =1
+                        Y: =1
+                        ZIndex: =1
+
+                        DataCardKey159 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue159 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey159.Y + DataCardKey159.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage159 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue159.Y + DataCardValue159.Height
+                            ZIndex: =3
+
+                        StarVisible159 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey159.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey159.Y
+                            ZIndex: =4
+
+                    Perfect_Day_Remarks_DataCard4 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Perfect_Day_Remarks"
+                        Default: =ThisItem.Perfect_Day_Remarks
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Perfect_Day_Remarks")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Remarks")
+                        Required: =false
+                        Update: =DataCardValue163.Text
+                        Width: =563
+                        X: =0
+                        Y: =2
+                        ZIndex: =1
+
+                        DataCardKey163 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue163 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey163.Y + DataCardKey163.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage163 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue163.Y + DataCardValue163.Height
+                            ZIndex: =3
+
+                        StarVisible163 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey163.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey163.Y
+                            ZIndex: =4
+
+                SubmitFinal As button:
+                    OnSelect: |+
+                        =ClearCollect(
+                            Form_Data_Admin,
+                            {
+                                LTI_Today: DataCardValue1.Text,
+                                Incident_Today: DataCardValue13.Text,
+                                COP_Today: DataCardValue17.Text,
+                                PerfectDay_Today: DataCardValue21.Text,
+                                MTC_Today: DataCardValue5.Text,
+                                LTI_CumYTD: DataCardValue80.Text,
+                                MTC_CumYTD: DataCardValue100.Text,
+                                Incident_CumYTD: DataCardValue120.Text,
+                                COP_CumYTD: DataCardValue124.Text,
+                                Perfect_CumYTD: DataCardValue128.Text,
+                                LTI_LR: DataCardValue140.Text,
+                                MTC_LR: DataCardValue144.Text,
+                                Incident_LR: DataCardValue148.Text,
+                                COP_LR: DataCardValue152.Text,
+                                Perfect_LR: DataCardValue156.Text,
+                                LTI_Remark: DataCardValue161.Text,
+                                MTC_Remark: DataCardValue162.Text,
+                                Incident_Remark: DataCardValue160.Text,
+                                COP_Remarks: DataCardValue159.Text,
+                                Perfect_Remark: DataCardValue163.Text
+                            }
+                        );
+                        ResetForm(Form_Today);
+                        ResetForm(Form_CumYTD);
+                        ResetForm(Form_LastReported);
+                        ResetForm(Form_Remarks);
+                        
+                        Patch(
+                            OM_HSES_SUMMARY,
+                            {
+                                Title:First(Form_Data_Admin).LTI_Today,
+                                LTI_Cumulative_YTD:First(Form_Data_Admin).LTI_CumYTD,
+                                LTI_Last_Reported:First(Form_Data_Admin).LTI_LR,
+                                LTI_Remarks:First(Form_Data_Admin).LTI_Remark,
+                                'MTC/RWDC_Todays':First(Form_Data_Admin).MTC_Today,
+                                'MTC/RWDC_Cumulative YTD':First(Form_Data_Admin).MTC_CumYTD,
+                                'MTC/RWDC_Last_Reported':First(Form_Data_Admin).MTC_LR,
+                                'MTC/RWDC_Remarks':First(Form_Data_Admin).MTC_Remark,
+                                'Incidents/Near_Misses_Todays':First(Form_Data_Admin).Incident_Today,
+                                'Incidents/Near_Misses_Cumulative_YTD':First(Form_Data_Admin).Incident_CumYTD,
+                                'Incidents/Near_Misses_Last_Reported':First(Form_Data_Admin).Incident_LR,
+                                'Incidents/Near_Misses_Remarks':First(Form_Data_Admin).Incident_Remark,
+                                COP_Todays:First(Form_Data_Admin).COP_Today,
+                                COP_Cumulative_YTD:First(Form_Data_Admin).COP_CumYTD,
+                                COP_Last_Reported:First(Form_Data_Admin).COP_LR,
+                                COP_Remarks:First(Form_Data_Admin).COP_Remarks,
+                                Perfect_Day_Todays:First(Form_Data_Admin).PerfectDay_Today,
+                                Perfect_Day_Cumulative_YTD:First(Form_Data_Admin).Perfect_CumYTD,
+                                Perfect_Day_Last_Reported:First(Form_Data_Admin).COP_LR,
+                                Perfect_Day_Remarks:First(Form_Data_Admin).Perfect_Remark
+                            }
+                        )
+                        
+                    Text: ="Submit Details"
+                    X: =773
+                    Y: =358
+                    ZIndex: =2
+
+                "'Remarks-LastReported' As button":
+                    OnSelect: =Set(next_gal_Item,"Last Reported")
+                    Text: ="Previous"
+                    X: =143
+                    Y: =358
+                    ZIndex: =3
 
