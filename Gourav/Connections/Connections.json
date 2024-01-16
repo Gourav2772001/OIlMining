@@ -97,7 +97,9 @@
       "OM_SalesPDF_Summary"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "f4d50040-a2a7-46ca-b7fa-13676b8635dd"
+    ],
     "id": "ad35ed50-698e-48be-9427-a782a1a80ec5"
   },
   "c5b2dfc5-6ce6-40d7-bfda-6011ac1e7b4a": {
@@ -125,5 +127,37 @@
     "dependencies": {},
     "dependents": [],
     "id": "c5b2dfc5-6ce6-40d7-bfda-6011ac1e7b4a"
+  },
+  "f4d50040-a2a7-46ca-b7fa-13676b8635dd": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "e490dd1f-38b4-ee11-9078-6045bdaa8a35"
+        },
+        "workflowName": {
+          "value": "691f25db-bb45-dbb5-ffa5-d9b95f308322"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "e490dd1f-38b4-ee11-9078-6045bdaa8a35"
+        },
+        "workflowName": {
+          "value": "691f25db-bb45-dbb5-ffa5-d9b95f308322"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "OMPerDaySummaryFlow"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "ad35ed50-698e-48be-9427-a782a1a80ec5"
+    },
+    "dependents": [],
+    "id": "f4d50040-a2a7-46ca-b7fa-13676b8635dd"
   }
 }
