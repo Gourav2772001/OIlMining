@@ -1654,6 +1654,7 @@ Admin_from As screen:
                     ZIndex: =3
 
             "Progress1 As 'Progress Bar'":
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =40
                 Indeterminate: =false
@@ -1669,7 +1670,6 @@ Admin_from As screen:
 
     "'Radial Progress Bar_6' As 'Radial Progress Bar'":
         Height: ='Radial Progress Bar_6'.progressHeight
-        OnReset: =Set(precentageVisible,!'Radial Progress Bar_6'.precentagleVisble)
         progressValueCircle: =70
         valueCircleColor: ="rgba(136,110,255,255)"
         Width: ='Radial Progress Bar_6'.progressWidth
