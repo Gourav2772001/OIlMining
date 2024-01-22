@@ -107,7 +107,7 @@ Admin_from As screen:
                     HoverFill: =RGBA(136,110,255,0.3)
                     OnSelect: |
                         =Select(Parent);
-                        Set(next_gal_Item,"");
+                        Set(next_gal_Item,AdminForm_Tabs.Selected.Name);
                     PressedFill: =RGBA(136,110,255,0.3)
                     RadiusBottomLeft: =25
                     RadiusBottomRight: =25
@@ -149,7 +149,7 @@ Admin_from As screen:
                         MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Title")
                         Required: =false
                         Update: =DataCardValue1.Text
-                        Width: =561
+                        Width: =563
                         WidthFit: =true
                         X: =0
                         Y: =0
@@ -530,7 +530,9 @@ Admin_from As screen:
 
                         DataCardKey80 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -540,15 +542,12 @@ Admin_from As screen:
 
                         DataCardValue80 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -599,7 +598,9 @@ Admin_from As screen:
 
                         DataCardKey100 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -609,15 +610,12 @@ Admin_from As screen:
 
                         DataCardValue100 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -668,7 +666,9 @@ Admin_from As screen:
 
                         DataCardKey120 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -678,15 +678,12 @@ Admin_from As screen:
 
                         DataCardValue120 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -737,7 +734,9 @@ Admin_from As screen:
 
                         DataCardKey124 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -747,15 +746,12 @@ Admin_from As screen:
 
                         DataCardValue124 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -806,7 +802,9 @@ Admin_from As screen:
 
                         DataCardKey128 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -816,15 +814,12 @@ Admin_from As screen:
 
                         DataCardValue128 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -923,7 +918,9 @@ Admin_from As screen:
 
                         DataCardKey140 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -933,15 +930,12 @@ Admin_from As screen:
 
                         DataCardValue140 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -992,7 +986,9 @@ Admin_from As screen:
 
                         DataCardKey144 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1002,15 +998,12 @@ Admin_from As screen:
 
                         DataCardValue144 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1061,7 +1054,9 @@ Admin_from As screen:
 
                         DataCardKey148 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1071,15 +1066,12 @@ Admin_from As screen:
 
                         DataCardValue148 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1130,7 +1122,9 @@ Admin_from As screen:
 
                         DataCardKey152 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1140,15 +1134,12 @@ Admin_from As screen:
 
                         DataCardValue152 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1199,7 +1190,9 @@ Admin_from As screen:
 
                         DataCardKey156 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1209,15 +1202,12 @@ Admin_from As screen:
 
                         DataCardValue156 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1316,7 +1306,9 @@ Admin_from As screen:
 
                         DataCardKey161 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1326,15 +1318,12 @@ Admin_from As screen:
 
                         DataCardValue161 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1385,7 +1374,9 @@ Admin_from As screen:
 
                         DataCardKey162 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1395,15 +1386,12 @@ Admin_from As screen:
 
                         DataCardValue162 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1454,7 +1442,9 @@ Admin_from As screen:
 
                         DataCardKey160 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1464,15 +1454,12 @@ Admin_from As screen:
 
                         DataCardValue160 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1523,7 +1510,9 @@ Admin_from As screen:
 
                         DataCardKey159 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1533,15 +1522,12 @@ Admin_from As screen:
 
                         DataCardValue159 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1592,7 +1578,9 @@ Admin_from As screen:
 
                         DataCardKey163 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Height: =34
+                            Size: =If(Admin_from.Size>2,18,15)
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1602,15 +1590,12 @@ Admin_from As screen:
 
                         DataCardValue163 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
