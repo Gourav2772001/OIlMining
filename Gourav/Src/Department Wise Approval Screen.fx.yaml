@@ -2,12 +2,14 @@
     OnVisible: =Set(SalesAllDataCount,0)
 
     gal_SALEdepartmentwiseApproval As gallery.galleryVertical:
+        BorderThickness: =1
         DelayItemLoading: =true
         Height: =480
         Items: =OM_SalesPDF_Summary
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =98
+        Width: =636
         X: =35
         Y: =40
         ZIndex: =1
@@ -117,4 +119,25 @@
         X: =212
         Y: =652
         ZIndex: =4
+
+    gal_RefDocFile As gallery.galleryVertical:
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Height: =301
+        Items: ='Oil Mining Reference Docs'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        X: =703
+        Y: =40
+        ZIndex: =5
+
+        lbl_FileNameOfDoc As label:
+            Height: =31
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Name
+            Width: =317
+            X: =104
+            Y: =24
+            ZIndex: =1
 

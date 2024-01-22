@@ -27,6 +27,9 @@
           "OM__Kota_Oil_RDG_Condensate_Dispatch": {
             "tableName": "ac455880-7418-43c1-95e7-bbfb6ed30962"
           },
+          "OM_AllDepartmentSummary": {
+            "tableName": "69b0d67b-a5cf-4eaa-a02e-27da5b925261"
+          },
           "OM_Crude_oil_sales_pipeline_inventory": {
             "tableName": "76fafcc9-4a35-4e9a-aef4-429922668f73"
           },
@@ -94,7 +97,8 @@
       "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1",
       "OM_Nos_of_Cargo_Loaded_from_Kota_Terminal",
       "OM_InventorySummaryPDF",
-      "OM_SalesPDF_Summary"
+      "OM_SalesPDF_Summary",
+      "OM_AllDepartmentSummary"
     ],
     "dependencies": {},
     "dependents": [],
@@ -125,5 +129,27 @@
     "dependencies": {},
     "dependents": [],
     "id": "c5b2dfc5-6ce6-40d7-bfda-6011ac1e7b4a"
+  },
+  "ef2e8c58-c9aa-479e-989a-70de5955308e": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
+        "dataSources": {
+          "Oil Mining Reference Docs": {
+            "tableName": "68128a0a-b4ff-42f5-a9ba-cd81770f22a8"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Oil Mining Reference Docs"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ef2e8c58-c9aa-479e-989a-70de5955308e"
   }
 }

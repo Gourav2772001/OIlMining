@@ -551,7 +551,20 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SalesOf_Jaipur_3);ResetForm(form_SalesOf_Jaipur_3)
+                        OnSelect: |+
+                            =SubmitForm(form_SalesOf_Jaipur_3);
+                            ResetForm(form_SalesOf_Jaipur_3);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Sales_to_Jaipur_Terminal).ID,
+                                            Location:"Jaipur",
+                                            Department:"Sales",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
+                            
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -1065,7 +1078,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SalesOf_Jodhpur_2);ResetForm(form_SalesOf_Jodhpur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SalesOf_Jodhpur_2);
+                            ResetForm(form_SalesOf_Jodhpur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Sales_to_Jodhpur).ID,
+                                            Location:"Jodhpur",
+                                            Department:"Sales",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -1536,7 +1561,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SalesOf_Udaipur_2);ResetForm(form_SalesOf_Udaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SalesOf_Udaipur_2);
+                            ResetForm(form_SalesOf_Udaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Sales_to_Udaipur_Terminal).ID,
+                                            Location:"Udaipur",
+                                            Department:"Sales",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -2007,7 +2044,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SalesOf_Kota_2);ResetForm(form_SalesOf_Kota_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SalesOf_Kota_2);
+                            ResetForm(form_SalesOf_Kota_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Sales_to_Kota_Terminal).ID,
+                                            Location:"Kota",
+                                            Department:"Sales",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -2482,7 +2531,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SalesOf_Jaisalmer_2);ResetForm(form_SalesOf_Jaisalmer_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SalesOf_Jaisalmer_2);
+                            ResetForm(form_SalesOf_Jaisalmer_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Sales_to_Jaisalmer).ID,
+                                            Location:"Jaisalmer",
+                                            Department:"Sales",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -2886,7 +2947,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_CrudeOil_Jaipur_2);ResetForm(form_CrudeOil_Jaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_CrudeOil_Jaipur_2);
+                            ResetForm(form_CrudeOil_Jaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_MPT_Crude_Oil).ID,
+                                            Location:"Jaipur",
+                                            Department:"Crude Oil",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -3156,7 +3229,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_InventoryJaipur_2);ResetForm(form_InventoryJaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_InventoryJaipur_2);
+                            ResetForm(form_InventoryJaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Crude_oil_sales_pipeline_inventory).ID,
+                                            Location:"Jaipur",
+                                            Department:"Inventory",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -3493,7 +3578,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SummaryJaipur_2);ResetForm(form_SummaryJaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SummaryJaipur_2);
+                            ResetForm(form_SummaryJaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Jaipur_Terminal).ID,
+                                            Location:"Jaipur",
+                                            Department:"Summary",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -3830,7 +3927,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SummaryKota_2);ResetForm(form_SummaryKota_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SummaryKota_2);
+                            ResetForm(form_SummaryKota_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Kota_Terminal).ID,
+                                            Location:"Kota",
+                                            Department:"Summary",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -4167,7 +4276,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_SummaryUdaipur_2);ResetForm(form_SummaryUdaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_SummaryUdaipur_2);
+                            ResetForm(form_SummaryUdaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Udaipur_Terminal).ID,
+                                            Location:"Udaipur",
+                                            Department:"Summary",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -4772,7 +4893,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_Dispatch_Jaipur_2);ResetForm(form_Dispatch_Jaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_Dispatch_Jaipur_2);
+                            ResetForm(form_Dispatch_Jaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM__Jaipur_Oil_RDG_Condensate_Dispatch).ID,
+                                            Location:"Jaipur",
+                                            Department:"Dispatch",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -5377,7 +5510,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_Dispatch_Jodhpur_2);ResetForm(form_Dispatch_Jodhpur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_Dispatch_Jodhpur_2);
+                            ResetForm(form_Dispatch_Jodhpur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM__Jodhpur_Oil_RDG_Condensate_Dispatch).ID,
+                                            Location:"Jodhpur",
+                                            Department:"Dispatch",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -5982,7 +6127,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_Dispatch_Jaisalmer_2);ResetForm(form_Dispatch_Jaisalmer_2)
+                        OnSelect: |-
+                            =SubmitForm(form_Dispatch_Jaisalmer_2);
+                            ResetForm(form_Dispatch_Jaisalmer_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM__Jaisalmer_Oil_RDG_Condensate_Dispatch).ID,
+                                            Location:"Jaisalmer",
+                                            Department:"Dispatch",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -6587,7 +6744,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_Dispatch_Kota_2);ResetForm(form_Dispatch_Kota_2)
+                        OnSelect: |-
+                            =SubmitForm(form_Dispatch_Kota_2);
+                            ResetForm(form_Dispatch_Kota_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM__Kota_Oil_RDG_Condensate_Dispatch).ID,
+                                            Location:"Kota",
+                                            Department:"Dispatch",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -6790,7 +6959,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_Cargo_Kota_2);ResetForm(form_Cargo_Kota_2)
+                        OnSelect: |-
+                            =SubmitForm(form_Cargo_Kota_2);
+                            ResetForm(form_Cargo_Kota_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Nos_of_Cargo_Loaded_from_Kota_Terminal).ID,
+                                            Location:"Kota",
+                                            Department:"Cargo",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
@@ -6993,7 +7174,19 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: =SubmitForm(form_Cargo_Jaipur_2);ResetForm(form_Cargo_Jaipur_2)
+                        OnSelect: |-
+                            =SubmitForm(form_Cargo_Jaipur_2);
+                            ResetForm(form_Cargo_Jaipur_2);
+                            Patch(OM_AllDepartmentSummary,
+                                    Defaults(OM_AllDepartmentSummary),
+                                        {
+                                            'Reference ID':Last(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal).ID,
+                                            Location:"Jaipur",
+                                            Department:"Cargo",
+                                            Created_On:Now(),
+                                            Status:"Pending"
+                                        }
+                            )
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
