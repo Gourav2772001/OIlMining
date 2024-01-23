@@ -2457,6 +2457,392 @@ Approvals_Screen As screen:
                                 Y: =DataCardKey169.Y + DataCardKey169.Height + 5
                                 ZIndex: =2
 
+                    Sales_UdaipurTerminal As formViewer:
+                        DataSource: =OM_Sales_to_Udaipur_Terminal
+                        Item: =LookUp(OM_Sales_to_Udaipur_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Udaipur",dept="Sales"),true,false)
+                        ZIndex: =13
+
+                        Title_DataCard30 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =14
+
+                            DataCardKey170 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue170 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey170.Y + DataCardKey170.Height + 5
+                                ZIndex: =2
+
+                        Gross_Sales_DataCard9 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Sales"
+                            Default: =ThisItem.Gross_Sales
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Gross_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =14
+
+                            DataCardKey171 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue171 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey171.Y + DataCardKey171.Height + 5
+                                ZIndex: =2
+
+                        Net_Sales_DataCard9 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Net_Sales"
+                            Default: =ThisItem.Net_Sales
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Net_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =14
+
+                            DataCardKey172 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue172 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey172.Y + DataCardKey172.Height + 5
+                                ZIndex: =2
+
+                        BS_W_DataCard16 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =14
+
+                            DataCardKey173 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue173 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey173.Y + DataCardKey173.Height + 5
+                                ZIndex: =2
+
+                        Density_15C_DataCard9 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Density_15C"
+                            Default: =ThisItem.Density_15C
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Density_15C")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =1
+                            ZIndex: =14
+
+                            DataCardKey174 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue174 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey174.Y + DataCardKey174.Height + 5
+                                ZIndex: =2
+
+                        Shortfall_Excess_NetMonth_DataCard7 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Shortfall_Excess_NetMonth"
+                            Default: =ThisItem.Shortfall_Excess_NetMonth
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Udaipur_Terminal],DataSourceInfo.DisplayName,"Shortfall_Excess_NetMonth")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =1
+                            ZIndex: =14
+
+                            DataCardKey175 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue175 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey175.Y + DataCardKey175.Height + 5
+                                ZIndex: =2
+
+                    Summary_UdaipurTerminal As formViewer:
+                        DataSource: =OM_Udaipur_Terminal
+                        Item: =LookUp(OM_Udaipur_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Udaipur",dept="Summary"),true,false)
+                        ZIndex: =14
+
+                        Title_DataCard31 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Udaipur_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =15
+
+                            DataCardKey176 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue176 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey176.Y + DataCardKey176.Height + 5
+                                ZIndex: =2
+
+                        Receipt_Tankage_only_BBLS_DataCard6 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Receipt_Tankage_only_BBLS"
+                            Default: =ThisItem.Receipt_Tankage_only_BBLS
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Udaipur_Terminal],DataSourceInfo.DisplayName,"Receipt_Tankage_only_BBLS")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =15
+
+                            DataCardKey177 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue177 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey177.Y + DataCardKey177.Height + 5
+                                ZIndex: =2
+
+                        Closing_Tank_Stock_BBLS_DataCard6 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Closing_Tank_Stock_BBLS"
+                            Default: =ThisItem.Closing_Tank_Stock_BBLS
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Udaipur_Terminal],DataSourceInfo.DisplayName,"Closing_Tank_Stock_BBLS")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =15
+
+                            DataCardKey178 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue178 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey178.Y + DataCardKey178.Height + 5
+                                ZIndex: =2
+
+                        Water_Drain_Quantity_BBLS_DataCard6 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Water_Drain_Quantity_BBLS"
+                            Default: =ThisItem.Water_Drain_Quantity_BBLS
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Udaipur_Terminal],DataSourceInfo.DisplayName,"Water_Drain_Quantity_BBLS")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =15
+
+                            DataCardKey179 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue179 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey179.Y + DataCardKey179.Height + 5
+                                ZIndex: =2
+
                 Combine_Gallery_Container As groupContainer.horizontalAutoLayoutContainer:
                     Height: =Parent.Height
                     LayoutMode: =LayoutMode.Auto
