@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "b82a6b4c-2439-441e-8293-d346f3011af6",
+    "FlowNameId": "ea0db970-ca0f-ba3d-91cb-a07dee7eb25e",
     "Name": "OMDaywiseSummary",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
