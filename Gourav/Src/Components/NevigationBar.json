@@ -1396,7 +1396,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638415917204126998",
+    "LastModifiedTimestamp": "638415922293474436",
     "Name": "NevigationBar",
     "Rules": [
       {
@@ -1518,7 +1518,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638415917204126998",
+  "LastModifiedTimestamp": "638415922293474436",
   "Name": "8d8acd61e3154144836005b40fe0806e",
   "OverridableProperties": {},
   "Version": "1.0"
