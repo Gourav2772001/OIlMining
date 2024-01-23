@@ -94,6 +94,7 @@
       "useexperimentalsqlconnector": true,
       "useguiddatatypes": true,
       "usenonblockingonstartrule": true,
+      "userdefinedfunctions": false,
       "webbarcodescanner": false,
       "zeroalltabindexes": false
     },
@@ -140,6 +141,6 @@
     "PDF viewer screen",
     "Department Wise Approval Screen",
     "Admin_from",
-    "Screen2"
+    "Rough Screen"
   ]
 }
