@@ -10123,6 +10123,35 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Approvals_Screen"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Approvals_Screen",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "Approvals_Screen",
+                "type": "Approvals_Screen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Form Screen'"
                 }
               ],
@@ -11098,7 +11127,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Form Screen\" is 527, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Approvals_Screen\" is 308, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
