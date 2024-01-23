@@ -1,13 +1,10 @@
 {
-  "6dfadd81-1769-459d-9526-3e7b8f8fa2f2": {
+  "2725fecf-b3bb-4236-b4d0-797db060f8c1": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "780bdd85-1158-4b32-bbbe-60de34299df3": {
-          "value": "shared_sharepointonline"
-        },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
         },
@@ -16,9 +13,6 @@
         }
       },
       "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "780bdd85-1158-4b32-bbbe-60de34299df3"
-        },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
         },
@@ -32,26 +26,24 @@
       "OMDaywiseSummary"
     ],
     "dependencies": {
-      "shared_sharepointonline": "780bdd85-1158-4b32-bbbe-60de34299df3"
+      "shared_sharepointonline": "2e888bcd-9361-4fc1-9163-29e040769757"
     },
     "dependents": [],
-    "id": "6dfadd81-1769-459d-9526-3e7b8f8fa2f2"
+    "id": "2725fecf-b3bb-4236-b4d0-797db060f8c1"
   },
-  "780bdd85-1158-4b32-bbbe-60de34299df3": {
+  "2e888bcd-9361-4fc1-9163-29e040769757": {
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
-    "dataSources": [
-      "OM_Crude_oil_sales_pipeline_inventory"
-    ],
+    "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "6dfadd81-1769-459d-9526-3e7b8f8fa2f2"
+      "2725fecf-b3bb-4236-b4d0-797db060f8c1"
     ],
-    "id": "780bdd85-1158-4b32-bbbe-60de34299df3"
+    "id": "2e888bcd-9361-4fc1-9163-29e040769757"
   },
   "ad35ed50-698e-48be-9427-a782a1a80ec5": {
     "appActions": [
