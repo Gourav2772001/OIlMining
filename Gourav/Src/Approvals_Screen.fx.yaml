@@ -1151,6 +1151,540 @@ Approvals_Screen As screen:
                                 Y: =DataCardKey121.Y + DataCardKey121.Height + 5
                                 ZIndex: =2
 
+                    Sales_JodhpurTerminal As formViewer:
+                        DataSource: =OM_Sales_to_Jodhpur
+                        Item: =LookUp(OM_Sales_to_Jodhpur,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Jodhpur",dept="Sales"),true,false)
+                        ZIndex: =7
+
+                        Title_DataCard24 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jodhpur],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
+
+                            DataCardKey122 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue122 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey122.Y + DataCardKey122.Height + 5
+                                ZIndex: =2
+
+                        Gross_Sales_DataCard2 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Sales"
+                            Default: =ThisItem.Gross_Sales
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jodhpur],DataSourceInfo.DisplayName,"Gross_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =8
+
+                            DataCardKey123 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue123 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey123.Y + DataCardKey123.Height + 5
+                                ZIndex: =2
+
+                        Net_Sales_DataCard2 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Net_Sales"
+                            Default: =ThisItem.Net_Sales
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jodhpur],DataSourceInfo.DisplayName,"Net_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =8
+
+                            DataCardKey125 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue125 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey125.Y + DataCardKey125.Height + 5
+                                ZIndex: =2
+
+                        BS_W_DataCard12 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jodhpur],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =8
+
+                            DataCardKey126 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue126 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey126.Y + DataCardKey126.Height + 5
+                                ZIndex: =2
+
+                        Density_15C_DataCard2 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Density_15C"
+                            Default: =ThisItem.Density_15C
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jodhpur],DataSourceInfo.DisplayName,"Density_15C")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =1
+                            ZIndex: =8
+
+                            DataCardKey127 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue127 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey127.Y + DataCardKey127.Height + 5
+                                ZIndex: =2
+
+                        Shortfall_Excess_NetMonth_DataCard1 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Shortfall_Excess_NetMonth"
+                            Default: =ThisItem.Shortfall_Excess_NetMonth
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Jodhpur],DataSourceInfo.DisplayName,"Shortfall_Excess_NetMonth")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =1
+                            ZIndex: =8
+
+                            DataCardKey129 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue129 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey129.Y + DataCardKey129.Height + 5
+                                ZIndex: =2
+
+                    FormViewer10 As formViewer:
+                        DataSource: =OM__Jodhpur_Oil_RDG_Condensate_Dispatch
+                        Item: =LookUp(OM__Jodhpur_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Jodhpur",dept="Dispatch"),true,false)
+                        ZIndex: =8
+
+                        Title_DataCard25 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
+
+                            DataCardKey130 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue130 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey130.Y + DataCardKey130.Height + 5
+                                ZIndex: =2
+
+                        Gross_Volume_pumped_DataCard7 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Volume_pumped"
+                            Default: =ThisItem.Gross_Volume_pumped
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Gross_Volume_pumped")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =9
+
+                            DataCardKey133 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue133 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey133.Y + DataCardKey133.Height + 5
+                                ZIndex: =2
+
+                        Total_Nomination_DataCard6 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Total_Nomination"
+                            Default: =ThisItem.Total_Nomination
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Total_Nomination")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =9
+
+                            DataCardKey134 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue134 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey134.Y + DataCardKey134.Height + 5
+                                ZIndex: =2
+
+                        Total_Gross_Pumped_DataCard7 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Total_Gross_Pumped"
+                            Default: =ThisItem.Total_Gross_Pumped
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Total_Gross_Pumped")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =9
+
+                            DataCardKey135 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue135 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey135.Y + DataCardKey135.Height + 5
+                                ZIndex: =2
+
+                        RAAG_Oil_RDG_DataCard7 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="RAAG_Oil_RDG"
+                            Default: =ThisItem.RAAG_Oil_RDG
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"RAAG_Oil_RDG")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =1
+                            ZIndex: =9
+
+                            DataCardKey136 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue136 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey136.Y + DataCardKey136.Height + 5
+                                ZIndex: =2
+
+                        "'Tank _DataCard6' As typedDataCard.textualViewCard":
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Tank"
+                            Default: =ThisItem.'Tank '
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Tank")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =1
+                            ZIndex: =9
+
+                            DataCardKey137 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue137 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey137.Y + DataCardKey137.Height + 5
+                                ZIndex: =2
+
+                        Duration_hours_DataCard6 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Duration_hours"
+                            Default: =ThisItem.Duration_hours
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Duration_hours")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =2
+                            ZIndex: =9
+
+                            DataCardKey138 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue138 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey138.Y + DataCardKey138.Height + 5
+                                ZIndex: =2
+
+                        BS_W_DataCard13 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Jodhpur_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =2
+                            ZIndex: =9
+
+                            DataCardKey139 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue139 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey139.Y + DataCardKey139.Height + 5
+                                ZIndex: =2
+
                 Combine_Gallery_Container As groupContainer.horizontalAutoLayoutContainer:
                     Height: =Parent.Height
                     LayoutMode: =LayoutMode.Auto
