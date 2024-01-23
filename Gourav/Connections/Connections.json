@@ -5,6 +5,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "2e888bcd-9361-4fc1-9163-29e040769757": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
         },
@@ -13,6 +16,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "2e888bcd-9361-4fc1-9163-29e040769757"
+        },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
         },
@@ -37,8 +43,19 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
-    "datasets": {},
-    "dataSources": [],
+    "datasets": {
+      "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
+        "dataSources": {
+          "OM_AllDepartmentSummary": {
+            "tableName": "69b0d67b-a5cf-4eaa-a02e-27da5b925261"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "OM_Crude_oil_sales_pipeline_inventory",
+      "OM_AllDepartmentSummary"
+    ],
     "dependencies": {},
     "dependents": [
       "2725fecf-b3bb-4236-b4d0-797db060f8c1"
