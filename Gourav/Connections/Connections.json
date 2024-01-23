@@ -38,13 +38,17 @@
         "dataSources": {
           "OM_AllDepartmentSummary": {
             "tableName": "69b0d67b-a5cf-4eaa-a02e-27da5b925261"
+          },
+          "OM_HSES_SUMMARY": {
+            "tableName": "30ef39be-89bf-4102-b218-7d2add6fa3f2"
           }
         }
       }
     },
     "dataSources": [
       "OM_Crude_oil_sales_pipeline_inventory",
-      "OM_AllDepartmentSummary"
+      "OM_AllDepartmentSummary",
+      "OM_HSES_SUMMARY"
     ],
     "dependencies": {},
     "dependents": [],
@@ -56,6 +60,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "271a3552-a1d1-47af-a423-55330041313b": {
+          "value": "shared_wordonlinebusiness"
+        },
+        "29c3238a-7e3a-406a-ac7d-5cef5f1d7759": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
         },
@@ -64,6 +74,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "29c3238a-7e3a-406a-ac7d-5cef5f1d7759"
+        },
+        "shared_wordonlinebusiness": {
+          "value": "271a3552-a1d1-47af-a423-55330041313b"
+        },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
         },
