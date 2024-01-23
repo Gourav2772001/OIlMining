@@ -1381,7 +1381,7 @@ Approvals_Screen As screen:
                                 Y: =DataCardKey129.Y + DataCardKey129.Height + 5
                                 ZIndex: =2
 
-                    FormViewer10 As formViewer:
+                    Dispatch_JodhpurTerminal As formViewer:
                         DataSource: =OM__Jodhpur_Oil_RDG_Condensate_Dispatch
                         Item: =LookUp(OM__Jodhpur_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
                         LayoutMinHeight: =250
@@ -1683,6 +1683,778 @@ Approvals_Screen As screen:
                                 Width: =Parent.Width - 60
                                 X: =30
                                 Y: =DataCardKey139.Y + DataCardKey139.Height + 5
+                                ZIndex: =2
+
+                    Sales_KotaTerminal As formViewer:
+                        DataSource: =OM_Sales_to_Kota_Terminal
+                        Item: =LookUp(OM_Sales_to_Kota_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Kota",dept="Sales"),true,false)
+                        ZIndex: =9
+
+                        Title_DataCard26 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
+
+                            DataCardKey141 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue141 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey141.Y + DataCardKey141.Height + 5
+                                ZIndex: =2
+
+                        Gross_Sales_DataCard8 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Sales"
+                            Default: =ThisItem.Gross_Sales
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"Gross_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =10
+
+                            DataCardKey142 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue142 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey142.Y + DataCardKey142.Height + 5
+                                ZIndex: =2
+
+                        Net_Sales_DataCard8 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Net_Sales"
+                            Default: =ThisItem.Net_Sales
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"Net_Sales")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =10
+
+                            DataCardKey143 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue143 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey143.Y + DataCardKey143.Height + 5
+                                ZIndex: =2
+
+                        BS_W_DataCard14 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =10
+
+                            DataCardKey145 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue145 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey145.Y + DataCardKey145.Height + 5
+                                ZIndex: =2
+
+                        Density_15C_DataCard8 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Density_15C"
+                            Default: =ThisItem.Density_15C
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"Density_15C")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =1
+                            ZIndex: =10
+
+                            DataCardKey146 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue146 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey146.Y + DataCardKey146.Height + 5
+                                ZIndex: =2
+
+                        Shortfall_Excess_NetMonth_DataCard2 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Shortfall_Excess_NetMonth"
+                            Default: =ThisItem.Shortfall_Excess_NetMonth
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Sales_to_Kota_Terminal],DataSourceInfo.DisplayName,"Shortfall_Excess_NetMonth")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =1
+                            ZIndex: =10
+
+                            DataCardKey147 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue147 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey147.Y + DataCardKey147.Height + 5
+                                ZIndex: =2
+
+                    Summary_KotaTerminal As formViewer:
+                        DataSource: =OM_Kota_Terminal
+                        Item: =LookUp(OM_Kota_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Kota",dept="Summary"),true,false)
+                        ZIndex: =10
+
+                        Title_DataCard27 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Kota_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =11
+
+                            DataCardKey149 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue149 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey149.Y + DataCardKey149.Height + 5
+                                ZIndex: =2
+
+                        Receipt_Tankage_only_BBLS_DataCard5 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Receipt_Tankage_only_BBLS"
+                            Default: =ThisItem.Receipt_Tankage_only_BBLS
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Kota_Terminal],DataSourceInfo.DisplayName,"Receipt_Tankage_only_BBLS")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =11
+
+                            DataCardKey150 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue150 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey150.Y + DataCardKey150.Height + 5
+                                ZIndex: =2
+
+                        Closing_Tank_Stock_BBLS_DataCard5 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Closing_Tank_Stock_BBLS"
+                            Default: =ThisItem.Closing_Tank_Stock_BBLS
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Kota_Terminal],DataSourceInfo.DisplayName,"Closing_Tank_Stock_BBLS")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =11
+
+                            DataCardKey151 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue151 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey151.Y + DataCardKey151.Height + 5
+                                ZIndex: =2
+
+                        Water_Drain_Quantity_BBLS_DataCard5 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Water_Drain_Quantity_BBLS"
+                            Default: =ThisItem.Water_Drain_Quantity_BBLS
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Kota_Terminal],DataSourceInfo.DisplayName,"Water_Drain_Quantity_BBLS")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =11
+
+                            DataCardKey153 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue153 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey153.Y + DataCardKey153.Height + 5
+                                ZIndex: =2
+
+                    Dispatch_KotaTerminial As formViewer:
+                        DataSource: =OM__Kota_Oil_RDG_Condensate_Dispatch
+                        Item: =LookUp(OM__Kota_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Kota",dept="Dispatch"),true,false)
+                        ZIndex: =11
+
+                        Title_DataCard28 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =12
+
+                            DataCardKey154 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue154 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey154.Y + DataCardKey154.Height + 5
+                                ZIndex: =2
+
+                        Gross_Volume_pumped_DataCard8 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Gross_Volume_pumped"
+                            Default: =ThisItem.Gross_Volume_pumped
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Gross_Volume_pumped")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =12
+
+                            DataCardKey155 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue155 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey155.Y + DataCardKey155.Height + 5
+                                ZIndex: =2
+
+                        Total_Nomination_DataCard7 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Total_Nomination"
+                            Default: =ThisItem.Total_Nomination
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Total_Nomination")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =0
+                            ZIndex: =12
+
+                            DataCardKey157 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue157 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey157.Y + DataCardKey157.Height + 5
+                                ZIndex: =2
+
+                        Total_Gross_Pumped_DataCard8 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Total_Gross_Pumped"
+                            Default: =ThisItem.Total_Gross_Pumped
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Total_Gross_Pumped")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =1
+                            ZIndex: =12
+
+                            DataCardKey158 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue158 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey158.Y + DataCardKey158.Height + 5
+                                ZIndex: =2
+
+                        RAAG_Oil_RDG_DataCard8 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="RAAG_Oil_RDG"
+                            Default: =ThisItem.RAAG_Oil_RDG
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"RAAG_Oil_RDG")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =1
+                            ZIndex: =12
+
+                            DataCardKey164 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue164 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey164.Y + DataCardKey164.Height + 5
+                                ZIndex: =2
+
+                        "'Tank _DataCard7' As typedDataCard.textualViewCard":
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Tank"
+                            Default: =ThisItem.'Tank '
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Tank")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =2
+                            Y: =1
+                            ZIndex: =12
+
+                            DataCardKey165 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue165 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey165.Y + DataCardKey165.Height + 5
+                                ZIndex: =2
+
+                        Duration_hours_DataCard7 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Duration_hours"
+                            Default: =ThisItem.Duration_hours
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"Duration_hours")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =2
+                            ZIndex: =12
+
+                            DataCardKey166 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue166 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey166.Y + DataCardKey166.Height + 5
+                                ZIndex: =2
+
+                        BS_W_DataCard15 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="BS_W"
+                            Default: =ThisItem.BS_W
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM__Kota_Oil_RDG_Condensate_Dispatch],DataSourceInfo.DisplayName,"BS_W")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =2
+                            ZIndex: =12
+
+                            DataCardKey167 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue167 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey167.Y + DataCardKey167.Height + 5
+                                ZIndex: =2
+
+                    Cargo_KotaTerminal As formViewer:
+                        DataSource: =OM_Nos_of_Cargo_Loaded_from_Kota_Terminal
+                        Item: =LookUp(OM_Nos_of_Cargo_Loaded_from_Kota_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        Visible: =If(And(loc="Kota",dept="Cargo"),true,false)
+                        ZIndex: =12
+
+                        Title_DataCard29 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Title"
+                            Default: =ThisItem.Title
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Nos_of_Cargo_Loaded_from_Kota_Terminal],DataSourceInfo.DisplayName,"Title")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =0
+                            Y: =0
+                            ZIndex: =13
+
+                            DataCardKey168 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue168 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey168.Y + DataCardKey168.Height + 5
+                                ZIndex: =2
+
+                        Cumulative_Till_Date_DataCard4 As typedDataCard.textualViewCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Cumulative_Till_Date"
+                            Default: =ThisItem.Cumulative_Till_Date
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@OM_Nos_of_Cargo_Loaded_from_Kota_Terminal],DataSourceInfo.DisplayName,"Cumulative_Till_Date")
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =40
+                            Required: =false
+                            Width: =296
+                            X: =1
+                            Y: =0
+                            ZIndex: =13
+
+                            DataCardKey169 As label:
+                                AutoHeight: =true
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue169 As label:
+                                AutoHeight: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =27
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =Parent.Default
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey169.Y + DataCardKey169.Height + 5
                                 ZIndex: =2
 
                 Combine_Gallery_Container As groupContainer.horizontalAutoLayoutContainer:
