@@ -1,0 +1,62 @@
+Approvals_Screen As screen:
+    BackgroundImage: ='7f951bda68241a57aa84929a95f120f9f082a9a0-1440x1054'
+    ImagePosition: =ImagePosition.Fill
+
+    Approval_Main_Container As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Hedaer_container As groupContainer.verticalAutoLayoutContainer:
+            Height: =Parent.Height*.2
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Header_Sub_Container As groupContainer.manualLayoutContainer:
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                ZIndex: =1
+
+                Header As groupContainer.manualLayoutContainer:
+                    Height: =Parent.Height/2
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                Gal_Fillter_Container As groupContainer.manualLayoutContainer:
+                    Height: =Parent.Height/2
+                    Width: =Parent.Width
+                    Y: =Parent.Height-Header.Height
+                    ZIndex: =2
+
+        Gal_Form_Container As groupContainer.verticalAutoLayoutContainer:
+            Height: =(Approval_Main_Container.Height-Hedaer_container.Height)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            Y: =(Approval_Main_Container.Height-Hedaer_container.Height)*.25
+            ZIndex: =2
+
+            Gal_Form_sub_container As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =Parent.Width
+                ZIndex: =1
+
+                All_DisplayForm_Container As groupContainer.horizontalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width-Combine_Gallery_Container.Width
+                    X: =Parent.Width*.35
+                    ZIndex: =1
+
+                Combine_Gallery_Container As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width*.35
+                    Y: =
+                    ZIndex: =2
+
