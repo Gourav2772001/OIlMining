@@ -1,4 +1,32 @@
 {
+  "271a3552-a1d1-47af-a423-55330041313b": {
+    "connectionRef": {
+      "displayName": "Word Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "76ff4e1e-fe84-4f32-875c-a7b195db0fb9"
+    ],
+    "id": "271a3552-a1d1-47af-a423-55330041313b"
+  },
+  "29c3238a-7e3a-406a-ac7d-5cef5f1d7759": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "76ff4e1e-fe84-4f32-875c-a7b195db0fb9"
+    ],
+    "id": "29c3238a-7e3a-406a-ac7d-5cef5f1d7759"
+  },
   "2e888bcd-9361-4fc1-9163-29e040769757": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -21,6 +49,39 @@
     "dependencies": {},
     "dependents": [],
     "id": "2e888bcd-9361-4fc1-9163-29e040769757"
+  },
+  "76ff4e1e-fe84-4f32-875c-a7b195db0fb9": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
+        },
+        "workflowName": {
+          "value": "ea0db970-ca0f-ba3d-91cb-a07dee7eb25e"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
+        },
+        "workflowName": {
+          "value": "ea0db970-ca0f-ba3d-91cb-a07dee7eb25e"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "OMDaywiseSummary"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "29c3238a-7e3a-406a-ac7d-5cef5f1d7759",
+      "shared_wordonlinebusiness": "271a3552-a1d1-47af-a423-55330041313b"
+    },
+    "dependents": [],
+    "id": "76ff4e1e-fe84-4f32-875c-a7b195db0fb9"
   },
   "ad35ed50-698e-48be-9427-a782a1a80ec5": {
     "appActions": [
