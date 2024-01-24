@@ -9433,36 +9433,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.AdminFormFilled"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.AdminFormFilled",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AdminFormFilled",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.1649"
                 }
               ],
@@ -11200,7 +11170,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Approvals_Screen\" is 320, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Approvals_Screen\" is 321, which exceeds the maximum threshold recommended (300)."
               }
             },
             {

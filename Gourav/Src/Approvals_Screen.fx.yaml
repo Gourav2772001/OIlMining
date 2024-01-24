@@ -3412,7 +3412,7 @@ Approvals_Screen As screen:
                     Combine_Data_Gal As gallery.galleryVertical:
                         DelayItemLoading: =true
                         FillPortions: =0
-                        Items: =Filter(OM_AllDepartmentSummary,Status="Pending")
+                        Items: =Filter(OM_AllDepartmentSummary,And(Status="Pending", Created_On=Today()))
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -3495,4 +3495,13 @@ Approvals_Screen As screen:
                         X: =1272
                         Y: =12
                         ZIndex: =1
+
+                    Button1 As button:
+                        DisplayMode: =If(And(Combine_Data_Gal.AllItemsCount=0,AdminFormFilled=true),DisplayMode.Edit,DisplayMode.Disabled)
+                        OnSelect: =OMDaywiseSummary.Run()
+                        Text: ="View Cumulative Summary"
+                        Width: =288
+                        X: =540
+                        Y: =21
+                        ZIndex: =2
 

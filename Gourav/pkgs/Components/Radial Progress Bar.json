@@ -98,7 +98,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_progressBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 2147,
+            "PublishOrderIndex": 2148,
             "Rules": [
               {
                 "Category": "Data",
@@ -405,7 +405,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_progressBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 2148,
+            "PublishOrderIndex": 2149,
             "Rules": [
               {
                 "Category": "Data",
@@ -775,7 +775,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_progressBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 2149,
+            "PublishOrderIndex": 2150,
             "Rules": [
               {
                 "Category": "Data",
@@ -1085,7 +1085,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Radial Progress Bar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2146,
+        "PublishOrderIndex": 2147,
         "Rules": [
           {
             "Category": "Design",

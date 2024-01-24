@@ -1,32 +1,4 @@
 {
-  "271a3552-a1d1-47af-a423-55330041313b": {
-    "connectionRef": {
-      "displayName": "Word Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "76ff4e1e-fe84-4f32-875c-a7b195db0fb9"
-    ],
-    "id": "271a3552-a1d1-47af-a423-55330041313b"
-  },
-  "29c3238a-7e3a-406a-ac7d-5cef5f1d7759": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "76ff4e1e-fe84-4f32-875c-a7b195db0fb9"
-    ],
-    "id": "29c3238a-7e3a-406a-ac7d-5cef5f1d7759"
-  },
   "2e888bcd-9361-4fc1-9163-29e040769757": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -54,16 +26,44 @@
     "dependents": [],
     "id": "2e888bcd-9361-4fc1-9163-29e040769757"
   },
-  "76ff4e1e-fe84-4f32-875c-a7b195db0fb9": {
+  "5f5c74de-f6e5-472c-bca2-d96944162d15": {
+    "connectionRef": {
+      "displayName": "Word Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "9ce3ab05-1e5e-49fb-a7b6-94916de9b5a1"
+    ],
+    "id": "5f5c74de-f6e5-472c-bca2-d96944162d15"
+  },
+  "7e7bc186-495d-4383-b5c4-49fb5e86ece6": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "9ce3ab05-1e5e-49fb-a7b6-94916de9b5a1"
+    ],
+    "id": "7e7bc186-495d-4383-b5c4-49fb5e86ece6"
+  },
+  "9ce3ab05-1e5e-49fb-a7b6-94916de9b5a1": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "271a3552-a1d1-47af-a423-55330041313b": {
+        "5f5c74de-f6e5-472c-bca2-d96944162d15": {
           "value": "shared_wordonlinebusiness"
         },
-        "29c3238a-7e3a-406a-ac7d-5cef5f1d7759": {
+        "7e7bc186-495d-4383-b5c4-49fb5e86ece6": {
           "value": "shared_sharepointonline"
         },
         "workflowEntityId": {
@@ -75,10 +75,10 @@
       },
       "parameterHintsV2": {
         "shared_sharepointonline": {
-          "value": "29c3238a-7e3a-406a-ac7d-5cef5f1d7759"
+          "value": "7e7bc186-495d-4383-b5c4-49fb5e86ece6"
         },
         "shared_wordonlinebusiness": {
-          "value": "271a3552-a1d1-47af-a423-55330041313b"
+          "value": "5f5c74de-f6e5-472c-bca2-d96944162d15"
         },
         "workflowEntityId": {
           "value": "5c2b917d-c1b9-ee11-9079-6045bdaa8a35"
@@ -93,11 +93,11 @@
       "OMDaywiseSummary"
     ],
     "dependencies": {
-      "shared_sharepointonline": "29c3238a-7e3a-406a-ac7d-5cef5f1d7759",
-      "shared_wordonlinebusiness": "271a3552-a1d1-47af-a423-55330041313b"
+      "shared_sharepointonline": "7e7bc186-495d-4383-b5c4-49fb5e86ece6",
+      "shared_wordonlinebusiness": "5f5c74de-f6e5-472c-bca2-d96944162d15"
     },
     "dependents": [],
-    "id": "76ff4e1e-fe84-4f32-875c-a7b195db0fb9"
+    "id": "9ce3ab05-1e5e-49fb-a7b6-94916de9b5a1"
   },
   "ad35ed50-698e-48be-9427-a782a1a80ec5": {
     "appActions": [
