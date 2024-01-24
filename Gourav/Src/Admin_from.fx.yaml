@@ -1689,6 +1689,17 @@ Admin_from As screen:
                                 Perfect_Day_Last_Reported:First(Form_Data_Admin).COP_LR,
                                 Perfect_Day_Remarks:First(Form_Data_Admin).Perfect_Remark
                             }
+                        );
+                        
+                        Patch(OM_AllDepartmentSummary,
+                                Defaults(OM_AllDepartmentSummary),
+                                    {
+                                        'Reference ID':Last(OM_HSES_SUMMARY).ID,
+                                        Location:"nil",
+                                        Department:"Admin",
+                                        Created_On:Now(),
+                                        Status:"Approved"
+                                    }
                         )
                         
                     Text: ="Submit Details"
