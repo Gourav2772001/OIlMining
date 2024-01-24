@@ -1691,6 +1691,8 @@ Admin_from As screen:
                             }
                         );
                         
+                        Set(AdminFormFilled,true);
+                        
                         Patch(OM_AllDepartmentSummary,
                                 Defaults(OM_AllDepartmentSummary),
                                     {

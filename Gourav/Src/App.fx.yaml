@@ -27,7 +27,8 @@ App As appinfo:
             {Name:"Last Reported"},
             {Name: "Remarks"}
             
-        )
+        );
+        Set(AdminFormFilled,false)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
