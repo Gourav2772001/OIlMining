@@ -3386,41 +3386,58 @@ Approvals_Screen As screen:
 
                     Combine_Data_Gal As gallery.galleryVertical:
                         DelayItemLoading: =true
+                        FillPortions: =0
                         Items: =OM_AllDepartmentSummary
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
-                        OnSelect: |-
-                            =Set(loc,ThisItem.Location);
-                            Set(dept,ThisItem.Department)
-                        TemplateSize: =100
+                        TemplateSize: =120
+                        Width: =Parent.Width
                         ZIndex: =1
 
-                        ID_LBL As label:
-                            Align: =Align.Center
-                            Height: =37
-                            OnSelect: =Select(Parent)
-                            Text: =ThisItem.ID
-                            Width: =44
-                            Y: =48
+                        container_com_Data_gal As groupContainer.horizontalAutoLayoutContainer:
+                            Height: =Parent.TemplateHeight
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutGap: =10
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.TemplateWidth
+                            X: =
                             ZIndex: =1
 
-                        DEPARTMENT_LBL As label:
-                            Align: =Align.Center
-                            OnSelect: =Select(Parent)
-                            Text: =ThisItem.Department
-                            X: =152
-                            Y: =46
-                            ZIndex: =2
+                            ID As label:
+                                Align: =Align.Justify
+                                FontWeight: =FontWeight.Semibold
+                                Size: =15
+                                Text: =ThisItem.ID
+                                Width: =Parent.Width/4
+                                ZIndex: =1
 
-                        LOCATION_LBL As label:
-                            Align: =Align.Center
-                            OnSelect: =Select(Parent)
-                            Text: =ThisItem.Location
-                            X: =302
-                            Y: =45
-                            ZIndex: =3
+                            DEPARTMENT As label:
+                                FontWeight: =FontWeight.Semibold
+                                Height: =100
+                                Size: =15
+                                Text: =ThisItem.Department
+                                Width: =Parent.Width/4
+                                ZIndex: =2
+
+                            LOCATION As label:
+                                FontWeight: =FontWeight.Semibold
+                                Height: =100
+                                Size: =15
+                                Text: =ThisItem.Location
+                                Width: =Parent.Width/4
+                                ZIndex: =3
+
+                            VIEW As icon.View:
+                                Height: =54
+                                Icon: =Icon.View
+                                OnSelect: |-
+                                    =Set(loc,ThisItem.Location);
+                                    Set(dept,ThisItem.Department)
+                                Width: =40
+                                ZIndex: =4
 
         Hedaer_container As groupContainer.verticalAutoLayoutContainer:
             Height: =Parent.Height*.2

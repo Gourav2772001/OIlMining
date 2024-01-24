@@ -98,7 +98,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_progressBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 2143,
+            "PublishOrderIndex": 2145,
             "Rules": [
               {
                 "Category": "Data",
@@ -405,7 +405,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_progressBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 2144,
+            "PublishOrderIndex": 2146,
             "Rules": [
               {
                 "Category": "Data",
@@ -775,7 +775,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_progressBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 2145,
+            "PublishOrderIndex": 2147,
             "Rules": [
               {
                 "Category": "Data",
@@ -1085,7 +1085,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Radial Progress Bar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2142,
+        "PublishOrderIndex": 2144,
         "Rules": [
           {
             "Category": "Design",
@@ -1329,7 +1329,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638416707875038584",
+    "LastModifiedTimestamp": "638416737629241124",
     "Name": "Radial Progress Bar",
     "Rules": [
       {
@@ -1507,7 +1507,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638416707875038584",
+  "LastModifiedTimestamp": "638416737629241124",
   "Name": "f198378b2b1b4658908004d58067de03",
   "OverridableProperties": {},
   "SourceLibraryId": "2402ba05-d37b-4e29-98f6-2709197f691d",
