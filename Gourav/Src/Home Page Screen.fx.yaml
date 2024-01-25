@@ -552,7 +552,7 @@
                         ItemColorSet: =PieChart1.ItemColorSet
                         Items: =PieChart1.SeriesLabels
                         Size: =16
-                        Width: =Parent.Width*.4
+                        Width: =Parent.Width*.25
                         Y: =Parent.Height*.5
                         ZIndex: =4
 
