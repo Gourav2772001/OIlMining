@@ -1001,19 +1001,27 @@
                 PaddingTop: =8
                 ZIndex: =1
 
+                "'icn_Closed!' As icon.Cancel":
+                    AlignInContainer: =AlignInContainer.End
+                    Height: =Parent.Height*.2
+                    Icon: =Icon.Cancel
+                    OnSelect: =Set(Var_Persona,!Var_Persona)
+                    Width: =Parent.Width*.1
+                    ZIndex: =1
+
                 lbl_LogIn_1 As label:
                     AlignInContainer: =AlignInContainer.Start
                     FontWeight: =FontWeight.Semibold
                     PaddingLeft: =10
                     Size: =18
                     Text: ="Log In As"
-                    ZIndex: =1
+                    ZIndex: =2
 
                 Lbl_Size_1 As label:
                     PaddingLeft: =10
                     Text: ="Select Your Persona"
                     Width: =190
-                    ZIndex: =2
+                    ZIndex: =3
 
             "gal_personaSize_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
