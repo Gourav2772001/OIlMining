@@ -159,7 +159,7 @@
                             PaddingBottom: =8
                             PaddingLeft: =2
                             Size: =11
-                            Text: ="Jaipur Net Worth"
+                            Text: ="Jodhpur Net Worth"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_1.Width,Parent.Width)
                             ZIndex: =2
 
@@ -241,7 +241,7 @@
                             PaddingBottom: =8
                             PaddingLeft: =2
                             Size: =11
-                            Text: ="Jaipur Net Worth"
+                            Text: ="Udaipur Net Worth"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_2.Width,Parent.Width)
                             ZIndex: =2
 
@@ -323,7 +323,7 @@
                             PaddingBottom: =8
                             PaddingLeft: =2
                             Size: =11
-                            Text: ="Jaipur Net Worth"
+                            Text: ="Kota Net Worth"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_3.Width,Parent.Width)
                             ZIndex: =2
 
@@ -493,26 +493,6 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-            con_userImage As groupContainer.manualLayoutContainer:
-                FillPortions: =0.1
-                Height: =Parent.Height
-                LayoutMinHeight: =0
-                LayoutMinWidth: =50
-                ZIndex: =4
-
-                img_userImage As image:
-                    Height: =Parent.Height-10
-                    Image: =User().Image
-                    ImagePosition: =ImagePosition.Fill
-                    RadiusBottomLeft: =150
-                    RadiusBottomRight: =150
-                    RadiusTopLeft: =150
-                    RadiusTopRight: =150
-                    Width: =Parent.Width-10
-                    X: =(Parent.Width-Self.Width)/2
-                    Y: =(Parent.Height-Self.Height)/2
-                    ZIndex: =1
-
         con_ofChart As groupContainer.horizontalAutoLayoutContainer:
             Height: =If(Parent.Height>500,Parent.Height/1.6,Parent.Height/1.8)
             LayoutMode: =LayoutMode.Auto
@@ -614,4 +594,67 @@
                    
                 )
             Width: =If(App.ActiveScreen.Size=1,40,68)
+
+    cont_HeaderRegionalForm_5 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height*.1
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =4
+
+        img_oilLogoHeader_5 As image:
+            Height: =Parent.Height
+            Image: ='9d2ea1b508c12a7d974e238d426589ad-removebg-preview'
+            ImagePosition: =ImagePosition.Fill
+            Width: =Parent.Height
+            ZIndex: =1
+
+        lbl_RegionalForm_LogoHeader_5 As label:
+            AlignInContainer: =AlignInContainer.Center
+            AutoHeight: =true
+            FillPortions: =1
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.Height
+            Size: |-
+                =Switch(
+                    'Form Screen'.Size,
+                    1,
+                    10,
+                    2,
+                    13,
+                    3,
+                    16,
+                    4,
+                    19
+                )
+            Text: ="Fueling Progress, Powering Tomorrow"
+            Width: =Parent.Width*.2
+            ZIndex: =2
+
+        lbl_LoggedInUserName_5 As label:
+            Align: =Align.Right
+            AlignInContainer: =AlignInContainer.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FillPortions: =1
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height
+            Size: =18
+            Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
+            Visible: |-
+                =//If('Form Screen'.Size>3,true,false)
+                false
+            Width: =Parent.Width*.5
+            ZIndex: =3
+
+        img_RegionalForm_UserImage_5 As image:
+            AlignInContainer: =AlignInContainer.Center
+            Height: =Parent.Height
+            Image: =User().Image
+            RadiusBottomLeft: =1000
+            RadiusBottomRight: =1000
+            RadiusTopLeft: =1000
+            RadiusTopRight: =1000
+            Width: =Parent.Height
+            ZIndex: =4
 

@@ -11103,6 +11103,36 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen'.cont_HeaderRegionalForm_5.lbl_RegionalForm_LogoHeader_5.Size"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen'.cont_HeaderRegionalForm_5.lbl_RegionalForm_LogoHeader_5.Size",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Size",
+                "module": "Home Page Screen",
+                "type": "'Home Page Screen'.cont_HeaderRegionalForm_5.lbl_RegionalForm_LogoHeader_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
         }
       ],
       "tool": {
