@@ -485,21 +485,37 @@
                 Width: =If( App.ActiveScreen.Size=2 ||App.ActiveScreen.Size=1,220,475)
                 ZIndex: =1
 
+            "progressBar As 'Progress Bar'":
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =45
+                LayoutMinHeight: =45
+                LayoutMinWidth: =450
+                Max: =16
+                ProgressColor: =If(progressBar.Value=16,'Progress.ProgressColor'.Success,'Progress.ProgressColor'.Brand)
+                Thickness: ='Progress.Thickness'.Large
+                Value: =gal_allSummaryITemCount.AllItemsCount
+                Width: =450
+                X: =0
+                Y: =0
+                ZIndex: =2
+
             lbl_flex As label:
+                AlignInContainer: =AlignInContainer.Stretch
                 FillPortions: =1
                 Height: =Parent.Height
                 LayoutMinWidth: =0
-                Text: =""
+                Text: =(progressBar.Value/16)*100 & " %"
                 Visible: =If( App.ActiveScreen.Size=1,false,true)
                 Width: =If(App.ActiveScreen.Size=1,25,If( App.ActiveScreen.Size=2,50,150))
-                ZIndex: =2
+                ZIndex: =3
 
             con_notification As groupContainer.manualLayoutContainer:
                 FillPortions: =0.1
                 Height: =Parent.Height
                 LayoutMinHeight: =0
                 LayoutMinWidth: =50
-                ZIndex: =3
+                ZIndex: =4
 
                 img_notification As image:
                     Height: =Parent.Height
@@ -567,6 +583,32 @@
                         Width: =Parent.Width*.25
                         Y: =Parent.Height*.5
                         ZIndex: =4
+
+                gal_allSummaryITemCount As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Height: =386
+                    Items: =Filter(OM_AllDepartmentSummary,Created_On=Today() && Status="Pending")
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =123
+                    Visible: =false
+                    Width: =279
+                    X: =371
+                    ZIndex: =5
+
+                    lbl_LocatGalAllSummCount As label:
+                        OnSelect: =Select(Parent)
+                        Text: =ThisItem.Location
+                        X: =23
+                        Y: =40
+                        ZIndex: =1
+
+                    lbl_DeptGalAllSummCount As label:
+                        OnSelect: =Select(Parent)
+                        Text: =ThisItem.Department
+                        X: =23
+                        Y: =80
+                        ZIndex: =2
 
             con_OtherChart As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

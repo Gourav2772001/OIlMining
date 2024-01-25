@@ -4390,7 +4390,7 @@ Form_Screen As screen:
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
-                    OnSuccess: =ResetForm(form_Dispatch_Jaipur_2)
+                    OnSuccess: =ResetForm(form_Dispatch_Jaipur_2);
                     Width: =Parent.Width
                     X: =10
                     Y: =10
