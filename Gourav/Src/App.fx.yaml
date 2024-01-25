@@ -17,8 +17,8 @@ App As appinfo:
             {Name: "Crude Oil"},
             {Name: "Inventory"},
             {Name: "Summary"},
-            {Name:"Dispatch Form"},
-            {Name:"Cargo Form"}
+            {Name:"Dispatch"},
+            {Name:"Cargo"}
         );
         ClearCollect(
             Tabs_AdminForm,

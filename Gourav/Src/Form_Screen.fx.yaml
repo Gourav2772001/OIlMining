@@ -52,7 +52,10 @@ Form_Screen As screen:
                     Fill: =If(ThisItem.IsSelected,RGBA(136,110,255,0.3),RGBA(255,255,255,0.3))
                     Height: =If(Form_Screen.Size>2,60,Parent.TemplateHeight)
                     HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
-                    OnSelect: =Select(Parent)
+                    OnSelect: |
+                        =ClearCollect(record,
+                        LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Department=ThisItem.Name,Location=First(userData1).Location))
+                        );
                     PressedBorderColor: =
                     PressedFill: =Self.Fill
                     RadiusBottomLeft: =30
@@ -101,8 +104,10 @@ Form_Screen As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderStyle: =BorderStyle.None
                     DataSource: =OM_Sales_to_Jaipur_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Sales_to_Jaipur_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -2571,8 +2576,9 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_MPT_Crude_Oil
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: =LookUp(OM_MPT_Crude_Oil,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -2987,8 +2993,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Crude_oil_sales_pipeline_inventory
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Crude_oil_sales_pipeline_inventory,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -3269,8 +3277,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Jaipur_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Jaipur_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -4304,7 +4314,7 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_2.Selected.Name = "Dispatch Form" && selectedData="Gourav Kumar",
+                        gal_tempTabItems_2.Selected.Name = "Dispatch" && selectedData="Gourav Kumar",
                         true,
                         false
                     )
@@ -4316,8 +4326,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM__Jaipur_Oil_RDG_Condensate_Dispatch
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM__Jaipur_Oil_RDG_Condensate_Dispatch,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -6987,7 +6999,7 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_2.Selected.Name = "Cargo Form" && selectedData="Gourav Kumar",
+                        gal_tempTabItems_2.Selected.Name = "Cargo" && selectedData="Gourav Kumar",
                         true,
                         false
                     )
@@ -6999,8 +7011,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2

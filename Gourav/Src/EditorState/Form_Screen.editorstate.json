@@ -8934,7 +8934,14 @@
     "btn_galTabSelecteds_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Select(Parent)",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9246,7 +9253,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -103072,7 +103079,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -103134,6 +103149,11 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -103512,7 +103532,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -103574,6 +103602,11 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -103732,7 +103765,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -103789,11 +103830,16 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "DataSource",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -104612,7 +104658,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -104669,11 +104723,16 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "DataSource",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -104847,6 +104906,14 @@
           "InvariantPropertyName": "SnapToColumns",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -104904,11 +104971,16 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "DataSource",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -106041,7 +106113,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -106103,6 +106183,11 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
