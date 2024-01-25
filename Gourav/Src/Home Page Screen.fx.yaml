@@ -505,7 +505,7 @@
 
         con_ofChart As groupContainer.horizontalAutoLayoutContainer:
             Height: =If(Parent.Height>500,Parent.Height/1.6,Parent.Height/1.8)
-            LayoutGap: =10
+            LayoutGap: =20
             LayoutMode: =LayoutMode.Auto
             Width: =Parent.Width-80
             X: =(Parent.Width-Self.Width)/1.5
@@ -515,14 +515,15 @@
             con_graphChart As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
+                FillPortions: =0
                 Height: =Parent.Height
                 LayoutMinHeight: =0
-                LayoutMinWidth: =400
+                LayoutMinWidth: =0
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
                 PaddingTop: =10
-                Width: =Parent.Width/1.3
+                Width: =Parent.Width*.6
                 ZIndex: =1
 
                 CompositePieChart1 As group:
@@ -567,7 +568,7 @@
                 LayoutMinWidth: =0
                 LayoutMode: =LayoutMode.Auto
                 Visible: =If(con_otherGarph.Width<250,false,true)
-                Width: =Parent.Width/2.3
+                Width: =Parent.Width*.38
                 ZIndex: =2
 
                 con_progessBar As groupContainer.manualLayoutContainer:
@@ -579,8 +580,11 @@
                     ZIndex: =1
 
                     lbl_file9 As label:
-                        Height: =Parent.Height*.2
-                        Text: ="Files"
+                        Font: =Font.'Lato Black'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height*.1
+                        Size: =15
+                        Text: =" Downloaded Files"
                         Width: =Parent.Width
                         Y: =3
                         ZIndex: =1
@@ -594,12 +598,13 @@
                         OnSelect: =Launch(ThisItem.'Link to item')
                         TemplatePadding: =0
                         TemplateSize: =36
-                        Transition: =Transition.Push
+                        Transition: =Transition.Pop
                         Width: =Parent.Width
                         Y: =43
                         ZIndex: =1
 
                         lbl_titleName As label:
+                            Color: =RGBA(39, 113, 194, 1)
                             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                             Height: =Self.Size * 1.8
                             OnSelect: =Select(Parent)
@@ -607,42 +612,43 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
+                            Size: =12
                             Text: =ThisItem.Name
+                            Underline: =true
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth - 86
-                            X: =16
-                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            X: =60
+                            Y: =5
                             ZIndex: =1
 
-                        NextArrow1 As icon.ChevronRight:
-                            AccessibleLabel: =Self.Tooltip
-                            Color: =RGBA(166, 166, 166, 1)
-                            Height: =50
-                            Icon: =Icon.ChevronRight
+                        Button1 As button:
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =36
+                            HoverFill: =Color.Transparent
                             OnSelect: =Select(Parent)
-                            PaddingBottom: =12
-                            PaddingLeft: =12
-                            PaddingRight: =12
-                            PaddingTop: =12
-                            Tooltip: ="View item details"
-                            Width: =50
-                            X: =Parent.TemplateWidth - Self.Width - 12
-                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                            ZIndex: =2
+                            PressedColor: =Color.Black
+                            PressedFill: =Color.Transparent
+                            Text: =" "
+                            Width: =472.1739130434783
+                            ZIndex: =5
 
-                        Rectangle1 As rectangle:
-                            Height: =
+                        Icon_view As icon.View:
+                            Height: =21
+                            Icon: =Icon.View
                             OnSelect: =Select(Parent)
-                            Visible: =ThisItem.IsSelected
-                            Width: =4
-                            ZIndex: =4
+                            Width: =21
+                            X: =28
+                            Y: =5
+                            ZIndex: =6
 
                 con_otherGarph As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0.7
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
-                    Visible: =If(con_otherGarph.Width<250,false,true)
+                    Visible: |-
+                        =//If(con_otherGarph.Width<250,false,true)
+                        false
                     Width: =Parent.Width
                     ZIndex: =2
 
@@ -701,8 +707,10 @@
 
     cont_HeaderRegionalForm_5 As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height*.1
+        Height: =Parent.Height*.07
         LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =5
+        PaddingTop: =5
         Width: =Parent.Width
         ZIndex: =4
 
@@ -712,6 +720,22 @@
             ImagePosition: =ImagePosition.Fill
             Width: =Parent.Height
             ZIndex: =1
+
+        lbl_LoggedInUserName_5 As label:
+            Align: =Align.Right
+            AlignInContainer: =AlignInContainer.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FillPortions: =1
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height
+            Size: =18
+            Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
+            Visible: |-
+                =//If('Form Screen'.Size>3,true,false)
+                false
+            Width: =Parent.Width*.5
+            ZIndex: =2
 
         lbl_RegionalForm_LogoHeader_5 As label:
             AlignInContainer: =AlignInContainer.Center
@@ -733,23 +757,43 @@
                 )
             Text: ="Fueling Progress, Powering Tomorrow"
             Width: =Parent.Width*.2
-            ZIndex: =2
+            ZIndex: =3
 
-        lbl_LoggedInUserName_5 As label:
-            Align: =Align.Right
+        Icon_download As icon.Download:
             AlignInContainer: =AlignInContainer.Center
             Color: =RGBA(255, 255, 255, 1)
-            FillPortions: =1
-            Font: =Font.'Lato Black'
-            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height*.8
+            Icon: =Icon.Download
+            OnSelect: |-
+                =OMDaywiseSummary.Run();
+                Set(getURL,OMDaywiseSummary.Run().download_url);
+                Download(First(Split(getURL,"?")).Value);
+                Notify("Your file has been downloaded to the system",NotificationType.Success)
+            PaddingTop: =10
+            Width: =Parent.Width*.02
+            ZIndex: =5
+
+        Btn_downloadPdf As button:
+            Align: =Align.Left
+            AlignInContainer: =AlignInContainer.Center
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height
-            Size: =18
-            Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
-            Visible: |-
-                =//If('Form Screen'.Size>3,true,false)
-                false
-            Width: =Parent.Width*.5
-            ZIndex: =3
+            OnSelect: |-
+                =OMDaywiseSummary.Run();
+                Set(getURL,OMDaywiseSummary.Run().download_url);
+                Download(First(Split(getURL,"?")).Value);
+                Notify("Your file has been downloaded to the system",NotificationType.Success)
+            PaddingLeft: =0
+            PaddingTop: =10
+            Size: =12
+            Text: ="Download PDF"
+            ZIndex: =6
+
+        Label1_true As label:
+            Text: =""
+            Visible: =false
+            Width: =50
+            ZIndex: =7
 
         img_RegionalForm_UserImage_5 As image:
             AlignInContainer: =AlignInContainer.Center
@@ -760,5 +804,5 @@
             RadiusTopLeft: =1000
             RadiusTopRight: =1000
             Width: =Parent.Height
-            ZIndex: =4
+            ZIndex: =8
 
