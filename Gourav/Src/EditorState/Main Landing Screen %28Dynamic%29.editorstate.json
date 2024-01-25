@@ -16292,7 +16292,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_LogIn_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23446,7 +23446,7 @@
       "MetaDataIDKey": "",
       "Name": "Lbl_Size_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
