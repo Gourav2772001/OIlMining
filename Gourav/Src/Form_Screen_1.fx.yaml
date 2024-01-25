@@ -7497,3 +7497,10 @@ Form_Screen_1 As screen:
             Width: =Parent.Height
             ZIndex: =4
 
+    Button_ALL_Region_Container As groupContainer.manualLayoutContainer:
+        Height: =66
+        Width: =Parent.Width-cont_leftSideContentgalTab_2.Width-160
+        X: =cont_leftSideContentgalTab_2.Width+80
+        Y: =90
+        ZIndex: =3
+
