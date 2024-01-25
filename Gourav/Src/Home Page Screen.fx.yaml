@@ -77,7 +77,7 @@
                             PaddingBottom: =8
                             PaddingLeft: =2
                             Size: =11
-                            Text: ="Jaipur Net Worth"
+                            Text: ="Jaipur Net Sales"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon.Width,Parent.Width)
                             ZIndex: =2
 
@@ -97,7 +97,9 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
                             Size: =12
-                            Text: ="$5048598K"
+                            Text: |-
+                                =//"$5048598K"
+                                LookUp(OM_Sales_to_Jaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
                             Width: =Parent.Width-'Radial Progress Bar_1'.Width
                             ZIndex: =1
 
@@ -158,8 +160,8 @@
                             Height: =Parent.Height*.8
                             PaddingBottom: =8
                             PaddingLeft: =2
-                            Size: =11
-                            Text: ="Jodhpur Net Worth"
+                            Size: =10
+                            Text: ="Jodhpur Net Sales"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_1.Width,Parent.Width)
                             ZIndex: =2
 
@@ -179,7 +181,9 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
                             Size: =12
-                            Text: ="$5048598K"
+                            Text: |-
+                                =//"$5048598K"
+                                LookUp(OM_Sales_to_Jodhpur,Net_Sales=Max(Net_Sales)).Net_Sales
                             Width: =Parent.Width-'Radial Progress Bar_2'.Width
                             ZIndex: =1
 
@@ -240,8 +244,8 @@
                             Height: =Parent.Height*.8
                             PaddingBottom: =8
                             PaddingLeft: =2
-                            Size: =11
-                            Text: ="Udaipur Net Worth"
+                            Size: =10
+                            Text: ="Udaipur Net Sales"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_2.Width,Parent.Width)
                             ZIndex: =2
 
@@ -261,7 +265,9 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
                             Size: =12
-                            Text: ="$5048598K"
+                            Text: |-
+                                =//"$5048598K"
+                                LookUp(OM_Sales_to_Udaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
                             Width: =Parent.Width-'Radial Progress Bar_3'.Width
                             ZIndex: =1
 
@@ -323,7 +329,7 @@
                             PaddingBottom: =8
                             PaddingLeft: =2
                             Size: =11
-                            Text: ="Kota Net Worth"
+                            Text: ="Kota Net Sales"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_3.Width,Parent.Width)
                             ZIndex: =2
 
@@ -343,7 +349,9 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
                             Size: =12
-                            Text: ="$5048598K"
+                            Text: |-
+                                =//"$5048598K"
+                                LookUp(OM_Sales_to_Kota_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
                             Width: =Parent.Width-'Radial Progress Bar_4'.Width
                             ZIndex: =1
 
@@ -405,8 +413,8 @@
                             Height: =Parent.Height*.8
                             PaddingBottom: =8
                             PaddingLeft: =2
-                            Size: =11
-                            Text: ="Jaipur Net Worth"
+                            Size: =10
+                            Text: ="Jaisalmer Net Sales"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_4.Width,Parent.Width)
                             ZIndex: =2
 
@@ -426,7 +434,9 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
                             Size: =12
-                            Text: ="$5048598K"
+                            Text: |-
+                                =//"$5048598K"
+                                LookUp(OM_Sales_to_Jaisalmer,Net_Sales=Max(Net_Sales)).Net_Sales
                             Width: =Parent.Width-'Radial Progress Bar_5'.Width
                             ZIndex: =1
 
