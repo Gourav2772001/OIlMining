@@ -7475,6 +7475,15 @@ Form_Screen As screen:
             Width: =Parent.Width*.2
             ZIndex: =2
 
+        ico_backToEmployee As icon.BackArrow:
+            AlignInContainer: =AlignInContainer.Center
+            FillPortions: =1
+            Height: =35
+            Icon: =Icon.BackArrow
+            OnSelect: =Back()
+            Width: =35
+            ZIndex: =3
+
         lbl_LoggedInUserName_3 As label:
             Align: =Align.Right
             AlignInContainer: =AlignInContainer.Center
@@ -7487,7 +7496,7 @@ Form_Screen As screen:
             Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
             Visible: =If(Form_Screen.Size>3,true,false)
             Width: =Parent.Width*.5
-            ZIndex: =3
+            ZIndex: =4
 
         img_RegionalForm_UserImage_3 As image:
             AlignInContainer: =AlignInContainer.Center
@@ -7498,5 +7507,5 @@ Form_Screen As screen:
             RadiusTopLeft: =1000
             RadiusTopRight: =1000
             Width: =Parent.Height
-            ZIndex: =4
+            ZIndex: =5
 
