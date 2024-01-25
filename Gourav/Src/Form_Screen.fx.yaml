@@ -104,7 +104,8 @@ Form_Screen As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderStyle: =BorderStyle.None
                     DataSource: =OM_Sales_to_Jaipur_Terminal
-                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: |
+                        =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     Item: |
                         =LookUp(OM_Sales_to_Jaipur_Terminal,ID=First(record).'Reference ID')
@@ -559,9 +560,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SalesOf_Jaipur_3);
                             ResetForm(form_SalesOf_Jaipur_3);
+                            
                             If(
-                                IsBlank(LookUp(OM_AllDepartmentSummary,'Reference ID'=First(record).ID)),
-                                "",
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Sales_to_Jaipur_Terminal).ID,
+                                            Department = "Sales",
+                                            Location = "Jaipur"
+                                        )
+                                    )
+                                ),
                                 Patch(
                                     OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
@@ -572,8 +582,8 @@ Form_Screen As screen:
                                         Created_On: Now(),
                                         Status: "Pending"
                                     }
-                                )
-                                
+                                ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -2581,7 +2591,7 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_MPT_Crude_Oil
-                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     Item: =LookUp(OM_MPT_Crude_Oil,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
@@ -2961,15 +2971,29 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_CrudeOil_Jaipur_2);
                             ResetForm(form_CrudeOil_Jaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_MPT_Crude_Oil).ID,
+                                            Department = "Crude Oil",
+                                            Location = "Jaipur"
+                                        )
+                                    )
+                                ),
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM_MPT_Crude_Oil).ID,
-                                            Location:"Jaipur",
-                                            Department:"Crude Oil",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM_MPT_Crude_Oil).ID,
+                                        Location: "Jaipur",
+                                        Department: "Crude Oil",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -2998,7 +3022,7 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Crude_oil_sales_pipeline_inventory
-                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     Item: |
                         =LookUp(OM_Crude_oil_sales_pipeline_inventory,ID=First(record).'Reference ID')
@@ -3245,15 +3269,29 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_InventoryJaipur_2);
                             ResetForm(form_InventoryJaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Crude_oil_sales_pipeline_inventory).ID,
+                                            Department = "Inventory",
+                                            Location = "Jaipur"
+                                        )
+                                    )
+                                ),
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM_Crude_oil_sales_pipeline_inventory).ID,
-                                            Location:"Jaipur",
-                                            Department:"Inventory",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM_Crude_oil_sales_pipeline_inventory).ID,
+                                        Location: "Jaipur",
+                                        Department: "Inventory",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -3282,7 +3320,7 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Jaipur_Terminal
-                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     Item: |
                         =LookUp(OM_Jaipur_Terminal,ID=First(record).'Reference ID')
@@ -3596,15 +3634,29 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SummaryJaipur_2);
                             ResetForm(form_SummaryJaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Jaipur_Terminal).ID,
+                                            Department = "Summary",
+                                            Location = "Jaipur"
+                                        )
+                                    )
+                                ),
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM_Jaipur_Terminal).ID,
-                                            Location:"Jaipur",
-                                            Department:"Summary",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM_Jaipur_Terminal).ID,
+                                        Location: "Jaipur",
+                                        Department: "Summary",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -4331,7 +4383,7 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM__Jaipur_Oil_RDG_Condensate_Dispatch
-                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     Item: |
                         =LookUp(OM__Jaipur_Oil_RDG_Condensate_Dispatch,ID=First(record).'Reference ID')
@@ -4913,15 +4965,29 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_Dispatch_Jaipur_2);
                             ResetForm(form_Dispatch_Jaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM__Jaipur_Oil_RDG_Condensate_Dispatch).ID,
+                                            Department = "Dispatch",
+                                            Location = "Jaipur"
+                                        )
+                                    )
+                                ),
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM__Jaipur_Oil_RDG_Condensate_Dispatch).ID,
-                                            Location:"Jaipur",
-                                            Department:"Dispatch",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM__Jaipur_Oil_RDG_Condensate_Dispatch).ID,
+                                        Location: "Jaipur",
+                                        Department: "Dispatch",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -7016,7 +7082,7 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1
-                    DefaultMode: =If(IsBlank(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     Item: |
                         =LookUp(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1,ID=First(record).'Reference ID')
@@ -7196,15 +7262,29 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_Cargo_Jaipur_2);
                             ResetForm(form_Cargo_Jaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1).ID,
+                                            Department = "Cargo",
+                                            Location = "Jaipur"
+                                        )
+                                    )
+                                ),
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal).ID,
-                                            Location:"Jaipur",
-                                            Department:"Cargo",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1).ID,
+                                        Location: "Jaipur",
+                                        Department: "Cargo",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
