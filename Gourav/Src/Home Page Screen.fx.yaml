@@ -487,6 +487,7 @@
 
             "progressBar As 'Progress Bar'":
                 AlignInContainer: =AlignInContainer.Stretch
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =45
                 LayoutMinHeight: =45

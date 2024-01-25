@@ -600,15 +600,15 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        First(userData1).Location = "Jodhpur" && (gal_tempTabItems_2.Selected.Name ="Summary" || gal_tempTabItems_2.Selected.Name ="Cargo Form" || gal_tempTabItems_2.Selected.Name ="Crude Oil" || gal_tempTabItems_2.Selected.Name ="Inventory"),
+                        First(userData1).Location = "Jodhpur" && (gal_tempTabItems_2.Selected.Name ="Summary" || gal_tempTabItems_2.Selected.Name ="Cargo" || gal_tempTabItems_2.Selected.Name ="Crude Oil" || gal_tempTabItems_2.Selected.Name ="Inventory"),
                     
                         true,
                     
-                        First(userData1).Location = "Jaisalmer" && (gal_tempTabItems_2.Selected.Name ="Summary" || gal_tempTabItems_2.Selected.Name ="Cargo Form" || gal_tempTabItems_2.Selected.Name ="Crude Oil" || gal_tempTabItems_2.Selected.Name ="Inventory"),
+                        First(userData1).Location = "Jaisalmer" && (gal_tempTabItems_2.Selected.Name ="Summary" || gal_tempTabItems_2.Selected.Name ="Cargo" || gal_tempTabItems_2.Selected.Name ="Crude Oil" || gal_tempTabItems_2.Selected.Name ="Inventory"),
                     
                         true,
                     
-                        First(userData1).Location = "Udaipur" && (gal_tempTabItems_2.Selected.Name ="Crude Oil" || gal_tempTabItems_2.Selected.Name ="Inventory" || gal_tempTabItems_2.Selected.Name ="Cargo Form" || gal_tempTabItems_2.Selected.Name ="Dispatch Form"),
+                        First(userData1).Location = "Udaipur" && (gal_tempTabItems_2.Selected.Name ="Crude Oil" || gal_tempTabItems_2.Selected.Name ="Inventory" || gal_tempTabItems_2.Selected.Name ="Cargo" || gal_tempTabItems_2.Selected.Name ="Dispatch"),
                     
                         true,
                     
@@ -655,8 +655,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Jodhpur
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Sales_to_Jodhpur,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -1101,15 +1103,29 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SalesOf_Jodhpur_2);
                             ResetForm(form_SalesOf_Jodhpur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Sales_to_Jodhpur).ID,
+                                            Department = "Sales",
+                                            Location = "Jodhpur"
+                                        )
+                                    )
+                                ),
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM_Sales_to_Jodhpur).ID,
-                                            Location:"Jodhpur",
-                                            Department:"Sales",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM_Sales_to_Jodhpur).ID,
+                                        Location: "Jodhpur",
+                                        Department: "Sales",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                ),
+                                " "
                             )
                         Size: =20
                         Text: ="Save"
@@ -5004,7 +5020,7 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_2.Selected.Name = "Dispatch Form" && selectedData="Rahul Choudhary",
+                        gal_tempTabItems_2.Selected.Name = "Dispatch" && selectedData="Rahul Choudhary",
                         true,
                         false
                     )
@@ -5016,7 +5032,7 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM__Jodhpur_Oil_RDG_Condensate_Dispatch
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
@@ -5596,7 +5612,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_Dispatch_Jodhpur_2);
                             ResetForm(form_Dispatch_Jodhpur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM__Jodhpur_Oil_RDG_Condensate_Dispatch).ID,
+                                            Department = "Dispatch",
+                                            Location = "Jodhpur"
+                                        )
+                                    )
+                                ),
+                               Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM__Jodhpur_Oil_RDG_Condensate_Dispatch).ID,
@@ -5605,6 +5632,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -6238,7 +6267,7 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_2.Selected.Name = "Dispatch Form" && selectedData="Arti Acharya",
+                        gal_tempTabItems_2.Selected.Name = "Dispatch" && selectedData="Arti Acharya",
                         true,
                         false
                     )
@@ -6855,7 +6884,7 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_2.Selected.Name = "Cargo Form" && selectedData="Arti Acharya",
+                        gal_tempTabItems_2.Selected.Name = "Cargo" && selectedData="Arti Acharya",
                         true,
                         false
                     )

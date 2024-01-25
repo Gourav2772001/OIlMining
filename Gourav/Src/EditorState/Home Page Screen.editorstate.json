@@ -17794,7 +17794,8 @@
           "InvariantPropertyName": "ProgressColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "BasePaletteColor"
       ],
       "DynamicProperties": [
         {
@@ -17874,6 +17875,11 @@
           "Category": "Data",
           "PropertyName": "ProgressColor",
           "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BasePaletteColor",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
