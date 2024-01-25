@@ -8,6 +8,9 @@
     "datasets": {
       "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
         "dataSources": {
+          "Oil Mining Reference Docs_1": {
+            "tableName": "68128a0a-b4ff-42f5-a9ba-cd81770f22a8"
+          },
           "OM_AllDepartmentSummary": {
             "tableName": "69b0d67b-a5cf-4eaa-a02e-27da5b925261"
           },
@@ -20,7 +23,9 @@
     "dataSources": [
       "OM_Crude_oil_sales_pipeline_inventory",
       "OM_AllDepartmentSummary",
-      "OM_HSES_SUMMARY"
+      "OM_HSES_SUMMARY",
+      "Oil Mining Reference Docs_1",
+      "Oil Mining Reference Docs"
     ],
     "dependencies": {},
     "dependents": [],

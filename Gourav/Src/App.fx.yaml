@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |-
+    OnStart: |+
         =    ClearCollect(
             Tabs,
             {Name: "Sales"},
@@ -28,7 +28,15 @@ App As appinfo:
             {Name: "Remarks"}
             
         );
-        Set(AdminFormFilled,false)
+        Set(AdminFormFilled,false);
+        ClearCollect(
+            MyGroupedData,
+            AddColumns(
+                GroupBy(OM_AllDepartmentSummary, "Status", "MyGroupedData"),
+                "StatusCount", CountRows(MyGroupedData)
+            )
+        )
+        
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
