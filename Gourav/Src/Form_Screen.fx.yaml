@@ -1637,8 +1637,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Kota_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Sales_to_Kota_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -2083,7 +2085,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SalesOf_Kota_2);
                             ResetForm(form_SalesOf_Kota_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Sales_to_Kota_Terminal).ID,
+                                            Department = "Sales",
+                                            Location = "Kota"
+                                        )
+                                    )
+                                ),
+                                Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM_Sales_to_Kota_Terminal).ID,
@@ -2092,6 +2105,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -3701,8 +3716,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Kota_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Kota_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -4013,7 +4030,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SummaryKota_2);
                             ResetForm(form_SummaryKota_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Kota_Terminal).ID,
+                                            Department = "Summary",
+                                            Location = "Kota"
+                                        )
+                                    )
+                                ),
+                               Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM_Kota_Terminal).ID,
@@ -4022,6 +4050,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -6279,8 +6309,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM__Kota_Oil_RDG_Condensate_Dispatch
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM__Kota_Oil_RDG_Condensate_Dispatch,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -6859,7 +6891,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_Dispatch_Kota_2);
                             ResetForm(form_Dispatch_Kota_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM__Kota_Oil_RDG_Condensate_Dispatch).ID,
+                                            Department = "Dispatch",
+                                            Location = "Kota"
+                                        )
+                                    )
+                                ),
+                                Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM__Kota_Oil_RDG_Condensate_Dispatch).ID,
@@ -6868,6 +6911,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -6896,8 +6941,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Nos_of_Cargo_Loaded_from_Kota_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Nos_of_Cargo_Loaded_from_Kota_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -7074,7 +7121,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_Cargo_Kota_2);
                             ResetForm(form_Cargo_Kota_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Nos_of_Cargo_Loaded_from_Kota_Terminal).ID,
+                                            Department = "Kota",
+                                            Location = "Cargo"
+                                        )
+                                    )
+                                ),
+                                Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM_Nos_of_Cargo_Loaded_from_Kota_Terminal).ID,
@@ -7083,6 +7141,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
