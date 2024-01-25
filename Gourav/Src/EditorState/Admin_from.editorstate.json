@@ -1882,7 +1882,7 @@
       "MetaDataIDKey": "",
       "Name": "COP_Todays_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24652,7 +24652,7 @@
       "MetaDataIDKey": "",
       "Name": "MTC/RWDC_Todays_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25327,7 +25327,7 @@
       "MetaDataIDKey": "",
       "Name": "Perfect_Day_Todays_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31875,7 +31875,7 @@
       "MetaDataIDKey": "",
       "Name": "Title_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

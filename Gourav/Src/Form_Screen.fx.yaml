@@ -556,20 +556,25 @@ Form_Screen As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
-                        OnSelect: |+
+                        OnSelect: |-
                             =SubmitForm(form_SalesOf_Jaipur_3);
                             ResetForm(form_SalesOf_Jaipur_3);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(LookUp(OM_AllDepartmentSummary,'Reference ID'=First(record).ID)),
+                                "",
+                                Patch(
+                                    OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
-                                        {
-                                            'Reference ID':Last(OM_Sales_to_Jaipur_Terminal).ID,
-                                            Location:"Jaipur",
-                                            Department:"Sales",
-                                            Created_On:Now(),
-                                            Status:"Pending"
-                                        }
+                                    {
+                                        'Reference ID': Last(OM_Sales_to_Jaipur_Terminal).ID,
+                                        Location: "Jaipur",
+                                        Department: "Sales",
+                                        Created_On: Now(),
+                                        Status: "Pending"
+                                    }
+                                )
+                                
                             )
-                            
                         Size: =20
                         Text: ="Save"
                         ZIndex: =2
