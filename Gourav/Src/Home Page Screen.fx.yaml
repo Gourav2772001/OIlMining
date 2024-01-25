@@ -617,7 +617,7 @@
             Height: =Parent.Height
             Size: |-
                 =Switch(
-                    'Form Screen'.Size,
+                    'Home Page Screen'.Size,
                     1,
                     10,
                     2,
