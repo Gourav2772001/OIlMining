@@ -3418,6 +3418,7 @@ Approvals_Screen As screen:
 
                                 Approve_Btn As button:
                                     Fill: =RGBA(54, 176, 75, 1)
+                                    OnSelect: =
                                     Text: ="Approve"
                                     X: =Parent.Width-Self.Width-40
                                     Y: =(Parent.Height-Self.Height)/2
@@ -3481,7 +3482,8 @@ Approvals_Screen As screen:
                                 Icon: =Icon.View
                                 OnSelect: |-
                                     =Set(loc,ThisItem.Location);
-                                    Set(dept,ThisItem.Department)
+                                    Set(dept,ThisItem.Department);
+                                    Set(id,ThisItem.ID)
                                 Width: =40
                                 ZIndex: =4
 
@@ -3508,12 +3510,12 @@ Approvals_Screen As screen:
                     Y: =Parent.Height-Header.Height
                     ZIndex: =2
 
-                    Refresh_Icon_temp As icon.GlobeRefresh:
-                        Height: =49
-                        Icon: =Icon.GlobeRefresh
-                        OnSelect: =Set(loc,"");Set(dept,"")
-                        Width: =50
-                        X: =1272
-                        Y: =12
+                    Download_Report_BTN As button:
+                        Height: =42
+                        OnSelect: =OMDaywiseSummary.Run()
+                        Text: ="Download  PDF"
+                        Width: =196
+                        X: =1148
+                        Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
 
