@@ -135,11 +135,7 @@
   "ScreenOrder": [
     "Main Landing Screen (Dynamic)",
     "Home Page Screen",
-    "Form Screen",
-    "Screen1",
     "Form_Screen",
-    "PDF viewer screen",
-    "Department Wise Approval Screen",
     "Admin_from",
     "Approvals_Screen"
   ]

@@ -38,7 +38,7 @@ Form_Screen As screen:
                     FontWeight: =FontWeight.Bold
                     Height: =60
                     OnSelect: =Select(Parent)
-                    Size: =If('Form Screen'.Size>2,18,12)
+                    Size: =If('Form_Screen'.Size>2,18,12)
                     Text: =ThisItem.Name
                     Width: |-
                         =If(Form_Screen.Size>2,
@@ -7213,7 +7213,7 @@ Form_Screen As screen:
             Height: =Parent.Height
             Size: |-
                 =Switch(
-                    'Form Screen'.Size,
+                    'Form_Screen'.Size,
                     1,
                     10,
                     2,
@@ -7237,7 +7237,7 @@ Form_Screen As screen:
             Height: =Parent.Height
             Size: =18
             Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
-            Visible: =If('Form Screen'.Size>3,true,false)
+            Visible: =If('Form_Screen'.Size>3,true,false)
             Width: =Parent.Width*.5
             ZIndex: =3
 

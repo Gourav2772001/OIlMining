@@ -52,7 +52,7 @@ Approvals_Screen As screen:
 
                             Sales_JaipurTerminal As formViewer:
                                 DataSource: =OM_Sales_to_Jaipur_Terminal
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Sales_to_Jaipur_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaipur",dept="Sales"),true,false)
                                 Width: =Parent.Width
@@ -319,7 +319,7 @@ Approvals_Screen As screen:
 
                             CrudeOil_JaipurTerminal As formViewer:
                                 DataSource: =OM_MPT_Crude_Oil
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_MPT_Crude_Oil,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaipur",dept="Crude Oil"),true,false)
                                 Width: =Parent.Width
@@ -512,7 +512,7 @@ Approvals_Screen As screen:
 
                             Inventory_JaipurTerminal As formViewer:
                                 DataSource: =OM_Crude_oil_sales_pipeline_inventory
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Crude_oil_sales_pipeline_inventory,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaipur",dept="Inventory"),true,false)
                                 Width: =Parent.Width
@@ -631,7 +631,7 @@ Approvals_Screen As screen:
 
                             Summary_JaipurTerminal As formViewer:
                                 DataSource: =OM_Jaipur_Terminal
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Jaipur_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaipur",dept="Summary"),true,false)
                                 Width: =Parent.Width
@@ -787,7 +787,7 @@ Approvals_Screen As screen:
 
                             Dispatch_JaipurTerminal As formViewer:
                                 DataSource: =OM__Jaipur_Oil_RDG_Condensate_Dispatch
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM__Jaipur_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaipur",dept="Dispatch"),true,false)
                                 Width: =Parent.Width
@@ -1091,7 +1091,7 @@ Approvals_Screen As screen:
 
                             Cargo_JaipurTerminal As formViewer:
                                 DataSource: =OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaipur",dept="Cargo"),true,false)
                                 Width: =Parent.Width
@@ -1173,7 +1173,7 @@ Approvals_Screen As screen:
 
                             Sales_JodhpurTerminal As formViewer:
                                 DataSource: =OM_Sales_to_Jodhpur
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Sales_to_Jodhpur,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jodhpur",dept="Sales"),true,false)
                                 Width: =Parent.Width
@@ -1403,7 +1403,7 @@ Approvals_Screen As screen:
 
                             Dispatch_JodhpurTerminal As formViewer:
                                 DataSource: =OM__Jodhpur_Oil_RDG_Condensate_Dispatch
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM__Jodhpur_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jodhpur",dept="Dispatch"),true,false)
                                 Width: =Parent.Width
@@ -1707,7 +1707,7 @@ Approvals_Screen As screen:
 
                             Sales_KotaTerminal As formViewer:
                                 DataSource: =OM_Sales_to_Kota_Terminal
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Sales_to_Kota_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Kota",dept="Sales"),true,false)
                                 Width: =Parent.Width
@@ -1937,7 +1937,7 @@ Approvals_Screen As screen:
 
                             Summary_KotaTerminal As formViewer:
                                 DataSource: =OM_Kota_Terminal
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Kota_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Kota",dept="Summary"),true,false)
                                 Width: =Parent.Width
@@ -2093,7 +2093,7 @@ Approvals_Screen As screen:
 
                             Dispatch_KotaTerminial As formViewer:
                                 DataSource: =OM__Kota_Oil_RDG_Condensate_Dispatch
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM__Kota_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Kota",dept="Dispatch"),true,false)
                                 Width: =Parent.Width
@@ -2397,7 +2397,7 @@ Approvals_Screen As screen:
 
                             Cargo_KotaTerminal As formViewer:
                                 DataSource: =OM_Nos_of_Cargo_Loaded_from_Kota_Terminal
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Nos_of_Cargo_Loaded_from_Kota_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Kota",dept="Cargo"),true,false)
                                 Width: =Parent.Width
@@ -2479,7 +2479,7 @@ Approvals_Screen As screen:
 
                             Sales_UdaipurTerminal As formViewer:
                                 DataSource: =OM_Sales_to_Udaipur_Terminal
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Sales_to_Udaipur_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Udaipur",dept="Sales"),true,false)
                                 Width: =Parent.Width
@@ -2712,7 +2712,7 @@ Approvals_Screen As screen:
                                 BorderStyle: =BorderStyle.None
                                 DataSource: =OM_Udaipur_Terminal
                                 Fill: =RGBA(216, 232, 251, 1)
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Udaipur_Terminal,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Udaipur",dept="Summary"),true,false)
                                 Width: =Parent.Width
@@ -2868,7 +2868,7 @@ Approvals_Screen As screen:
 
                             Sales_JaisalmerTerminal As formViewer:
                                 DataSource: =OM_Sales_to_Jaisalmer
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM_Sales_to_Jaisalmer,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 NumberOfColumns: =2
                                 Visible: =If(And(loc="Jaisalmer",dept="Sales"),true,false)
@@ -3100,7 +3100,7 @@ Approvals_Screen As screen:
                             Dispatch_JaisalmerTerminal As formViewer:
                                 DataSource: =OM__Jaisalmer_Oil_RDG_Condensate_Dispatch
                                 Fill: =RGBA(255, 255, 255, 1)
-                                Height: =Parent.Height
+                                Height: =Parent.Height*.7
                                 Item: =LookUp(OM__Jaisalmer_Oil_RDG_Condensate_Dispatch,ID=Combine_Data_Gal.Selected.'Reference ID')
                                 Visible: =If(And(loc="Jaisalmer",dept="Dispatch"),true,false)
                                 Width: =Parent.Width
@@ -3402,6 +3402,27 @@ Approvals_Screen As screen:
                                         Y: =DataCardKey193.Y + DataCardKey193.Height + 5
                                         ZIndex: =2
 
+                            ApprovalButton_Container As groupContainer.manualLayoutContainer:
+                                Height: =Parent.Height-Dispatch_JaisalmerTerminal.Height-40
+                                Width: =Parent.Width-Self.X*2
+                                X: =40
+                                Y: =Dispatch_JaisalmerTerminal.Height
+                                ZIndex: =17
+
+                                Decline_BTN As button:
+                                    Fill: =RGBA(255, 0, 0, 1)
+                                    Text: ="Decline"
+                                    X: =40
+                                    Y: =(Parent.Height-Self.Height)/2
+                                    ZIndex: =1
+
+                                Approve_Btn As button:
+                                    Fill: =RGBA(54, 176, 75, 1)
+                                    Text: ="Approve"
+                                    X: =Parent.Width-Self.Width-40
+                                    Y: =(Parent.Height-Self.Height)/2
+                                    ZIndex: =2
+
                 Combine_Gallery_Container As groupContainer.horizontalAutoLayoutContainer:
                     Height: =Parent.Height
                     LayoutMode: =LayoutMode.Auto
@@ -3412,7 +3433,7 @@ Approvals_Screen As screen:
                     Combine_Data_Gal As gallery.galleryVertical:
                         DelayItemLoading: =true
                         FillPortions: =0
-                        Items: =Filter(OM_AllDepartmentSummary,And(Status="Pending", Created_On=Today()))
+                        Items: =Filter(OM_AllDepartmentSummary,Status="Pending")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -3495,13 +3516,4 @@ Approvals_Screen As screen:
                         X: =1272
                         Y: =12
                         ZIndex: =1
-
-                    Button1 As button:
-                        DisplayMode: =If(And(Combine_Data_Gal.AllItemsCount=0,AdminFormFilled=true),DisplayMode.Edit,DisplayMode.Disabled)
-                        OnSelect: =OMDaywiseSummary.Run()
-                        Text: ="View Cumulative Summary"
-                        Width: =288
-                        X: =540
-                        Y: =21
-                        ZIndex: =2
 
