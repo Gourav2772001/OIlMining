@@ -138,24 +138,24 @@ Admin_from As screen:
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    Title_DataCard1 As typedDataCard.textualEditCard:
+                    Perfect_Day_Todays_DataCard1 As typedDataCard.textualEditCard:
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="Title"
-                        Default: =ThisItem.Title
+                        DataField: ="Perfect_Day_Todays"
+                        Default: =ThisItem.Perfect_Day_Todays
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Title")
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Perfect_Day_Todays")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Title")
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Todays")
                         Required: =false
-                        Update: =DataCardValue1.Text
+                        Update: =DataCardValue21.Text
                         Width: =563
-                        WidthFit: =true
+                        WidthFit: =
                         X: =0
                         Y: =0
                         ZIndex: =2
 
-                        DataCardKey1 As label:
+                        DataCardKey21 As label:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
@@ -167,7 +167,7 @@ Admin_from As screen:
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue1 As text:
+                        DataCardValue21 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             BorderThickness: =1
                             Default: =Parent.Default
@@ -178,10 +178,10 @@ Admin_from As screen:
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                            Y: =DataCardKey21.Y + DataCardKey21.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage1 As label:
+                        ErrorMessage21 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -193,37 +193,37 @@ Admin_from As screen:
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue1.Y + DataCardValue1.Height
+                            Y: =DataCardValue21.Y + DataCardValue21.Height
                             ZIndex: =3
 
-                        StarVisible1 As label:
+                        StarVisible21 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey1.Height
+                            Height: =DataCardKey21.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey1.Y
+                            Y: =DataCardKey21.Y
                             ZIndex: =4
 
-                    "'MTC/RWDC_Todays_DataCard1' As typedDataCard.textualEditCard":
+                    COP_Todays_DataCard1 As typedDataCard.textualEditCard:
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="MTC_x002f_RWDC_Todays"
-                        Default: =ThisItem.'MTC/RWDC_Todays'
+                        DataField: ="COP_Todays"
+                        Default: =ThisItem.COP_Todays
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"MTC_x002f_RWDC_Todays")
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"COP_Todays")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_Todays")
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Todays")
                         Required: =false
-                        Update: =DataCardValue5.Text
-                        Width: =561
+                        Update: =DataCardValue17.Text
+                        Width: =563
                         WidthFit: =true
                         X: =1
                         Y: =0
                         ZIndex: =2
 
-                        DataCardKey5 As label:
+                        DataCardKey17 As label:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
@@ -235,7 +235,7 @@ Admin_from As screen:
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue5 As text:
+                        DataCardValue17 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             BorderThickness: =1
                             Default: =Parent.Default
@@ -246,10 +246,10 @@ Admin_from As screen:
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                            Y: =DataCardKey17.Y + DataCardKey17.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage5 As label:
+                        ErrorMessage17 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -261,17 +261,17 @@ Admin_from As screen:
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue5.Y + DataCardValue5.Height
+                            Y: =DataCardValue17.Y + DataCardValue17.Height
                             ZIndex: =3
 
-                        StarVisible5 As label:
+                        StarVisible17 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey5.Height
+                            Height: =DataCardKey17.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey5.Y
+                            Y: =DataCardKey17.Y
                             ZIndex: =4
 
                     "'Incidents/Near_Misses_Todays_DataCard1' As typedDataCard.textualEditCard":
@@ -285,7 +285,7 @@ Admin_from As screen:
                         MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Incidents_x002f_Near_Misses_Toda")
                         Required: =false
                         Update: =DataCardValue13.Text
-                        Width: =561
+                        Width: =563
                         WidthFit: =true
                         X: =0
                         Y: =1
@@ -342,24 +342,24 @@ Admin_from As screen:
                             Y: =DataCardKey13.Y
                             ZIndex: =4
 
-                    COP_Todays_DataCard1 As typedDataCard.textualEditCard:
+                    "'MTC/RWDC_Todays_DataCard1' As typedDataCard.textualEditCard":
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="COP_Todays"
-                        Default: =ThisItem.COP_Todays
+                        DataField: ="MTC_x002f_RWDC_Todays"
+                        Default: =ThisItem.'MTC/RWDC_Todays'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"COP_Todays")
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"MTC_x002f_RWDC_Todays")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Todays")
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_Todays")
                         Required: =false
-                        Update: =DataCardValue17.Text
-                        Width: =561
+                        Update: =DataCardValue5.Text
+                        Width: =563
                         WidthFit: =true
                         X: =1
                         Y: =1
                         ZIndex: =2
 
-                        DataCardKey17 As label:
+                        DataCardKey5 As label:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
@@ -371,7 +371,7 @@ Admin_from As screen:
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue17 As text:
+                        DataCardValue5 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             BorderThickness: =1
                             Default: =Parent.Default
@@ -382,10 +382,10 @@ Admin_from As screen:
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                            Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage17 As label:
+                        ErrorMessage5 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -397,37 +397,37 @@ Admin_from As screen:
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue17.Y + DataCardValue17.Height
+                            Y: =DataCardValue5.Y + DataCardValue5.Height
                             ZIndex: =3
 
-                        StarVisible17 As label:
+                        StarVisible5 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey17.Height
+                            Height: =DataCardKey5.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey17.Y
+                            Y: =DataCardKey5.Y
                             ZIndex: =4
 
-                    Perfect_Day_Todays_DataCard1 As typedDataCard.textualEditCard:
+                    Title_DataCard1 As typedDataCard.textualEditCard:
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="Perfect_Day_Todays"
-                        Default: =ThisItem.Perfect_Day_Todays
+                        DataField: ="Title"
+                        Default: =ThisItem.Title
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Perfect_Day_Todays")
+                        DisplayName: =DataSourceInfo([@OM_HSES_SUMMARY],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Todays")
+                        MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Title")
                         Required: =false
-                        Update: =DataCardValue21.Text
-                        Width: =If(Admin_from.Size>3,Parent.Width/2,Parent.Width)
-                        WidthFit: =
+                        Update: =DataCardValue1.Text
+                        Width: =563
+                        WidthFit: =true
                         X: =0
                         Y: =2
                         ZIndex: =2
 
-                        DataCardKey21 As label:
+                        DataCardKey1 As label:
                             AutoHeight: =true
                             FontWeight: =FontWeight.Semibold
                             Height: =34
@@ -439,7 +439,7 @@ Admin_from As screen:
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue21 As text:
+                        DataCardValue1 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             BorderThickness: =1
                             Default: =Parent.Default
@@ -450,10 +450,10 @@ Admin_from As screen:
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey21.Y + DataCardKey21.Height + 5
+                            Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage21 As label:
+                        ErrorMessage1 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -465,17 +465,17 @@ Admin_from As screen:
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue21.Y + DataCardValue21.Height
+                            Y: =DataCardValue1.Y + DataCardValue1.Height
                             ZIndex: =3
 
-                        StarVisible21 As label:
+                        StarVisible1 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey21.Height
+                            Height: =DataCardKey1.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey21.Y
+                            Y: =DataCardKey1.Y
                             ZIndex: =4
 
                 "'Today-CumulativeYTD' As button":

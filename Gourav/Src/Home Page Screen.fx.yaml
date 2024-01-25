@@ -97,9 +97,12 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height
                             Size: =12
-                            Text: |-
+                            Text: |
                                 =//"$5048598K"
-                                LookUp(OM_Sales_to_Jaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                                //LookUp(OM_Sales_to_Jaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                                
+                                  LookUp(OM_Sales_to_Jaipur_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jaipur",Department="Sales")).'Reference ID').Net_Sales
+                                 
                             Width: =Parent.Width-'Radial Progress Bar_1'.Width
                             ZIndex: =1
 
@@ -183,7 +186,9 @@
                             Size: =12
                             Text: |-
                                 =//"$5048598K"
-                                LookUp(OM_Sales_to_Jodhpur,Net_Sales=Max(Net_Sales)).Net_Sales
+                                //LookUp(OM_Sales_to_Jodhpur,Net_Sales=Max(Net_Sales)).Net_Sales
+                                  LookUp(OM_Sales_to_Jodhpur,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jodhpur",Department="Sales")).'Reference ID').Net_Sales
+                                 
                             Width: =Parent.Width-'Radial Progress Bar_2'.Width
                             ZIndex: =1
 
@@ -267,7 +272,9 @@
                             Size: =12
                             Text: |-
                                 =//"$5048598K"
-                                LookUp(OM_Sales_to_Udaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                                //LookUp(OM_Sales_to_Udaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                                  LookUp(OM_Sales_to_Udaipur_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Udaipur",Department="Sales")).'Reference ID').Net_Sales
+                                 
                             Width: =Parent.Width-'Radial Progress Bar_3'.Width
                             ZIndex: =1
 
@@ -351,7 +358,9 @@
                             Size: =12
                             Text: |-
                                 =//"$5048598K"
-                                LookUp(OM_Sales_to_Kota_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                                //LookUp(OM_Sales_to_Kota_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                                  LookUp(OM_Sales_to_Kota_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Kota",Department="Sales")).'Reference ID').Net_Sales
+                                 
                             Width: =Parent.Width-'Radial Progress Bar_4'.Width
                             ZIndex: =1
 
@@ -436,7 +445,9 @@
                             Size: =12
                             Text: |-
                                 =//"$5048598K"
-                                LookUp(OM_Sales_to_Jaisalmer,Net_Sales=Max(Net_Sales)).Net_Sales
+                                //LookUp(OM_Sales_to_Jaisalmer,Net_Sales=Max(Net_Sales)).Net_Sales
+                                  LookUp(OM_Sales_to_Jaisalmer,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jaisalmer",Department="Sales")).'Reference ID').Net_Sales
+                                 
                             Width: =Parent.Width-'Radial Progress Bar_5'.Width
                             ZIndex: =1
 
