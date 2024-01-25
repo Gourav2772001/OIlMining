@@ -28,7 +28,7 @@ Admin_from As screen:
                 Height: =Parent.Height
                 Size: |-
                     =Switch(
-                        'Form Screen'.Size,
+                        'Admin_from'.Size,
                         1,
                         10,
                         2,
@@ -52,7 +52,7 @@ Admin_from As screen:
                 Height: =Parent.Height
                 Size: =18
                 Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
-                Visible: =If('Form Screen'.Size>3,true,false)
+                Visible: =If('Admin_from'.Size>3,true,false)
                 Width: =Parent.Width*.5
                 ZIndex: =3
 
