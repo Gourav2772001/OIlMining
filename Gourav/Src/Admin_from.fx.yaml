@@ -152,7 +152,7 @@ Admin_from As screen:
                         Width: =563
                         WidthFit: =true
                         X: =0
-                        Y: =0
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey1 As label:
@@ -217,10 +217,10 @@ Admin_from As screen:
                         MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "MTC_x002f_RWDC_Todays")
                         Required: =false
                         Update: =DataCardValue5.Text
-                        Width: =561
+                        Width: =563
                         WidthFit: =true
                         X: =1
-                        Y: =0
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey5 As label:
@@ -285,7 +285,7 @@ Admin_from As screen:
                         MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Incidents_x002f_Near_Misses_Toda")
                         Required: =false
                         Update: =DataCardValue13.Text
-                        Width: =561
+                        Width: =563
                         WidthFit: =true
                         X: =0
                         Y: =1
@@ -353,10 +353,10 @@ Admin_from As screen:
                         MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "COP_Todays")
                         Required: =false
                         Update: =DataCardValue17.Text
-                        Width: =561
+                        Width: =563
                         WidthFit: =true
                         X: =1
-                        Y: =1
+                        Y: =0
                         ZIndex: =2
 
                         DataCardKey17 As label:
@@ -421,10 +421,10 @@ Admin_from As screen:
                         MaxLength: =DataSourceInfo([@OM_HSES_SUMMARY], DataSourceInfo.MaxLength, "Perfect_Day_Todays")
                         Required: =false
                         Update: =DataCardValue21.Text
-                        Width: =If(Admin_from.Size>3,Parent.Width/2,Parent.Width)
+                        Width: =563
                         WidthFit: =
                         X: =0
-                        Y: =2
+                        Y: =0
                         ZIndex: =2
 
                         DataCardKey21 As label:
