@@ -1055,6 +1055,7 @@
                 LayoutMinHeight: =230
                 LayoutMinWidth: =0
                 LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: =
                 TemplatePadding: =
                 TemplateSize: =If(App.ActiveScreen.Size=1,Self.Width/2.19,Self.Width/2.17)
                 Width: =(Parent.Width-38)
@@ -1103,10 +1104,11 @@
                         Fill: =Color.Transparent
                         Height: =188
                         HoverFill: =Color.Transparent
-                        OnSelect: |-
+                        OnSelect: |
                             =Set(var_disable,false);
                             Set(var_selected_ID,ThisItem.ID);
-                            Set(user_data,OM_User_Iist.Title)
+                            Set(user_data,OM_User_Iist.Title);
+                            Set(Persona,ThisItem.Title)
                         PressedFill: =Color.Transparent
                         Text: =""
                         Width: =176
