@@ -1154,8 +1154,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Udaipur_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Sales_to_Udaipur_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -1600,7 +1602,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SalesOf_Udaipur_2);
                             ResetForm(form_SalesOf_Udaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Sales_to_Udaipur_Terminal).ID,
+                                            Department = "Sales",
+                                            Location = "Udaipur"
+                                        )
+                                    )
+                                ),
+                               Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM_Sales_to_Udaipur_Terminal).ID,
@@ -1609,6 +1622,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -2135,8 +2150,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Jaisalmer
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Sales_to_Jaisalmer,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -2585,7 +2602,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SalesOf_Jaisalmer_2);
                             ResetForm(form_SalesOf_Jaisalmer_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Sales_to_Jaisalmer).ID,
+                                            Department = "Sales",
+                                            Location = "Jaisalmer"
+                                        )
+                                    )
+                                ),
+                                Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM_Sales_to_Jaisalmer).ID,
@@ -2594,6 +2622,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -4080,8 +4110,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Udaipur_Terminal
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM_Udaipur_Terminal,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -4392,7 +4424,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_SummaryUdaipur_2);
                             ResetForm(form_SummaryUdaipur_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM_Udaipur_Terminal).ID,
+                                            Department = "Summary",
+                                            Location = "Udaipur"
+                                        )
+                                    )
+                                ),
+                               Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM_Udaipur_Terminal).ID,
@@ -4401,6 +4444,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
@@ -5680,7 +5725,7 @@ Form_Screen As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_2.Selected.Name = "Dispatch Form" && selectedData="Shakti Singh",
+                        gal_tempTabItems_2.Selected.Name = "Dispatch" && selectedData="Shakti Singh",
                         true,
                         false
                     )
@@ -5692,8 +5737,10 @@ Form_Screen As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM__Jaisalmer_Oil_RDG_Condensate_Dispatch
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
                     Height: =Parent.Height*.7
+                    Item: |
+                        =LookUp(OM__Jaisalmer_Oil_RDG_Condensate_Dispatch,ID=First(record).'Reference ID')
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -6272,7 +6319,18 @@ Form_Screen As screen:
                         OnSelect: |-
                             =SubmitForm(form_Dispatch_Jaisalmer_2);
                             ResetForm(form_Dispatch_Jaisalmer_2);
-                            Patch(OM_AllDepartmentSummary,
+                            If(
+                                IsBlank(
+                                    LookUp(
+                                        OM_AllDepartmentSummary,
+                                        And(
+                                            'Reference ID' = Last(OM__Jaisalmer_Oil_RDG_Condensate_Dispatch).ID,
+                                            Department = "Dispatch",
+                                            Location = "Jaisalmer"
+                                        )
+                                    )
+                                ),
+                               Patch(OM_AllDepartmentSummary,
                                     Defaults(OM_AllDepartmentSummary),
                                         {
                                             'Reference ID':Last(OM__Jaisalmer_Oil_RDG_Condensate_Dispatch).ID,
@@ -6281,6 +6339,8 @@ Form_Screen As screen:
                                             Created_On:Now(),
                                             Status:"Pending"
                                         }
+                            ),
+                                ""
                             )
                         Size: =20
                         Text: ="Save"
