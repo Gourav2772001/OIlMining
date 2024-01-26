@@ -90,9 +90,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData = "Gourav Kumar",
+                        true,
+                        false
+                    ),
+                    If(
                         gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Jaipur",
                         true,
                         false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =1
@@ -101,23 +111,33 @@ Form_Screen_1 As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderStyle: =BorderStyle.None
                     DataSource: =OM_Sales_to_Jaipur_Terminal
-                    DefaultMode: |
-                        =If(IsEmpty(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: |-
+                        =If(
+                            Persona = "Employee",
+                            If(
+                                IsEmpty(record),
+                                FormMode.New,
+                                FormMode.Edit
+                            ),
+                            FormMode.View
+                        )
                     Height: =Parent.Height*.7
                     Item: |+
-                        = LookUp(OM_Sales_to_Jaipur_Terminal,ID=First(record).'Reference ID')
-                           
+                        =If(
+                        Persona="Employee",
+                        LookUp(OM_Sales_to_Jaipur_Terminal,ID=First(record).'Reference ID'),
+                        LookUp(OM_Sales_to_Jaipur_Terminal,ID=First(record_Admin).'Reference ID')
+                        
+                        )
+                         
                         
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
                     OnSuccess: =ResetForm(form_SalesOf_Jaipur_4)
                     Visible: |-
-                        =If(
-                            selectedData="Gourav Kumar",
-                            true,
-                            false
-                        )
+                        = true
+                         
                     Width: =Parent.Width
                     X: =10
                     Y: =10
@@ -642,9 +662,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData="Rahul Choudhary",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData = "Rahul Chaudhary",
                         true,
                         false
+                    ),
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Jodhpur",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =3
@@ -654,10 +684,23 @@ Form_Screen_1 As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Jodhpur
-                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: |-
+                        =If(
+                            Persona = "Employee",
+                            If(
+                                IsEmpty(record),
+                                FormMode.New,
+                                FormMode.Edit
+                            ),
+                            FormMode.View
+                        )
                     Height: =Parent.Height*.7
                     Item: |
-                        =LookUp(OM_Sales_to_Jodhpur,ID=First(record).'Reference ID')
+                        =If(Persona="Employee",
+                        LookUp(OM_Sales_to_Jodhpur,ID=First(record).'Reference ID'),
+                        LookUp(OM_Sales_to_Jodhpur,ID=First(record_Admin).'Reference ID')
+                        
+                        )
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -1141,9 +1184,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData="Jayesh Sahijwani",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData = "Jayesh Sahijwani",
                         true,
                         false
+                    ),
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Udaipur",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =4
@@ -1153,10 +1206,23 @@ Form_Screen_1 As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Udaipur_Terminal
-                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: |-
+                        =If(
+                            Persona = "Employee",
+                            If(
+                                IsEmpty(record),
+                                FormMode.New,
+                                FormMode.Edit
+                            ),
+                            FormMode.View
+                        )
                     Height: =Parent.Height*.7
-                    Item: |
-                        =LookUp(OM_Sales_to_Udaipur_Terminal,ID=First(record).'Reference ID')
+                    Item: |-
+                        =If(Persona="Employee",
+                        LookUp(OM_Sales_to_Udaipur_Terminal,ID=First(record).'Reference ID'),
+                        LookUp(OM_Sales_to_Udaipur_Terminal,ID=First(record_Admin).'Reference ID')
+                        
+                        )
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -1639,9 +1705,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData="Arti Acharya",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData = "Arti Acharya",
                         true,
                         false
+                    ),
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Kota",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =5
@@ -1651,10 +1727,23 @@ Form_Screen_1 As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Kota_Terminal
-                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: |-
+                        =If(
+                            Persona = "Employee",
+                            If(
+                                IsEmpty(record),
+                                FormMode.New,
+                                FormMode.Edit
+                            ),
+                            FormMode.View
+                        )
                     Height: =Parent.Height*.7
-                    Item: |
-                        =LookUp(OM_Sales_to_Kota_Terminal,ID=First(record).'Reference ID')
+                    Item: |-
+                        =If(Persona="Employee",
+                        LookUp(OM_Sales_to_Kota_Terminal,ID=First(record).'Reference ID'),
+                        LookUp(OM_Sales_to_Kota_Terminal,ID=First(record_Admin).'Reference ID')
+                        
+                        )
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -2137,9 +2226,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData="Shakti Singh",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && selectedData = "Shakti Singh",
                         true,
                         false
+                    ),
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Jaisalmer",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =6
@@ -2149,10 +2248,23 @@ Form_Screen_1 As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DataSource: =OM_Sales_to_Jaisalmer
-                    DefaultMode: =If(IsEmpty(record),FormMode.New,FormMode.Edit)
+                    DefaultMode: |-
+                        =If(
+                            Persona = "Employee",
+                            If(
+                                IsEmpty(record),
+                                FormMode.New,
+                                FormMode.Edit
+                            ),
+                            FormMode.View
+                        )
                     Height: =Parent.Height*.7
                     Item: |
-                        =LookUp(OM_Sales_to_Jaisalmer,ID=First(record).'Reference ID')
+                        =If(Persona="Employee",
+                        LookUp(OM_Sales_to_Jaisalmer,ID=First(record).'Reference ID'),
+                        LookUp(OM_Sales_to_Jaisalmer,ID=First(record_Admin).'Reference ID')
+                        
+                        )
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
@@ -7501,6 +7613,7 @@ Form_Screen_1 As screen:
 
     Button_ALL_Region_Container As groupContainer.manualLayoutContainer:
         Height: =66
+        Visible: =If(Persona="Manager",true,false)
         Width: =Parent.Width-cont_leftSideContentgalTab_2.Width-160
         X: =cont_leftSideContentgalTab_2.Width+80
         Y: =90
@@ -7520,7 +7633,10 @@ Form_Screen_1 As screen:
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =If(ThisItem.IsSelected,RGBA(136,110,255,0.3),RGBA(255,255,255,0.3))
                 Height: =35
-                OnSelect: =Select(Parent)
+                OnSelect: |-
+                    =ClearCollect(record_Admin,
+                    LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Department=gal_tempTabItems_3.Selected.Name,Location=Gal_Location_Tabs.Selected.City))
+                    )
                 Text: =ThisItem.City
                 Width: =Parent.TemplateWidth-20
                 X: =10
