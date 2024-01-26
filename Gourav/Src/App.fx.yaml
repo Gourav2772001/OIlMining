@@ -35,6 +35,15 @@ App As appinfo:
                 GroupBy(OM_AllDepartmentSummary, "Status", "MyGroupedData"),
                 "StatusCount", CountRows(MyGroupedData)
             )
+        );
+        ClearCollect
+        (
+            AllRegion,
+            {City:"Jaipur"},
+             {City:"Jodhpur"},
+              {City:"Kota"},
+               {City:"Udaipur"},
+                {City:"Jaisalmer"}
         )
         
     StartScreen: =
