@@ -72,7 +72,8 @@
     "dataSources": [
       "OM_Crude_oil_sales_pipeline_inventory",
       "OM_AllDepartmentSummary",
-      "OM_HSES_SUMMARY"
+      "OM_HSES_SUMMARY",
+      "Oil Mining Reference Docs"
     ],
     "dependencies": {},
     "dependents": [],

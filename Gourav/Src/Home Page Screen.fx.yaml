@@ -965,7 +965,8 @@
                 =OMDaywiseSummary.Run();
                 Set(getURL,OMDaywiseSummary.Run().download_url);
                 Download(First(Split(getURL,"?")).Value);
-                Notify("Your file has been downloaded to the system",NotificationType.Success)
+                Notify("Your file has been downloaded to the system",NotificationType.Success);
+                Refresh('Oil Mining Reference Docs')
             PaddingLeft: =0
             PaddingTop: =10
             Size: =12
