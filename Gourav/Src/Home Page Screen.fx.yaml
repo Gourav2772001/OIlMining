@@ -481,7 +481,12 @@
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
                 Size: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,13,23)
-                Text: ="Welcome " & ComboBox1.Selected.Title & " 👋"
+                Text: |-
+                    =If(
+                        Persona="Employee",
+                        "Welcome " & ComboBox1.Selected.Title & " 👋",
+                        "Welcome Mr. Shakti Singh" & " 👋"
+                    )
                 Width: =If( App.ActiveScreen.Size=2 ||App.ActiveScreen.Size=1,220,475)
                 ZIndex: =1
 
@@ -496,6 +501,12 @@
                 ProgressColor: =If(progressBar.Value=16,'Progress.ProgressColor'.Success,'Progress.ProgressColor'.Brand)
                 Thickness: ='Progress.Thickness'.Large
                 Value: =gal_allSummaryITemCount.AllItemsCount
+                Visible: |-
+                    =If(
+                        Persona="Manager",
+                        If( App.ActiveScreen.Size=1,false,true),
+                        false
+                    )
                 Width: =450
                 X: =0
                 Y: =0
@@ -507,16 +518,32 @@
                 Height: =Parent.Height
                 LayoutMinWidth: =0
                 Text: =(progressBar.Value/16)*100 & " %"
-                Visible: =If( App.ActiveScreen.Size=1,false,true)
+                Visible: |-
+                    =If(
+                        Persona="Manager",
+                        If( App.ActiveScreen.Size=1,false,true),
+                        false
+                    )
                 Width: =If(App.ActiveScreen.Size=1,25,If( App.ActiveScreen.Size=2,50,150))
                 ZIndex: =3
+
+            Label1 As label:
+                FillPortions: =1
+                Text: =""
+                Visible: |-
+                    =If(
+                        Persona="Manager",
+                        false,
+                        true
+                    )
+                ZIndex: =4
 
             con_notification As groupContainer.manualLayoutContainer:
                 FillPortions: =0.1
                 Height: =Parent.Height
                 LayoutMinHeight: =0
                 LayoutMinWidth: =50
-                ZIndex: =4
+                ZIndex: =5
 
                 img_notification As image:
                     Height: =Parent.Height
@@ -564,7 +591,13 @@
                     Title1 As label:
                         Align: =Align.Center
                         Height: =25
-                        Text: ="Chart Title"
+                        Text: ="Status Report"
+                        Visible: |-
+                            =If(
+                                Persona="Manager",
+                                true,
+                                false
+                            )
                         Width: =604
                         Y: =12
                         ZIndex: =2
@@ -573,6 +606,12 @@
                         Height: =Parent.Height
                         ItemColorSet: =[RGBA(38, 194, 129,1),RGBA(30, 81, 123,1), RGBA(255, 0, 0,1)]
                         Items: =MyGroupedData
+                        Visible: |-
+                            =If(
+                                Persona="Manager",
+                                true,
+                                false
+                            )
                         Width: =Parent.Width
                         ZIndex: =3
 
@@ -581,6 +620,12 @@
                         ItemColorSet: =PieChart1.ItemColorSet
                         Items: =PieChart1.SeriesLabels
                         Size: =16
+                        Visible: |-
+                            =If(
+                                Persona="Manager",
+                                true,
+                                false
+                            )
                         Width: =Parent.Width*.25
                         Y: =Parent.Height*.5
                         ZIndex: =4
@@ -611,6 +656,41 @@
                         Y: =80
                         ZIndex: =2
 
+                CompositeLineChart1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =6
+
+                    Title3 As label:
+                        Align: =Align.Center
+                        Height: =25
+                        Text: ="Gross Sale (Monthly)"
+                        Visible: |
+                            =If(Persona="Manager", false,true )
+                        Width: =Parent.Width
+                        Y: =40
+                        ZIndex: =7
+
+                    LineChart1 As lineChart:
+                        Height: =386
+                        Items: =LineChartSample
+                        Visible: |
+                            =If(Persona="Manager", false,true )
+                        Width: =Parent.Width
+                        ZIndex: =8
+
+                    Legend3 As legend:
+                        Height: =80
+                        ItemColorSet: =LineChart1.ItemColorSet
+                        Items: =LineChart1.SeriesLabels
+                        Visible: |
+                            =If(Persona="Manager", false,true )
+                        Width: =Parent.Width
+                        Y: =306
+                        ZIndex: =9
+
             con_OtherChart As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
@@ -629,7 +709,12 @@
                     AlignInContainer: =AlignInContainer.SetByContainer
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
-                    Visible: =If(con_otherGarph.Width<250,false,true)
+                    Visible: |-
+                        =If(
+                            Persona="Manager",
+                            If(con_otherGarph.Width<250,false,true),
+                            false
+                        )
                     Width: =Parent.Width
                     ZIndex: =1
 
@@ -713,6 +798,44 @@
                         Width: =Parent.Width
                         ZIndex: =3
 
+                CompositePieChart2 As group:
+                    Height: =5
+                    LayoutMinHeight: =5
+                    LayoutMinWidth: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =3
+
+                    Title2 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        Height: =Parent.Height/3.3
+                        Text: ="Chart Title"
+                        Visible: |
+                            =If(Persona="Manager",false,true)
+                        Width: =Parent.Width
+                        ZIndex: =4
+
+                    PieChart2 As pieChart:
+                        Height: =Parent.Height/3.3
+                        Items: =PieChartSample
+                        Visible: |
+                            =If(Persona="Manager",false,true)
+                        Width: =Parent.Width
+                        ZIndex: =5
+
+                    Legend2 As legend:
+                        FillPortions: =1
+                        Height: =Parent.Height/3.3
+                        ItemColorSet: =PieChart2.ItemColorSet
+                        Items: =PieChart2.SeriesLabels
+                        Size: =16
+                        Visible: |
+                            =If(Persona="Manager",false,true)
+                        Width: =Parent.Width
+                        ZIndex: =6
+
     con_nevigation As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
         Height: =If(App.ActiveScreen.Size=1,220,318)
@@ -742,7 +865,7 @@
                 </svg>","currentColor","RGBA(255,255,255,1)")),
                         Lbl:"DashBord",
                 
-                        Screen:If(Persona="Manager", Admin_from,Persona="Employee",Form_Screen,App.ActiveScreen)
+                        Screen:If(Persona="Manager", Admin_from,Persona="Employee",Form_Screen, App.ActiveScreen)
                      
                     },
                     {
@@ -824,6 +947,12 @@
                 Download(First(Split(getURL,"?")).Value);
                 Notify("Your file has been downloaded to the system",NotificationType.Success)
             PaddingTop: =10
+            Visible: |-
+                =If(
+                    Persona="Manager",
+                    true,
+                    false
+                )
             Width: =Parent.Width*.02
             ZIndex: =5
 
@@ -841,6 +970,12 @@
             PaddingTop: =10
             Size: =12
             Text: ="Download PDF"
+            Visible: |-
+                =If(
+                    Persona="Manager",
+                    true,
+                    false
+                )
             ZIndex: =6
 
         Label1_true As label:
