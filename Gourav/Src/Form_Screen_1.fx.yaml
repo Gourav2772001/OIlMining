@@ -7595,7 +7595,11 @@ Form_Screen_1 As screen:
             FontWeight: =FontWeight.Bold
             Height: =Parent.Height
             Size: =18
-            Text: =If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " ")
+            Text: |-
+                =If(Persona="Employee",
+                If(selectedData="Arti Acharya", "Welcome Miss " & selectedData & " ", "Welcome Mr " & selectedData & " "),
+                "Welcome Mr " & "Shakti Singh" & " "
+                )
             Visible: =If(Form_Screen_1.Size>3,true,false)
             Width: =Parent.Width*.5
             ZIndex: =3
