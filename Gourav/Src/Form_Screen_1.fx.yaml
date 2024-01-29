@@ -65,7 +65,9 @@ Form_Screen_1 As screen:
                                 )
                             )
                         );
-                        Gal_Location_Tabs.Selected.City="Jaipur"
+                        Reset(Gal_Location_Tabs)
+                        
+                        
                         
                         //ClearCollect(record,LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location=Gal_Location_Tabs.Selected.City,Department=gal_tempTabItems_3.Selected.Name)))
                     PressedBorderColor: =

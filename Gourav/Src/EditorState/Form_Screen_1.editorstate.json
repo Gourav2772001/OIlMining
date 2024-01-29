@@ -107079,6 +107079,14 @@
           "InvariantPropertyName": "Default",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "NavigationStep",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "GalleryTemplateChildName": "galleryTemplate3",
@@ -107220,6 +107228,11 @@
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "NavigationStep",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGalleryStyle",
@@ -107280,7 +107293,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "ZIndex"
+        "ZIndex",
+        "Default"
       ],
       "DynamicProperties": [
         {
@@ -107357,6 +107371,11 @@
         {
           "Category": "Data",
           "PropertyName": "WrapCount",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {
