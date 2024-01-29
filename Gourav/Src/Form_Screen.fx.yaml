@@ -7475,15 +7475,6 @@ Form_Screen As screen:
             Width: =Parent.Width*.2
             ZIndex: =2
 
-        ico_backToEmployee As icon.BackArrow:
-            AlignInContainer: =AlignInContainer.Center
-            FillPortions: =1
-            Height: =35
-            Icon: =Icon.BackArrow
-            OnSelect: =Back()
-            Width: =35
-            ZIndex: =3
-
         lbl_LoggedInUserName_3 As label:
             Align: =Align.Right
             AlignInContainer: =AlignInContainer.Center
