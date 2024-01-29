@@ -73,7 +73,8 @@
       "OM_Crude_oil_sales_pipeline_inventory",
       "OM_AllDepartmentSummary",
       "OM_HSES_SUMMARY",
-      "Oil Mining Reference Docs"
+      "Oil Mining Reference Docs",
+      "OM_MPT_Crude_Oil"
     ],
     "dependencies": {},
     "dependents": [],
@@ -213,7 +214,9 @@
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
-    "dataSources": [],
+    "dataSources": [
+      "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1"
+    ],
     "dependencies": {},
     "dependents": [
       "21db4dde-acb9-466d-ae84-a76aa12b76c1"

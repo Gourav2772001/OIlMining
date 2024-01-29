@@ -8934,7 +8934,14 @@
     "btn_galTabSelecteds_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ClearCollect(record,\nLookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Department=ThisItem.Name,Location=First(userData1).Location))\n);\n",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9253,7 +9260,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -12138,7 +12145,14 @@
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
-        "BorderStyle",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderStyle",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
         {
           "AFDDataSourceName": "",
@@ -12181,7 +12195,14 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "DropShadow",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DropShadow",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "RadiusTopLeft",
         "RadiusTopRight",
@@ -12298,7 +12319,7 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -12932,7 +12953,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Cargo_Jaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13464,7 +13485,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Cargo_Kota_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13996,7 +14017,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_CrudeOil_Jaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14528,7 +14549,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Jaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15060,7 +15081,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Jaisalmer_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15592,7 +15613,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Jodhpur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16124,7 +16145,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_Dispatch_Kota_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17110,7 +17131,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_InventoryJaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19104,7 +19125,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Jaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19356,7 +19377,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Jaisalmer_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19608,7 +19629,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Jodhpur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19860,7 +19881,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Kota_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20112,7 +20133,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SalesOf_Udaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21484,7 +21505,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SummaryJaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21736,7 +21757,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SummaryKota_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21988,7 +22009,7 @@
       "MetaDataIDKey": "",
       "Name": "cont_SummaryUdaipur_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -103740,7 +103761,14 @@
           "NameMapSourceSchema": "?"
         },
         "Visible",
-        "Item"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "LookUp(OM_MPT_Crude_Oil,ID=First(record).'Reference ID')",
+          "InvariantPropertyName": "Item",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -107043,7 +107071,15 @@
           "NameMapSourceSchema": "?"
         },
         "Height",
-        "ZIndex"
+        "ZIndex",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "GalleryTemplateChildName": "galleryTemplate3",
       "HasDynamicProperties": false,
@@ -107063,6 +107099,11 @@
         {
           "Category": "Data",
           "PropertyName": "Items",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {
@@ -107442,7 +107483,14 @@
       "ControlPropertyState": [
         "ItemAccessibleLabel",
         "TemplateFill",
-        "OnSelect"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -107471,7 +107519,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultGalleryTemplateStyle",
@@ -107480,7 +107528,15 @@
     "galleryTemplate3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "TemplateFill"
+        "TemplateFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -107500,6 +107556,11 @@
           "Category": "Design",
           "PropertyName": "TemplateFill",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
@@ -111323,7 +111384,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "33",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Height",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -111335,7 +111396,14 @@
         "RadiusBottomRight",
         "BorderThickness",
         "FocusedBorderThickness",
-        "Size",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "15",
+          "InvariantPropertyName": "Size",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Italic",
         "Underline",
         "Strikethrough"
@@ -111397,17 +111465,17 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -111492,7 +111560,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
