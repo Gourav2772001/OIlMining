@@ -1005,7 +1005,12 @@
                     AlignInContainer: =AlignInContainer.End
                     Height: =Parent.Height*.2
                     Icon: =Icon.Cancel
-                    OnSelect: =Set(Var_Persona,!Var_Persona)
+                    OnSelect: |-
+                        =Set(Var_Persona,!Var_Persona);
+                        Set(var_selected_ID,Blank());
+                        Set(user_data,Blank());
+                        Set(Persona,Blank());
+                        Set(var_disable,true)
                     Width: =Parent.Width*.1
                     ZIndex: =1
 
