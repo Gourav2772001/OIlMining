@@ -657,7 +657,12 @@ Form_Screen_1 As screen:
                 lbl_NoFormText_3 As label:
                     Align: =Align.Center
                     FontWeight: =FontWeight.Bold
-                    Text: ="You are not authorized to access this form"
+                    Text: |-
+                        =If(
+                            Persona = "Employee",
+                            "You are not authorized to access this form",
+                            "No forms to display"
+                        )
                     Width: =Parent.Width
                     ZIndex: =2
 
