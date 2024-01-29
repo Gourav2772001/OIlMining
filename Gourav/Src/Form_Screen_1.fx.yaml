@@ -44,7 +44,7 @@ Form_Screen_1 As screen:
                         =If(Form_Screen_1.Size>2,
                         Parent.TemplateWidth-65,
                         Parent.TemplateWidth)
-                    X: =1
+                    X: =(Parent.TemplateWidth-Self.Width)/2
                     Y: =If(Form_Screen_1.Size>2,0,10)
                     ZIndex: =1
 
@@ -68,7 +68,7 @@ Form_Screen_1 As screen:
                         =If(Form_Screen_1.Size>2,
                         Parent.TemplateWidth-62,
                         Parent.TemplateWidth)
-                    X: =1
+                    X: =(Parent.TemplateWidth-Self.Width)/2
                     ZIndex: =3
 
         cont_rightSideContentForms_3 As groupContainer.verticalAutoLayoutContainer:
@@ -98,7 +98,7 @@ Form_Screen_1 As screen:
                         false
                     ),
                     If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Jaipur",
+                       First(record_Admin).Location="Jaipur" && First(record_Admin).Department="Sales",
                         true,
                         false
                     )
@@ -568,7 +568,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_SalesJaipur_3 As button:
@@ -605,7 +610,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_NoFormToDisplay_3 As groupContainer.verticalAutoLayoutContainer:
@@ -619,23 +629,23 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        First(userData1).Location = "Jodhpur" && (gal_tempTabItems_3.Selected.Name ="Summary" || gal_tempTabItems_3.Selected.Name ="Cargo" || gal_tempTabItems_3.Selected.Name ="Crude Oil" || gal_tempTabItems_3.Selected.Name ="Inventory"),
-                    
-                        true,
-                    
-                        First(userData1).Location = "Jaisalmer" && (gal_tempTabItems_3.Selected.Name ="Summary" || gal_tempTabItems_3.Selected.Name ="Cargo" || gal_tempTabItems_3.Selected.Name ="Crude Oil" || gal_tempTabItems_3.Selected.Name ="Inventory"),
-                    
-                        true,
-                    
-                        First(userData1).Location = "Udaipur" && (gal_tempTabItems_3.Selected.Name ="Crude Oil" || gal_tempTabItems_3.Selected.Name ="Inventory" || gal_tempTabItems_3.Selected.Name ="Cargo" || gal_tempTabItems_3.Selected.Name ="Dispatch"),
-                    
-                        true,
-                    
-                        First(userData1).Location = "Kota" && ( gal_tempTabItems_3.Selected.Name ="Crude Oil" || gal_tempTabItems_3.Selected.Name ="Inventory"),
-                    
-                        true,
-                    
-                        false
+                        Persona = "Employee",
+                        If(
+                            First(userData1).Location = "Jodhpur" && (gal_tempTabItems_3.Selected.Name = "Summary" || gal_tempTabItems_3.Selected.Name = "Cargo" || gal_tempTabItems_3.Selected.Name = "Crude Oil" || gal_tempTabItems_3.Selected.Name = "Inventory"),
+                            true,
+                            First(userData1).Location = "Jaisalmer" && (gal_tempTabItems_3.Selected.Name = "Summary" || gal_tempTabItems_3.Selected.Name = "Cargo" || gal_tempTabItems_3.Selected.Name = "Crude Oil" || gal_tempTabItems_3.Selected.Name = "Inventory"),
+                            true,
+                            First(userData1).Location = "Udaipur" && (gal_tempTabItems_3.Selected.Name = "Crude Oil" || gal_tempTabItems_3.Selected.Name = "Inventory" || gal_tempTabItems_3.Selected.Name = "Cargo" || gal_tempTabItems_3.Selected.Name = "Dispatch"),
+                            true,
+                            First(userData1).Location = "Kota" && (gal_tempTabItems_3.Selected.Name = "Crude Oil" || gal_tempTabItems_3.Selected.Name = "Inventory"),
+                            true,
+                            false
+                        ),
+                        If(
+                            IsEmpty(record_Admin),
+                            true,
+                            false
+                        )
                     )
                 Width: =Parent.Width
                 ZIndex: =2
@@ -670,7 +680,7 @@ Form_Screen_1 As screen:
                         false
                     ),
                     If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Jodhpur",
+                          First(record_Admin).Location="Jodhpur" && First(record_Admin).Department="Sales",
                         true,
                         false
                     )
@@ -1135,7 +1145,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_SalesJodhpur_3 As button:
@@ -1170,7 +1185,12 @@ Form_Screen_1 As screen:
                                 " "
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_SalesOf_Udaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -1192,7 +1212,7 @@ Form_Screen_1 As screen:
                         false
                     ),
                     If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Udaipur",
+                         First(record_Admin).Location="Udaipur" && First(record_Admin).Department="Sales",
                         true,
                         false
                     )
@@ -1657,7 +1677,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_SalesUdaipur_3 As button:
@@ -1691,7 +1716,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_SalesOf_Kota_3 As groupContainer.verticalAutoLayoutContainer:
@@ -1713,7 +1743,7 @@ Form_Screen_1 As screen:
                         false
                     ),
                     If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Kota",
+                         First(record_Admin).Location="Kota" && First(record_Admin).Department="Sales",
                         true,
                         false
                     )
@@ -2178,7 +2208,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_SalesKota_3 As button:
@@ -2212,7 +2247,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_SalesOf_Jaisalmer_3 As groupContainer.verticalAutoLayoutContainer:
@@ -2234,7 +2274,7 @@ Form_Screen_1 As screen:
                         false
                     ),
                     If(
-                        gal_tempTabItems_3.Selected.Name = "Sales" && Gal_Location_Tabs.Selected.City="Jaisalmer",
+                         First(record_Admin).Location="Jaisalmer" && First(record_Admin).Department="Sales",
                         true,
                         false
                     )
@@ -2703,7 +2743,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_SalesJaisalmer_3 As button:
@@ -2737,7 +2782,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_CrudeOil_Jaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -2751,9 +2801,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Crude Oil" && selectedData="Gourav Kumar",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Crude Oil" && selectedData = "Gourav Kumar",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jaipur" && First(record_Admin).Department="Crude Oil",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =7
@@ -3133,7 +3193,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_CrudeOil_Jaipur_3 As button:
@@ -3168,7 +3233,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_InventoryJaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -3182,9 +3252,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Inventory" && selectedData="Gourav Kumar",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Inventory" && selectedData = "Gourav Kumar",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jaipur" && First(record_Admin).Department="Inventory",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =8
@@ -3431,7 +3511,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Inventory_Jaipur_3 As button:
@@ -3466,7 +3551,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_SummaryJaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -3480,9 +3570,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Summary" && selectedData="Gourav Kumar" && First(userData1).Location="Jaipur",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Summary" && selectedData = "Gourav Kumar",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jaipur" && First(record_Admin).Department="Summary",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =9
@@ -3796,7 +3896,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Summary_Jaipur_3 As button:
@@ -3831,7 +3936,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_SummaryKota_3 As groupContainer.verticalAutoLayoutContainer:
@@ -3845,9 +3955,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Summary" && selectedData="Arti Acharya",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Summary" && selectedData = "Arti Acharya",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Kota" && First(record_Admin).Department="Summary",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =10
@@ -4161,7 +4281,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Summary_Kota_3 As button:
@@ -4195,7 +4320,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_SummaryUdaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -4209,9 +4339,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Summary" && selectedData="Jayesh Sahijwani",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Summary" && selectedData = "Jayesh Sahijwani",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Udaipur" && First(record_Admin).Department="Summary",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =11
@@ -4525,7 +4665,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Summary_Udaipur_3 As button:
@@ -4559,7 +4704,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_Dispatch_Jaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -4573,9 +4723,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData="Gourav Kumar",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData = "Gourav Kumar",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jaipur" && First(record_Admin).Department="Dispatch",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =12
@@ -5157,7 +5317,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Dispatch_Jaipur_3 As button:
@@ -5192,7 +5357,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_Dispatch_Jodhpur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -5206,9 +5376,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData="Rahul Choudhary",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData = "Rahul Chaudhary",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jodhpur" && First(record_Admin).Department="Dispatch",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =13
@@ -5788,7 +5968,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Dispatch_Jodhpur_3 As button:
@@ -5822,7 +6007,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_Dispatch_Jaisalmer_3 As groupContainer.verticalAutoLayoutContainer:
@@ -5836,9 +6026,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData="Shakti Singh",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData = "Shakti Singh",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jaisalmer" && First(record_Admin).Department="Dispatch",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =14
@@ -6420,7 +6620,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Dispatch_Jaisalmer_3 As button:
@@ -6454,7 +6659,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_Dispatch_Kota_3 As groupContainer.verticalAutoLayoutContainer:
@@ -6468,9 +6678,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData="Arti Acharya",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Dispatch" && selectedData = "Arti Acharya",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Kota" && First(record_Admin).Department="Dispatch",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =15
@@ -7052,7 +7272,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Dispatch_Kota_3 As button:
@@ -7086,7 +7311,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_Cargo_Kota_3 As groupContainer.verticalAutoLayoutContainer:
@@ -7100,9 +7330,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Cargo" && selectedData="Arti Acharya",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Cargo" && selectedData = "Arti Acharya",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Kota" && First(record_Admin).Department="Cargo",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =16
@@ -7282,7 +7522,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Cargo_Kota_3 As button:
@@ -7316,7 +7561,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
             cont_Cargo_Jaipur_3 As groupContainer.verticalAutoLayoutContainer:
@@ -7330,9 +7580,19 @@ Form_Screen_1 As screen:
                 LayoutMode: =LayoutMode.Auto
                 Visible: |-
                     =If(
-                        gal_tempTabItems_3.Selected.Name = "Cargo" && selectedData="Gourav Kumar",
+                    Persona="Employee",
+                    
+                    If(
+                        gal_tempTabItems_3.Selected.Name = "Cargo" && selectedData = "Gourav Kumar",
                         true,
                         false
+                    ),
+                    If(
+                         First(record_Admin).Location="Jaipur" && First(record_Admin).Department="Cargo",
+                        true,
+                        false
+                    )
+                    
                     )
                 Width: =Parent.Width
                 ZIndex: =17
@@ -7512,7 +7772,12 @@ Form_Screen_1 As screen:
                         HoverFill: =ColorFade(RGBA(136,110,255,255), -20%)
                         OnSelect: =Navigate('Home Page Screen')
                         Size: =20
-                        Text: ="Back"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Back",
+                                "Decline"
+                            )
                         ZIndex: =1
 
                     btn_Cargo_Jaipur_3 As button:
@@ -7547,7 +7812,12 @@ Form_Screen_1 As screen:
                                 ""
                             )
                         Size: =20
-                        Text: ="Save"
+                        Text: |-
+                            =If(
+                                Persona="Employee",
+                                "Save",
+                                "Accept"
+                            )
                         ZIndex: =2
 
     cont_HeaderRegionalForm_6 As groupContainer.horizontalAutoLayoutContainer:
