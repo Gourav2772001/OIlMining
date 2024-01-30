@@ -44,7 +44,8 @@ App As appinfo:
               {City:"Kota"},
                {City:"Udaipur"},
                 {City:"Jaisalmer"}
-        )
+        );
+        
         
     StartScreen: =
     Theme: =PowerAppsTheme
