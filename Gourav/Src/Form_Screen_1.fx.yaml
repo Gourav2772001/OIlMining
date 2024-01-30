@@ -7954,3 +7954,14 @@ Form_Screen_1 As screen:
                 Y: =If(Form_Screen_1.Size>2,(Parent.TemplateHeight-Self.Height)/2,0)
                 ZIndex: =1
 
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(40, 134, 222, 1)
+        OnSelect: =Back()
+        Size: =17
+        Text: ="Back"
+        Underline: =true
+        X: =107
+        Y: =98
+        ZIndex: =4
+
