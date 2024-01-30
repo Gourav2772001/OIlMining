@@ -8485,7 +8485,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon_download",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10560,7 +10560,7 @@
       "MetaDataIDKey": "",
       "Name": "img_oilLogoHeader_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10850,7 +10850,7 @@
       "MetaDataIDKey": "",
       "Name": "img_RegionalForm_UserImage_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11116,7 +11116,7 @@
       "MetaDataIDKey": "",
       "Name": "Label1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11437,7 +11437,7 @@
       "MetaDataIDKey": "",
       "Name": "Label1_true",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14075,7 +14075,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_flex",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17400,7 +17400,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_welcome",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19176,7 +19176,7 @@
       "MetaDataIDKey": "",
       "Name": "progressBar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
