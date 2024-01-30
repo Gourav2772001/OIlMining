@@ -6854,6 +6854,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.Cont_ContentLeftGallery.cont_Content_1LeftGallery.gal_PendingFormsAlert.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.Cont_ContentLeftGallery.cont_Content_1LeftGallery.gal_PendingFormsAlert.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_1",
+                "type": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.Cont_ContentLeftGallery.cont_Content_1LeftGallery.gal_PendingFormsAlert"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.cont_ContetnRightGallery.gal_ReferenceDocs.TabIndex"
                 }
               ],
@@ -6908,6 +6938,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.Cont_ContentLeftGallery.cont_Content_1LeftGallery.gal_PendingFormsAlert.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.Cont_ContentLeftGallery.cont_Content_1LeftGallery.gal_PendingFormsAlert.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_1",
+                "type": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.Cont_ContentLeftGallery.cont_Content_1LeftGallery.gal_PendingFormsAlert"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [
