@@ -6914,6 +6914,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.cont_ContetnRightGallery.cont_DownloadFileDatePicker.datePicker_DownloadedFiles.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.cont_ContetnRightGallery.cont_DownloadFileDatePicker.datePicker_DownloadedFiles.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_1",
+                "type": "'Home Page Screen_1'.con_main1_1.con_ofChart_1.con_mainHeader_2.cont_ContetnRightGallery.cont_DownloadFileDatePicker.datePicker_DownloadedFiles"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AdminFormFilled"
                 }
               ],

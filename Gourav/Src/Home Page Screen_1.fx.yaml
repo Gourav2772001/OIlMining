@@ -63,11 +63,25 @@
                     Width: =Parent.Width*.3
                     ZIndex: =2
 
-                    lbl_DownloadedFiles As label:
-                        FontWeight: =FontWeight.Semibold
-                        Text: ="Downloaded Files"
+                    cont_DownloadFileDatePicker As groupContainer.horizontalAutoLayoutContainer:
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =Parent.Height*.1
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         Width: =Parent.Width
                         ZIndex: =1
+
+                        lbl_DownloadedFiles As label:
+                            FontWeight: =FontWeight.Semibold
+                            Text: ="Downloaded Files"
+                            Width: =Parent.Width*.5
+                            ZIndex: =1
+
+                        datePicker_DownloadedFiles As datepicker:
+                            Width: =Parent.Width*.5
+                            ZIndex: =2
 
                     rect_DownloadedFileUnderline As rectangle:
                         Height: =1
@@ -75,10 +89,11 @@
                         ZIndex: =2
 
                     gal_ReferenceDocs As gallery.galleryVertical:
+                        BorderThickness: =1
                         DelayItemLoading: =true
                         FillPortions: =0
                         Height: =Parent.Height*.6
-                        Items: ='Oil Mining Reference Docs'
+                        Items: =Filter('Oil Mining Reference Docs',Created=datePicker_DownloadedFiles.SelectedDate)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -91,7 +106,7 @@
                             Height: =34
                             OnSelect: =Select(Parent)
                             Size: =10
-                            Text: =ThisItem.Name
+                            Text: =If(ThisItem.Name=Blank(),"No Files Downloaded",ThisItem.Name)
                             Width: =171
                             X: =48
                             Y: =18
@@ -135,7 +150,7 @@
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =19
                             HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
-                            OnSelect: =Select(Parent);Launch(ThisItem.'Link to item')
+                            OnSelect: =Select(Parent);If(ThisItem.Name=Blank(),false,Launch(ThisItem.'Link to item'))
                             Text: ="Button"
                             Width: =65
                             X: =223
