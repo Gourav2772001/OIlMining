@@ -74,7 +74,7 @@
                             PieChartApprovalReq_1 As pieChart:
                                 Explode: =1
                                 Height: =Parent.Height
-                                Items: =MyGroupedData
+                                Items: =StatusCounts
                                 Width: =Parent.Width*.4
                                 ZIndex: =3
 
@@ -131,7 +131,7 @@
                         DelayItemLoading: =true
                         FillPortions: =0
                         Height: =Parent.Height*.6
-                        Items: ='Oil Mining Reference Docs'
+                        Items: =Filter('Oil Mining Reference Docs',Or(ThisRecord.Created= datePicker_DownloadedFiles.SelectedDate))
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -194,6 +194,16 @@
                             X: =223
                             Y: =27
                             ZIndex: =6
+
+                        Label5 As label:
+                            Height: =22
+                            OnSelect: =Select(Parent)
+                            Text: =Text(ThisItem.Created,"mm/dd/yyyy")
+                            Visible: =false
+                            Width: =193
+                            X: =115
+                            Y: =2
+                            ZIndex: =7
 
                     lbl_gapReferenceGAl As label:
                         Text: =""

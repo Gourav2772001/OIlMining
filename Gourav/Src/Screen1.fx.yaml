@@ -222,3 +222,14 @@ Screen1 As screen:
         Y: =451
         ZIndex: =9
 
+    Label4 As label:
+        Text: =DatePicker1.SelectedDate
+        X: =62
+        Y: =680
+        ZIndex: =10
+
+    DatePicker1 As datepicker:
+        X: =212
+        Y: =558
+        ZIndex: =11
+
