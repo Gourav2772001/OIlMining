@@ -2,6 +2,32 @@
     BackgroundImage: ='7f951bda68241a57aa84929a95f120f9f082a9a0-1440x1054'
     Fill: =RGBA(255, 255, 255, 1)
     ImagePosition: =ImagePosition.Fill
+    OnVisible: |-
+        =// Create a collection for master list
+        ClearCollect(
+            MasterListData,
+            OM_MasterList
+        );
+        
+        ClearCollect(
+            AllDeptSumm,
+           Filter( OM_AllDepartmentSummary,Created_On=Today())
+        );
+        
+        // Create a collection to store missing data
+        ClearCollect(
+            MissingData,
+            Filter(
+                MasterListData As mstr,
+                CountRows(
+                    Filter(
+                        AllDeptSumm,
+                        Department = mstr.Department &&
+                        Location = mstr.Location
+                    )
+                ) = 0
+            )
+        );
 
     con_main1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.ExtraBold
@@ -158,6 +184,11 @@
                                         progressWidth: =Parent.Height*.85
                                         Width: ='Radial Progress Bar_6'.progressWidth
                                         ZIndex: =2
+
+                        cont_formNotFilled As groupContainer.manualLayoutContainer:
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            ZIndex: =7
 
                 cont_ContetnRightGallery As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
