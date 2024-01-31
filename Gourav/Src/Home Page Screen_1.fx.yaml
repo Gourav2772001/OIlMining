@@ -185,10 +185,76 @@
                                         Width: ='Radial Progress Bar_6'.progressWidth
                                         ZIndex: =2
 
-                        cont_formNotFilled As groupContainer.manualLayoutContainer:
+                        cont_galHeaderForm As groupContainer.manualLayoutContainer:
+                            FillPortions: =0
+                            Height: =Parent.Height*.1
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
+                            Width: =Parent.Width
                             ZIndex: =7
+
+                            cont_LblFiltersETC As groupContainer.horizontalAutoLayoutContainer:
+                                Fill: =RGBA(180, 214, 250, 1)
+                                Height: =Parent.Height
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                lbl_AwaitFormSubmisn As label:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    AutoHeight: =true
+                                    FontWeight: =FontWeight.Bold
+                                    Text: ="Awaiting Form Submission"
+                                    Width: =Parent.Width*.35
+                                    ZIndex: =1
+
+                                drpDown_Department As dropdown:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    Height: =Parent.Height*.6
+                                    Items: =["Select Department","Sales","Crude Oil","Inventory","Summary","Dispatch","Cargo"]
+                                    Width: =Parent.Width*.3
+                                    ZIndex: =2
+
+                                Label12 As label:
+                                    Text: =""
+                                    Width: =Parent.Width*.03
+                                    ZIndex: =3
+
+                                dropDown_Location As dropdown:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    Height: =Parent.Height*.6
+                                    Items: =["Select Location","Jaipur","Jodhpur","Kota","Udaipur","Jaisalmer"]
+                                    Width: =Parent.Width*.3
+                                    ZIndex: =4
+
+                        cont_galFormNotFille As groupContainer.manualLayoutContainer:
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            ZIndex: =8
+
+                            gal_FormNotFilled As gallery.galleryVertical:
+                                DelayItemLoading: =true
+                                Height: =Parent.Height
+                                Items: =MissingData
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateSize: =77
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                lbl_deptFormnotFill As label:
+                                    OnSelect: =Select(Parent)
+                                    Text: =ThisItem.Department
+                                    X: =43
+                                    Y: =20
+                                    ZIndex: =1
+
+                                lbl_LocaFormnotfill As label:
+                                    OnSelect: =Select(Parent)
+                                    Text: =ThisItem.Location
+                                    X: =193
+                                    Y: =20
+                                    ZIndex: =2
 
                 cont_ContetnRightGallery As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
