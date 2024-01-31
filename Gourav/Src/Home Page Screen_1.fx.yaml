@@ -17,7 +17,7 @@
             Height: =499
             LayoutGap: =20
             LayoutMode: =LayoutMode.Auto
-            Width: =1099
+            Width: =Parent.Width-75
             X: =40
             Y: =80
             ZIndex: =3
@@ -26,7 +26,8 @@
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 DropShadow: =DropShadow.None
-                Height: =60
+                FillPortions: =0
+                Height: =Parent.Height
                 LayoutGap: =10
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -39,7 +40,7 @@
                 RadiusBottomRight: =1
                 RadiusTopLeft: =1
                 RadiusTopRight: =1
-                Width: =Parent.Width-70
+                Width: =Parent.Width
                 X: =49
                 ZIndex: =1
 
@@ -77,17 +78,17 @@
                                 Width: =Parent.Width*.4
                                 ZIndex: =3
 
-                        Gallery1 As gallery.galleryVertical:
-                            DelayItemLoading: =true
-                            Items: =CustomGallerySample
-                            Layout: =Layout.Vertical
-                            LayoutMinHeight: =287
-                            LayoutMinWidth: =320
-                            LoadingSpinner: =LoadingSpinner.Data
-                            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                        "'Radial Progress Bar_6' As 'Radial Progress Bar'":
+                            AlignInContainer: =AlignInContainer.Center
+                            Height: ='Radial Progress Bar_6'.progressHeight
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+                            OnReset: =Set(precentageVisible,!'Radial Progress Bar_6'.precentagleVisble)
+                            Width: ='Radial Progress Bar_6'.progressWidth
                             ZIndex: =6
 
                 cont_ContetnRightGallery As groupContainer.verticalAutoLayoutContainer:
+                    BorderThickness: =1
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
@@ -199,10 +200,10 @@
                         ZIndex: =4
 
         Cont_mainCont_1 As groupContainer.verticalAutoLayoutContainer:
-            Height: =68
+            Height: =Parent.Height/11
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
-            Width: =1099
+            Width: =Parent.Width-80
             X: =40
             Y: =12
             ZIndex: =4

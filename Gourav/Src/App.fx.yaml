@@ -46,6 +46,42 @@ App As appinfo:
                 {City:"Jaisalmer"}
         );
         
+        // Create a collection for today's data
+        ClearCollect(
+            TodayData,
+            Filter(
+               OM_AllDepartmentSummary,
+              Created_On= Today()
+            )
+        );
+        
+        // Create a collection for status counts
+        
+        If(
+            CountRows(TodayData)>0,
+            ClearCollect(
+            StatusCounts,
+            {
+                Status: "Pending",
+                Count: CountIf(TodayData, Status = "Pending")
+            },
+            {
+                Status: "Approved",
+                Count: CountIf(TodayData, Status = "Approved")
+            },
+            {
+                Status: "Decline",
+                Count: CountIf(TodayData, Status = "Decline")
+            }
+        ),
+        ClearCollect(
+                StatusCounts,
+                { Status: "NoData", Count: 1 }
+            )
+        )
+        
+        
+        
         
     StartScreen: =
     Theme: =PowerAppsTheme

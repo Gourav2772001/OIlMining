@@ -112,6 +112,7 @@
                             LayoutMinWidth: =640
                             progessBarPrencatageSize: =8
                             progressHeight: =Parent.Height*.8
+                            progressValueCircle: =(2/16)*100
                             progressWidth: =Parent.Width*.3
                             Width: ='Radial Progress Bar_1'.progressWidth
                             ZIndex: =2
