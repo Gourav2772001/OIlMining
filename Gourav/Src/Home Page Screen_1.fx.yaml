@@ -140,13 +140,12 @@
                         ZIndex: =3
 
                         lbl_fileName As label:
-                            Height: =34
                             OnSelect: =Select(Parent)
                             Size: =10
                             Text: =If(ThisItem.Name=Blank(),"No Files Downloaded",ThisItem.Name)
                             Width: =171
                             X: =48
-                            Y: =18
+                            Y: =12
                             ZIndex: =1
 
                         ico_DocFile As icon.DocumentwithContent:
