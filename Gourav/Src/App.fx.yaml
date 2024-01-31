@@ -78,6 +78,11 @@ App As appinfo:
                 StatusCounts,
                 { Status: "NoData", Count: 1 }
             )
+        );
+        
+        ClearCollect(
+            MasterData,
+            OM_MasterList
         )
         
         

@@ -231,9 +231,18 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
-    "datasets": {},
+    "datasets": {
+      "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
+        "dataSources": {
+          "OM_MasterList": {
+            "tableName": "c2bfe002-c50f-40f5-8d02-2c0a4f818e36"
+          }
+        }
+      }
+    },
     "dataSources": [
-      "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1"
+      "OM_Nos_of_Cargo_Loaded_from_Jaipur_Terminal_1",
+      "OM_MasterList"
     ],
     "dependencies": {},
     "dependents": [

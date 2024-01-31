@@ -1,12 +1,12 @@
 Screen1 As screen:
 
     cont_ColumnChart As groupContainer.verticalAutoLayoutContainer:
-        Height: =375
+        Height: =328
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Width: =426
-        X: =484
-        Y: =96
+        Width: =331
+        X: =16
+        Y: =20
         ZIndex: =5
 
         CompositeColumnChart1 As group:
@@ -18,7 +18,7 @@ Screen1 As screen:
             Y: =-40
             ZIndex: =1
 
-            Title4 As label:
+            TitleColorApprReq As label:
                 Align: =Align.Center
                 AlignInContainer: =AlignInContainer.Center
                 Fill: =RGBA(180, 214, 250, 1)
@@ -27,7 +27,7 @@ Screen1 As screen:
                 Width: =Parent.Width
                 X: =40
                 Y: =40
-                ZIndex: =2
+                ZIndex: =1
 
             ColumnChart1 As barChart:
                 AlignInContainer: =AlignInContainer.Center
@@ -42,14 +42,183 @@ Screen1 As screen:
                 Width: =Parent.Width
                 XLabelAngle: =10
                 Y: =90
-                ZIndex: =3
+                ZIndex: =2
 
-            Legend4 As legend:
+            legendApprReq As legend:
                 AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.View
                 Height: =Parent.Height*.10
                 ItemColorSet: =ColumnChart1.ItemColorSet
                 Items: =["Pending","Approved","Decline"]
                 Width: =Parent.Width
-                ZIndex: =4
+                ZIndex: =3
+
+    "gal_DataReceivedToday As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =335
+        Items: =Filter(OM_AllDepartmentSummary,Created_On=Today())
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =424
+        X: =453
+        Y: =20
+        ZIndex: =6
+
+        Title5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Location
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Department
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Title5.Y + Title5.Height
+            ZIndex: =3
+
+    Button2 As button:
+        OnSelect: |+
+            =// Create a collection for today's data
+            ClearCollect(
+                TodayData,
+                Filter(
+                    OM_AllDepartmentSummary,
+                    Created_On = Today()
+                )
+            );
+            
+            // Create a collection for master list
+            ClearCollect(
+                MasterListData,
+                OM_MasterList
+            );
+            
+            ClearCollect(
+                MissingData,
+                ForAll(
+                    MasterListData,
+                    {
+                        Location: Location,
+                        Department: Department
+                    }
+                )
+            );
+            
+            // Remove records that are present in TodayData
+            
+        Text: ="Button"
+        X: =52
+        Y: =436
+        ZIndex: =7
+
+    "gal_MissingData As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =454
+        Items: =MissingData
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =381
+        X: =948
+        Y: =244
+        ZIndex: =8
+
+        Image2 As image:
+            Height: =72
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title6 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Location
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Department
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title6.Width
+            X: =Title6.X
+            Y: =Title6.Y + Title6.Height
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator2 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator2.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+    Label3 As label:
+        Text: =CountRows(gal_MissingData.AllItems)
+        X: =453
+        Y: =451
+        ZIndex: =9
 
