@@ -83,7 +83,6 @@
                             Height: ='Radial Progress Bar_6'.progressHeight
                             LayoutMinHeight: =640
                             LayoutMinWidth: =640
-                            OnReset: =Set(precentageVisible,!'Radial Progress Bar_6'.precentagleVisble)
                             Width: ='Radial Progress Bar_6'.progressWidth
                             ZIndex: =6
 
@@ -131,7 +130,7 @@
                         DelayItemLoading: =true
                         FillPortions: =0
                         Height: =Parent.Height*.6
-                        Items: =Filter('Oil Mining Reference Docs',Or(ThisRecord.Created= datePicker_DownloadedFiles.SelectedDate))
+                        Items: =Filter('Oil Mining Reference Docs',Created >= datePicker_DownloadedFiles.SelectedDate)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
