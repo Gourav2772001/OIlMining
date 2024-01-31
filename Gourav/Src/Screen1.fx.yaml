@@ -100,8 +100,8 @@ Screen1 As screen:
         TemplatePadding: =0
         TemplateSize: =104
         Width: =381
-        X: =478
-        Y: =63
+        X: =496
+        Y: =60
         ZIndex: =8
 
         Image2 As image:
@@ -192,4 +192,17 @@ Screen1 As screen:
         X: =1003
         Y: =20
         ZIndex: =11
+
+    "'Radial Progress Bar_7' As 'Radial Progress Bar'":
+        baseCircleColor: ="RGBA(189, 195, 199,1)"
+        Height: ='Radial Progress Bar_7'.progressHeight
+        OnReset: =Set(precentageVisible,!'Radial Progress Bar_7'.precentagleVisble)
+        progessBarPrencatageSize: =15
+        progressHeight: =80
+        progressWidth: =80
+        valueCircleColor: ="RGBA(3, 201, 169,1)"
+        Width: ='Radial Progress Bar_7'.progressWidth
+        X: =132
+        Y: =488
+        ZIndex: =12
 

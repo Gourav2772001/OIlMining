@@ -63,28 +63,101 @@
                         Width: =Parent.Width
                         ZIndex: =1
 
-                        cont_PieChartApprovalReq As groupContainer.manualLayoutContainer:
+                        cont_Pie_FormProgress As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =Parent.Height*.3
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
-                            Width: =Parent.Width*.5
-                            ZIndex: =5
-
-                            PieChartApprovalReq_1 As pieChart:
-                                Explode: =1
-                                Height: =Parent.Height
-                                Items: =StatusCounts
-                                Width: =Parent.Width*.4
-                                ZIndex: =3
-
-                        "'Radial Progress Bar_6' As 'Radial Progress Bar'":
-                            AlignInContainer: =AlignInContainer.Center
-                            Height: ='Radial Progress Bar_6'.progressHeight
-                            LayoutMinHeight: =640
-                            LayoutMinWidth: =640
-                            Width: ='Radial Progress Bar_6'.progressWidth
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
                             ZIndex: =6
+
+                            con_PIeChartApproval As groupContainer.verticalAutoLayoutContainer:
+                                Height: =Parent.Height
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                lbl_ApprovalReqsts As label:
+                                    Align: =Align.Center
+                                    AutoHeight: =true
+                                    Fill: =RGBA(180, 214, 250, 1)
+                                    FontWeight: =FontWeight.Bold
+                                    Text: ="Approval Requests"
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                cont_PieCharholder As groupContainer.manualLayoutContainer:
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    CompositePieChart4 As group:
+                                        Height: =5
+                                        Width: =5
+                                        X: =-40
+                                        Y: =-70
+                                        ZIndex: =1
+
+                                        PieChart4 As pieChart:
+                                            Height: =Parent.Height
+                                            Items: =StatusCounts
+                                            Width: =Parent.Width
+                                            ZIndex: =2
+
+                                        Legend5 As legend:
+                                            DisplayMode: =DisplayMode.View
+                                            Height: =Parent.Height
+                                            ItemColorSet: =PieChart4.ItemColorSet
+                                            Items: =PieChart4.SeriesLabels
+                                            Width: =Parent.Width
+                                            ZIndex: =3
+
+                            cont_formProgress As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =2
+
+                                lbl_totFormFill As label:
+                                    Align: =Align.Center
+                                    AutoHeight: =true
+                                    Fill: =RGBA(180, 214, 250, 1)
+                                    FontWeight: =FontWeight.Bold
+                                    Text: ="Total Forms Filled"
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                cont_fillProgImg As groupContainer.horizontalAutoLayoutContainer:
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    img_FormFillup As image:
+                                        Height: =Parent.Height
+                                        Image: =FormFilil
+                                        Width: =Parent.Width*.3
+                                        ZIndex: =1
+
+                                    "'Radial Progress Bar_6' As 'Radial Progress Bar'":
+                                        Height: ='Radial Progress Bar_6'.progressHeight
+                                        LayoutMinHeight: =640
+                                        LayoutMinWidth: =640
+                                        OnReset: =Set(precentageVisible,!'Radial Progress Bar_6'.precentagleVisble)
+                                        progressHeight: =Parent.Height
+                                        progressValueCircle: =Round((CountRows(gal_totalFormCount.AllItems)/16)*100,0)
+                                        progressWidth: =Parent.Height*.85
+                                        Width: ='Radial Progress Bar_6'.progressWidth
+                                        ZIndex: =2
 
                 cont_ContetnRightGallery As groupContainer.verticalAutoLayoutContainer:
                     BorderThickness: =1
@@ -475,4 +548,17 @@
             Visible: =false
             Width: =50
             ZIndex: =7
+
+    gal_totalFormCount As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =112
+        Items: =Filter(OM_AllDepartmentSummary,Created_On=Today() && Status="Pending")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Visible: =false
+        Width: =42
+        X: =30
+        Y: =75
+        ZIndex: =5
 
