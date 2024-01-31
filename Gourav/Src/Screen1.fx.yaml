@@ -53,59 +53,11 @@ Screen1 As screen:
                 Width: =Parent.Width
                 ZIndex: =3
 
-    "gal_DataReceivedToday As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        DelayItemLoading: =true
-        Height: =335
-        Items: =Filter(OM_AllDepartmentSummary,Created_On=Today())
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =104
-        Width: =424
-        X: =453
-        Y: =20
-        ZIndex: =6
-
-        Title5 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Location
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 173
-            X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
-            ZIndex: =2
-
-        Subtitle1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Department
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title5.Width
-            X: =Title5.X
-            Y: =Title5.Y + Title5.Height
-            ZIndex: =3
-
     Button2 As button:
+        Height: =28
         OnSelect: |+
-            =// Create a collection for today's data
-            ClearCollect(
-                TodayData,
-                Filter(
-                    OM_AllDepartmentSummary,
-                    Created_On = Today()
-                )
-            );
+            =//ForAll(Filter(OM_AllDepartmentSummary,Created_On=Today()) As summaryTable,If(IsEmpty(Filter(OM_MasterList,Location=summaryTable.Location&&Department=summaryTable.Department)),Collect(Missingform,Filter(OM_MasterList,Location=summaryTable.Location&&Department=summaryTable.Department)),""))
+            
             
             // Create a collection for master list
             ClearCollect(
@@ -114,46 +66,42 @@ Screen1 As screen:
             );
             
             ClearCollect(
+                AllDeptSumm,
+               Filter( OM_AllDepartmentSummary,Created_On=Today())
+            );
+            
+            // Create a collection to store missing data
+            ClearCollect(
                 MissingData,
-                ForAll(
-                    MasterListData,
-                    {
-                        Location: Location,
-                        Department: Department
-                    }
+                Filter(
+                    MasterListData As mstr,
+                    CountRows(
+                        Filter(
+                            AllDeptSumm,
+                            Department = mstr.Department &&
+                            Location = mstr.Location
+                        )
+                    ) = 0
                 )
             );
             
-            ClearCollect(
-                jfjfjf,
-                ForAll(
-               Filter(OM_AllDepartmentSummary,Created_On=Today()) As summaryTable,
-            
-                
-                    Filter(
-                OM_MasterList,
-                Location=summaryTable.Location && Department=summaryTable.Department
-               )
-                
-            )
-            )
-            
-        Text: ="Button"
-        X: =52
-        Y: =436
+        Text: ="Forms To be filled"
+        Width: =213
+        X: =664
+        Y: =20
         ZIndex: =7
 
     "gal_MissingData As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =454
-        Items: =OM_MasterList
+        Items: =MissingData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
         Width: =381
-        X: =948
-        Y: =244
+        X: =478
+        Y: =63
         ZIndex: =8
 
         Image2 As image:
@@ -230,18 +178,18 @@ Screen1 As screen:
 
     Label3 As label:
         Text: =CountRows(gal_MissingData.AllItems)
-        X: =453
-        Y: =451
+        X: =536
+        Y: =20
         ZIndex: =9
 
     Label4 As label:
         Text: =DatePicker1.SelectedDate
-        X: =57
-        Y: =614
+        X: =1064
+        Y: =92
         ZIndex: =10
 
     DatePicker1 As datepicker:
-        X: =52
-        Y: =520
+        X: =1003
+        Y: =20
         ZIndex: =11
 
