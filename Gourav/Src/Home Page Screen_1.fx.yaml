@@ -169,7 +169,7 @@
                                 cont_fillProgImg As groupContainer.horizontalAutoLayoutContainer:
                                     Height: =Parent.Height
                                     LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
+                                    LayoutMinWidth: =0
                                     LayoutMode: =LayoutMode.Auto
                                     Width: =Parent.Width
                                     ZIndex: =2
@@ -207,7 +207,7 @@
                                 cont_fillProgImg_1 As groupContainer.horizontalAutoLayoutContainer:
                                     Height: =Parent.Height
                                     LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
+                                    LayoutMinWidth: =0
                                     LayoutMode: =LayoutMode.Auto
                                     Width: =Parent.Width
                                     ZIndex: =2

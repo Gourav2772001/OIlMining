@@ -7363,6 +7363,216 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Page Screen_2'.cont_HeaderRegionalForm_8.Icon_download_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.cont_HeaderRegionalForm_8.Icon_download_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.cont_HeaderRegionalForm_8.Icon_download_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.cont_HeaderRegionalForm_8.Icon_download_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.cont_HeaderRegionalForm_8.Icon_download_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.cont_HeaderRegionalForm_8.Icon_download_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_mainHeader_3.progressBar_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_mainHeader_3.progressBar_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_mainHeader_3.progressBar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_graphChart_1.gal_allSummaryITemCount_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_graphChart_1.gal_allSummaryITemCount_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_graphChart_1.gal_allSummaryITemCount_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_graphChart_1.gal_allSummaryITemCount_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_graphChart_1.gal_allSummaryITemCount_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_graphChart_1.gal_allSummaryITemCount_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_OtherChart_1.con_progessBar_1.gal_mining_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_OtherChart_1.con_progessBar_1.gal_mining_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_OtherChart_1.con_progessBar_1.gal_mining_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_OtherChart_1.con_progessBar_1.gal_mining_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_OtherChart_1.con_progessBar_1.gal_mining_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.con_OtherChart_1.con_progessBar_1.gal_mining_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AdminFormFilled"
                 }
               ],
@@ -8434,6 +8644,36 @@
           },
           "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_mainHeader_3.lbl_welcome_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_mainHeader_3.lbl_welcome_2.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_mainHeader_3.lbl_welcome_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
         }
       ],
       "tool": {
