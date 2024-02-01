@@ -50,7 +50,6 @@
 
             con_mainHeader_2 As groupContainer.horizontalAutoLayoutContainer:
                 BorderStyle: =BorderStyle.None
-                BorderThickness: =1
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =Parent.Height
@@ -71,6 +70,7 @@
                 ZIndex: =1
 
                 Cont_ContentLeftGallery As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
                     Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
@@ -82,6 +82,7 @@
                     cont_Content_1LeftGallery As groupContainer.verticalAutoLayoutContainer:
                         Height: =Parent.Height
                         LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =10
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
@@ -95,10 +96,6 @@
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            PaddingBottom: =5
-                            PaddingLeft: =5
-                            PaddingRight: =5
-                            PaddingTop: =5
                             Width: =Parent.Width
                             ZIndex: =6
 
@@ -106,7 +103,7 @@
                                 Height: =Parent.Height
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =100
-                                LayoutMinWidth: =250
+                                LayoutMinWidth: =0
                                 LayoutMode: =LayoutMode.Auto
                                 Width: =Parent.Width
                                 ZIndex: =1
@@ -150,13 +147,13 @@
                                             ItemColorSet: =PieChart4.ItemColorSet
                                             Items: =PieChart4.SeriesLabels
                                             Width: =105
-                                            Y: =2
+                                            Y: =20
                                             ZIndex: =3
 
                             cont_formProgress As groupContainer.verticalAutoLayoutContainer:
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =100
-                                LayoutMinWidth: =250
+                                LayoutMinWidth: =0
                                 LayoutMode: =LayoutMode.Auto
                                 ZIndex: =2
 
@@ -194,7 +191,7 @@
                             cont_formProgress_1 As groupContainer.verticalAutoLayoutContainer:
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =100
-                                LayoutMinWidth: =250
+                                LayoutMinWidth: =0
                                 LayoutMode: =LayoutMode.Auto
                                 ZIndex: =3
 
@@ -318,7 +315,7 @@
                     ZIndex: =2
 
                     cont_progressFormfill As groupContainer.manualLayoutContainer:
-                        BorderThickness: =1
+                        BorderStyle: =BorderStyle.None
                         FillPortions: =0
                         Height: =Parent.Height*.25
                         LayoutMinHeight: =100
@@ -420,7 +417,6 @@
                         ZIndex: =4
 
                     gal_ReferenceDocs As gallery.galleryVertical:
-                        BorderThickness: =1
                         DelayItemLoading: =true
                         FillPortions: =0
                         Height: =Parent.Height*.6
