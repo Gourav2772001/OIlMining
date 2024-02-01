@@ -196,7 +196,6 @@ Screen1 As screen:
     "'Radial Progress Bar_7' As 'Radial Progress Bar'":
         baseCircleColor: ="RGBA(189, 195, 199,1)"
         Height: ='Radial Progress Bar_7'.progressHeight
-        OnReset: =Set(precentageVisible,!'Radial Progress Bar_7'.precentagleVisble)
         progessBarPrencatageSize: =15
         progressHeight: =80
         progressWidth: =80
