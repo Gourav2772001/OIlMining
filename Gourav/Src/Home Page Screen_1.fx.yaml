@@ -259,7 +259,7 @@
                     cont_DownloadFileDatePicker As groupContainer.horizontalAutoLayoutContainer:
                         Fill: =RGBA(180, 214, 250, 1)
                         FillPortions: =0
-                        Height: =Parent.Height*.1
+                        Height: =30
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
