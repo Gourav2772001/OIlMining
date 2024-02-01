@@ -77,45 +77,35 @@
                             PaddingBottom: =8
                             PaddingLeft: =2
                             Size: =11
-                            Text: ="Jaipur Net Sales"
+                            Text: ="Approval Awaiting"
                             Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon.Width,Parent.Width)
                             ZIndex: =2
 
-                    con_SubChildSec As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height-con_subChildOne.Height
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width
+                    CompositePieChart4_1 As group:
+                        Height: =5
+                        LayoutMinHeight: =5
+                        LayoutMinWidth: =5
+                        Width: =5
+                        X: =-40
+                        Y: =-70
                         ZIndex: =2
 
-                        lbl_netWorthNo As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
+                        PieChart4_2 As pieChart:
                             Height: =Parent.Height
-                            Size: =12
-                            Text: |
-                                =//"$5048598K"
-                                //LookUp(OM_Sales_to_Jaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
-                                
-                                  LookUp(OM_Sales_to_Jaipur_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jaipur",Department="Sales")).'Reference ID').Net_Sales
-                                 
-                            Width: =Parent.Width-'Radial Progress Bar_1'.Width
-                            ZIndex: =1
+                            Items: =StatusCounts
+                            ShowLabels: =false
+                            Width: =Parent.Width
+                            X: =118
+                            ZIndex: =3
 
-                        "'Radial Progress Bar_1' As 'Radial Progress Bar'":
-                            Height: ='Radial Progress Bar_1'.progressHeight
-                            LayoutMinHeight: =640
-                            LayoutMinWidth: =640
-                            progessBarPrencatageSize: =8
-                            progressHeight: =Parent.Height*.8
-                            progressValueCircle: =(2/16)*100
-                            progressWidth: =Parent.Width*.3
-                            Width: ='Radial Progress Bar_1'.progressWidth
-                            ZIndex: =2
+                        Legend5_1 As legend:
+                            DisplayMode: =DisplayMode.View
+                            Height: =103
+                            ItemColorSet: =PieChart4_2.ItemColorSet
+                            Items: =PieChart4_2.SeriesLabels
+                            Width: =105
+                            Y: =11
+                            ZIndex: =4
 
             con_kpi2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

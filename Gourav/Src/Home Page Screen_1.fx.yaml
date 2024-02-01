@@ -71,7 +71,6 @@
                 ZIndex: =1
 
                 Cont_ContentLeftGallery As groupContainer.verticalAutoLayoutContainer:
-                    BorderThickness: =1
                     Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
@@ -92,9 +91,14 @@
                         cont_Pie_FormProgress As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =Parent.Height*.3
+                            LayoutGap: =5
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =5
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            PaddingTop: =5
                             Width: =Parent.Width
                             ZIndex: =6
 
@@ -133,15 +137,18 @@
                                         PieChart4 As pieChart:
                                             Height: =Parent.Height
                                             Items: =StatusCounts
-                                            Width: =Parent.Width
+                                            ShowLabels: =false
+                                            Width: =245
+                                            X: =118
                                             ZIndex: =2
 
                                         Legend5 As legend:
                                             DisplayMode: =DisplayMode.View
-                                            Height: =Parent.Height
+                                            Height: =103
                                             ItemColorSet: =PieChart4.ItemColorSet
                                             Items: =PieChart4.SeriesLabels
-                                            Width: =Parent.Width
+                                            Width: =105
+                                            Y: =11
                                             ZIndex: =3
 
                             cont_formProgress As groupContainer.verticalAutoLayoutContainer:
@@ -156,7 +163,7 @@
                                     AutoHeight: =true
                                     Fill: =RGBA(180, 214, 250, 1)
                                     FontWeight: =FontWeight.Bold
-                                    Text: ="Total Forms Filled"
+                                    Text: ="Awaiting Form Arrival"
                                     Width: =Parent.Width
                                     ZIndex: =1
 
@@ -171,8 +178,55 @@
                                     img_FormFillup As image:
                                         Height: =Parent.Height
                                         Image: =FormFilil
+                                        ImagePosition: =ImagePosition.Fill
                                         Width: =Parent.Width*.3
                                         ZIndex: =1
+
+                                    lbl_FormArrivCount As label:
+                                        Align: =Align.Center
+                                        AlignInContainer: =AlignInContainer.Center
+                                        FontWeight: =FontWeight.Bold
+                                        Size: =20
+                                        Text: =CountRows(gal_FormNotFilled.AllItems)
+                                        ZIndex: =2
+
+                            cont_formProgress_1 As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =3
+
+                                lbl_totFormFill_1 As label:
+                                    Align: =Align.Center
+                                    AutoHeight: =true
+                                    Fill: =RGBA(180, 214, 250, 1)
+                                    FontWeight: =FontWeight.Bold
+                                    Text: ="Total Profit"
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                cont_fillProgImg_1 As groupContainer.horizontalAutoLayoutContainer:
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    img_FormFillup_1 As image:
+                                        Height: =Parent.Height
+                                        Image: =asaliprofit
+                                        Width: =Parent.Width*.3
+                                        ZIndex: =1
+
+                                    lbl_FormArrivCount_1 As label:
+                                        Align: =Align.Center
+                                        AlignInContainer: =AlignInContainer.Center
+                                        FontWeight: =FontWeight.Bold
+                                        Size: =20
+                                        Text: =CountRows(gal_FormNotFilled.AllItems)
+                                        ZIndex: =2
 
                         cont_galHeaderForm As groupContainer.manualLayoutContainer:
                             FillPortions: =0
@@ -246,17 +300,99 @@
                                     ZIndex: =2
 
                 cont_ContetnRightGallery As groupContainer.verticalAutoLayoutContainer:
+                    BorderStyle: =BorderStyle.None
                     BorderThickness: =1
+                    DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Parent.Height
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
                     Width: =Parent.Width*.3
                     ZIndex: =2
 
+                    cont_progressFormfill As groupContainer.manualLayoutContainer:
+                        BorderThickness: =1
+                        FillPortions: =0
+                        Height: =Parent.Height*.25
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingTop: =10
+                        ZIndex: =1
+
+                        "ProgressCirlceFormFilled As 'Radial Progress Bar'":
+                            baseCircleColor: ="RGBA(189, 195, 199,1)"
+                            Height: =69
+                            progressHeight: =Parent.Height
+                            progressValueCircle: =Round((CountRows(gal_totalFormCount.AllItems)/16)*100,0)
+                            progressWidth: =Parent.Height*.85
+                            valueCircleColor: ="RGBA(3, 201, 169,1)"
+                            Width: =94
+                            X: =5
+                            Y: =45
+
+                        lbl_FormsFillled As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            BorderThickness: =1
+                            Fill: =RGBA(180, 214, 250, 1)
+                            FocusedBorderThickness: =1
+                            FontWeight: =FontWeight.Bold
+                            PaddingTop: =10
+                            Text: ="Global Form Intake"
+                            Width: =Parent.Width
+                            X: =Parent.X
+                            ZIndex: =2
+
+                        lbl_deppts As label:
+                            Height: =33
+                            Text: |-
+                                ="Departments: "
+                            Width: =Parent.Width*.38
+                            X: =Parent.X+ProgressCirlceFormFilled.Width
+                            Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height
+                            ZIndex: =3
+
+                        lbl_locttion As label:
+                            Text: |-
+                                ="Regions:"
+                            Width: =Parent.Width*.38
+                            X: =Parent.X+ProgressCirlceFormFilled.Width
+                            Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height+lbl_deppts.Height
+                            ZIndex: =4
+
+                        lbl_dptNum As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            Text: ="6"
+                            Width: =62
+                            X: =228
+                            Y: =37
+                            ZIndex: =5
+
+                        lbl_regionNum As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            Text: ="5"
+                            Width: =62
+                            X: =228
+                            Y: =75
+                            ZIndex: =6
+
+                    lbl_gapReferenceGAl As label:
+                        Height: =Parent.Height*.04
+                        Text: =""
+                        ZIndex: =2
+
                     cont_DownloadFileDatePicker As groupContainer.horizontalAutoLayoutContainer:
+                        BorderThickness: =1
                         Fill: =RGBA(180, 214, 250, 1)
                         FillPortions: =0
                         Height: =Parent.Height*.1
@@ -264,11 +400,12 @@
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         Width: =Parent.Width
-                        ZIndex: =1
+                        ZIndex: =3
 
                         lbl_DownloadedFiles As label:
                             Align: =Align.Center
                             AlignInContainer: =AlignInContainer.Center
+                            AutoHeight: =true
                             FontWeight: =FontWeight.Bold
                             Text: ="Downloaded Files"
                             Width: =Parent.Width
@@ -277,7 +414,7 @@
                     rect_DownloadedFileUnderline As rectangle:
                         Height: =1
                         Width: =Parent.Width
-                        ZIndex: =2
+                        ZIndex: =4
 
                     gal_ReferenceDocs As gallery.galleryVertical:
                         BorderThickness: =1
@@ -291,7 +428,7 @@
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =70
                         Width: =Parent.Width
-                        ZIndex: =3
+                        ZIndex: =5
 
                         lbl_fileName As label:
                             OnSelect: =Select(Parent)
@@ -356,75 +493,6 @@
                             X: =115
                             Y: =2
                             ZIndex: =7
-
-                    lbl_gapReferenceGAl As label:
-                        Height: =Parent.Height*.04
-                        Text: =""
-                        ZIndex: =4
-
-                    cont_progressFormfill As groupContainer.manualLayoutContainer:
-                        FillPortions: =0
-                        Height: =Parent.Height*.25
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        ZIndex: =5
-
-                        "ProgressCirlceFormFilled As 'Radial Progress Bar'":
-                            baseCircleColor: ="RGBA(189, 195, 199,1)"
-                            Height: =89
-                            progressHeight: =Parent.Height
-                            progressValueCircle: =Round((CountRows(gal_totalFormCount.AllItems)/16)*100,0)
-                            progressWidth: =Parent.Height*.85
-                            valueCircleColor: ="RGBA(3, 201, 169,1)"
-                            Width: =ProgressCirlceFormFilled.progressWidth
-                            Y: =31
-
-                        lbl_FormsFillled As label:
-                            Align: =Align.Center
-                            AutoHeight: =true
-                            Fill: =RGBA(180, 214, 250, 1)
-                            FontWeight: =FontWeight.Bold
-                            Text: ="Global Form Intake"
-                            Width: =Parent.Width
-                            X: =Parent.X
-                            ZIndex: =2
-
-                        lbl_deppts As label:
-                            Height: =33
-                            Text: |-
-                                ="Departments: "
-                            Width: =Parent.Width*.38
-                            X: =Parent.X+ProgressCirlceFormFilled.Width
-                            Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height
-                            ZIndex: =3
-
-                        lbl_locttion As label:
-                            Text: |-
-                                ="Regions:"
-                            Width: =Parent.Width*.38
-                            X: =Parent.X+ProgressCirlceFormFilled.Width
-                            Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height+lbl_deppts.Height
-                            ZIndex: =4
-
-                        lbl_dptNum As label:
-                            Align: =Align.Center
-                            FontWeight: =FontWeight.Bold
-                            Height: =30
-                            Text: ="6"
-                            Width: =62
-                            X: =228
-                            Y: =37
-                            ZIndex: =5
-
-                        lbl_regionNum As label:
-                            Align: =Align.Center
-                            FontWeight: =FontWeight.Bold
-                            Height: =30
-                            Text: ="5"
-                            Width: =62
-                            X: =228
-                            Y: =75
-                            ZIndex: =6
 
         Cont_mainCont_1 As groupContainer.verticalAutoLayoutContainer:
             Height: =Parent.Height/11
