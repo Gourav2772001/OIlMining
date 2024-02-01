@@ -121,6 +121,7 @@
                                     ZIndex: =1
 
                                 cont_PieCharholder As groupContainer.manualLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Center
                                     Height: =Parent.Height
                                     LayoutMinHeight: =100
                                     LayoutMinWidth: =250
@@ -136,19 +137,20 @@
 
                                         PieChart4 As pieChart:
                                             Height: =Parent.Height
+                                            ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                                             Items: =StatusCounts
                                             ShowLabels: =false
-                                            Width: =245
-                                            X: =118
+                                            Width: =129
+                                            X: =120
                                             ZIndex: =2
 
                                         Legend5 As legend:
                                             DisplayMode: =DisplayMode.View
-                                            Height: =103
+                                            Height: =75
                                             ItemColorSet: =PieChart4.ItemColorSet
                                             Items: =PieChart4.SeriesLabels
                                             Width: =105
-                                            Y: =11
+                                            Y: =2
                                             ZIndex: =3
 
                             cont_formProgress As groupContainer.verticalAutoLayoutContainer:
@@ -178,7 +180,6 @@
                                     img_FormFillup As image:
                                         Height: =Parent.Height
                                         Image: =FormFilil
-                                        ImagePosition: =ImagePosition.Fill
                                         Width: =Parent.Width*.3
                                         ZIndex: =1
 
@@ -350,20 +351,22 @@
                             ZIndex: =2
 
                         lbl_deppts As label:
+                            FontWeight: =FontWeight.Semibold
                             Height: =33
                             Text: |-
                                 ="Departments: "
-                            Width: =Parent.Width*.38
+                            Width: =Parent.Width*.4
                             X: =Parent.X+ProgressCirlceFormFilled.Width
-                            Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height
+                            Y: =Parent.Y+lbl_FormsFillled.Height
                             ZIndex: =3
 
                         lbl_locttion As label:
+                            FontWeight: =FontWeight.Semibold
                             Text: |-
                                 ="Regions:"
                             Width: =Parent.Width*.38
                             X: =Parent.X+ProgressCirlceFormFilled.Width
-                            Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height+lbl_deppts.Height
+                            Y: =Parent.Y+lbl_deppts.Height+lbl_deppts.Height
                             ZIndex: =4
 
                         lbl_dptNum As label:
