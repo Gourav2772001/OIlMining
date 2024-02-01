@@ -406,7 +406,7 @@
                             Y: =Parent.Y-lbl_FormsFillled.Height-gal_ReferenceDocs.Height+lbl_deppts.Height
                             ZIndex: =4
 
-                        Label9 As label:
+                        lbl_dptNum As label:
                             Align: =Align.Center
                             FontWeight: =FontWeight.Bold
                             Height: =30
@@ -415,6 +415,16 @@
                             X: =228
                             Y: =37
                             ZIndex: =5
+
+                        lbl_regionNum As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            Text: ="5"
+                            Width: =62
+                            X: =228
+                            Y: =75
+                            ZIndex: =6
 
         Cont_mainCont_1 As groupContainer.verticalAutoLayoutContainer:
             Height: =Parent.Height/11

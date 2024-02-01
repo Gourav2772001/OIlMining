@@ -93,7 +93,7 @@ Screen1 As screen:
 
     "gal_MissingData As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =454
+        Height: =268
         Items: =MissingData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -105,20 +105,21 @@ Screen1 As screen:
         ZIndex: =8
 
         Image2 As image:
-            Height: =72
+            Height: =37
+            ImagePosition: =ImagePosition.Fill
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =72
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            Width: =58
+            X: =24
+            Y: =27
             ZIndex: =1
 
         Title6 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+            Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -126,7 +127,7 @@ Screen1 As screen:
             PaddingTop: =0
             Text: =ThisItem.Location
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 173
+            Width: =85
             X: =103
             Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
             ZIndex: =2
@@ -142,8 +143,8 @@ Screen1 As screen:
             Text: =ThisItem.Department
             VerticalAlign: =VerticalAlign.Top
             Width: =Title6.Width
-            X: =Title6.X
-            Y: =Title6.Y + Title6.Height
+            X: =211
+            Y: =30
             ZIndex: =3
 
         NextArrow2 As icon.ChevronRight:
@@ -201,7 +202,440 @@ Screen1 As screen:
         progressWidth: =80
         valueCircleColor: ="RGBA(3, 201, 169,1)"
         Width: ='Radial Progress Bar_7'.progressWidth
-        X: =132
-        Y: =488
+        X: =160
+        Y: =415
         ZIndex: =12
+
+    cont_mainKpi_1 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height/5.5
+        LayoutGap: =15
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Visible: =If(App.ActiveScreen.Size=4||App.ActiveScreen.Size=3,true,false)
+        Width: =Parent.Width-80
+        X: =70
+        Y: =575
+        ZIndex: =13
+
+        cont_kpi1_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height-20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            ZIndex: =1
+
+            con_SubChild_5 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                con_subChildOne_5 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*.4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_kpiIcon_5 As image:
+                        Height: =Parent.Height*.8
+                        Image: |-
+                            =  "data:image/svg+xml;utf8," & 
+                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
+                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
+                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
+                            </svg>
+                            ")
+                        PaddingBottom: =5
+                        PaddingRight: =5
+                        Visible: =If(App.ActiveScreen.Size=4,true,false)
+                        Width: =Parent.Width*.2
+                        ZIndex: =1
+
+                    lbl_companyName_5 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =Parent.Height*.8
+                        PaddingBottom: =8
+                        PaddingLeft: =2
+                        Size: =11
+                        Text: ="Daily Approval Snapshot"
+                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_5.Width,Parent.Width)
+                        ZIndex: =2
+
+                con_SubChildSec_5 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height-con_subChildOne_5.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    PieChart4_1 As pieChart:
+                        AlignInContainer: =AlignInContainer.Start
+                        DisplayMode: =DisplayMode.View
+                        Height: =Parent.Height
+                        Items: =StatusCounts
+                        LabelPosition: =LabelPosition.Inside
+                        Width: =Parent.Width
+                        ZIndex: =4
+
+        con_kpi2_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height-20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            ZIndex: =2
+
+            con_SubChild_6 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                con_subChildOne_6 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*.4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_kpiIcon_6 As image:
+                        Height: =Parent.Height*.8
+                        Image: |-
+                            =  "data:image/svg+xml;utf8," & 
+                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
+                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
+                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
+                            </svg>
+                            ")
+                        PaddingBottom: =5
+                        PaddingRight: =5
+                        Visible: =If(App.ActiveScreen.Size=4,true,false)
+                        Width: =Parent.Width*.2
+                        ZIndex: =1
+
+                    lbl_companyName_6 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =Parent.Height*.8
+                        PaddingBottom: =8
+                        PaddingLeft: =2
+                        Size: =10
+                        Text: ="Jodhpur Net Sales"
+                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_6.Width,Parent.Width)
+                        ZIndex: =2
+
+                con_SubChildSec_6 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height-con_subChildOne_6.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    lbl_netWorthNo_6 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =12
+                        Text: |-
+                            =//"$5048598K"
+                            //LookUp(OM_Sales_to_Jodhpur,Net_Sales=Max(Net_Sales)).Net_Sales
+                              LookUp(OM_Sales_to_Jodhpur,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jodhpur",Department="Sales")).'Reference ID').Net_Sales
+                             
+                        Width: =Parent.Width-'Radial Progress Bar_8'.Width
+                        ZIndex: =1
+
+                    "'Radial Progress Bar_8' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_8'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progessBarPrencatageSize: =8
+                        progressHeight: =Parent.Height*.8
+                        progressWidth: =Parent.Width*.3
+                        Width: ='Radial Progress Bar_8'.progressWidth
+                        ZIndex: =2
+
+        con_kpi3_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height-20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            ZIndex: =3
+
+            con_SubChild_7 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                con_subChildOne_7 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*.4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_kpiIcon_7 As image:
+                        Height: =Parent.Height*.8
+                        Image: |-
+                            =  "data:image/svg+xml;utf8," & 
+                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
+                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
+                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
+                            </svg>
+                            ")
+                        PaddingBottom: =5
+                        PaddingRight: =5
+                        Visible: =If(App.ActiveScreen.Size=4,true,false)
+                        Width: =Parent.Width*.2
+                        ZIndex: =1
+
+                    lbl_companyName_7 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =Parent.Height*.8
+                        PaddingBottom: =8
+                        PaddingLeft: =2
+                        Size: =10
+                        Text: ="Udaipur Net Sales"
+                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_7.Width,Parent.Width)
+                        ZIndex: =2
+
+                con_SubChildSec_7 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height-con_subChildOne_7.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    lbl_netWorthNo_7 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =12
+                        Text: |-
+                            =//"$5048598K"
+                            //LookUp(OM_Sales_to_Udaipur_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                              LookUp(OM_Sales_to_Udaipur_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Udaipur",Department="Sales")).'Reference ID').Net_Sales
+                             
+                        Width: =Parent.Width-'Radial Progress Bar_9'.Width
+                        ZIndex: =1
+
+                    "'Radial Progress Bar_9' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_9'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progessBarPrencatageSize: =8
+                        progressHeight: =Parent.Height*.8
+                        progressWidth: =Parent.Width*.3
+                        Width: ='Radial Progress Bar_9'.progressWidth
+                        ZIndex: =2
+
+        con_kpi4_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height-20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            ZIndex: =4
+
+            con_SubChild_8 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                con_subChildOne_8 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*.4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_kpiIcon_8 As image:
+                        Height: =Parent.Height*.8
+                        Image: |-
+                            =  "data:image/svg+xml;utf8," & 
+                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
+                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
+                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
+                            </svg>
+                            ")
+                        PaddingBottom: =5
+                        PaddingRight: =5
+                        Visible: =If(App.ActiveScreen.Size=4,true,false)
+                        Width: =Parent.Width*.2
+                        ZIndex: =1
+
+                    lbl_companyName_8 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =Parent.Height*.8
+                        PaddingBottom: =8
+                        PaddingLeft: =2
+                        Size: =11
+                        Text: ="Kota Net Sales"
+                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_8.Width,Parent.Width)
+                        ZIndex: =2
+
+                con_SubChildSec_8 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height-con_subChildOne_8.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    lbl_netWorthNo_8 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =12
+                        Text: |-
+                            =//"$5048598K"
+                            //LookUp(OM_Sales_to_Kota_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
+                              LookUp(OM_Sales_to_Kota_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Kota",Department="Sales")).'Reference ID').Net_Sales
+                             
+                        Width: =Parent.Width-'Radial Progress Bar_10'.Width
+                        ZIndex: =1
+
+                    "'Radial Progress Bar_10' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_10'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progessBarPrencatageSize: =8
+                        progressHeight: =Parent.Height*.8
+                        progressWidth: =Parent.Width*.3
+                        Width: ='Radial Progress Bar_10'.progressWidth
+                        ZIndex: =2
+
+        con_kpi5_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height-20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            Width: =Parent.Width
+            ZIndex: =5
+
+            con_SubChild_9 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                con_subChildOne_9 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height*.4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_kpiIcon_9 As image:
+                        Height: =Parent.Height*.8
+                        Image: |-
+                            =  "data:image/svg+xml;utf8," & 
+                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
+                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
+                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
+                            </svg>
+                            ")
+                        PaddingBottom: =5
+                        PaddingRight: =5
+                        Visible: =If(App.ActiveScreen.Size=4,true,false)
+                        Width: =Parent.Width*.2
+                        ZIndex: =1
+
+                    lbl_companyName_9 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =Parent.Height*.8
+                        PaddingBottom: =8
+                        PaddingLeft: =2
+                        Size: =10
+                        Text: ="Jaisalmer Net Sales"
+                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_9.Width,Parent.Width)
+                        ZIndex: =2
+
+                con_SubChildSec_9 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height-con_subChildOne_9.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    lbl_netWorthNo_9 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =12
+                        Text: |-
+                            =//"$5048598K"
+                            //LookUp(OM_Sales_to_Jaisalmer,Net_Sales=Max(Net_Sales)).Net_Sales
+                              LookUp(OM_Sales_to_Jaisalmer,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jaisalmer",Department="Sales")).'Reference ID').Net_Sales
+                             
+                        Width: =Parent.Width-'Radial Progress Bar_11'.Width
+                        ZIndex: =1
+
+                    "'Radial Progress Bar_11' As 'Radial Progress Bar'":
+                        Height: ='Radial Progress Bar_11'.progressHeight
+                        LayoutMinHeight: =640
+                        LayoutMinWidth: =640
+                        progessBarPrencatageSize: =8
+                        progressHeight: =Parent.Height*.8
+                        progressWidth: =Parent.Width*.3
+                        Width: ='Radial Progress Bar_11'.progressWidth
+                        ZIndex: =2
 
