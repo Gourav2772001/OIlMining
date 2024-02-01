@@ -608,7 +608,7 @@
                         Height: =25
                         Text: ="Gross Sale (Monthly)"
                         Visible: |
-                            =If(Persona="Manager", false,true )
+                            =If(Persona="Manager" || IsBlank(Persona), false,true )
                         Width: =Parent.Width
                         Y: =40
                         ZIndex: =7
@@ -617,7 +617,7 @@
                         Height: =386
                         Items: =LineChartSample
                         Visible: |
-                            =If(Persona="Manager", false,true )
+                            =If(Persona="Manager" || IsBlank(Persona), false,true )
                         Width: =Parent.Width
                         ZIndex: =8
 
@@ -626,10 +626,115 @@
                         ItemColorSet: =LineChart1_1.ItemColorSet
                         Items: =LineChart1_1.SeriesLabels
                         Visible: |
-                            =If(Persona="Manager", false,true )
+                            =If(Persona="Manager" || IsBlank(Persona), false,true )
                         Width: =Parent.Width
                         Y: =306
                         ZIndex: =9
+
+                cont_104 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =10
+
+                    cont_105 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Regular
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =1
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        ZIndex: =2
+
+                        lbl_galHeading_1 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(9, 33, 98, 1)
+                            Fill: =RGBA(180, 214, 250, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            Text: ="Awaiting Form Submission"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        cont_106 As groupContainer.horizontalAutoLayoutContainer:
+                            Fill: =RGBA(180, 214, 250, 1)
+                            FillPortions: =0
+                            Height: =30
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                            lbl_columDept_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Center
+                                FillPortions: =1
+                                LayoutMinWidth: =0
+                                Text: ="Department"
+                                ZIndex: =1
+
+                            lbl_columLocat_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Center
+                                FillPortions: =1
+                                LayoutMinWidth: =0
+                                Text: ="Location"
+                                ZIndex: =2
+
+                            lbl_columSupervisor_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Center
+                                FillPortions: =1
+                                LayoutMinWidth: =0
+                                Text: ="Supervisor"
+                                ZIndex: =3
+
+                        Gal_missData_1 As gallery.galleryVertical:
+                            DelayItemLoading: =true
+                            Items: =MissingData
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =8
+                            TemplateSize: |-
+                                =//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                                50
+                            ZIndex: =3
+
+                            cont_missingData_1 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.Regular
+                                Height: =Parent.TemplateHeight
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =1
+
+                                lbl_forDept_1 As label:
+                                    Align: =Align.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    FillPortions: =1
+                                    LayoutMinWidth: =0
+                                    Text: =ThisItem.Department
+                                    ZIndex: =1
+
+                                lbl_forLocation_1 As label:
+                                    Align: =Align.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    FillPortions: =1
+                                    LayoutMinWidth: =0
+                                    Text: =ThisItem.Location
+                                    ZIndex: =2
+
+                                lbl_forSupervisor_1 As label:
+                                    Align: =Align.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    FillPortions: =1
+                                    LayoutMinWidth: =0
+                                    Text: =If(ThisItem.Location="Jaipur","Gourav Kumar",ThisItem.Location="Udaipur","Jayesh Sahijwani",ThisItem.Location="Jodhpur","Rahul Choudhary",ThisItem.Location="Kota","Arti Acharya",ThisItem.Location="Jaisalmer","Shakti Singh")
+                                    ZIndex: =3
 
             con_OtherChart_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
