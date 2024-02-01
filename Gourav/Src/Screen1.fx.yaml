@@ -100,8 +100,8 @@ Screen1 As screen:
         TemplatePadding: =0
         TemplateSize: =104
         Width: =381
-        X: =496
-        Y: =60
+        X: =461
+        Y: =177
         ZIndex: =8
 
         Image2 As image:
@@ -222,78 +222,6 @@ Screen1 As screen:
         Y: =575
         ZIndex: =13
 
-        cont_kpi1_1 As groupContainer.manualLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            Height: =Parent.Height-20
-            LayoutMinHeight: =100
-            LayoutMinWidth: =0
-            ZIndex: =1
-
-            con_SubChild_5 As groupContainer.verticalAutoLayoutContainer:
-                Height: =Parent.Height
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMode: =LayoutMode.Auto
-                Width: =Parent.Width
-                ZIndex: =1
-
-                con_subChildOne_5 As groupContainer.horizontalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =Parent.Height*.4
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =0
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =5
-                    PaddingTop: =5
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    img_kpiIcon_5 As image:
-                        Height: =Parent.Height*.8
-                        Image: |-
-                            =  "data:image/svg+xml;utf8," & 
-                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
-                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
-                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
-                            </svg>
-                            ")
-                        PaddingBottom: =5
-                        PaddingRight: =5
-                        Visible: =If(App.ActiveScreen.Size=4,true,false)
-                        Width: =Parent.Width*.2
-                        ZIndex: =1
-
-                    lbl_companyName_5 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =Parent.Height*.8
-                        PaddingBottom: =8
-                        PaddingLeft: =2
-                        Size: =11
-                        Text: ="Daily Approval Snapshot"
-                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_5.Width,Parent.Width)
-                        ZIndex: =2
-
-                con_SubChildSec_5 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =Parent.Height-con_subChildOne_5.Height
-                    LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =0
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =2
-
-                    PieChart4_1 As pieChart:
-                        AlignInContainer: =AlignInContainer.Start
-                        DisplayMode: =DisplayMode.View
-                        Height: =Parent.Height
-                        Items: =StatusCounts
-                        LabelPosition: =LabelPosition.Inside
-                        Width: =Parent.Width
-                        ZIndex: =4
-
         con_kpi2_1 As groupContainer.manualLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             Height: =Parent.Height-20
@@ -321,29 +249,16 @@ Screen1 As screen:
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    img_kpiIcon_6 As image:
-                        Height: =Parent.Height*.8
-                        Image: |-
-                            =  "data:image/svg+xml;utf8," & 
-                                EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
-                              <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
-                              <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
-                            </svg>
-                            ")
-                        PaddingBottom: =5
-                        PaddingRight: =5
-                        Visible: =If(App.ActiveScreen.Size=4,true,false)
-                        Width: =Parent.Width*.2
-                        ZIndex: =1
-
                     lbl_companyName_6 As label:
+                        Align: =Align.Center
                         Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
                         Height: =Parent.Height*.8
                         PaddingBottom: =8
                         PaddingLeft: =2
                         Size: =10
                         Text: ="Jodhpur Net Sales"
-                        Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_6.Width,Parent.Width)
+                        Width: =If(App.ActiveScreen.Size=4,Parent.Width,Parent.Width)
                         ZIndex: =2
 
                 con_SubChildSec_6 As groupContainer.horizontalAutoLayoutContainer:
@@ -357,19 +272,6 @@ Screen1 As screen:
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    lbl_netWorthNo_6 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Parent.Height
-                        Size: =12
-                        Text: |-
-                            =//"$5048598K"
-                            //LookUp(OM_Sales_to_Jodhpur,Net_Sales=Max(Net_Sales)).Net_Sales
-                              LookUp(OM_Sales_to_Jodhpur,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jodhpur",Department="Sales")).'Reference ID').Net_Sales
-                             
-                        Width: =Parent.Width-'Radial Progress Bar_8'.Width
-                        ZIndex: =1
-
                     "'Radial Progress Bar_8' As 'Radial Progress Bar'":
                         Height: ='Radial Progress Bar_8'.progressHeight
                         LayoutMinHeight: =640
@@ -378,6 +280,19 @@ Screen1 As screen:
                         progressHeight: =Parent.Height*.8
                         progressWidth: =Parent.Width*.3
                         Width: ='Radial Progress Bar_8'.progressWidth
+
+                    lbl_netWorthNo_6 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =12
+                        Text: |-
+                            =//"$5048598K"
+                            //LookUp(OM_Sales_to_Jodhpur,Net_Sales=Max(Net_Sales)).Net_Sales
+                             // LookUp(OM_Sales_to_Jodhpur,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jodhpur",Department="Sales")).'Reference ID').Net_Sales
+                             
+                             
+                        Width: =Parent.Width-'Radial Progress Bar_8'.Width
                         ZIndex: =2
 
         con_kpi3_1 As groupContainer.manualLayoutContainer:
@@ -638,4 +553,113 @@ Screen1 As screen:
                         progressWidth: =Parent.Width*.3
                         Width: ='Radial Progress Bar_11'.progressWidth
                         ZIndex: =2
+
+    cont_101 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =321
+        LayoutMode: =LayoutMode.Auto
+        Width: =343
+        X: =912
+        Y: =192
+        ZIndex: =14
+
+        cont_102 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            ZIndex: =2
+
+            lbl_galHeading As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =RGBA(9, 33, 98, 1)
+                Fill: =RGBA(180, 214, 250, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =30
+                Text: ="Awaiting Form Submission"
+                Width: =Parent.Width
+                ZIndex: =1
+
+            cont_103 As groupContainer.horizontalAutoLayoutContainer:
+                Fill: =RGBA(180, 214, 250, 1)
+                FillPortions: =0
+                Height: =50
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                lbl_columDept As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    FillPortions: =1
+                    LayoutMinWidth: =0
+                    Text: ="Department"
+                    ZIndex: =1
+
+                lbl_columLocat As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    FillPortions: =1
+                    LayoutMinWidth: =0
+                    Text: ="Location"
+                    ZIndex: =2
+
+                lbl_columSupervisor As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    FillPortions: =1
+                    LayoutMinWidth: =0
+                    Text: ="Supervisor"
+                    ZIndex: =3
+
+            Gal_missData As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Items: =MissingData
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =8
+                TemplateSize: |-
+                    =//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    50
+                ZIndex: =3
+
+                cont_missingData As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Regular
+                    Height: =Parent.TemplateHeight
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =1
+
+                    lbl_forDept As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        FillPortions: =1
+                        LayoutMinWidth: =0
+                        Text: =ThisItem.Department
+                        ZIndex: =1
+
+                    lbl_forLocation As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        FillPortions: =1
+                        LayoutMinWidth: =0
+                        Text: =ThisItem.Location
+                        ZIndex: =2
+
+                    lbl_forSupervisor As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        FillPortions: =1
+                        LayoutMinWidth: =0
+                        Text: =If(ThisItem.Location="Jaipur","Gourav Kumar",ThisItem.Location="Udaipur","Jayesh Sahijwani",ThisItem.Location="Jodhpur","Rahul Choudhary",ThisItem.Location="Kota","Arti Acharya",ThisItem.Location="Jaisalmer","Shakti Singh")
+                        ZIndex: =3
 
