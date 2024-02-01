@@ -555,23 +555,21 @@ Screen1 As screen:
                         ZIndex: =2
 
     cont_101 As groupContainer.horizontalAutoLayoutContainer:
-        Height: =321
+        Height: =366
         LayoutMode: =LayoutMode.Auto
-        Width: =343
+        Width: =351
         X: =912
         Y: =192
         ZIndex: =14
 
         cont_102 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutGap: =10
+            LayoutGap: =1
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
             ZIndex: =2
 
             lbl_galHeading As label:
@@ -588,7 +586,7 @@ Screen1 As screen:
             cont_103 As groupContainer.horizontalAutoLayoutContainer:
                 Fill: =RGBA(180, 214, 250, 1)
                 FillPortions: =0
-                Height: =50
+                Height: =30
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
@@ -597,7 +595,7 @@ Screen1 As screen:
 
                 lbl_columDept As label:
                     Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
+                    AlignInContainer: =AlignInContainer.Center
                     FillPortions: =1
                     LayoutMinWidth: =0
                     Text: ="Department"
@@ -605,7 +603,7 @@ Screen1 As screen:
 
                 lbl_columLocat As label:
                     Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
+                    AlignInContainer: =AlignInContainer.Center
                     FillPortions: =1
                     LayoutMinWidth: =0
                     Text: ="Location"
@@ -613,7 +611,7 @@ Screen1 As screen:
 
                 lbl_columSupervisor As label:
                     Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
+                    AlignInContainer: =AlignInContainer.Center
                     FillPortions: =1
                     LayoutMinWidth: =0
                     Text: ="Supervisor"
@@ -623,7 +621,7 @@ Screen1 As screen:
                 DelayItemLoading: =true
                 Items: =MissingData
                 Layout: =Layout.Vertical
-                LayoutMinHeight: =287
+                LayoutMinHeight: =0
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =8
