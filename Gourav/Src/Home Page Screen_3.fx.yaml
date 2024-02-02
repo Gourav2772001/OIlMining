@@ -43,7 +43,7 @@
             Height: =499
             LayoutGap: =20
             LayoutMode: =LayoutMode.Auto
-            Width: =Parent.Width-75
+            Width: =Parent.Width-80
             X: =40
             Y: =80
             ZIndex: =3
@@ -213,8 +213,9 @@
                                     ZIndex: =2
 
                                     img_FormFillup_3 As image:
-                                        Height: =Parent.Height
-                                        Image: =asaliprofit
+                                        AlignInContainer: =AlignInContainer.Center
+                                        Height: =Parent.Height*.8
+                                        Image: =PROFIT_IMG
                                         Width: =Parent.Width*.3
                                         ZIndex: =1
 
@@ -427,8 +428,8 @@
                             progressWidth: =Parent.Height*.85
                             valueCircleColor: ="RGBA(3, 201, 169,1)"
                             Width: =94
-                            X: =5
-                            Y: =45
+                            X: =1
+                            Y: =(Parent.Y+lbl_FormsFillled_1.Height+Self.Height)/2
 
                         lbl_FormsFillled_1 As label:
                             Align: =Align.Center
@@ -650,12 +651,12 @@
                     Height: =40
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
-                    RadiusBottomLeft: =1000
-                    RadiusBottomRight: =1000
-                    RadiusTopLeft: =1000
-                    RadiusTopRight: =1000
-                    Width: =300
-                    ZIndex: =5
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Width: =200
+                    ZIndex: =4
 
                     rect_DownloadWidth_1 As rectangle:
                         Height: =Parent.Height
@@ -667,6 +668,17 @@
                         Text: ="Download"
                         Width: =Parent.Width
                         ZIndex: =2
+
+                Image1 As image:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Height: =Parent.Height
+                    Image: ='landing-page'
+                    LayoutMinHeight: =0
+                    OnSelect: =Navigate('Main Landing Screen (Dynamic)')
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =50
+                    ZIndex: =5
 
                 con_notification_3 As groupContainer.manualLayoutContainer:
                     FillPortions: =0.1

@@ -11778,7 +11778,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_netWorthNo_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14209,7 +14209,7 @@
       "MetaDataIDKey": "",
       "Name": "Radial Progress Bar_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
