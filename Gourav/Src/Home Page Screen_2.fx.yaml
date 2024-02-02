@@ -382,7 +382,8 @@
                         Align: =Align.Center
                         AlignInContainer: =AlignInContainer.Stretch
                         AutoHeight: =true
-                        Fill: =RGBA(132, 107, 247, 0.7)
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =RGBA(132, 107, 247, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =0
                         LayoutMinWidth: =0
@@ -567,8 +568,8 @@
                             Align: =Align.Center
                             AlignInContainer: =AlignInContainer.Stretch
                             AutoHeight: =true
-                            Color: =RGBA(9, 33, 98, 1)
-                            Fill: =RGBA(132, 107, 247, 0.7)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Fill: =RGBA(132, 107, 247, 1)
                             FontWeight: =FontWeight.Bold
                             Height: =53
                             Text: ="Awaiting Form Submission"
@@ -669,7 +670,8 @@
                     Align: =Align.Center
                     AlignInContainer: =AlignInContainer.Stretch
                     AutoHeight: =true
-                    Fill: =RGBA(132, 107, 247, 0.7)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(132, 107, 247, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =50
                     LayoutMinWidth: =0
@@ -809,6 +811,7 @@
                     ZIndex: =1
 
                 btn_DownloadSummarybtn_2 As button:
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =Parent.Height
                     Text: ="Download"
@@ -996,17 +999,6 @@
             Visible: =false
             Width: =50
             ZIndex: =7
-
-        img_RegionalForm_UserImage_8 As image:
-            AlignInContainer: =AlignInContainer.Center
-            Height: =Parent.Height
-            Image: =User().Image
-            RadiusBottomLeft: =1000
-            RadiusBottomRight: =1000
-            RadiusTopLeft: =1000
-            RadiusTopRight: =1000
-            Width: =Parent.Height
-            ZIndex: =8
 
     gal_totalFormCount_2 As gallery.galleryVertical:
         DelayItemLoading: =true
