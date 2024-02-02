@@ -180,7 +180,9 @@
                         progressHeight: =Parent.Height
                         progressValueCircle: =Round((CountRows(gal_totalFormCount_1.AllItems)/16)*100,0)
                         progressWidth: =Parent.Height*.85
-                        valueCircleColor: ="RGBA(3, 201, 169,1)"
+                        valueCircleColor: |-
+                            =//"RGBA(3, 201, 169,1)"
+                            "RGBA(132,107,247,7)"
                         Width: =94
                         X: =1
                         Y: =(Parent.Y+lbl_FormsFillled_1.Height+Self.Height)/2
@@ -347,7 +349,7 @@
                         Align: =Align.Center
                         AlignInContainer: =AlignInContainer.Stretch
                         AutoHeight: =true
-                        Fill: =RGBA(132, 107, 247, 0.56)
+                        Fill: =RGBA(132, 107, 247, 0.7)
                         FontWeight: =FontWeight.Semibold
                         Height: =0
                         LayoutMinWidth: =0
@@ -531,10 +533,11 @@
                         lbl_galHeading_1 As label:
                             Align: =Align.Center
                             AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
                             Color: =RGBA(9, 33, 98, 1)
-                            Fill: =RGBA(180, 214, 250, 1)
+                            Fill: =RGBA(132, 107, 247, 0.7)
                             FontWeight: =FontWeight.Bold
-                            Height: =30
+                            Height: =53
                             Text: ="Awaiting Form Submission"
                             Width: =Parent.Width
                             ZIndex: =1
@@ -633,7 +636,7 @@
                     Align: =Align.Center
                     AlignInContainer: =AlignInContainer.Stretch
                     AutoHeight: =true
-                    Fill: =RGBA(132, 107, 247, 0.56)
+                    Fill: =RGBA(132, 107, 247, 0.7)
                     FontWeight: =FontWeight.Semibold
                     Height: =50
                     LayoutMinWidth: =0
