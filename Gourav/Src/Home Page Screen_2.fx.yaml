@@ -245,104 +245,6 @@
                             Text: =CountRows(gal_totalFormCount_1.AllItems) & " /16"
                             ZIndex: =2
 
-        con_mainHeader_3 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.None
-            Height: =60
-            LayoutGap: =10
-            LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Visible: =false
-            Width: =Parent.Width-70
-            X: =49
-            Y: =15
-            ZIndex: =2
-
-            lbl_welcome_2 As label:
-                AutoHeight: =true
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =Parent.Height
-                Size: =If(App.ActiveScreen.Size=2 || App.ActiveScreen.Size=1,13,23)
-                Text: |-
-                    =If(
-                        Persona="Employee",
-                        "Welcome " & ComboBox1.Selected.Title & " 👋",
-                        "Welcome Mr. Shakti Singh" & " 👋"
-                    )
-                Width: =If( App.ActiveScreen.Size=2 ||App.ActiveScreen.Size=1,220,475)
-                ZIndex: =1
-
-            "progressBar_1 As 'Progress Bar'":
-                AlignInContainer: =AlignInContainer.Stretch
-                BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
-                Height: =45
-                LayoutMinHeight: =45
-                LayoutMinWidth: =450
-                Max: =16
-                ProgressColor: =If(progressBar_1.Value=16,'Progress.ProgressColor'.Success,'Progress.ProgressColor'.Brand)
-                Thickness: ='Progress.Thickness'.Large
-                Value: =gal_allSummaryITemCount_1.AllItemsCount
-                Visible: |-
-                    =If(
-                        Persona="Manager",
-                        If( App.ActiveScreen.Size=1,false,true),
-                        false
-                    )
-                Width: =450
-                X: =0
-                Y: =0
-                ZIndex: =2
-
-            lbl_flex_1 As label:
-                AlignInContainer: =AlignInContainer.Stretch
-                FillPortions: =1
-                Height: =Parent.Height
-                LayoutMinWidth: =0
-                Text: =(progressBar_1.Value/16)*100 & " %"
-                Visible: |-
-                    =If(
-                        Persona="Manager",
-                        If( App.ActiveScreen.Size=1,false,true),
-                        false
-                    )
-                Width: =If(App.ActiveScreen.Size=1,25,If( App.ActiveScreen.Size=2,50,150))
-                ZIndex: =3
-
-            Label1_2 As label:
-                FillPortions: =1
-                Text: =""
-                Visible: |-
-                    =If(
-                        Persona="Manager",
-                        false,
-                        true
-                    )
-                ZIndex: =4
-
-            con_notification_2 As groupContainer.manualLayoutContainer:
-                FillPortions: =0.1
-                Height: =Parent.Height
-                LayoutMinHeight: =0
-                LayoutMinWidth: =50
-                ZIndex: =5
-
-                img_notification_2 As image:
-                    Height: =Parent.Height
-                    Image: |-
-                        ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-bell' viewBox='0 0 16 16'>
-                          <path d='M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6'/>
-                        </svg>")
-                    PaddingBottom: =5
-                    PaddingLeft: =5
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    Width: =Parent.Width
-                    ZIndex: =1
-
         con_ofChart_2 As groupContainer.horizontalAutoLayoutContainer:
             BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.None
@@ -440,81 +342,6 @@
                 PaddingTop: =10
                 Width: =Parent.Width*.6
                 ZIndex: =2
-
-                CompositePieChart1_1 As group:
-                    Height: =5
-                    Width: =5
-                    X: =40
-                    Y: =40
-                    ZIndex: =1
-
-                    Title1_1 As label:
-                        Align: =Align.Center
-                        Height: =25
-                        Text: ="Status Report"
-                        Visible: |-
-                            =If(
-                                Persona="Manager",
-                                true,
-                                false
-                            )
-                        Width: =604
-                        Y: =12
-                        ZIndex: =2
-
-                    PieChart1_1 As pieChart:
-                        Height: =Parent.Height
-                        ItemColorSet: =[RGBA(38, 194, 129,1),RGBA(30, 81, 123,1), RGBA(255, 0, 0,1)]
-                        Items: =MyGroupedData
-                        Visible: |-
-                            =If(
-                                Persona="Manager",
-                                true,
-                                false
-                            )
-                        Width: =Parent.Width
-                        ZIndex: =3
-
-                    Legend1_1 As legend:
-                        Height: =Parent.Height*.5
-                        ItemColorSet: =PieChart1_1.ItemColorSet
-                        Items: =PieChart1_1.SeriesLabels
-                        Size: =16
-                        Visible: |-
-                            =If(
-                                Persona="Manager",
-                                true,
-                                false
-                            )
-                        Width: =Parent.Width*.25
-                        Y: =Parent.Height*.5
-                        ZIndex: =4
-
-                gal_allSummaryITemCount_1 As gallery.galleryVertical:
-                    DelayItemLoading: =true
-                    Height: =386
-                    Items: =Filter(OM_AllDepartmentSummary,Created_On=Today() && Status="Pending")
-                    Layout: =Layout.Vertical
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =123
-                    Visible: =false
-                    Width: =279
-                    X: =371
-                    ZIndex: =5
-
-                    lbl_LocatGalAllSummCount_1 As label:
-                        OnSelect: =Select(Parent)
-                        Text: =ThisItem.Location
-                        X: =23
-                        Y: =40
-                        ZIndex: =1
-
-                    lbl_DeptGalAllSummCount_1 As label:
-                        OnSelect: =Select(Parent)
-                        Text: =ThisItem.Department
-                        X: =23
-                        Y: =80
-                        ZIndex: =2
 
                 CompositeLineChart1_1 As group:
                     Height: =5
@@ -787,13 +614,7 @@
 
             Label1_4 As label:
                 FillPortions: =1
-                Text: =""
-                Visible: |-
-                    =If(
-                        Persona="Manager",
-                        false,
-                        true
-                    )
+                Text: =
                 ZIndex: =3
 
             cont_DownloadFileButton_2 As groupContainer.manualLayoutContainer:
@@ -821,6 +642,12 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =Parent.Height
                     HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
+                    OnSelect: |-
+                        =OMDaywiseSummary.Run();
+                        Set(getURL,OMDaywiseSummary.Run().download_url);
+                        Download(First(Split(getURL,"?")).Value);
+                        Notify("Your file has been downloaded to the system",NotificationType.Success);
+                        Refresh('Oil Mining Reference Docs')
                     Text: ="Download"
                     Width: =Parent.Width
                     ZIndex: =2
@@ -838,25 +665,21 @@
                 Width: =50
                 ZIndex: =5
 
-            con_notification_4 As groupContainer.manualLayoutContainer:
-                FillPortions: =0.1
+            img_notification_2 As image:
+                AlignInContainer: =AlignInContainer.Stretch
                 Height: =Parent.Height
+                Image: |-
+                    ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-bell' viewBox='0 0 16 16'>
+                      <path d='M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6'/>
+                    </svg>")
                 LayoutMinHeight: =0
-                LayoutMinWidth: =50
+                LayoutMinWidth: =0
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =Parent.Width*.04
                 ZIndex: =6
-
-                img_notification_4 As image:
-                    Height: =Parent.Height
-                    Image: |-
-                        ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='12' height='16' fill='currentColor' class='bi bi-bell' viewBox='0 0 16 16'>
-                          <path d='M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6'/>
-                        </svg>")
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    Width: =Parent.Width
-                    ZIndex: =1
 
     con_nevigation_2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
@@ -957,49 +780,6 @@
             Text: ="Fueling Progress, Powering Tomorrow"
             Width: =Parent.Width*.2
             ZIndex: =3
-
-        Icon_download_2 As icon.Download:
-            AlignInContainer: =AlignInContainer.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =Parent.Height*.8
-            Icon: =Icon.Download
-            OnSelect: |-
-                =OMDaywiseSummary.Run();
-                Set(getURL,OMDaywiseSummary.Run().download_url);
-                Download(First(Split(getURL,"?")).Value);
-                Notify("Your file has been downloaded to the system",NotificationType.Success)
-            PaddingTop: =10
-            Visible: |-
-                =If(
-                    Persona="Manager",
-                    true,
-                    false
-                )
-            Width: =Parent.Width*.02
-            ZIndex: =5
-
-        Btn_downloadPdf_2 As button:
-            Align: =Align.Left
-            AlignInContainer: =AlignInContainer.Center
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height
-            OnSelect: |-
-                =OMDaywiseSummary.Run();
-                Set(getURL,OMDaywiseSummary.Run().download_url);
-                Download(First(Split(getURL,"?")).Value);
-                Notify("Your file has been downloaded to the system",NotificationType.Success);
-                Refresh('Oil Mining Reference Docs')
-            PaddingLeft: =0
-            PaddingTop: =10
-            Size: =12
-            Text: ="Download PDF"
-            Visible: |-
-                =If(
-                    Persona="Manager",
-                    true,
-                    false
-                )
-            ZIndex: =6
 
         Label1_true_2 As label:
             Text: =""
