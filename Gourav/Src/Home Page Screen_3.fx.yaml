@@ -108,47 +108,35 @@
                                 Width: =Parent.Width
                                 ZIndex: =1
 
-                                lbl_ApprovalReqsts_1 As label:
-                                    Align: =Align.Center
-                                    AutoHeight: =true
-                                    Fill: =RGBA(180, 214, 250, 1)
-                                    FontWeight: =FontWeight.Bold
-                                    Text: ="Approval Requests"
-                                    Width: =Parent.Width
-                                    ZIndex: =1
+                                cont_PieApprovPending As groupContainer.horizontalAutoLayoutContainer:
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =0
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =3
 
-                                cont_PieCharholder_1 As groupContainer.manualLayoutContainer:
-                                    AlignInContainer: =AlignInContainer.Center
-                                    Height: =Parent.Height
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    Width: =Parent.Width
-                                    ZIndex: =2
-
-                                    CompositePieChart4_2 As group:
-                                        Height: =5
-                                        Width: =5
-                                        X: =-40
-                                        Y: =-70
+                                    img_approvPendingrem As image:
+                                        Height: =Parent.Height
+                                        Image: ='aprovePending-removebg-preview'
+                                        Width: =Parent.Height
                                         ZIndex: =1
 
-                                        PieChart4_1 As pieChart:
-                                            Height: =Parent.Height
-                                            ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                                            Items: =StatusCounts
-                                            ShowLabels: =false
-                                            Width: =129
-                                            X: =120
-                                            ZIndex: =2
+                                    cont_AllPendingLables As groupContainer.verticalAutoLayoutContainer:
+                                        AlignInContainer: =AlignInContainer.Center
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =0
+                                        LayoutMode: =LayoutMode.Auto
+                                        Width: =Parent.Width
+                                        ZIndex: =3
 
-                                        Legend5_2 As legend:
-                                            DisplayMode: =DisplayMode.View
-                                            Height: =75
-                                            ItemColorSet: =PieChart4_1.ItemColorSet
-                                            Items: =PieChart4_1.SeriesLabels
-                                            Width: =105
-                                            Y: =20
-                                            ZIndex: =3
+                                        lbl_PendingHeading As label:
+                                            Align: =Align.Center
+                                            AlignInContainer: =AlignInContainer.Stretch
+                                            FontWeight: =FontWeight.Semibold
+                                            LayoutMinWidth: =0
+                                            Text: ="Approval Pending"
+                                            Width: =0
+                                            ZIndex: =1
 
                             cont_formProgress_2 As groupContainer.verticalAutoLayoutContainer:
                                 LayoutDirection: =LayoutDirection.Vertical
@@ -238,61 +226,6 @@
                             Y: =192
                             ZIndex: =7
 
-                            cont_ColumnChart_1 As groupContainer.verticalAutoLayoutContainer:
-                                Height: =328
-                                LayoutDirection: =LayoutDirection.Vertical
-                                LayoutMinHeight: =100
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                Width: =331
-                                X: =16
-                                Y: =20
-                                ZIndex: =1
-
-                                CompositeColumnChart1_1 As group:
-                                    Height: =5
-                                    LayoutMinHeight: =5
-                                    LayoutMinWidth: =5
-                                    Width: =5
-                                    X: =-40
-                                    Y: =-40
-                                    ZIndex: =1
-
-                                    TitleColorApprReq_1 As label:
-                                        Align: =Align.Center
-                                        AlignInContainer: =AlignInContainer.Center
-                                        Fill: =RGBA(180, 214, 250, 1)
-                                        Height: =Parent.Height*.10
-                                        Text: ="Approval Requests"
-                                        Width: =Parent.Width
-                                        X: =40
-                                        Y: =40
-                                        ZIndex: =1
-
-                                    ColumnChart1_1 As barChart:
-                                        AlignInContainer: =AlignInContainer.Center
-                                        DisplayMode: =DisplayMode.View
-                                        FillPortions: =
-                                        Height: =Parent.Height*.80
-                                        ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                                        Items: =StatusCounts
-                                        ItemsGap: =2
-                                        SeriesAxisMax: =5
-                                        SeriesAxisMin: =0
-                                        Width: =Parent.Width
-                                        XLabelAngle: =10
-                                        Y: =90
-                                        ZIndex: =2
-
-                                    legendApprReq_1 As legend:
-                                        AlignInContainer: =AlignInContainer.Center
-                                        DisplayMode: =DisplayMode.View
-                                        Height: =Parent.Height*.10
-                                        ItemColorSet: =ColumnChart1_1.ItemColorSet
-                                        Items: =["Pending","Approved","Decline"]
-                                        Width: =Parent.Width
-                                        ZIndex: =3
-
                             cont_108 As groupContainer.verticalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Regular
                                 LayoutDirection: =LayoutDirection.Vertical
@@ -301,7 +234,7 @@
                                 LayoutMinWidth: =250
                                 LayoutMode: =LayoutMode.Auto
                                 PaddingBottom: =5
-                                ZIndex: =2
+                                ZIndex: =1
 
                                 lbl_galHeading_2 As label:
                                     Align: =Align.Center
@@ -393,6 +326,62 @@
                                             Text: =If(ThisItem.Location="Jaipur","Gourav Kumar",ThisItem.Location="Udaipur","Jayesh Sahijwani",ThisItem.Location="Jodhpur","Rahul Choudhary",ThisItem.Location="Kota","Arti Acharya",ThisItem.Location="Jaisalmer","Shakti Singh")
                                             ZIndex: =3
 
+                            cont_ColumnChart_1 As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =328
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =200
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.Width*.4
+                                X: =16
+                                Y: =20
+                                ZIndex: =2
+
+                                CompositeColumnChart1_1 As group:
+                                    Height: =5
+                                    LayoutMinHeight: =5
+                                    LayoutMinWidth: =5
+                                    Width: =5
+                                    X: =-40
+                                    Y: =-40
+                                    ZIndex: =1
+
+                                    TitleColorApprReq_1 As label:
+                                        Align: =Align.Center
+                                        AlignInContainer: =AlignInContainer.Center
+                                        Fill: =RGBA(180, 214, 250, 1)
+                                        Height: =Parent.Height*.10
+                                        Text: ="Approval Requests"
+                                        Width: =Parent.Width
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =1
+
+                                    ColumnChart1_1 As barChart:
+                                        AlignInContainer: =AlignInContainer.Center
+                                        DisplayMode: =DisplayMode.View
+                                        FillPortions: =
+                                        Height: =Parent.Height*.80
+                                        ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                                        Items: =StatusCounts
+                                        ItemsGap: =2
+                                        SeriesAxisMax: =5
+                                        SeriesAxisMin: =0
+                                        Width: =Parent.Width
+                                        XLabelAngle: =10
+                                        Y: =90
+                                        ZIndex: =2
+
+                                    legendApprReq_1 As legend:
+                                        AlignInContainer: =AlignInContainer.Center
+                                        DisplayMode: =DisplayMode.View
+                                        Height: =Parent.Height*.10
+                                        ItemColorSet: =ColumnChart1_1.ItemColorSet
+                                        Items: =["Pending","Approved","Decline"]
+                                        Width: =Parent.Width
+                                        ZIndex: =3
+
                 cont_ContetnRightGallery_1 As groupContainer.verticalAutoLayoutContainer:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -433,11 +422,10 @@
 
                         lbl_FormsFillled_1 As label:
                             Align: =Align.Center
-                            AutoHeight: =true
-                            BorderThickness: =1
                             Fill: =RGBA(180, 214, 250, 1)
                             FocusedBorderThickness: =1
                             FontWeight: =FontWeight.Bold
+                            Height: =32
                             PaddingTop: =10
                             Text: ="Global Form Intake"
                             Width: =Parent.Width

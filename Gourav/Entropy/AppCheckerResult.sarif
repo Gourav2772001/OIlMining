@@ -4993,19 +4993,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home Page Screen_3'.con_main1_3.con_ofChart_3.con_mainHeader_5.Cont_ContentLeftGallery_1.cont_Content_1LeftGallery_1.cont_Pie_FormProgress_1.con_PIeChartApproval_1.cont_PieCharholder_1.PieChart4_1.ShowLabels"
+                  "fullyQualifiedName": "'Home Page Screen_2'.gal_totalFormCount_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home Page Screen_3'.con_main1_3.con_ofChart_3.con_mainHeader_5.Cont_ContentLeftGallery_1.cont_Content_1LeftGallery_1.cont_Pie_FormProgress_1.con_PIeChartApproval_1.cont_PieCharholder_1.PieChart4_1.ShowLabels",
+                  "fullyQualifiedName": "'Home Page Screen_2'.gal_totalFormCount_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "ShowLabels",
-                "module": "Home Page Screen_3",
-                "type": "'Home Page Screen_3'.con_main1_3.con_ofChart_3.con_mainHeader_5.Cont_ContentLeftGallery_1.cont_Content_1LeftGallery_1.cont_Pie_FormProgress_1.con_PIeChartApproval_1.cont_PieCharholder_1.PieChart4_1"
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.gal_totalFormCount_2"
               }
             }
           ],
@@ -5015,8 +5015,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-HelpfulControlSettingNeeded",
-          "ruleIndex": 2
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -7993,6 +7993,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Page Screen_2'.gal_totalFormCount_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.gal_totalFormCount_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.gal_totalFormCount_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AdminFormFilled"
                 }
               ],
@@ -8814,6 +8844,36 @@
               },
               "properties": {
                 "member": "Udaipur",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.aprovePending"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.aprovePending",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "aprovePending",
                 "module": "App",
                 "type": "App"
               }

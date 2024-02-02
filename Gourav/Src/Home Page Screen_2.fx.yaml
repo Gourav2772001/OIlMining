@@ -29,347 +29,6 @@
             Y: =75
             ZIndex: =1
 
-            con_kpi2_2 As groupContainer.manualLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
-                Fill: =RGBA(180, 214, 250, 0.35)
-                Height: =Parent.Height-20
-                LayoutMinHeight: =100
-                LayoutMinWidth: =0
-                ZIndex: =2
-
-                con_SubChild_10 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =Parent.Height
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    con_subChildOne_10 As groupContainer.horizontalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height*.4
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingBottom: =5
-                        PaddingTop: =5
-                        Width: =Parent.Width
-                        ZIndex: =1
-
-                        img_kpiIcon_6 As image:
-                            Height: =Parent.Height*.8
-                            Image: |-
-                                =  "data:image/svg+xml;utf8," & 
-                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
-                                  <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
-                                  <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
-                                </svg>
-                                ")
-                            PaddingBottom: =5
-                            PaddingRight: =5
-                            Visible: =If(App.ActiveScreen.Size=4,true,false)
-                            Width: =Parent.Width*.2
-                            ZIndex: =1
-
-                        lbl_companyName_10 As label:
-                            Font: =Font.'Segoe UI'
-                            Height: =Parent.Height*.8
-                            PaddingBottom: =8
-                            PaddingLeft: =2
-                            Size: =10
-                            Text: ="Approvals Pending"
-                            Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_6.Width,Parent.Width)
-                            ZIndex: =2
-
-                    con_SubChildSec_5 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height-con_subChildOne_10.Height
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width
-                        ZIndex: =2
-
-                        lbl_netWorthNo_5 As label:
-                            Align: =Align.Center
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =Parent.Height
-                            Size: =12
-                            Text: =12
-                            Width: =Parent.Width-'Radial Progress Bar_6'.Width
-                            ZIndex: =1
-
-                        "'Radial Progress Bar_6' As 'Radial Progress Bar'":
-                            Height: ='Radial Progress Bar_6'.progressHeight
-                            LayoutMinHeight: =640
-                            LayoutMinWidth: =640
-                            progessBarPrencatageSize: =8
-                            progressHeight: =Parent.Height*.8
-                            progressWidth: =Parent.Width*.3
-                            Width: ='Radial Progress Bar_6'.progressWidth
-                            ZIndex: =2
-
-            con_kpi3_2 As groupContainer.manualLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
-                Height: =Parent.Height-20
-                LayoutMinHeight: =100
-                LayoutMinWidth: =0
-                ZIndex: =3
-
-                con_SubChild_11 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =Parent.Height
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    con_subChildOne_11 As groupContainer.horizontalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height*.4
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingBottom: =5
-                        PaddingTop: =5
-                        Width: =Parent.Width
-                        ZIndex: =1
-
-                        img_kpiIcon_10 As image:
-                            Height: =Parent.Height*.8
-                            Image: |-
-                                =  "data:image/svg+xml;utf8," & 
-                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
-                                  <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
-                                  <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
-                                </svg>
-                                ")
-                            PaddingBottom: =5
-                            PaddingRight: =5
-                            Visible: =If(App.ActiveScreen.Size=4,true,false)
-                            Width: =Parent.Width*.2
-                            ZIndex: =1
-
-                        lbl_companyName_11 As label:
-                            Font: =Font.'Segoe UI'
-                            Height: =Parent.Height*.8
-                            PaddingBottom: =8
-                            PaddingLeft: =2
-                            Size: =10
-                            Text: ="Awaiting Form Arrival"
-                            Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_10.Width,Parent.Width)
-                            ZIndex: =2
-
-                    con_SubChildSec_10 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height-con_subChildOne_11.Height
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width
-                        ZIndex: =2
-
-                        lbl_netWorthNo_10 As label:
-                            Align: =Align.Center
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =12
-                            Text: =11
-                            Width: =Parent.Width-'Radial Progress Bar_12'.Width
-                            ZIndex: =1
-
-                        "'Radial Progress Bar_12' As 'Radial Progress Bar'":
-                            Height: ='Radial Progress Bar_12'.progressHeight
-                            LayoutMinHeight: =640
-                            LayoutMinWidth: =640
-                            progessBarPrencatageSize: =8
-                            progressHeight: =Parent.Height*.8
-                            progressWidth: =Parent.Width*.3
-                            Width: ='Radial Progress Bar_12'.progressWidth
-                            ZIndex: =2
-
-            con_kpi4_2 As groupContainer.manualLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
-                Height: =Parent.Height-20
-                LayoutMinHeight: =100
-                LayoutMinWidth: =0
-                ZIndex: =4
-
-                con_SubChild_12 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =Parent.Height
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    con_subChildOne_12 As groupContainer.horizontalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height*.4
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingBottom: =5
-                        PaddingTop: =5
-                        Width: =Parent.Width
-                        ZIndex: =1
-
-                        img_kpiIcon_11 As image:
-                            Height: =Parent.Height*.8
-                            Image: |-
-                                =  "data:image/svg+xml;utf8," & 
-                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
-                                  <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
-                                  <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
-                                </svg>
-                                ")
-                            PaddingBottom: =5
-                            PaddingRight: =5
-                            Visible: =If(App.ActiveScreen.Size=4,true,false)
-                            Width: =Parent.Width*.2
-                            ZIndex: =1
-
-                        lbl_companyName_12 As label:
-                            Font: =Font.'Segoe UI'
-                            Height: =Parent.Height*.8
-                            PaddingBottom: =8
-                            PaddingLeft: =2
-                            Size: =10
-                            Text: ="Total Profit"
-                            Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_11.Width,Parent.Width)
-                            ZIndex: =2
-
-                    con_SubChildSec_11 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height-con_subChildOne_12.Height
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width
-                        ZIndex: =2
-
-                        lbl_netWorthNo_11 As label:
-                            Align: =Align.Center
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =12
-                            Text: |-
-                                =//"$5048598K"
-                                //LookUp(OM_Sales_to_Kota_Terminal,Net_Sales=Max(Net_Sales)).Net_Sales
-                                  LookUp(OM_Sales_to_Kota_Terminal,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Kota",Department="Sales")).'Reference ID').Net_Sales
-                                 
-                            Width: =Parent.Width-'Radial Progress Bar_13'.Width
-                            ZIndex: =1
-
-                        "'Radial Progress Bar_13' As 'Radial Progress Bar'":
-                            Height: ='Radial Progress Bar_13'.progressHeight
-                            LayoutMinHeight: =640
-                            LayoutMinWidth: =640
-                            progessBarPrencatageSize: =8
-                            progressHeight: =Parent.Height*.8
-                            progressWidth: =Parent.Width*.3
-                            Width: ='Radial Progress Bar_13'.progressWidth
-                            ZIndex: =2
-
-            con_kpi5_2 As groupContainer.manualLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
-                Height: =Parent.Height-20
-                LayoutMinHeight: =100
-                LayoutMinWidth: =0
-                Width: =Parent.Width
-                ZIndex: =5
-
-                con_SubChild_13 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =Parent.Height
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    con_subChildOne_13 As groupContainer.horizontalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height*.4
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingBottom: =5
-                        PaddingTop: =5
-                        Width: =Parent.Width
-                        ZIndex: =1
-
-                        img_kpiIcon_12 As image:
-                            Height: =Parent.Height*.8
-                            Image: |-
-                                =  "data:image/svg+xml;utf8," & 
-                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-app-indicator' viewBox='0 0 16 16'>
-                                  <path d='M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z'/>
-                                  <path d='M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/>
-                                </svg>
-                                ")
-                            PaddingBottom: =5
-                            PaddingRight: =5
-                            Visible: =If(App.ActiveScreen.Size=4,true,false)
-                            Width: =Parent.Width*.2
-                            ZIndex: =1
-
-                        lbl_companyName_13 As label:
-                            Font: =Font.'Segoe UI'
-                            Height: =Parent.Height*.8
-                            PaddingBottom: =8
-                            PaddingLeft: =2
-                            Size: =10
-                            Text: ="Global Form Intake"
-                            Width: =If(App.ActiveScreen.Size=4,Parent.Width-img_kpiIcon_12.Width,Parent.Width)
-                            ZIndex: =2
-
-                    con_SubChildSec_12 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Parent.Height-con_subChildOne_13.Height
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =0
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =Parent.Width
-                        ZIndex: =2
-
-                        lbl_netWorthNo_12 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =12
-                            Text: |-
-                                =//"$5048598K"
-                                //LookUp(OM_Sales_to_Jaisalmer,Net_Sales=Max(Net_Sales)).Net_Sales
-                                  LookUp(OM_Sales_to_Jaisalmer,ID= LookUp(OM_AllDepartmentSummary,And(Created_On=Today(),Location="Jaisalmer",Department="Sales")).'Reference ID').Net_Sales
-                                 
-                            Width: =Parent.Width-'Radial Progress Bar_14'.Width
-                            ZIndex: =1
-
-                        "'Radial Progress Bar_14' As 'Radial Progress Bar'":
-                            Height: ='Radial Progress Bar_14'.progressHeight
-                            LayoutMinHeight: =640
-                            LayoutMinWidth: =640
-                            progessBarPrencatageSize: =8
-                            progressHeight: =Parent.Height*.8
-                            progressWidth: =Parent.Width*.3
-                            Width: ='Radial Progress Bar_14'.progressWidth
-                            ZIndex: =2
-
             con_kpi2_3 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height-20
@@ -384,21 +43,162 @@
                     ZIndex: =1
 
                     img_KPI As image:
+                        Height: =Parent.Height
+                        Image: ='aprovePending-removebg-preview'
                         ZIndex: =1
 
                     cont_rtKPI As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
                         LayoutMode: =LayoutMode.Auto
                         ZIndex: =2
 
                         lbl_kpiHeding As label:
-                            Text: ="Text"
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: ="Approval Pending"
                             ZIndex: =1
 
                         lbl_kpiData As label:
-                            Text: ="Text"
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: =CountRows(gal_totalFormCount_2.AllItems)
+                            ZIndex: =2
+
+            con_kpi2_4 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =7
+
+                cont_kPI2_4 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_KPI_1 As image:
+                        Height: =Parent.Height
+                        Image: ='aprovePending-removebg-preview'
+                        ZIndex: =1
+
+                    cont_rtKPI_1 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lbl_kpiHeding_1 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: ="Approval Pending"
+                            ZIndex: =1
+
+                        lbl_kpiData_1 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: =CountRows(gal_totalFormCount_2.AllItems)
+                            ZIndex: =2
+
+            con_kpi2_5 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =8
+
+                cont_kPI2_5 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_KPI_2 As image:
+                        Height: =Parent.Height
+                        Image: ='aprovePending-removebg-preview'
+                        ZIndex: =1
+
+                    cont_rtKPI_2 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lbl_kpiHeding_2 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: ="Approval Pending"
+                            ZIndex: =1
+
+                        lbl_kpiData_2 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: =CountRows(gal_totalFormCount_2.AllItems)
+                            ZIndex: =2
+
+            con_kpi2_6 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height-20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                ZIndex: =9
+
+                cont_kPI2_6 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    img_KPI_3 As image:
+                        Height: =Parent.Height
+                        Image: ='aprovePending-removebg-preview'
+                        ZIndex: =1
+
+                    cont_rtKPI_3 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lbl_kpiHeding_3 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: ="Approval Pending"
+                            ZIndex: =1
+
+                        lbl_kpiData_3 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            LayoutMinWidth: =0
+                            Text: =CountRows(gal_totalFormCount_2.AllItems)
                             ZIndex: =2
 
         con_mainHeader_3 As groupContainer.horizontalAutoLayoutContainer:
@@ -1040,4 +840,17 @@
             RadiusTopRight: =1000
             Width: =Parent.Height
             ZIndex: =8
+
+    gal_totalFormCount_2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =112
+        Items: =Filter(OM_AllDepartmentSummary,Created_On=Today() && Status="Pending")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Visible: =false
+        Width: =42
+        X: =50
+        Y: =95
+        ZIndex: =5
 
