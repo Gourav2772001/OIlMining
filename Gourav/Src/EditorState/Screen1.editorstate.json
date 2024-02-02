@@ -3857,7 +3857,7 @@
       "MetaDataIDKey": "",
       "Name": "ico_viewDocIcon",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6218,7 +6218,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_forFileDoc",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7571,7 +7571,7 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

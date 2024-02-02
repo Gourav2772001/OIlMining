@@ -39,7 +39,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "gal_mainNev",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1950,
+                "PublishOrderIndex": 1946,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -163,7 +163,7 @@
                     "OptimizeForDevices": "Off",
                     "Parent": "Container10",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 1952,
+                    "PublishOrderIndex": 1948,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -404,7 +404,7 @@
                     "OptimizeForDevices": "Off",
                     "Parent": "Container10",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 1953,
+                    "PublishOrderIndex": 1949,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -702,7 +702,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "gal_mainNev",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1951,
+                "PublishOrderIndex": 1947,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -947,7 +947,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "con_mainNev",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1949,
+            "PublishOrderIndex": 1945,
             "Rules": [
               {
                 "Category": "Data",
@@ -1183,7 +1183,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "NevigationBar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1948,
+        "PublishOrderIndex": 1944,
         "Rules": [
           {
             "Category": "Design",
@@ -1396,7 +1396,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638424407462728241",
+    "LastModifiedTimestamp": "638424700673019242",
     "Name": "NevigationBar",
     "Rules": [
       {
@@ -1518,7 +1518,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638424407462728241",
+  "LastModifiedTimestamp": "638424700673019242",
   "Name": "8d8acd61e3154144836005b40fe0806e",
   "OverridableProperties": {},
   "Version": "1.0"

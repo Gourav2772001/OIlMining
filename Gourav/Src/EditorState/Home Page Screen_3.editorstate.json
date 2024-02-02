@@ -5152,7 +5152,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGroupContainerStyle",
@@ -8942,7 +8942,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon_download_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9249,7 +9249,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -10523,7 +10523,7 @@
       "MetaDataIDKey": "",
       "Name": "img_oilLogoHeader_9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11414,7 +11414,7 @@
       "MetaDataIDKey": "",
       "Name": "Label1_true_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
