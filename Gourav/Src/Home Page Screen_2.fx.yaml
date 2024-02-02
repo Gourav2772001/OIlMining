@@ -631,10 +631,10 @@
                                 ZIndex: =1
 
                                 lbl_forDept_1 As label:
-                                    Align: =Align.Center
                                     AlignInContainer: =AlignInContainer.Stretch
                                     FillPortions: =1
                                     LayoutMinWidth: =0
+                                    PaddingLeft: =30
                                     Text: =ThisItem.Department
                                     ZIndex: =1
 
