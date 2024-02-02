@@ -548,147 +548,74 @@
             con_OtherChart_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
-                FillPortions: =0
                 Height: =Parent.Height
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
                 LayoutMinHeight: =100
                 LayoutMinWidth: =0
                 LayoutMode: =LayoutMode.Auto
-                Visible: =If(con_otherGarph_1.Width<250,false,true)
-                Width: =Parent.Width*.38
+                Visible: |-
+                    =//If(cont_ColumnChart_2.Width<250,false,true)
+                    true
+                Width: =Parent.Width*.4
                 ZIndex: =2
 
-                con_progessBar_1 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
+                cont_ColumnChart_2 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    Visible: |-
-                        =If(
-                            Persona="Manager",
-                            If(con_otherGarph_1.Width<250,false,true),
-                            false
-                        )
-                    Width: =Parent.Width
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width*.4
+                    X: =16
+                    Y: =20
                     ZIndex: =1
 
-                    lbl_file9_1 As label:
-                        Font: =Font.'Lato Black'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Parent.Height*.1
-                        Size: =15
-                        Text: =" Downloaded Files"
-                        Width: =Parent.Width
-                        Y: =3
+                    CompositeColumnChart1_2 As group:
+                        Height: =5
+                        LayoutMinHeight: =5
+                        LayoutMinWidth: =5
+                        Width: =5
+                        X: =-40
+                        Y: =-40
                         ZIndex: =1
 
-                    "gal_mining_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                        DelayItemLoading: =true
-                        Height: =Parent.Height*.78
-                        Items: ='Oil Mining Reference Docs'
-                        Layout: =Layout.Vertical
-                        LoadingSpinner: =LoadingSpinner.Data
-                        OnSelect: =Launch(ThisItem.'Link to item')
-                        TemplatePadding: =0
-                        TemplateSize: =36
-                        Transition: =Transition.Pop
-                        Width: =Parent.Width
-                        Y: =43
-                        ZIndex: =1
-
-                        lbl_titleName_1 As label:
-                            Color: =RGBA(39, 113, 194, 1)
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                            Height: =Self.Size * 1.8
-                            OnSelect: =Select(Parent)
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =12
-                            Text: =ThisItem.Name
-                            Underline: =true
-                            VerticalAlign: =VerticalAlign.Top
-                            Width: =Parent.TemplateWidth - 86
-                            X: =60
-                            Y: =5
+                        TitleColorApprReq_2 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Center
+                            Fill: =RGBA(132, 107, 247, 0.52)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =Parent.Height*.10
+                            Text: ="Approval Status Report"
+                            Width: =Parent.Width
+                            X: =40
+                            Y: =40
                             ZIndex: =1
 
-                        Button1_1 As button:
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =36
-                            HoverFill: =Color.Transparent
-                            OnSelect: =Select(Parent)
-                            PressedColor: =Color.Black
-                            PressedFill: =Color.Transparent
-                            Text: =" "
-                            Width: =472.1739130434783
-                            ZIndex: =5
+                        ColumnChart1_2 As barChart:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.View
+                            FillPortions: =
+                            Height: =Parent.Height*.80
+                            ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                            Items: =StatusCounts
+                            ItemsGap: =2
+                            SeriesAxisMax: =5
+                            SeriesAxisMin: =0
+                            Width: =Parent.Width
+                            XLabelAngle: =10
+                            Y: =90
+                            ZIndex: =2
 
-                        Icon_view_1 As icon.View:
-                            Height: =21
-                            Icon: =Icon.View
-                            OnSelect: =Select(Parent)
-                            Width: =21
-                            X: =28
-                            Y: =5
-                            ZIndex: =6
-
-                con_otherGarph_1 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    FillPortions: =0.7
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    Visible: |-
-                        =//If(con_otherGarph.Width<250,false,true)
-                        false
-                    Width: =Parent.Width
-                    ZIndex: =2
-
-                    LineChart2_1 As lineChart:
-                        GridStyle: =GridStyle.None
-                        Height: =Parent.Height
-                        Items: =LineChartSample
-                        Width: =Parent.Width
-                        ZIndex: =3
-
-                CompositePieChart2_1 As group:
-                    Height: =5
-                    LayoutMinHeight: =5
-                    LayoutMinWidth: =5
-                    Width: =5
-                    X: =40
-                    Y: =40
-                    ZIndex: =3
-
-                    Title2_1 As label:
-                        Align: =Align.Center
-                        AutoHeight: =true
-                        Height: =Parent.Height/3.3
-                        Text: ="Chart Title"
-                        Visible: |
-                            =If(Persona="Manager",false,true)
-                        Width: =Parent.Width
-                        ZIndex: =4
-
-                    PieChart2_1 As pieChart:
-                        Height: =Parent.Height/3.3
-                        Items: =PieChartSample
-                        Visible: |
-                            =If(Persona="Manager",false,true)
-                        Width: =Parent.Width
-                        ZIndex: =5
-
-                    Legend2_1 As legend:
-                        FillPortions: =1
-                        Height: =Parent.Height/3.3
-                        ItemColorSet: =PieChart2_1.ItemColorSet
-                        Items: =PieChart2_1.SeriesLabels
-                        Size: =16
-                        Visible: |
-                            =If(Persona="Manager",false,true)
-                        Width: =Parent.Width
-                        ZIndex: =6
+                        legendApprReq_2 As legend:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.View
+                            Height: =Parent.Height*.10
+                            ItemColorSet: =ColumnChart1_2.ItemColorSet
+                            Items: =["Pending","Approved","Decline"]
+                            Width: =Parent.Width
+                            ZIndex: =3
 
     con_nevigation_2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
