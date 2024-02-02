@@ -8113,6 +8113,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.cont_missingData_4.ico_viewDocIcon_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.cont_missingData_4.ico_viewDocIcon_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.cont_missingData_4.ico_viewDocIcon_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.cont_missingData_4.ico_viewDocIcon_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.cont_missingData_4.ico_viewDocIcon_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home Page Screen_2",
+                "type": "'Home Page Screen_2'.con_main1_2.con_ofChart_2.cont_refDocsGallery_1.Gal_missData_4.cont_missingData_4.ico_viewDocIcon_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AdminFormFilled"
                 }
               ],

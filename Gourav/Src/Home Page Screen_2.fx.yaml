@@ -316,6 +316,78 @@
             Y: =(Parent.Height-Self.Height)/1.2
             ZIndex: =3
 
+            con_OtherChart_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =0
+                LayoutMode: =LayoutMode.Auto
+                Visible: |-
+                    =//If(cont_ColumnChart_2.Width<250,false,true)
+                    true
+                Width: =Parent.Width*.4
+                ZIndex: =1
+
+                cont_ColumnChart_2 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width*.4
+                    X: =16
+                    Y: =20
+                    ZIndex: =1
+
+                    lbl_RefDocName_3 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        Fill: =RGBA(132, 107, 247, 0.56)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =0
+                        LayoutMinWidth: =0
+                        Text: ="Approval Status Report"
+                        Width: =Parent.Width
+                        Y: =10
+                        ZIndex: =1
+
+                    CompositeColumnChart1_2 As group:
+                        Height: =5
+                        LayoutMinHeight: =5
+                        LayoutMinWidth: =5
+                        Width: =5
+                        X: =-40
+                        Y: =-40
+                        ZIndex: =1
+
+                        ColumnChart1_2 As barChart:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.View
+                            Height: =Parent.Height*.6
+                            ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                            Items: =StatusCounts
+                            ItemsGap: =2
+                            SeriesAxisMax: =5
+                            SeriesAxisMin: =0
+                            Width: =Parent.Width
+                            XLabelAngle: =10
+                            Y: =90
+                            ZIndex: =2
+
+                        legendApprReq_2 As legend:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.View
+                            Height: =Parent.Height-lbl_RefDocName_3.Height
+                            ItemColorSet: =ColumnChart1_2.ItemColorSet
+                            Items: =["Pending","Approved","Decline"]
+                            Width: =Parent.Width
+                            ZIndex: =3
+
             con_graphChart_1 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
@@ -328,7 +400,7 @@
                 PaddingRight: =10
                 PaddingTop: =10
                 Width: =Parent.Width*.6
-                ZIndex: =1
+                ZIndex: =2
 
                 CompositePieChart1_1 As group:
                     Height: =5
@@ -545,76 +617,79 @@
                                     Text: =If(ThisItem.Location="Jaipur","Gourav Kumar",ThisItem.Location="Udaipur","Jayesh Sahijwani",ThisItem.Location="Jodhpur","Rahul Choudhary",ThisItem.Location="Kota","Arti Acharya",ThisItem.Location="Jaisalmer","Shakti Singh")
                                     ZIndex: =3
 
-            con_OtherChart_1 As groupContainer.verticalAutoLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
-                DropShadow: =DropShadow.None
-                Height: =Parent.Height
+            cont_refDocsGallery_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =361
                 LayoutDirection: =LayoutDirection.Vertical
-                LayoutGap: =10
-                LayoutMinHeight: =100
+                LayoutGap: =15
+                LayoutMinHeight: =0
                 LayoutMinWidth: =0
                 LayoutMode: =LayoutMode.Auto
-                Visible: |-
-                    =//If(cont_ColumnChart_2.Width<250,false,true)
-                    true
-                Width: =Parent.Width*.4
-                ZIndex: =2
+                Width: =386
+                X: =36
+                Y: =384
+                ZIndex: =3
 
-                cont_ColumnChart_2 As groupContainer.verticalAutoLayoutContainer:
-                    FillPortions: =0
-                    Height: =Parent.Height
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =200
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width*.4
-                    X: =16
-                    Y: =20
+                lbl_RefDocName_2 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    Fill: =RGBA(132, 107, 247, 0.56)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =50
+                    LayoutMinWidth: =0
+                    Text: ="Downloaded Files"
+                    Width: =Parent.Width
+                    Y: =10
                     ZIndex: =1
 
-                    CompositeColumnChart1_2 As group:
-                        Height: =5
-                        LayoutMinHeight: =5
-                        LayoutMinWidth: =5
-                        Width: =5
-                        X: =-40
-                        Y: =-40
+                Gal_missData_4 As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Items: ='Oil Mining Reference Docs'
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =0
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =8
+                    TemplateSize: |-
+                        =//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                        90
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    cont_missingData_4 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Regular
+                        Height: =Parent.TemplateHeight
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =10
+                        Width: =Parent.TemplateWidth
                         ZIndex: =1
 
-                        TitleColorApprReq_2 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Center
-                            Fill: =RGBA(132, 107, 247, 0.52)
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height*.10
-                            Text: ="Approval Status Report"
-                            Width: =Parent.Width
-                            X: =40
-                            Y: =40
+                        ico_FileDocIcon_1 As icon.DocumentwithContent:
+                            Height: =Parent.Height
+                            Icon: =Icon.DocumentWithContent
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
                             ZIndex: =1
 
-                        ColumnChart1_2 As barChart:
+                        lbl_forFileDoc_1 As label:
                             AlignInContainer: =AlignInContainer.Center
-                            DisplayMode: =DisplayMode.View
-                            FillPortions: =
-                            Height: =Parent.Height*.80
-                            ItemColorSet: =[RGBA(30, 139, 195,1),RGBA(102, 204, 153, 1), RGBA(236, 100, 75,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                            Items: =StatusCounts
-                            ItemsGap: =2
-                            SeriesAxisMax: =5
-                            SeriesAxisMin: =0
-                            Width: =Parent.Width
-                            XLabelAngle: =10
-                            Y: =90
+                            AutoHeight: =true
+                            Color: =RGBA(79, 90, 94, 1)
+                            FillPortions: =1
+                            FontWeight: =FontWeight.Semibold
+                            LayoutMinWidth: =0
+                            Size: =10
+                            Text: =ThisItem.Name
                             ZIndex: =2
 
-                        legendApprReq_2 As legend:
+                        ico_viewDocIcon_1 As icon.View:
                             AlignInContainer: =AlignInContainer.Center
-                            DisplayMode: =DisplayMode.View
-                            Height: =Parent.Height*.10
-                            ItemColorSet: =ColumnChart1_2.ItemColorSet
-                            Items: =["Pending","Approved","Decline"]
-                            Width: =Parent.Width
+                            Color: =RGBA(15, 84, 140, 1)
+                            Icon: =Icon.View
+                            OnSelect: =Launch(ThisItem.'Link to item')
+                            Width: =25
                             ZIndex: =3
 
     con_nevigation_2 As groupContainer.manualLayoutContainer:
